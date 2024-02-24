@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本の都道府県旗クイズ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="main-menu">
+        <h1>日本の都道府県旗クイズ</h1>
+        <label for="prefecture-count">都道府県の数を選択してください：</label>
+        <div class="slidecontainer">
+            <input type="range" id="prefecture-count" min="4" max="47" value="15" class="slider">
+        </div>
+        <div id="demo"></div>
+        <div class="main-button">
+            <button id="help-btn" class="styled-button">ヘルプ</button>
+            <button id="play-btn" class="styled-button">スタート</button>
+        </div>
+    </div>
+
+    <!-- Modal for help -->
+    <div id="help-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>ヘルプ</h2>
+            <p>日本の都道府県旗クイズへようこそ！</p>
+            <h3>遊び方：</h3>
+            <p>1. スライダーを使用してクイズに含める都道府県の数を選択します。</p>
+            <p>2. 「プレイ」ボタンをクリックしてクイズを開始します。</p>
+            <p>3. 都道府県の旗が表示され、提供されたオプションから正しい都道府県を選択する必要があります。</p>
+            <p>4. すべての質問に回答した後、結果が表示されます。</p>
+            <h3>コントロール：</h3>
+            <ul>
+                <li><strong>都道府県の数を選択：</strong> スライダーを使用してクイズに含める都道府県の数を選択します。</li>
+                <li><strong>プレイボタン：</strong> 選択した都道府県の数でクイズを開始します。</li>
+                <li><strong>旗の表示：</strong> 都道府県の旗が表示され、提供されたオプションから正しい都道府県名を選択する必要があります。</li>
+                <li><strong>結果の表示：</strong> すべての質問に回答した後、正解数と不正解数が表示されます。</li>
+                <li><strong>もう一度プレイボタン：</strong> クイズをもう一度プレイするにはクリックします。</li>
+            </ul>
+            <p>クイズを楽しんで、日本の都道府県に関する知識をテストしてください！</p>
+
+        </div>
+    </div>
+
+    <div id="quiz-container">
+        <div id="flag-container"></div>
+        <div id="options"></div>
+    </div>
+    <div id="result-container">
+    </div>
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
