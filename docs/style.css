@@ -68,7 +68,7 @@ a:hover {
 
 /* HAMBURGER MENU */
 
-#hamburger-nav {
+#hamburger-nav, #scrollToTopArrow {
   display: none;
 }
 
