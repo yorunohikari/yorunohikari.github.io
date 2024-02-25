@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Welcome to the Neko Kanji Quiz, where you can test your knowledge of Japanese characters and their readings. This quiz offers a challenging yet enjoyable experience to enhance your understanding of Kanji." />
+  <meta name="keywords" content="Kanji, Japanese, Quiz, Reading, Language, Learning" />
+  <meta name="author" content="Osha" />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@goshintai_" />
+  <meta name="twitter:title" content="Kanji Quiz" />
+  <meta name="twitter:description" content="Try your kanji knowledge" />
+  <meta name="twitter:image"
+    content="neko-kanji\Neko without background.png" />
+  <title>Neko Kanji Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="main-menu" class="main-menu">
+    <h1>Welcome to the Neko Kanji Quiz</h1>
+    <div>
+      <img
+        src="neko-kanji\Neko without background.png"
+        alt="Neko image" />
+    </div>
+    <label for="question-count">Number of Questions:</label>
+    <div class="numberlabel">
+      <input type="number" id="question-count" min="1" value="10" />
+      <select id="jlpt-level">
+        <option value="N5">N5</option>
+        <option value="N4">N4</option>
+        <option value="N3">N3</option>
+        <option value="N2">N2</option>
+        <option value="N1">N1</option>
+      </select>
+    </div>
+    <div class="label-hint">
+      <div class="checkbox-wrapper-4">
+        <input class="inp-cbx" id="hint-checkbox" type="checkbox" />
+        <label class="cbx" for="hint-checkbox">
+          <span>
+            <svg width="12px" height="10px">
+              <use xlink:href="#check-4"></use>
+            </svg>
+          </span>
+          <span>Include Hints</span>
+        </label>
+        <svg class="inline-svg">
+          <symbol id="check-4" viewbox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </symbol>
+        </svg>
+      </div>
+      <div class="checkbox-wrapper-4">
+        <input class="inp-cbx" id="time-attack-checkbox" type="checkbox" onchange="toggleTimeAttackOptions()" />
+        <label class="cbx" for="time-attack-checkbox">
+          <span>
+            <svg width="12px" height="10px">
+              <use xlink:href="#check-4"></use>
+            </svg>
+          </span>
+          <span>Time Attack Mode</span>
+        </label>
+        <svg class="inline-svg">
+          <symbol id="check-4" viewbox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </symbol>
+        </svg>
+      </div>
+    </div>
+    <div class="timeattack">
+      <div id="time-attack-options" style="display: none;">
+        <label for="time-limit">Time Limit:</label>
+        <select id="time-limit">
+          <option value="30">30 seconds</option>
+          <option value="60">1 minute</option>
+          <option value="120">2 minutes</option>
+          <option value="300">5 minutes</option>
+        </select>
+      </div>
+    </div>
+    <div class="help">
+      <a href="#" onclick="openModal()" style="color: #1877f2; cursor: pointer;">Help</a>
+    </div>
+    <div class="score-history">
+      <a href="#" onclick="openModal2()" style="color: #1877f2; cursor: pointer;">Score History</a>
+    </div>
+    <div class="input-group">
+      <button class="button-19" onclick="startQuiz()">Start Quiz</button>
+    </div>
+  </div>
+
+  <div id="loading-animation" style="display: none;">
+    <div class="loadop">
+      <div id="loading-animations">
+        <div class="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p>Welcome to the Neko Kanji Quiz, where you can test your knowledge of kanji characters and their readings.
+        This quiz offers a challenging yet enjoyable experience to enhance your understanding of Kanji.</p>
+      <h3>How to Play:</h3>
+      <ul>
+        <li>Choose between Regular Mode or Time Attack Mode.</li>
+        <li>In Regular Mode, set the desired number of questions for a customized experience.</li>
+        <li>In Time Attack Mode, challenge yourself with a set time limit of your choice.</li>
+        <li>Enable the hint option for additional assistance.</li>
+        <li>Write the Kanji reading in either hiragana or romaji.</li>
+        <li>Press Enter to submit your answer.</li>
+        <li>You have three chances per question to get it right.</li>
+        <li>If you want to end the quiz prematurely, you can type "end" in the input field.</li>
+        <li>Have fun!</li>
+      </ul>
+      <p>
+        For questions or suggestions, reach out on Twitter or Discord.
+        <br>
+        Twitter: <a href="https://twitter.com/goshintai_" target="_blank">@goshintai_</a>
+        <br>
+        Discord: <a href="https://discordapp.com/users/424526699611291650" target="_blank">osha420</a>
+      </p>
+      <div class="fsbtn">
+        <button class="button-19" id="fullscreen-button" onclick="toggleFullscreen()">Fullscreen</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="myModal2" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeModal2()">&times;</span>
+      <div class="resetstorage">
+        <button class="button-19" id="reset-storage-button" onclick="resetStoredData()">Reset Data</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="quiz-container" id="quiz-container" style="display: none">
+    <h1 id="quiz-heading">Neko Kanji Quiz</h1>
+    <div id="countdown-timer" style="font-size: 14px; margin-bottom: 10px;"></div>
+    <div id="question-container">
+      <!-- Questions will be dynamically inserted here -->
+    </div>
+    <p id="hint"></p>
+    <p id="feedback"></p>
+    <input type="text" id="answer-input" placeholder="Enter Reading"
+      onkeydown="if (event.key === 'Enter') checkAnswer()" />
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

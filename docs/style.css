@@ -288,9 +288,15 @@ section {
 }
 
 .arrow {
-  position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
+  position: relative;
+  left: 80rem;
+  bottom: 4rem;
+}
+
+.home {
+  position: fixed;
+  left: 5rem;
+  bottom: 20rem;
 }
 
 .details-container {

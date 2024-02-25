@@ -7,6 +7,7 @@
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="media-queries.css">
+  <link rel="icon" type="image/x-icon" href="quiz.ico">
 </head>
 
 <body>
@@ -38,7 +39,7 @@
     </div>
   </nav>
   <img src="assets/home.png" alt="arrow icon"
-    class="icon arrow" id="scrollToTopArrow" onclick="scrollToTop()" />
+    class="icon home" id="scrollToTopArrow" onclick="scrollToTop()" />
   <section id="profile">
     <div class="section__pic-container">
       <img class="osha_pp"
@@ -261,8 +262,12 @@
         </div>
       </div>
     </div>
-    <img src="assets/arrow.png"
-      alt="arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+    <img
+        src="assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
   </section>
   <section id="contact">
     <p class="section__text__p1">Get in touch</p>
@@ -307,16 +312,22 @@
       });
     }
 
-    // Add an event listener to show/hide the arrow based on the scroll position
-    window.addEventListener("scroll", function () {
-      var scrollToTopArrow = document.getElementById("scrollToTopArrow");
-      if (window.scrollY > 700) {
-        // Adjust the scroll position at which the arrow should appear
-        scrollToTopArrow.classList.add("show");
-      } else {
-        scrollToTopArrow.classList.remove("show");
-      }
-    });
+    window.addEventListener("scroll", function() {
+    var profileSection = document.getElementById("profile");
+    var scrollToTopArrow = document.getElementById("scrollToTopArrow");
+    
+    // Calculate the bottom of the profile section
+    var profileBottom = profileSection.offsetTop + profileSection.offsetHeight;
+    
+    // Check if the user has scrolled past the profile section
+    if (window.scrollY > profileBottom) {
+        // If scrolled past, display the arrow icon
+        scrollToTopArrow.style.display = "block";
+    } else {
+        // If not scrolled past, hide the arrow icon
+        scrollToTopArrow.style.display = "none";
+    }
+});
   </script>
 </body>
 

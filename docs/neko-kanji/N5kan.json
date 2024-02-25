@@ -1,0 +1,4508 @@
+[
+  {
+    "kanji": "会う",
+    "readings": [
+      "あう",
+      "au"
+    ],
+    "meaning": "to meet, to see"
+  },
+  {
+    "kanji": "青",
+    "readings": [
+      "あお",
+      "ao"
+    ],
+    "meaning": "blue"
+  },
+  {
+    "kanji": "青い",
+    "readings": [
+      "あおい",
+      "aoi"
+    ],
+    "meaning": "blue"
+  },
+  {
+    "kanji": "赤",
+    "readings": [
+      "あか",
+      "aka"
+    ],
+    "meaning": "red"
+  },
+  {
+    "kanji": "赤い",
+    "readings": [
+      "あかい",
+      "akai"
+    ],
+    "meaning": "red"
+  },
+  {
+    "kanji": "明るい",
+    "readings": [
+      "あかるい",
+      "akarui"
+    ],
+    "meaning": "bright (in reference to personality or weather); cheerful"
+  },
+  {
+    "kanji": "秋",
+    "readings": [
+      "あき",
+      "aki"
+    ],
+    "meaning": "fall (season)"
+  },
+  {
+    "kanji": "開く",
+    "readings": [
+      "あく",
+      "aku"
+    ],
+    "meaning": "to open, to become open"
+  },
+  {
+    "kanji": "開ける",
+    "readings": [
+      "あける",
+      "akeru"
+    ],
+    "meaning": "to open (v.t.)"
+  },
+  {
+    "kanji": "上げる",
+    "readings": [
+      "あげる",
+      "ageru"
+    ],
+    "meaning": "to raise, to lift"
+  },
+  {
+    "kanji": "朝",
+    "readings": [
+      "あさ",
+      "asa"
+    ],
+    "meaning": "morning"
+  },
+  {
+    "kanji": "朝御飯",
+    "readings": [
+      "あさごはん",
+      "asagohan"
+    ],
+    "meaning": "breakfast"
+  },
+  {
+    "kanji": "明後日",
+    "readings": [
+      "あさって",
+      "asatte"
+    ],
+    "meaning": "day after tomorrow"
+  },
+  {
+    "kanji": "足; 脚",
+    "readings": [
+      "あし",
+      "ashi"
+    ],
+    "meaning": "foot; leg"
+  },
+  {
+    "kanji": "明日",
+    "readings": [
+      "あした",
+      "ashita"
+    ],
+    "meaning": "tomorrow"
+  },
+  {
+    "kanji": "遊ぶ",
+    "readings": [
+      "あそぶ",
+      "asobu"
+    ],
+    "meaning": "to play; to spend time pleasantly; to hang out"
+  },
+  {
+    "kanji": "暖かい",
+    "readings": [
+      "あたたかい",
+      "atatakai"
+    ],
+    "meaning": "warm"
+  },
+  {
+    "kanji": "頭",
+    "readings": [
+      "あたま",
+      "atama"
+    ],
+    "meaning": "head"
+  },
+  {
+    "kanji": "新しい",
+    "readings": [
+      "あたらしい",
+      "atarashii"
+    ],
+    "meaning": "new"
+  },
+  {
+    "kanji": "暑い",
+    "readings": [
+      "あつい",
+      "atsui"
+    ],
+    "meaning": "hot (in reference to weather), warm"
+  },
+  {
+    "kanji": "熱い",
+    "readings": [
+      "あつい",
+      "atsui"
+    ],
+    "meaning": "hot (objects)"
+  },
+  {
+    "kanji": "厚い",
+    "readings": [
+      "あつい",
+      "atsui"
+    ],
+    "meaning": "kind, warm(hearted), thick, deep"
+  },
+  {
+    "kanji": "後",
+    "readings": [
+      "あと",
+      "ato"
+    ],
+    "meaning": "afterwards (later); in the future; the rest; since then"
+  },
+  {
+    "kanji": "兄",
+    "readings": [
+      "あに",
+      "ani"
+    ],
+    "meaning": "(my) older brother (humble)"
+  },
+  {
+    "kanji": "姉",
+    "readings": [
+      "あね",
+      "ane"
+    ],
+    "meaning": "(my) older sister (humble)"
+  },
+  {
+    "kanji": "浴びる",
+    "readings": [
+      "あびる",
+      "abiru"
+    ],
+    "meaning": "to bathe, to shower"
+  },
+  {
+    "kanji": "危ない",
+    "readings": [
+      "あぶない",
+      "abunai"
+    ],
+    "meaning": "dangerous, critical"
+  },
+  {
+    "kanji": "甘い",
+    "readings": [
+      "あまい",
+      "amai"
+    ],
+    "meaning": "generous, sweet"
+  },
+  {
+    "kanji": "余り",
+    "readings": [
+      "あまり",
+      "amari"
+    ],
+    "meaning": "not very; surplus"
+  },
+  {
+    "kanji": "雨",
+    "readings": [
+      "あめ",
+      "ame"
+    ],
+    "meaning": "rain"
+  },
+  {
+    "kanji": "飴",
+    "readings": [
+      "あめ",
+      "ame"
+    ],
+    "meaning": "(hard) candy"
+  },
+  {
+    "kanji": "洗う",
+    "readings": [
+      "あらう",
+      "arau"
+    ],
+    "meaning": "to wash"
+  },
+  {
+    "kanji": "在る",
+    "readings": [
+      "ある",
+      "aru"
+    ],
+    "meaning": "to be, to have"
+  },
+  {
+    "kanji": "有る",
+    "readings": [
+      "ある",
+      "aru"
+    ],
+    "meaning": "to be, to have"
+  },
+  {
+    "kanji": "歩く",
+    "readings": [
+      "あるく",
+      "aruku"
+    ],
+    "meaning": "to walk"
+  },
+  {
+    "kanji": "言う",
+    "readings": [
+      "いう",
+      "iu"
+    ],
+    "meaning": "to say"
+  },
+  {
+    "kanji": "家",
+    "readings": [
+      "いえ",
+      "ie"
+    ],
+    "meaning": "house, home"
+  },
+  {
+    "kanji": "行く",
+    "readings": [
+      "いく",
+      "iku"
+    ],
+    "meaning": "to go"
+  },
+  {
+    "kanji": "池",
+    "readings": [
+      "いけ",
+      "ike"
+    ],
+    "meaning": "pond"
+  },
+  {
+    "kanji": "医者",
+    "readings": [
+      "いしゃ",
+      "isha"
+    ],
+    "meaning": "doctor; physician"
+  },
+  {
+    "kanji": "椅子",
+    "readings": [
+      "いす",
+      "isu"
+    ],
+    "meaning": "chair"
+  },
+  {
+    "kanji": "忙しい",
+    "readings": [
+      "いそがしい",
+      "isogashii"
+    ],
+    "meaning": "busy (people, days)"
+  },
+  {
+    "kanji": "痛い",
+    "readings": [
+      "いたい",
+      "itai"
+    ],
+    "meaning": "hurt; painful; sore"
+  },
+  {
+    "kanji": "一",
+    "readings": [
+      "いち",
+      "ichi"
+    ],
+    "meaning": "one"
+  },
+  {
+    "kanji": "一日",
+    "readings": [
+      "いちにち",
+      "ichinichi"
+    ],
+    "meaning": "one day (duration)"
+  },
+  {
+    "kanji": "一番",
+    "readings": [
+      "いちばん",
+      "ichiban"
+    ],
+    "meaning": "best (most), first, number one"
+  },
+  {
+    "kanji": "五日",
+    "readings": [
+      "いつか",
+      "itsuka"
+    ],
+    "meaning": "five days; fifth day of the month"
+  },
+  {
+    "kanji": "一緒",
+    "readings": [
+      "いっしょ",
+      "issho"
+    ],
+    "meaning": "together"
+  },
+  {
+    "kanji": "五つ",
+    "readings": [
+      "いつつ",
+      "itsutsu"
+    ],
+    "meaning": "five things"
+  },
+  {
+    "kanji": "犬",
+    "readings": [
+      "いぬ",
+      "inu"
+    ],
+    "meaning": "dog"
+  },
+  {
+    "kanji": "今",
+    "readings": [
+      "いま",
+      "ima"
+    ],
+    "meaning": "now"
+  },
+  {
+    "kanji": "意味",
+    "readings": [
+      "いみ",
+      "imi"
+    ],
+    "meaning": "meaning, significance"
+  },
+  {
+    "kanji": "妹",
+    "readings": [
+      "いもうと",
+      "imouto"
+    ],
+    "meaning": "younger sister (humble)"
+  },
+  {
+    "kanji": "嫌",
+    "readings": [
+      "いや",
+      "iya"
+    ],
+    "meaning": "disagreeable, detestable, unpleasant"
+  },
+  {
+    "kanji": "入口",
+    "readings": [
+      "いりぐち",
+      "iriguchi"
+    ],
+    "meaning": "entrance"
+  },
+  {
+    "kanji": "居る",
+    "readings": [
+      "いる",
+      "iru"
+    ],
+    "meaning": "(humble) to be (animate), to exist"
+  },
+  {
+    "kanji": "要る",
+    "readings": [
+      "いる",
+      "iru"
+    ],
+    "meaning": "to need"
+  },
+  {
+    "kanji": "入れる",
+    "readings": [
+      "いれる",
+      "ireru"
+    ],
+    "meaning": "to put in"
+  },
+  {
+    "kanji": "色",
+    "readings": [
+      "いろ",
+      "iro"
+    ],
+    "meaning": "color"
+  },
+  {
+    "kanji": "色々",
+    "readings": [
+      "いろいろ",
+      "iroiro"
+    ],
+    "meaning": "various"
+  },
+  {
+    "kanji": "上",
+    "readings": [
+      "うえ",
+      "ue"
+    ],
+    "meaning": "above (up, top, etc.), over, on top of"
+  },
+  {
+    "kanji": "後ろ",
+    "readings": [
+      "うしろ",
+      "ushiro"
+    ],
+    "meaning": "back, behind, rear"
+  },
+  {
+    "kanji": "薄い",
+    "readings": [
+      "うすい",
+      "usui"
+    ],
+    "meaning": "thin, weak"
+  },
+  {
+    "kanji": "歌",
+    "readings": [
+      "うた",
+      "uta"
+    ],
+    "meaning": "a song"
+  },
+  {
+    "kanji": "歌う",
+    "readings": [
+      "うたう",
+      "utau"
+    ],
+    "meaning": "to sing"
+  },
+  {
+    "kanji": "生まれる",
+    "readings": [
+      "うまれる",
+      "umareru"
+    ],
+    "meaning": "to be born"
+  },
+  {
+    "kanji": "海",
+    "readings": [
+      "うみ",
+      "umi"
+    ],
+    "meaning": "sea, beach"
+  },
+  {
+    "kanji": "売る",
+    "readings": [
+      "うる",
+      "uru"
+    ],
+    "meaning": "to sell (v.t.)"
+  },
+  {
+    "kanji": "上着",
+    "readings": [
+      "うわぎ",
+      "uwagi"
+    ],
+    "meaning": "coat, jacket"
+  },
+  {
+    "kanji": "絵",
+    "readings": [
+      "え",
+      "e"
+    ],
+    "meaning": "a painting; a picture; a drawing"
+  },
+  {
+    "kanji": "映画",
+    "readings": [
+      "えいが",
+      "eiga"
+    ],
+    "meaning": "movie, film"
+  },
+  {
+    "kanji": "映画館",
+    "readings": [
+      "えいがかん",
+      "eigakan"
+    ],
+    "meaning": "movie theater, cinema"
+  },
+  {
+    "kanji": "英語",
+    "readings": [
+      "えいご",
+      "eigo"
+    ],
+    "meaning": "English (language)"
+  },
+  {
+    "kanji": "駅",
+    "readings": [
+      "えき",
+      "eki"
+    ],
+    "meaning": "station"
+  },
+  {
+    "kanji": "～円",
+    "readings": [
+      "えん",
+      "en"
+    ],
+    "meaning": "Yen"
+  },
+  {
+    "kanji": "鉛筆",
+    "readings": [
+      "えんぴつ",
+      "enpitsu"
+    ],
+    "meaning": "pencil"
+  },
+  {
+    "kanji": "美味しい",
+    "readings": [
+      "おいしい",
+      "oishii"
+    ],
+    "meaning": "delicious, tasty"
+  },
+  {
+    "kanji": "多い",
+    "readings": [
+      "おおい",
+      "ooi"
+    ],
+    "meaning": "many; there are a lot"
+  },
+  {
+    "kanji": "大きい",
+    "readings": [
+      "おおきい",
+      "ookii"
+    ],
+    "meaning": "big, large"
+  },
+  {
+    "kanji": "大きな",
+    "readings": [
+      "おおきな",
+      "ookina"
+    ],
+    "meaning": "big"
+  },
+  {
+    "kanji": "大勢",
+    "readings": [
+      "おおぜい",
+      "oozei"
+    ],
+    "meaning": "great number of people"
+  },
+  {
+    "kanji": "お母さん",
+    "readings": [
+      "おかあさん",
+      "okaasan"
+    ],
+    "meaning": "mother (formal)"
+  },
+  {
+    "kanji": "お菓子",
+    "readings": [
+      "おかし",
+      "okashi"
+    ],
+    "meaning": "confections, sweets, snack"
+  },
+  {
+    "kanji": "お金",
+    "readings": [
+      "おかね",
+      "okane"
+    ],
+    "meaning": "money"
+  },
+  {
+    "kanji": "起きる",
+    "readings": [
+      "おきる",
+      "okiru"
+    ],
+    "meaning": "to get up (e.g., from sleeping); to happen"
+  },
+  {
+    "kanji": "置く",
+    "readings": [
+      "おく",
+      "oku"
+    ],
+    "meaning": "to put; to lay; to place"
+  },
+  {
+    "kanji": "奥さん",
+    "readings": [
+      "おくさん",
+      "okusan"
+    ],
+    "meaning": "(someone else's) wife (hon.)"
+  },
+  {
+    "kanji": "お酒",
+    "readings": [
+      "おさけ",
+      "osake"
+    ],
+    "meaning": "sake; alcohol"
+  },
+  {
+    "kanji": "お皿",
+    "readings": [
+      "おさら",
+      "osara"
+    ],
+    "meaning": "plate, dish"
+  },
+  {
+    "kanji": "伯父; 叔父さん",
+    "readings": [
+      "おじさん",
+      "ojisan"
+    ],
+    "meaning": "uncle, middle-aged man"
+  },
+  {
+    "kanji": "教える",
+    "readings": [
+      "おしえる",
+      "oshieru"
+    ],
+    "meaning": "to teach, to inform, to instruct"
+  },
+  {
+    "kanji": "押す",
+    "readings": [
+      "おす",
+      "osu"
+    ],
+    "meaning": "to push, to press, to stamp (e.g., a passport)"
+  },
+  {
+    "kanji": "遅い",
+    "readings": [
+      "おそい",
+      "osoi"
+    ],
+    "meaning": "slow; (to be) late"
+  },
+  {
+    "kanji": "お茶",
+    "readings": [
+      "おちゃ",
+      "ocha"
+    ],
+    "meaning": "(green) tea"
+  },
+  {
+    "kanji": "お手洗い",
+    "readings": [
+      "おてあらい",
+      "otearai"
+    ],
+    "meaning": "toilet, restroom, bathroom (lit., a place to wash one's hands)"
+  },
+  {
+    "kanji": "お父さん",
+    "readings": [
+      "おとうさん",
+      "otousan"
+    ],
+    "meaning": "father (formal)"
+  },
+  {
+    "kanji": "弟",
+    "readings": [
+      "おとうと",
+      "otouto"
+    ],
+    "meaning": "younger brother"
+  },
+  {
+    "kanji": "男",
+    "readings": [
+      "おとこ",
+      "otoko"
+    ],
+    "meaning": "man, male"
+  },
+  {
+    "kanji": "男の子",
+    "readings": [
+      "おとこのこ",
+      "otokonoko"
+    ],
+    "meaning": "boy"
+  },
+  {
+    "kanji": "一昨日",
+    "readings": [
+      "おととい",
+      "ototoi"
+    ],
+    "meaning": "the day before yesterday"
+  },
+  {
+    "kanji": "大人",
+    "readings": [
+      "おとな",
+      "otona"
+    ],
+    "meaning": "adult"
+  },
+  {
+    "kanji": "お腹",
+    "readings": [
+      "おなか",
+      "onaka"
+    ],
+    "meaning": "stomach"
+  },
+  {
+    "kanji": "同じ",
+    "readings": [
+      "おなじ",
+      "onaji"
+    ],
+    "meaning": "same, identical"
+  },
+  {
+    "kanji": "お兄さん",
+    "readings": [
+      "おにいさん",
+      "oniisan"
+    ],
+    "meaning": "(someone else's) older brother (formal)"
+  },
+  {
+    "kanji": "お姉さん",
+    "readings": [
+      "おねえさん",
+      "oneesan"
+    ],
+    "meaning": "older sister (formal)"
+  },
+  {
+    "kanji": "伯母さん; 叔母さん",
+    "readings": [
+      "おばさん",
+      "obasan"
+    ],
+    "meaning": "aunt"
+  },
+  {
+    "kanji": "お風呂",
+    "readings": [
+      "おふろ",
+      "ofuro"
+    ],
+    "meaning": "a bath"
+  },
+  {
+    "kanji": "お弁当",
+    "readings": [
+      "おべんとう",
+      "obentou"
+    ],
+    "meaning": "a boxed lunch"
+  },
+  {
+    "kanji": "覚える",
+    "readings": [
+      "おぼえる",
+      "oboeru"
+    ],
+    "meaning": "to learn, to commit to memory, to remember, to memorize"
+  },
+  {
+    "kanji": "重い",
+    "readings": [
+      "おもい",
+      "omoi"
+    ],
+    "meaning": "heavy; serious"
+  },
+  {
+    "kanji": "面白い",
+    "readings": [
+      "おもしろい",
+      "omoshiroi"
+    ],
+    "meaning": "interesting, amusing"
+  },
+  {
+    "kanji": "泳ぐ",
+    "readings": [
+      "およぐ",
+      "oyogu"
+    ],
+    "meaning": "to swim"
+  },
+  {
+    "kanji": "降りる",
+    "readings": [
+      "おりる",
+      "oriru"
+    ],
+    "meaning": "to get off"
+  },
+  {
+    "kanji": "終る",
+    "readings": [
+      "おわる",
+      "owaru"
+    ],
+    "meaning": "to finish, to close"
+  },
+  {
+    "kanji": "音楽",
+    "readings": [
+      "おんがく",
+      "ongaku"
+    ],
+    "meaning": "Music"
+  },
+  {
+    "kanji": "女",
+    "readings": [
+      "おんな",
+      "onna"
+    ],
+    "meaning": "woman, female"
+  },
+  {
+    "kanji": "女の子",
+    "readings": [
+      "おんなのこ",
+      "onnanoko"
+    ],
+    "meaning": "girl"
+  },
+  {
+    "kanji": "～回",
+    "readings": [
+      "かい",
+      "kai"
+    ],
+    "meaning": "counter for occurrences (~ times)"
+  },
+  {
+    "kanji": "～階",
+    "readings": [
+      "かい",
+      "kai"
+    ],
+    "meaning": "counter for stories (floors) of a building"
+  },
+  {
+    "kanji": "外国",
+    "readings": [
+      "がいこく",
+      "gaikoku"
+    ],
+    "meaning": "foreign country; abroad"
+  },
+  {
+    "kanji": "外国人",
+    "readings": [
+      "がいこくじん",
+      "gaikokujin"
+    ],
+    "meaning": "foreigner"
+  },
+  {
+    "kanji": "会社",
+    "readings": [
+      "かいしゃ",
+      "kaisha"
+    ],
+    "meaning": "company, corporation"
+  },
+  {
+    "kanji": "階段",
+    "readings": [
+      "かいだん",
+      "kaidan"
+    ],
+    "meaning": "stairs"
+  },
+  {
+    "kanji": "買い物",
+    "readings": [
+      "かいもの",
+      "kaimono"
+    ],
+    "meaning": "shopping"
+  },
+  {
+    "kanji": "買う",
+    "readings": [
+      "かう",
+      "kau"
+    ],
+    "meaning": "to buy"
+  },
+  {
+    "kanji": "返す",
+    "readings": [
+      "かえす",
+      "kaesu"
+    ],
+    "meaning": "to return something"
+  },
+  {
+    "kanji": "帰る",
+    "readings": [
+      "かえる",
+      "kaeru"
+    ],
+    "meaning": "to go back, to go home, to return"
+  },
+  {
+    "kanji": "顔",
+    "readings": [
+      "かお",
+      "kao"
+    ],
+    "meaning": "face (body part)"
+  },
+  {
+    "kanji": "鍵",
+    "readings": [
+      "かぎ",
+      "kagi"
+    ],
+    "meaning": "a lock; a key"
+  },
+  {
+    "kanji": "書く",
+    "readings": [
+      "かく",
+      "kaku"
+    ],
+    "meaning": "to write"
+  },
+  {
+    "kanji": "学生",
+    "readings": [
+      "がくせい",
+      "gakusei"
+    ],
+    "meaning": "student"
+  },
+  {
+    "kanji": "～か月",
+    "readings": [
+      "かげつ",
+      "kagetsu"
+    ],
+    "meaning": "(number of) months"
+  },
+  {
+    "kanji": "掛ける",
+    "readings": [
+      "かける",
+      "kakeru"
+    ],
+    "meaning": "to put on (e.g., glasses); to hang (e.g., on a wall)"
+  },
+  {
+    "kanji": "傘",
+    "readings": [
+      "かさ",
+      "kasa"
+    ],
+    "meaning": "umbrella, parasol"
+  },
+  {
+    "kanji": "貸す",
+    "readings": [
+      "かす",
+      "kasu"
+    ],
+    "meaning": "to lend"
+  },
+  {
+    "kanji": "風",
+    "readings": [
+      "かぜ",
+      "kaze"
+    ],
+    "meaning": "wind, breeze"
+  },
+  {
+    "kanji": "風邪",
+    "readings": [
+      "かぜ",
+      "kaze"
+    ],
+    "meaning": "cold, flu"
+  },
+  {
+    "kanji": "方",
+    "readings": [
+      "かた",
+      "kata",
+      "hou"
+    ],
+    "meaning": "-- honorific form for 人 (ひと) --; way of doing"
+  },
+  {
+    "kanji": "家族",
+    "readings": [
+      "かぞく",
+      "kazoku"
+    ],
+    "meaning": "family, members of a family"
+  },
+  {
+    "kanji": "片仮名",
+    "readings": [
+      "かたかな",
+      "katakana"
+    ],
+    "meaning": "katakana"
+  },
+  {
+    "kanji": "～月",
+    "readings": [
+      "がつ",
+      "gatsu"
+    ],
+    "meaning": "month of year"
+  },
+  {
+    "kanji": "学校",
+    "readings": [
+      "がっこう",
+      "gakkou"
+    ],
+    "meaning": "a school"
+  },
+  {
+    "kanji": "家庭",
+    "readings": [
+      "かてい",
+      "katei"
+    ],
+    "meaning": "home; family"
+  },
+  {
+    "kanji": "角",
+    "readings": [
+      "かど",
+      "kado"
+    ],
+    "meaning": "corner (e.g., desk, pavement)"
+  },
+  {
+    "kanji": "花瓶",
+    "readings": [
+      "かびん",
+      "kabin"
+    ],
+    "meaning": "(flower) vase"
+  },
+  {
+    "kanji": "紙",
+    "readings": [
+      "かみ",
+      "kami"
+    ],
+    "meaning": "paper"
+  },
+  {
+    "kanji": "火曜日",
+    "readings": [
+      "かようび",
+      "kayoubi"
+    ],
+    "meaning": "Tuesday"
+  },
+  {
+    "kanji": "辛い",
+    "readings": [
+      "からい",
+      "karai"
+    ],
+    "meaning": "hot and spicy; salty"
+  },
+  {
+    "kanji": "体",
+    "readings": [
+      "からだ",
+      "かたち",
+      "katachi",
+      "karada",
+      "tai",
+      "たい"
+    ],
+    "meaning": "body; health"
+  },
+  {
+    "kanji": "借りる",
+    "readings": [
+      "かりる",
+      "kariru"
+    ],
+    "meaning": "to borrow, to owe"
+  },
+  {
+    "kanji": "軽い",
+    "readings": [
+      "かるい",
+      "karui"
+    ],
+    "meaning": "light, non-serious, minor"
+  },
+  {
+    "kanji": "川; 河",
+    "readings": [
+      "かわ",
+      "kawa"
+    ],
+    "meaning": "river"
+  },
+  {
+    "kanji": "～側",
+    "readings": [
+      "がわ",
+      "gawa"
+    ],
+    "meaning": "~ side"
+  },
+  {
+    "kanji": "可愛い",
+    "readings": [
+      "かわいい",
+      "kawaii"
+    ],
+    "meaning": "cute, adorable"
+  },
+  {
+    "kanji": "漢字",
+    "readings": [
+      "かんじ",
+      "kanji"
+    ],
+    "meaning": "kanji; Chinese character"
+  },
+  {
+    "kanji": "木",
+    "readings": [
+      "き",
+      "ki"
+    ],
+    "meaning": "tree, wood, timber"
+  },
+  {
+    "kanji": "黄色",
+    "readings": [
+      "きいろ",
+      "kiiro"
+    ],
+    "meaning": "yellow"
+  },
+  {
+    "kanji": "黄色い",
+    "readings": [
+      "きいろい",
+      "kiiroi"
+    ],
+    "meaning": "yellow"
+  },
+  {
+    "kanji": "消える",
+    "readings": [
+      "きえる",
+      "kieru"
+    ],
+    "meaning": "to vanish, to disappear"
+  },
+  {
+    "kanji": "聞く",
+    "readings": [
+      "きく",
+      "kiku"
+    ],
+    "meaning": "to hear, to listen, to ask"
+  },
+  {
+    "kanji": "北",
+    "readings": [
+      "きた",
+      "kita"
+    ],
+    "meaning": "north"
+  },
+  {
+    "kanji": "汚い",
+    "readings": [
+      "きたない",
+      "kitanai"
+    ],
+    "meaning": "dirty, unclean, filthy"
+  },
+  {
+    "kanji": "喫茶店",
+    "readings": [
+      "きっさてん",
+      "kissaten"
+    ],
+    "meaning": "café"
+  },
+  {
+    "kanji": "切手",
+    "readings": [
+      "きって",
+      "kitte"
+    ],
+    "meaning": "postal (postage) stamps"
+  },
+  {
+    "kanji": "切符",
+    "readings": [
+      "きっぷ",
+      "kippu"
+    ],
+    "meaning": "a ticket"
+  },
+  {
+    "kanji": "昨日",
+    "readings": [
+      "きのう",
+      "kinou"
+    ],
+    "meaning": "yesterday"
+  },
+  {
+    "kanji": "九",
+    "readings": [
+      "きゅう",
+      "kyuu",
+      "ku",
+      "く"
+    ],
+    "meaning": "nine"
+  },
+  {
+    "kanji": "牛肉",
+    "readings": [
+      "ぎゅうにく",
+      "gyuuniku"
+    ],
+    "meaning": "beef"
+  },
+  {
+    "kanji": "牛乳",
+    "readings": [
+      "ぎゅうにゅう",
+      "gyuunyuu"
+    ],
+    "meaning": "milk"
+  },
+  {
+    "kanji": "今日",
+    "readings": [
+      "きょう",
+      "kyou"
+    ],
+    "meaning": "today, this day"
+  },
+  {
+    "kanji": "教室",
+    "readings": [
+      "きょうしつ",
+      "kyoushitsu"
+    ],
+    "meaning": "classroom"
+  },
+  {
+    "kanji": "兄弟",
+    "readings": [
+      "きょうだい",
+      "kyoudai"
+    ],
+    "meaning": "siblings (humble), brothers and sisters"
+  },
+  {
+    "kanji": "去年",
+    "readings": [
+      "きょねん",
+      "kyonen"
+    ],
+    "meaning": "last year"
+  },
+  {
+    "kanji": "嫌い",
+    "readings": [
+      "きらい",
+      "kirai"
+    ],
+    "meaning": "dislike"
+  },
+  {
+    "kanji": "切る",
+    "readings": [
+      "きる",
+      "kiru"
+    ],
+    "meaning": "to cut; to hang up (a phone)"
+  },
+  {
+    "kanji": "着る",
+    "readings": [
+      "きる",
+      "kiru"
+    ],
+    "meaning": "to put on (clothes above your waist); to wear"
+  },
+  {
+    "kanji": "綺麗",
+    "readings": [
+      "きれい",
+      "kirei"
+    ],
+    "meaning": "pretty, clean, tidy"
+  },
+  {
+    "kanji": "銀行",
+    "readings": [
+      "ぎんこう",
+      "ginkou"
+    ],
+    "meaning": "bank"
+  },
+  {
+    "kanji": "金曜日",
+    "readings": [
+      "きんようび",
+      "kinyoubi"
+    ],
+    "meaning": "Friday"
+  },
+  {
+    "kanji": "薬",
+    "readings": [
+      "くすり",
+      "kusuri"
+    ],
+    "meaning": "medicine"
+  },
+  {
+    "kanji": "下さい",
+    "readings": [
+      "ください",
+      "kudasai"
+    ],
+    "meaning": "(with te-form verb) please do for me"
+  },
+  {
+    "kanji": "果物",
+    "readings": [
+      "くだもの",
+      "kudamono"
+    ],
+    "meaning": "fruit"
+  },
+  {
+    "kanji": "口",
+    "readings": [
+      "くち",
+      "kuchi"
+    ],
+    "meaning": "job opening; mouth"
+  },
+  {
+    "kanji": "靴",
+    "readings": [
+      "くつ",
+      "kutsu"
+    ],
+    "meaning": "shoes, footwear"
+  },
+  {
+    "kanji": "靴下",
+    "readings": [
+      "くつした",
+      "kutsushita"
+    ],
+    "meaning": "socks"
+  },
+  {
+    "kanji": "国",
+    "readings": [
+      "くに",
+      "kuni"
+    ],
+    "meaning": "country; place of origin"
+  },
+  {
+    "kanji": "曇り",
+    "readings": [
+      "くもり",
+      "kumori"
+    ],
+    "meaning": "cloudiness, cloudy weather"
+  },
+  {
+    "kanji": "曇る",
+    "readings": [
+      "くもる",
+      "kumoru"
+    ],
+    "meaning": "to become cloudy, to become dim"
+  },
+  {
+    "kanji": "暗い",
+    "readings": [
+      "くらい",
+      "kurai"
+    ],
+    "meaning": "dark, gloomy"
+  },
+  {
+    "kanji": "来る",
+    "readings": [
+      "くる",
+      "kuru"
+    ],
+    "meaning": "to come"
+  },
+  {
+    "kanji": "車",
+    "readings": [
+      "くるま",
+      "kuruma"
+    ],
+    "meaning": "car, vehicle"
+  },
+  {
+    "kanji": "黒",
+    "readings": [
+      "くろ",
+      "kuro"
+    ],
+    "meaning": "black"
+  },
+  {
+    "kanji": "黒い",
+    "readings": [
+      "くろい",
+      "kuroi"
+    ],
+    "meaning": "black; dark"
+  },
+  {
+    "kanji": "警官",
+    "readings": [
+      "けいかん",
+      "keikan"
+    ],
+    "meaning": "police officer"
+  },
+  {
+    "kanji": "今朝",
+    "readings": [
+      "けさ",
+      "kesa"
+    ],
+    "meaning": "this morning"
+  },
+  {
+    "kanji": "消す",
+    "readings": [
+      "けす",
+      "kesu"
+    ],
+    "meaning": "to erase, to delete, to turn off power"
+  },
+  {
+    "kanji": "結構",
+    "readings": [
+      "けっこう",
+      "kekkou"
+    ],
+    "meaning": "splendid; enough, tolerably"
+  },
+  {
+    "kanji": "結婚",
+    "readings": [
+      "けっこん",
+      "kekkon"
+    ],
+    "meaning": "marriage (get married)"
+  },
+  {
+    "kanji": "月曜日",
+    "readings": [
+      "げつようび",
+      "getsuyoubi"
+    ],
+    "meaning": "Monday"
+  },
+  {
+    "kanji": "玄関",
+    "readings": [
+      "げんかん",
+      "genkan"
+    ],
+    "meaning": "entrance (to a house or a building)"
+  },
+  {
+    "kanji": "元気",
+    "readings": [
+      "げんき",
+      "genki"
+    ],
+    "meaning": "health(y), energetic"
+  },
+  {
+    "kanji": "～個",
+    "readings": [
+      "こ",
+      "ko"
+    ],
+    "meaning": "counter for small items (e.g., fruits, cups)"
+  },
+  {
+    "kanji": "五",
+    "readings": [
+      "ご",
+      "go"
+    ],
+    "meaning": "five"
+  },
+  {
+    "kanji": "～語",
+    "readings": [
+      "ご",
+      "go"
+    ],
+    "meaning": "word, language"
+  },
+  {
+    "kanji": "公園",
+    "readings": [
+      "こうえん",
+      "kouen"
+    ],
+    "meaning": "a park"
+  },
+  {
+    "kanji": "交差点",
+    "readings": [
+      "こうさてん",
+      "kousaten"
+    ],
+    "meaning": "intersection"
+  },
+  {
+    "kanji": "紅茶",
+    "readings": [
+      "こうちゃ",
+      "koucha"
+    ],
+    "meaning": "black tea"
+  },
+  {
+    "kanji": "交番",
+    "readings": [
+      "こうばん",
+      "kouban"
+    ],
+    "meaning": "police box"
+  },
+  {
+    "kanji": "声",
+    "readings": [
+      "こえ",
+      "koe"
+    ],
+    "meaning": "voice"
+  },
+  {
+    "kanji": "午後",
+    "readings": [
+      "ごご",
+      "gogo"
+    ],
+    "meaning": "afternoon, P.M."
+  },
+  {
+    "kanji": "九日",
+    "readings": [
+      "ここのか",
+      "kokonoka"
+    ],
+    "meaning": "nine days; ninth day of the month"
+  },
+  {
+    "kanji": "九つ",
+    "readings": [
+      "ここのつ",
+      "kokonotsu"
+    ],
+    "meaning": "nine things"
+  },
+  {
+    "kanji": "午前",
+    "readings": [
+      "ごぜん",
+      "gozen"
+    ],
+    "meaning": "morning, A.M."
+  },
+  {
+    "kanji": "答える",
+    "readings": [
+      "こたえる",
+      "kotaeru"
+    ],
+    "meaning": "to answer, to reply"
+  },
+  {
+    "kanji": "今年",
+    "readings": [
+      "ことし",
+      "kotoshi"
+    ],
+    "meaning": "this year"
+  },
+  {
+    "kanji": "言葉",
+    "readings": [
+      "ことば",
+      "kotoba"
+    ],
+    "meaning": "language; word(s); expression(s)"
+  },
+  {
+    "kanji": "子供",
+    "readings": [
+      "こども",
+      "kodomo"
+    ],
+    "meaning": "child(ren)"
+  },
+  {
+    "kanji": "御飯",
+    "readings": [
+      "ごはん",
+      "gohan"
+    ],
+    "meaning": "rice (cooked); meal"
+  },
+  {
+    "kanji": "困る",
+    "readings": [
+      "こまる",
+      "komaru"
+    ],
+    "meaning": "to be bothered, to have difficulty"
+  },
+  {
+    "kanji": "今月",
+    "readings": [
+      "こんげつ",
+      "kongetsu"
+    ],
+    "meaning": "this month"
+  },
+  {
+    "kanji": "今週",
+    "readings": [
+      "こんしゅう",
+      "konshuu"
+    ],
+    "meaning": "this week"
+  },
+  {
+    "kanji": "今晩",
+    "readings": [
+      "こんばん",
+      "konban"
+    ],
+    "meaning": "tonight, this evening"
+  },
+  {
+    "kanji": "～歳",
+    "readings": [
+      "さい",
+      "sai"
+    ],
+    "meaning": "~ years old"
+  },
+  {
+    "kanji": "財布",
+    "readings": [
+      "さいふ",
+      "saifu"
+    ],
+    "meaning": "wallet"
+  },
+  {
+    "kanji": "魚",
+    "readings": [
+      "さかな",
+      "sakana"
+    ],
+    "meaning": "fish"
+  },
+  {
+    "kanji": "先",
+    "readings": [
+      "さき",
+      "saki"
+    ],
+    "meaning": "future; recent, previous"
+  },
+  {
+    "kanji": "咲く",
+    "readings": [
+      "さく",
+      "saku"
+    ],
+    "meaning": "to bloom"
+  },
+  {
+    "kanji": "作文",
+    "readings": [
+      "さくぶん",
+      "sakubun"
+    ],
+    "meaning": "essay; composition"
+  },
+  {
+    "kanji": "差す",
+    "readings": [
+      "さす",
+      "sasu"
+    ],
+    "meaning": "to raise (stretch out) hands, to raise (e.g., umbrella)"
+  },
+  {
+    "kanji": "～冊",
+    "readings": [
+      "さつ",
+      "satsu"
+    ],
+    "meaning": "counter for books"
+  },
+  {
+    "kanji": "雑誌",
+    "readings": [
+      "ざっし",
+      "zasshi"
+    ],
+    "meaning": "magazine, journal"
+  },
+  {
+    "kanji": "砂糖",
+    "readings": [
+      "さとう",
+      "satou"
+    ],
+    "meaning": "sugar"
+  },
+  {
+    "kanji": "寒い",
+    "readings": [
+      "さむい",
+      "samui"
+    ],
+    "meaning": "cold (in reference to weather)"
+  },
+  {
+    "kanji": "さ来年",
+    "readings": [
+      "さらいねん",
+      "sarainen"
+    ],
+    "meaning": "year after next"
+  },
+  {
+    "kanji": "三",
+    "readings": [
+      "さん",
+      "san"
+    ],
+    "meaning": "three"
+  },
+  {
+    "kanji": "散歩",
+    "readings": [
+      "さんぽ",
+      "sanpo"
+    ],
+    "meaning": "walk, stroll"
+  },
+  {
+    "kanji": "四",
+    "readings": [
+      "し",
+      "shi",
+      "yon",
+      "よん"
+    ],
+    "meaning": "four"
+  },
+  {
+    "kanji": "塩",
+    "readings": [
+      "しお",
+      "shio"
+    ],
+    "meaning": "salt"
+  },
+  {
+    "kanji": "時間",
+    "readings": [
+      "じかん",
+      "jikan"
+    ],
+    "meaning": "time"
+  },
+  {
+    "kanji": "～時間",
+    "readings": [
+      "じかん",
+      "jikan"
+    ],
+    "meaning": "~ hours"
+  },
+  {
+    "kanji": "仕事",
+    "readings": [
+      "しごと",
+      "shigoto"
+    ],
+    "meaning": "work, job, occupation, employment"
+  },
+  {
+    "kanji": "辞書",
+    "readings": [
+      "じしょ",
+      "jisho"
+    ],
+    "meaning": "dictionary"
+  },
+  {
+    "kanji": "静か",
+    "readings": [
+      "しずか",
+      "shizuka"
+    ],
+    "meaning": "quiet, calm"
+  },
+  {
+    "kanji": "下",
+    "readings": [
+      "した",
+      "shita"
+    ],
+    "meaning": "under, below, beneath"
+  },
+  {
+    "kanji": "七",
+    "readings": [
+      "しち",
+      "shichi",
+      "nana",
+      "なな"
+    ],
+    "meaning": "seven"
+  },
+  {
+    "kanji": "質問",
+    "readings": [
+      "しつもん",
+      "shitsumon"
+    ],
+    "meaning": "question, inquiry"
+  },
+  {
+    "kanji": "自転車",
+    "readings": [
+      "じてんしゃ",
+      "jitensha"
+    ],
+    "meaning": "bicycle"
+  },
+  {
+    "kanji": "自動車",
+    "readings": [
+      "じどうしゃ",
+      "jidousha"
+    ],
+    "meaning": "automobile"
+  },
+  {
+    "kanji": "死ぬ",
+    "readings": [
+      "しぬ",
+      "shinu"
+    ],
+    "meaning": "to die"
+  },
+  {
+    "kanji": "字引",
+    "readings": [
+      "じびき",
+      "jibiki"
+    ],
+    "meaning": "dictionary"
+  },
+  {
+    "kanji": "自分",
+    "readings": [
+      "じぶん",
+      "jibun"
+    ],
+    "meaning": "myself, oneself"
+  },
+  {
+    "kanji": "閉まる",
+    "readings": [
+      "しまる",
+      "shimaru"
+    ],
+    "meaning": "to close, to be closed"
+  },
+  {
+    "kanji": "閉める",
+    "readings": [
+      "しめる",
+      "shimeru"
+    ],
+    "meaning": "to close, to shut"
+  },
+  {
+    "kanji": "締める",
+    "readings": [
+      "しめる",
+      "shimeru"
+    ],
+    "meaning": "to tie, to fasten, to tighten"
+  },
+  {
+    "kanji": "写真",
+    "readings": [
+      "しゃしん",
+      "shashin"
+    ],
+    "meaning": "a picture; a photograph"
+  },
+  {
+    "kanji": "十",
+    "readings": [
+      "じゅう",
+      "juu"
+    ],
+    "meaning": "ten"
+  },
+  {
+    "kanji": "～中",
+    "readings": [
+      "じゅう",
+      "juu"
+    ],
+    "meaning": "during, while"
+  },
+  {
+    "kanji": "～週間",
+    "readings": [
+      "しゅうかん",
+      "shuukan"
+    ],
+    "meaning": "~ weeks"
+  },
+  {
+    "kanji": "授業",
+    "readings": [
+      "じゅぎょう",
+      "jugyou"
+    ],
+    "meaning": "a class (of school)"
+  },
+  {
+    "kanji": "宿題",
+    "readings": [
+      "しゅくだい",
+      "shukudai"
+    ],
+    "meaning": "homework"
+  },
+  {
+    "kanji": "上手",
+    "readings": [
+      "じょうず",
+      "jouzu"
+    ],
+    "meaning": "be good at, skillful"
+  },
+  {
+    "kanji": "丈夫",
+    "readings": [
+      "じょうぶ",
+      "joubu"
+    ],
+    "meaning": "strong, solid, durable"
+  },
+  {
+    "kanji": "醤油",
+    "readings": [
+      "しょうゆ",
+      "shouyu"
+    ],
+    "meaning": "soy sauce"
+  },
+  {
+    "kanji": "食堂",
+    "readings": [
+      "しょくどう",
+      "shokudou"
+    ],
+    "meaning": "cafeteria, dining hall"
+  },
+  {
+    "kanji": "知る",
+    "readings": [
+      "しる",
+      "shiru"
+    ],
+    "meaning": "to know, to understand"
+  },
+  {
+    "kanji": "白",
+    "readings": [
+      "しろ",
+      "shiro"
+    ],
+    "meaning": "white"
+  },
+  {
+    "kanji": "白い",
+    "readings": [
+      "しろい",
+      "shiroi"
+    ],
+    "meaning": "white"
+  },
+  {
+    "kanji": "～人",
+    "readings": [
+      "にん",
+      "nin"
+    ],
+    "meaning": "counter for people"
+  },
+  {
+    "kanji": "新聞",
+    "readings": [
+      "しんぶん",
+      "shinbun"
+    ],
+    "meaning": "newspaper"
+  },
+  {
+    "kanji": "水曜日",
+    "readings": [
+      "すいようび",
+      "suiyoubi"
+    ],
+    "meaning": "Wednesday"
+  },
+  {
+    "kanji": "吸う",
+    "readings": [
+      "すう",
+      "suu"
+    ],
+    "meaning": "to breathe in, to suck"
+  },
+  {
+    "kanji": "好き",
+    "readings": [
+      "すき",
+      "suki"
+    ],
+    "meaning": "liking, fondness, love"
+  },
+  {
+    "kanji": "少ない",
+    "readings": [
+      "すくない",
+      "sukunai"
+    ],
+    "meaning": "a little; a few"
+  },
+  {
+    "kanji": "少し",
+    "readings": [
+      "すこし",
+      "sukoshi"
+    ],
+    "meaning": "little, few"
+  },
+  {
+    "kanji": "涼しい",
+    "readings": [
+      "すずしい",
+      "suzushii"
+    ],
+    "meaning": "cool, refreshing (in reference to weather)"
+  },
+  {
+    "kanji": "住む",
+    "readings": [
+      "すむ",
+      "sumu"
+    ],
+    "meaning": "to reside, to live in"
+  },
+  {
+    "kanji": "座る",
+    "readings": [
+      "すわる",
+      "suwaru"
+    ],
+    "meaning": "to sit"
+  },
+  {
+    "kanji": "背",
+    "readings": [
+      "せい",
+      "sei"
+    ],
+    "meaning": "(one's) height, stature"
+  },
+  {
+    "kanji": "生徒",
+    "readings": [
+      "せいと",
+      "seito"
+    ],
+    "meaning": "student; pupil"
+  },
+  {
+    "kanji": "石鹸",
+    "readings": [
+      "せっけん",
+      "sekken"
+    ],
+    "meaning": "soap"
+  },
+  {
+    "kanji": "背広",
+    "readings": [
+      "せびろ",
+      "sebiro"
+    ],
+    "meaning": "men's suit"
+  },
+  {
+    "kanji": "狭い",
+    "readings": [
+      "せまい",
+      "semai"
+    ],
+    "meaning": "narrow; not spacious"
+  },
+  {
+    "kanji": "千",
+    "readings": [
+      "せん",
+      "sen"
+    ],
+    "meaning": "thousand"
+  },
+  {
+    "kanji": "先月",
+    "readings": [
+      "せんげつ",
+      "sengetsu"
+    ],
+    "meaning": "last month"
+  },
+  {
+    "kanji": "先週",
+    "readings": [
+      "せんしゅう",
+      "senshuu"
+    ],
+    "meaning": "last week"
+  },
+  {
+    "kanji": "先生",
+    "readings": [
+      "せんせい",
+      "sensei"
+    ],
+    "meaning": "teacher, professor; master; doctor"
+  },
+  {
+    "kanji": "洗濯",
+    "readings": [
+      "せんたく",
+      "sentaku"
+    ],
+    "meaning": "washing, laundry"
+  },
+  {
+    "kanji": "全部",
+    "readings": [
+      "ぜんぶ",
+      "zenbu"
+    ],
+    "meaning": "all, entire, whole"
+  },
+  {
+    "kanji": "掃除",
+    "readings": [
+      "そうじ",
+      "souji"
+    ],
+    "meaning": "cleaning, sweeping"
+  },
+  {
+    "kanji": "外",
+    "readings": [
+      "そと",
+      "soto",
+      "ほか",
+      "hoka"
+    ],
+    "meaning": "outside, exterior"
+  },
+  {
+    "kanji": "空",
+    "readings": [
+      "そら",
+      "sora"
+    ],
+    "meaning": "sky"
+  },
+  {
+    "kanji": "～台",
+    "readings": [
+      "だい",
+      "dai"
+    ],
+    "meaning": "counter for vehicles; machines"
+  },
+  {
+    "kanji": "大学",
+    "readings": [
+      "だいがく",
+      "daigaku"
+    ],
+    "meaning": "college; university"
+  },
+  {
+    "kanji": "大使館",
+    "readings": [
+      "たいしかん",
+      "taishikan"
+    ],
+    "meaning": "embassy"
+  },
+  {
+    "kanji": "大丈夫",
+    "readings": [
+      "だいじょうぶ",
+      "daijoubu"
+    ],
+    "meaning": "It's ok (all right); No need to worry; Everything is under control"
+  },
+  {
+    "kanji": "大好き",
+    "readings": [
+      "だいすき",
+      "daisuki"
+    ],
+    "meaning": "very like-able, like very much"
+  },
+  {
+    "kanji": "大切",
+    "readings": [
+      "たいせつ",
+      "taisetsu"
+    ],
+    "meaning": "important"
+  },
+  {
+    "kanji": "台所",
+    "readings": [
+      "だいどころ",
+      "daidokoro"
+    ],
+    "meaning": "kitchen"
+  },
+  {
+    "kanji": "大変",
+    "readings": [
+      "たいへん",
+      "taihen"
+    ],
+    "meaning": "very; difficult, hard"
+  },
+  {
+    "kanji": "高い",
+    "readings": [
+      "たかい",
+      "takai"
+    ],
+    "meaning": "tall, high; expensive"
+  },
+  {
+    "kanji": "沢山",
+    "readings": [
+      "たくさん",
+      "takusan"
+    ],
+    "meaning": "many, much"
+  },
+  {
+    "kanji": "出す",
+    "readings": [
+      "だす",
+      "dasu"
+    ],
+    "meaning": "to take (something) out; to hand in (something)"
+  },
+  {
+    "kanji": "立つ",
+    "readings": [
+      "たつ",
+      "tatsu"
+    ],
+    "meaning": "to stand up"
+  },
+  {
+    "kanji": "建物",
+    "readings": [
+      "たてもの",
+      "tatemono"
+    ],
+    "meaning": "building"
+  },
+  {
+    "kanji": "楽しい",
+    "readings": [
+      "たのしい",
+      "tanoshii"
+    ],
+    "meaning": "enjoyable, fun"
+  },
+  {
+    "kanji": "頼む",
+    "readings": [
+      "たのむ",
+      "tanomu"
+    ],
+    "meaning": "to request, to ask (a favor)"
+  },
+  {
+    "kanji": "多分",
+    "readings": [
+      "たぶん",
+      "tabun"
+    ],
+    "meaning": "perhaps, probably, maybe"
+  },
+  {
+    "kanji": "食べ物",
+    "readings": [
+      "たべもの",
+      "tabemono"
+    ],
+    "meaning": "food"
+  },
+  {
+    "kanji": "食べる",
+    "readings": [
+      "たべる",
+      "taberu"
+    ],
+    "meaning": "to eat"
+  },
+  {
+    "kanji": "卵",
+    "readings": [
+      "たまご",
+      "tamago"
+    ],
+    "meaning": "egg"
+  },
+  {
+    "kanji": "誰",
+    "readings": [
+      "だれ",
+      "dare"
+    ],
+    "meaning": "who"
+  },
+  {
+    "kanji": "誰か",
+    "readings": [
+      "だれか",
+      "dareka"
+    ],
+    "meaning": "someone"
+  },
+  {
+    "kanji": "誕生日",
+    "readings": [
+      "たんじょうび",
+      "tanjoubi"
+    ],
+    "meaning": "birthday"
+  },
+  {
+    "kanji": "段々",
+    "readings": [
+      "だんだん",
+      "dandan"
+    ],
+    "meaning": "gradually, by degrees"
+  },
+  {
+    "kanji": "小さい",
+    "readings": [
+      "ちいさい",
+      "chiisai"
+    ],
+    "meaning": "small, little"
+  },
+  {
+    "kanji": "小さな",
+    "readings": [
+      "ちいさな",
+      "chiisana"
+    ],
+    "meaning": "small, little"
+  },
+  {
+    "kanji": "近い",
+    "readings": [
+      "ちかい",
+      "chikai"
+    ],
+    "meaning": "near, close by, short"
+  },
+  {
+    "kanji": "違う",
+    "readings": [
+      "ちがう",
+      "chigau"
+    ],
+    "meaning": "to be different; to differ; wrong"
+  },
+  {
+    "kanji": "近く",
+    "readings": [
+      "ちかく",
+      "chikaku"
+    ],
+    "meaning": "nearby; in the neighborhood"
+  },
+  {
+    "kanji": "地下鉄",
+    "readings": [
+      "ちかてつ",
+      "chikatetsu"
+    ],
+    "meaning": "underground train, subway"
+  },
+  {
+    "kanji": "地図",
+    "readings": [
+      "ちず",
+      "chizu"
+    ],
+    "meaning": "a map"
+  },
+  {
+    "kanji": "父",
+    "readings": [
+      "ちち",
+      "chichi"
+    ],
+    "meaning": "(my) father"
+  },
+  {
+    "kanji": "茶色",
+    "readings": [
+      "ちゃいろ",
+      "chairo"
+    ],
+    "meaning": "brown"
+  },
+  {
+    "kanji": "茶碗",
+    "readings": [
+      "ちゃわん",
+      "chawan"
+    ],
+    "meaning": "rice bowl"
+  },
+  {
+    "kanji": "～中",
+    "readings": [
+      "ちゅう",
+      "chuu"
+    ],
+    "meaning": "during, while ~ing"
+  },
+  {
+    "kanji": "丁度",
+    "readings": [
+      "ちょうど",
+      "choudo"
+    ],
+    "meaning": "just, right, exactly"
+  },
+  {
+    "kanji": "一日",
+    "readings": [
+      "ついたち",
+      "tsuitachi"
+    ],
+    "meaning": "one day; first day of the month"
+  },
+  {
+    "kanji": "使う",
+    "readings": [
+      "つかう",
+      "tsukau"
+    ],
+    "meaning": "to use"
+  },
+  {
+    "kanji": "疲れる",
+    "readings": [
+      "つかれる",
+      "tsukareru"
+    ],
+    "meaning": "to get (become) tired; to become fatigued"
+  },
+  {
+    "kanji": "次",
+    "readings": [
+      "つぎ",
+      "tsugi"
+    ],
+    "meaning": "next"
+  },
+  {
+    "kanji": "着く",
+    "readings": [
+      "つく",
+      "tsuku"
+    ],
+    "meaning": "to arrive at, to reach"
+  },
+  {
+    "kanji": "机",
+    "readings": [
+      "つくえ",
+      "tsukue"
+    ],
+    "meaning": "desk"
+  },
+  {
+    "kanji": "作る",
+    "readings": [
+      "つくる",
+      "tsukuru"
+    ],
+    "meaning": "to make, to create"
+  },
+  {
+    "kanji": "勤める",
+    "readings": [
+      "つとめる",
+      "tsutomeru"
+    ],
+    "meaning": "to work (for)"
+  },
+  {
+    "kanji": "冷たい",
+    "readings": [
+      "つめたい",
+      "tsumetai"
+    ],
+    "meaning": "cold (things, people)"
+  },
+  {
+    "kanji": "強い",
+    "readings": [
+      "つよい",
+      "tsuyoi"
+    ],
+    "meaning": "strong, powerful"
+  },
+  {
+    "kanji": "手",
+    "readings": [
+      "て",
+      "te"
+    ],
+    "meaning": "hand"
+  },
+  {
+    "kanji": "出かける",
+    "readings": [
+      "でかける",
+      "dekakeru"
+    ],
+    "meaning": "to go out; to depart"
+  },
+  {
+    "kanji": "手紙",
+    "readings": [
+      "てがみ",
+      "tegami"
+    ],
+    "meaning": "letter"
+  },
+  {
+    "kanji": "出口",
+    "readings": [
+      "でぐち",
+      "deguchi"
+    ],
+    "meaning": "an exit"
+  },
+  {
+    "kanji": "出る",
+    "readings": [
+      "でる",
+      "deru"
+    ],
+    "meaning": "to appear, to leave"
+  },
+  {
+    "kanji": "天気",
+    "readings": [
+      "てんき",
+      "tenki"
+    ],
+    "meaning": "weather"
+  },
+  {
+    "kanji": "電気",
+    "readings": [
+      "でんき",
+      "denki"
+    ],
+    "meaning": "electricity, (electric) light"
+  },
+  {
+    "kanji": "電車",
+    "readings": [
+      "でんしゃ",
+      "densha"
+    ],
+    "meaning": "electric train"
+  },
+  {
+    "kanji": "電話",
+    "readings": [
+      "でんわ",
+      "denwa"
+    ],
+    "meaning": "a telephone"
+  },
+  {
+    "kanji": "戸",
+    "readings": [
+      "と",
+      "to"
+    ],
+    "meaning": "door (Japanese style)"
+  },
+  {
+    "kanji": "～度",
+    "readings": [
+      "ど",
+      "do"
+    ],
+    "meaning": "counter for occurrences; ~ degree; ~ point"
+  },
+  {
+    "kanji": "動物",
+    "readings": [
+      "どうぶつ",
+      "doubutsu"
+    ],
+    "meaning": "animal"
+  },
+  {
+    "kanji": "十",
+    "readings": [
+      "じゅう",
+      "juu"
+    ],
+    "meaning": "ten"
+  },
+  {
+    "kanji": "遠い",
+    "readings": [
+      "とおい",
+      "tooi"
+    ],
+    "meaning": "far (away), distant"
+  },
+  {
+    "kanji": "十日",
+    "readings": [
+      "とおか",
+      "tooka"
+    ],
+    "meaning": "ten days; tenth day of the month"
+  },
+  {
+    "kanji": "～時",
+    "readings": [
+      "とき",
+      "toki",
+      "じ",
+      "ji"
+    ],
+    "meaning": "(とき)at the time of ~; (じ) ~ o'clock (time)"
+  },
+  {
+    "kanji": "時々",
+    "readings": [
+      "ときどき",
+      "tokidoki"
+    ],
+    "meaning": "sometimes"
+  },
+  {
+    "kanji": "時計",
+    "readings": [
+      "とけい",
+      "tokei"
+    ],
+    "meaning": "a watch; a clock"
+  },
+  {
+    "kanji": "所",
+    "readings": [
+      "ところ",
+      "tokoro"
+    ],
+    "meaning": "place"
+  },
+  {
+    "kanji": "年",
+    "readings": [
+      "とし",
+      "toshi",
+      "nen"
+    ],
+    "meaning": "year, age"
+  },
+  {
+    "kanji": "図書館",
+    "readings": [
+      "としょかん",
+      "toshokan"
+    ],
+    "meaning": "library"
+  },
+  {
+    "kanji": "隣",
+    "readings": [
+      "となり",
+      "tonari"
+    ],
+    "meaning": "next to, next door to"
+  },
+  {
+    "kanji": "飛ぶ",
+    "readings": [
+      "とぶ",
+      "tobu"
+    ],
+    "meaning": "to fly, to hop"
+  },
+  {
+    "kanji": "止まる",
+    "readings": [
+      "とまる",
+      "tomaru"
+    ],
+    "meaning": "to come to a halt"
+  },
+  {
+    "kanji": "友達",
+    "readings": [
+      "ともだち",
+      "tomodachi"
+    ],
+    "meaning": "friend"
+  },
+  {
+    "kanji": "土曜日",
+    "readings": [
+      "どようび",
+      "doyoubi"
+    ],
+    "meaning": "Saturday"
+  },
+  {
+    "kanji": "鳥",
+    "readings": [
+      "とり",
+      "tori"
+    ],
+    "meaning": "chicken (lit., bird)"
+  },
+  {
+    "kanji": "鶏肉",
+    "readings": [
+      "とりにく",
+      "toriniku"
+    ],
+    "meaning": "chicken meat"
+  },
+  {
+    "kanji": "取る",
+    "readings": [
+      "とる",
+      "toru"
+    ],
+    "meaning": "to take (a class); to get (a grade)"
+  },
+  {
+    "kanji": "撮る",
+    "readings": [
+      "とる",
+      "toru"
+    ],
+    "meaning": "to take (a photo), to make (a film)"
+  },
+  {
+    "kanji": "中",
+    "readings": [
+      "なか",
+      "naka",
+      "chuu",
+      "うち",
+      "uchi",
+      "ちゅう"
+    ],
+    "meaning": "inside, middle, among"
+  },
+  {
+    "kanji": "長い",
+    "readings": [
+      "ながい",
+      "nagai"
+    ],
+    "meaning": "long, lengthy"
+  },
+  {
+    "kanji": "鳴く",
+    "readings": [
+      "なく",
+      "naku"
+    ],
+    "meaning": "to make sound (animal)"
+  },
+  {
+    "kanji": "無くす",
+    "readings": [
+      "なくす",
+      "nakusu"
+    ],
+    "meaning": "to lose something"
+  },
+  {
+    "kanji": "夏",
+    "readings": [
+      "なつ",
+      "natsu"
+    ],
+    "meaning": "summer"
+  },
+  {
+    "kanji": "夏休み",
+    "readings": [
+      "なつやすみ",
+      "natsuyasumi"
+    ],
+    "meaning": "summer vacation"
+  },
+  {
+    "kanji": "七つ",
+    "readings": [
+      "ななつ",
+      "nanatsu"
+    ],
+    "meaning": "seven things"
+  },
+  {
+    "kanji": "何",
+    "readings": [
+      "なん; なに",
+      "nan; nani"
+    ],
+    "meaning": "what"
+  },
+  {
+    "kanji": "七日",
+    "readings": [
+      "なのか",
+      "nanoka"
+    ],
+    "meaning": "seven days; seventh day (of the month)"
+  },
+  {
+    "kanji": "名前",
+    "readings": [
+      "なまえ",
+      "namae"
+    ],
+    "meaning": "name"
+  },
+  {
+    "kanji": "習う",
+    "readings": [
+      "ならう",
+      "narau"
+    ],
+    "meaning": "to learn"
+  },
+  {
+    "kanji": "並ぶ",
+    "readings": [
+      "ならぶ",
+      "narabu"
+    ],
+    "meaning": "to line up, to stand in a line (v.i.)"
+  },
+  {
+    "kanji": "並べる",
+    "readings": [
+      "ならべる",
+      "naraberu"
+    ],
+    "meaning": "to put (things) side by side; to line up"
+  },
+  {
+    "kanji": "何～",
+    "readings": [
+      "なん",
+      "nan"
+    ],
+    "meaning": "what sort of ~"
+  },
+  {
+    "kanji": "二",
+    "readings": [
+      "に",
+      "ni"
+    ],
+    "meaning": "two"
+  },
+  {
+    "kanji": "肉",
+    "readings": [
+      "にく",
+      "niku"
+    ],
+    "meaning": "meat"
+  },
+  {
+    "kanji": "西",
+    "readings": [
+      "にし",
+      "nishi"
+    ],
+    "meaning": "west"
+  },
+  {
+    "kanji": "～日",
+    "readings": [
+      "にち",
+      "nichi"
+    ],
+    "meaning": "~ day of the month, for ~ days"
+  },
+  {
+    "kanji": "日曜日",
+    "readings": [
+      "にちようび",
+      "nichiyoubi"
+    ],
+    "meaning": "Sunday"
+  },
+  {
+    "kanji": "荷物",
+    "readings": [
+      "にもつ",
+      "nimotsu"
+    ],
+    "meaning": "luggage; baggage"
+  },
+  {
+    "kanji": "庭",
+    "readings": [
+      "にわ",
+      "niwa"
+    ],
+    "meaning": "garden"
+  },
+  {
+    "kanji": "～人",
+    "readings": [
+      "にん",
+      "nin"
+    ],
+    "meaning": "counter for people"
+  },
+  {
+    "kanji": "脱ぐ",
+    "readings": [
+      "ぬぐ",
+      "nugu"
+    ],
+    "meaning": "to take off (clothes)"
+  },
+  {
+    "kanji": "温い",
+    "readings": [
+      "ぬるい",
+      "nurui"
+    ],
+    "meaning": "lukewarm"
+  },
+  {
+    "kanji": "猫",
+    "readings": [
+      "ねこ",
+      "neko"
+    ],
+    "meaning": "cat"
+  },
+  {
+    "kanji": "寝る",
+    "readings": [
+      "ねる",
+      "neru"
+    ],
+    "meaning": "to sleep; to go to sleep; to go to bed"
+  },
+  {
+    "kanji": "～年",
+    "readings": [
+      "ねん",
+      "nen"
+    ],
+    "meaning": "~ years"
+  },
+  {
+    "kanji": "登る",
+    "readings": [
+      "のぼる",
+      "noboru"
+    ],
+    "meaning": "to climb"
+  },
+  {
+    "kanji": "飲み物",
+    "readings": [
+      "のみもの",
+      "nomimono"
+    ],
+    "meaning": "drink, beverage"
+  },
+  {
+    "kanji": "飲む",
+    "readings": [
+      "のむ",
+      "nomu"
+    ],
+    "meaning": "to drink"
+  },
+  {
+    "kanji": "乗る",
+    "readings": [
+      "のる",
+      "noru"
+    ],
+    "meaning": "to get on, to ride in, to board"
+  },
+  {
+    "kanji": "歯",
+    "readings": [
+      "は",
+      "ha"
+    ],
+    "meaning": "tooth"
+  },
+  {
+    "kanji": "～杯",
+    "readings": [
+      "はい",
+      "hai"
+    ],
+    "meaning": "counter for cupfuls"
+  },
+  {
+    "kanji": "灰皿",
+    "readings": [
+      "はいざら",
+      "haizara"
+    ],
+    "meaning": "ashtray"
+  },
+  {
+    "kanji": "入る",
+    "readings": [
+      "はいる", "いる", "iru",
+      "hairu"
+    ],
+    "meaning": "to enter, to contain, to hold"
+  },
+  {
+    "kanji": "葉書",
+    "readings": [
+      "はがき",
+      "hagaki"
+    ],
+    "meaning": "postcard"
+  },
+  {
+    "kanji": "箱",
+    "readings": [
+      "はこ",
+      "hako"
+    ],
+    "meaning": "box"
+  },
+  {
+    "kanji": "橋",
+    "readings": [
+      "はし",
+      "hashi"
+    ],
+    "meaning": "bridge"
+  },
+  {
+    "kanji": "箸",
+    "readings": [
+      "はし",
+      "hashi"
+    ],
+    "meaning": "chopsticks"
+  },
+  {
+    "kanji": "始まる",
+    "readings": [
+      "はじまる",
+      "hajimaru"
+    ],
+    "meaning": "(something) begins"
+  },
+  {
+    "kanji": "初め; 始め",
+    "readings": [
+      "はじめ",
+      "hajime"
+    ],
+    "meaning": "beginning, start"
+  },
+  {
+    "kanji": "初めて",
+    "readings": [
+      "はじめて",
+      "hajimete"
+    ],
+    "meaning": "for the first time"
+  },
+  {
+    "kanji": "走る",
+    "readings": [
+      "はしる",
+      "hashiru"
+    ],
+    "meaning": "to run"
+  },
+  {
+    "kanji": "二十歳",
+    "readings": [
+      "はたち",
+      "hatachi"
+    ],
+    "meaning": "20 years old"
+  },
+  {
+    "kanji": "働く",
+    "readings": [
+      "はたらく",
+      "hataraku"
+    ],
+    "meaning": "to work"
+  },
+  {
+    "kanji": "八",
+    "readings": [
+      "はち",
+      "hachi"
+    ],
+    "meaning": "eight"
+  },
+  {
+    "kanji": "二十日",
+    "readings": [
+      "はつか",
+      "hatsuka"
+    ],
+    "meaning": "twenty days, twentieth (day of the month)"
+  },
+  {
+    "kanji": "花",
+    "readings": [
+      "はな",
+      "hana"
+    ],
+    "meaning": "flower"
+  },
+  {
+    "kanji": "鼻",
+    "readings": [
+      "はな",
+      "hana"
+    ],
+    "meaning": "nose"
+  },
+  {
+    "kanji": "話",
+    "readings": [
+      "はなし",
+      "hanashi"
+    ],
+    "meaning": "talk (chat), story"
+  },
+  {
+    "kanji": "話す",
+    "readings": [
+      "はなす",
+      "hanasu"
+    ],
+    "meaning": "to speak"
+  },
+  {
+    "kanji": "母",
+    "readings": [
+      "はは",
+      "haha"
+    ],
+    "meaning": "(my) mother"
+  },
+  {
+    "kanji": "早い",
+    "readings": [
+      "はやい",
+      "hayai"
+    ],
+    "meaning": "early"
+  },
+  {
+    "kanji": "速い",
+    "readings": [
+      "はやい",
+      "hayai"
+    ],
+    "meaning": "fast, quick"
+  },
+  {
+    "kanji": "春",
+    "readings": [
+      "はる",
+      "haru"
+    ],
+    "meaning": "spring"
+  },
+  {
+    "kanji": "貼る",
+    "readings": [
+      "はる",
+      "haru"
+    ],
+    "meaning": "to post; to paste; to attach"
+  },
+  {
+    "kanji": "晴れ",
+    "readings": [
+      "はれ",
+      "hare"
+    ],
+    "meaning": "clear (sunny) weather"
+  },
+  {
+    "kanji": "晴れる",
+    "readings": [
+      "はれる",
+      "hareru"
+    ],
+    "meaning": "to be sunny"
+  },
+  {
+    "kanji": "半",
+    "readings": [
+      "はん",
+      "han"
+    ],
+    "meaning": "half (e.g., にじはん | half-past two)"
+  },
+  {
+    "kanji": "晩",
+    "readings": [
+      "ばん",
+      "ban"
+    ],
+    "meaning": "evening"
+  },
+  {
+    "kanji": "～番",
+    "readings": [
+      "ばん",
+      "ban"
+    ],
+    "meaning": "~st; ~th best"
+  },
+  {
+    "kanji": "番号",
+    "readings": [
+      "ばんごう",
+      "bangou"
+    ],
+    "meaning": "number, series of digits"
+  },
+  {
+    "kanji": "晩御飯",
+    "readings": [
+      "ばんごはん",
+      "bangohan"
+    ],
+    "meaning": "dinner, evening meal"
+  },
+  {
+    "kanji": "半分",
+    "readings": [
+      "はんぶん",
+      "hanbun"
+    ],
+    "meaning": "half"
+  },
+  {
+    "kanji": "東",
+    "readings": [
+      "ひがし",
+      "higashi"
+    ],
+    "meaning": "east"
+  },
+  {
+    "kanji": "～匹",
+    "readings": [
+      "ひき",
+      "hiki"
+    ],
+    "meaning": "counter for small animals"
+  },
+  {
+    "kanji": "引く",
+    "readings": [
+      "ひく",
+      "hiku"
+    ],
+    "meaning": "to pull, to draw; subtract"
+  },
+  {
+    "kanji": "弾く",
+    "readings": [
+      "ひく",
+      "hiku"
+    ],
+    "meaning": "to play (a string instrument or piano)"
+  },
+  {
+    "kanji": "低い",
+    "readings": [
+      "ひくい",
+      "hikui"
+    ],
+    "meaning": "short, low"
+  },
+  {
+    "kanji": "飛行機",
+    "readings": [
+      "ひこうき",
+      "hikouki"
+    ],
+    "meaning": "airplane"
+  },
+  {
+    "kanji": "左",
+    "readings": [
+      "ひだり",
+      "hidari"
+    ],
+    "meaning": "left hand side"
+  },
+  {
+    "kanji": "人",
+    "readings": [
+      "ひと",
+      "hito"
+    ],
+    "meaning": "man, person"
+  },
+  {
+    "kanji": "一つ",
+    "readings": [
+      "ひとつ",
+      "hitotsu"
+    ],
+    "meaning": "one thing"
+  },
+  {
+    "kanji": "一月",
+    "readings": [
+      "ひとつき",
+      "hitotsuki"
+    ],
+    "meaning": "one month"
+  },
+  {
+    "kanji": "一人",
+    "readings": [
+      "ひとり",
+      "hitori"
+    ],
+    "meaning": "one person"
+  },
+  {
+    "kanji": "暇",
+    "readings": [
+      "ひま",
+      "hima"
+    ],
+    "meaning": "free time, leisure"
+  },
+  {
+    "kanji": "百",
+    "readings": [
+      "ひゃく",
+      "hyaku"
+    ],
+    "meaning": "hundred"
+  },
+  {
+    "kanji": "病院",
+    "readings": [
+      "びょういん",
+      "byouin"
+    ],
+    "meaning": "hospital"
+  },
+  {
+    "kanji": "病気",
+    "readings": [
+      "びょうき",
+      "byouki"
+    ],
+    "meaning": "illness; sickness"
+  },
+  {
+    "kanji": "平仮名",
+    "readings": [
+      "ひらがな",
+      "hiragana"
+    ],
+    "meaning": "hiragana"
+  },
+  {
+    "kanji": "昼",
+    "readings": [
+      "ひる",
+      "hiru"
+    ],
+    "meaning": "noon, daytime"
+  },
+  {
+    "kanji": "昼御飯",
+    "readings": [
+      "ひるごはん",
+      "hirugohan"
+    ],
+    "meaning": "lunch, midday meal"
+  },
+  {
+    "kanji": "広い",
+    "readings": [
+      "ひろい",
+      "hiroi"
+    ],
+    "meaning": "spacious; wide; broad"
+  },
+  {
+    "kanji": "封筒",
+    "readings": [
+      "ふうとう",
+      "fuutou"
+    ],
+    "meaning": "envelope"
+  },
+  {
+    "kanji": "吹く",
+    "readings": [
+      "ふく",
+      "fuku"
+    ],
+    "meaning": "to blow (wind, etc.)"
+  },
+  {
+    "kanji": "服",
+    "readings": [
+      "ふく",
+      "fuku"
+    ],
+    "meaning": "clothes"
+  },
+  {
+    "kanji": "二つ",
+    "readings": [
+      "ふたつ",
+      "futatsu"
+    ],
+    "meaning": "two things"
+  },
+  {
+    "kanji": "豚肉",
+    "readings": [
+      "ぶたにく",
+      "butaniku"
+    ],
+    "meaning": "pork"
+  },
+  {
+    "kanji": "二人",
+    "readings": [
+      "ふたり",
+      "futari"
+    ],
+    "meaning": "two people"
+  },
+  {
+    "kanji": "二日",
+    "readings": [
+      "ふつか",
+      "futsuka"
+    ],
+    "meaning": "two days; second day of the month"
+  },
+  {
+    "kanji": "太い",
+    "readings": [
+      "ふとい",
+      "futoi"
+    ],
+    "meaning": "fat, thick"
+  },
+  {
+    "kanji": "冬",
+    "readings": [
+      "ふゆ",
+      "fuyu"
+    ],
+    "meaning": "winter"
+  },
+  {
+    "kanji": "降る",
+    "readings": [
+      "ふる",
+      "furu"
+    ],
+    "meaning": "to precipitate, to fall (e.g., rain, snow, etc.)"
+  },
+  {
+    "kanji": "古い",
+    "readings": [
+      "ふるい",
+      "furui"
+    ],
+    "meaning": "old (in reference to objects, not people), aged, ancient"
+  },
+  {
+    "kanji": "～分",
+    "readings": [
+      "ふん",
+      "fun"
+    ],
+    "meaning": "~ minutes"
+  },
+  {
+    "kanji": "文章",
+    "readings": [
+      "ぶんしょう",
+      "bunshou"
+    ],
+    "meaning": "sentence, text"
+  },
+  {
+    "kanji": "下手",
+    "readings": [
+      "へた",
+      "heta"
+    ],
+    "meaning": "unskillful, poor"
+  },
+  {
+    "kanji": "部屋",
+    "readings": [
+      "へや",
+      "heya"
+    ],
+    "meaning": "a room"
+  },
+  {
+    "kanji": "辺",
+    "readings": [
+      "へん",
+      "hen"
+    ],
+    "meaning": "area, vicinity"
+  },
+  {
+    "kanji": "勉強",
+    "readings": [
+      "べんきょう",
+      "benkyou"
+    ],
+    "meaning": "study"
+  },
+  {
+    "kanji": "便利",
+    "readings": [
+      "べんり",
+      "benri"
+    ],
+    "meaning": "convenient, handy"
+  },
+  {
+    "kanji": "帽子",
+    "readings": [
+      "ぼうし",
+      "boushi"
+    ],
+    "meaning": "hat; cap"
+  },
+  {
+    "kanji": "欲しい",
+    "readings": [
+      "ほしい",
+      "hoshii"
+    ],
+    "meaning": "to want, in need of"
+  },
+  {
+    "kanji": "細い",
+    "readings": [
+      "ほそい",
+      "hosoi"
+    ],
+    "meaning": "thin, slender, fine"
+  },
+  {
+    "kanji": "本",
+    "readings": [
+      "ほん",
+      "hon"
+    ],
+    "meaning": "book"
+  },
+  {
+    "kanji": "～本",
+    "readings": [
+      "ほん",
+      "hon",
+      "pon",
+      "ぽん"
+    ],
+    "meaning": "counter for long cylindrical things"
+  },
+  {
+    "kanji": "本棚",
+    "readings": [
+      "ほんだな",
+      "hondana"
+    ],
+    "meaning": "bookshelf"
+  },
+  {
+    "kanji": "本当",
+    "readings": [
+      "ほんとう",
+      "hontou"
+    ],
+    "meaning": "real, true"
+  },
+  {
+    "kanji": "～枚",
+    "readings": [
+      "まい",
+      "mai"
+    ],
+    "meaning": "counter for flat things"
+  },
+  {
+    "kanji": "毎朝",
+    "readings": [
+      "まいあさ",
+      "maiasa"
+    ],
+    "meaning": "every morning"
+  },
+  {
+    "kanji": "毎月",
+    "readings": [
+      "まいげつ",
+      "まいつき",
+      "maigetsu",
+      "maitsuki"
+    ],
+    "meaning": "every month, monthly"
+  },
+  {
+    "kanji": "毎週",
+    "readings": [
+      "まいしゅう",
+      "maishuu"
+    ],
+    "meaning": "every week"
+  },
+  {
+    "kanji": "毎日",
+    "readings": [
+      "まいにち",
+      "mainichi"
+    ],
+    "meaning": "every day"
+  },
+  {
+    "kanji": "毎年",
+    "readings": [
+      "まいねん",
+      "まいとし",
+      "mainen",
+      "maitoshi"
+    ],
+    "meaning": "every year, yearly, annually"
+  },
+  {
+    "kanji": "毎晩",
+    "readings": [
+      "まいばん",
+      "maiban"
+    ],
+    "meaning": "every night"
+  },
+  {
+    "kanji": "前",
+    "readings": [
+      "まえ",
+      "mae"
+    ],
+    "meaning": "before, in front"
+  },
+  {
+    "kanji": "～前",
+    "readings": [
+      "まえ",
+      "mae"
+    ],
+    "meaning": "in front of ~"
+  },
+  {
+    "kanji": "曲る",
+    "readings": [
+      "まがる",
+      "magaru"
+    ],
+    "meaning": "to turn, to bend"
+  },
+  {
+    "kanji": "町",
+    "readings": [
+      "まち",
+      "machi"
+    ],
+    "meaning": "town; city"
+  },
+  {
+    "kanji": "待つ",
+    "readings": [
+      "まつ",
+      "matsu"
+    ],
+    "meaning": "to wait"
+  },
+  {
+    "kanji": "窓",
+    "readings": [
+      "まど",
+      "mado"
+    ],
+    "meaning": "window"
+  },
+  {
+    "kanji": "丸い; 円い",
+    "readings": [
+      "まるい",
+      "marui"
+    ],
+    "meaning": "round, circular"
+  },
+  {
+    "kanji": "万",
+    "readings": [
+      "まん",
+      "man"
+    ],
+    "meaning": "ten thousand"
+  },
+  {
+    "kanji": "万年筆",
+    "readings": [
+      "まんねんひつ",
+      "mannenhitsu"
+    ],
+    "meaning": "fountain pen"
+  },
+  {
+    "kanji": "磨く",
+    "readings": [
+      "みがく",
+      "migaku"
+    ],
+    "meaning": "to brush (teeth); to polish"
+  },
+  {
+    "kanji": "右",
+    "readings": [
+      "みぎ",
+      "migi"
+    ],
+    "meaning": "right hand side"
+  },
+  {
+    "kanji": "短い",
+    "readings": [
+      "みじかい",
+      "mijikai"
+    ],
+    "meaning": "short (length)"
+  },
+  {
+    "kanji": "水",
+    "readings": [
+      "みず",
+      "mizu"
+    ],
+    "meaning": "water"
+  },
+  {
+    "kanji": "店",
+    "readings": [
+      "みせ",
+      "mise"
+    ],
+    "meaning": "store, shop"
+  },
+  {
+    "kanji": "見せる",
+    "readings": [
+      "みせる",
+      "miseru"
+    ],
+    "meaning": "to show, to display"
+  },
+  {
+    "kanji": "道",
+    "readings": [
+      "みち",
+      "michi"
+    ],
+    "meaning": "road, street; way, directions"
+  },
+  {
+    "kanji": "三日",
+    "readings": [
+      "みっか",
+      "mikka"
+    ],
+    "meaning": "three days, third day of the month"
+  },
+  {
+    "kanji": "三つ",
+    "readings": [
+      "みっつ",
+      "mittsu"
+    ],
+    "meaning": "three things"
+  },
+  {
+    "kanji": "緑",
+    "readings": [
+      "みどり",
+      "midori"
+    ],
+    "meaning": "green"
+  },
+  {
+    "kanji": "皆さん",
+    "readings": [
+      "みなさん",
+      "minasan"
+    ],
+    "meaning": "all of you, everyone"
+  },
+  {
+    "kanji": "南",
+    "readings": [
+      "みなみ",
+      "minami"
+    ],
+    "meaning": "South"
+  },
+  {
+    "kanji": "耳",
+    "readings": [
+      "みみ",
+      "mimi"
+    ],
+    "meaning": "ear"
+  },
+  {
+    "kanji": "見る",
+    "readings": [
+      "みる",
+      "miru"
+    ],
+    "meaning": "to see, to look"
+  },
+  {
+    "kanji": "六日",
+    "readings": [
+      "むいか",
+      "muika"
+    ],
+    "meaning": "six days; sixth day of month"
+  },
+  {
+    "kanji": "向こう",
+    "readings": [
+      "むこう",
+      "mukou"
+    ],
+    "meaning": "beyond, over there"
+  },
+  {
+    "kanji": "難しい",
+    "readings": [
+      "むずかしい",
+      "muzukashii"
+    ],
+    "meaning": "difficult"
+  },
+  {
+    "kanji": "六つ",
+    "readings": [
+      "むっつ",
+      "muttsu"
+    ],
+    "meaning": "six things"
+  },
+  {
+    "kanji": "村",
+    "readings": [
+      "むら",
+      "mura"
+    ],
+    "meaning": "village"
+  },
+  {
+    "kanji": "目",
+    "readings": [
+      "め",
+      "me"
+    ],
+    "meaning": "eye(s)"
+  },
+  {
+    "kanji": "眼鏡",
+    "readings": [
+      "めがね",
+      "megane"
+    ],
+    "meaning": "eye glasses"
+  },
+  {
+    "kanji": "木曜日",
+    "readings": [
+      "もくようび",
+      "mokuyoubi"
+    ],
+    "meaning": "Thursday"
+  },
+  {
+    "kanji": "持つ",
+    "readings": [
+      "もつ",
+      "motsu"
+    ],
+    "meaning": "to hold, to carry; to possess"
+  },
+  {
+    "kanji": "物",
+    "readings": [
+      "もの",
+      "mono"
+    ],
+    "meaning": "thing (concrete object)"
+  },
+  {
+    "kanji": "門",
+    "readings": [
+      "もん",
+      "mon",
+      "かど",
+      "kado",
+      "と",
+      "to"
+    ],
+    "meaning": "gate"
+  },
+  {
+    "kanji": "問題",
+    "readings": [
+      "もんだい",
+      "mondai"
+    ],
+    "meaning": "a problem"
+  },
+  {
+    "kanji": "～屋",
+    "readings": [
+      "や",
+      "ya"
+    ],
+    "meaning": "~ shop"
+  },
+  {
+    "kanji": "八百屋",
+    "readings": [
+      "やおや",
+      "yaoya"
+    ],
+    "meaning": "greengrocer"
+  },
+  {
+    "kanji": "野菜",
+    "readings": [
+      "やさい",
+      "yasai"
+    ],
+    "meaning": "vegetable"
+  },
+  {
+    "kanji": "易しい",
+    "readings": [
+      "やさしい",
+      "yasashii"
+    ],
+    "meaning": "easy, plain, simple"
+  },
+  {
+    "kanji": "安い",
+    "readings": [
+      "やすい",
+      "yasui"
+    ],
+    "meaning": "inexpensive; cheap (things)"
+  },
+  {
+    "kanji": "休み",
+    "readings": [
+      "やすみ",
+      "yasumi"
+    ],
+    "meaning": "holiday; day off; absence"
+  },
+  {
+    "kanji": "休む",
+    "readings": [
+      "やすむ",
+      "yasumu"
+    ],
+    "meaning": "to rest, to have a break, to get time off"
+  },
+  {
+    "kanji": "八つ",
+    "readings": [
+      "やっつ",
+      "yattsu"
+    ],
+    "meaning": "eight things"
+  },
+  {
+    "kanji": "山",
+    "readings": [
+      "やま",
+      "yama"
+    ],
+    "meaning": "mountain"
+  },
+  {
+    "kanji": "夕方",
+    "readings": [
+      "ゆうがた",
+      "yuugata"
+    ],
+    "meaning": "late afternoon (typically just before dinner time), evening"
+  },
+  {
+    "kanji": "夕飯",
+    "readings": [
+      "ゆうはん",
+      "yuuhan"
+    ],
+    "meaning": "dinner, supper, evening meal"
+  },
+  {
+    "kanji": "郵便局",
+    "readings": [
+      "ゆうびんきょく",
+      "yuubinkyoku"
+    ],
+    "meaning": "post office"
+  },
+  {
+    "kanji": "昨夜",
+    "readings": [
+      "ゆうべ",
+      "yuube",
+      "sakuya",
+      "さくや"
+    ],
+    "meaning": "last night"
+  },
+  {
+    "kanji": "有名",
+    "readings": [
+      "ゆうめい",
+      "yuumei"
+    ],
+    "meaning": "famous"
+  },
+  {
+    "kanji": "雪",
+    "readings": [
+      "ゆき",
+      "yuki"
+    ],
+    "meaning": "snow"
+  },
+  {
+    "kanji": "八日",
+    "readings": [
+      "ようか",
+      "youka"
+    ],
+    "meaning": "eight days; eighth day of the month"
+  },
+  {
+    "kanji": "洋服",
+    "readings": [
+      "ようふく",
+      "youfuku"
+    ],
+    "meaning": "Western-style clothes"
+  },
+  {
+    "kanji": "横",
+    "readings": [
+      "よこ",
+      "yoko"
+    ],
+    "meaning": "beside; side; width"
+  },
+  {
+    "kanji": "四日",
+    "readings": [
+      "よっか",
+      "yokka"
+    ],
+    "meaning": "four days; fourth day of the month"
+  },
+  {
+    "kanji": "四つ",
+    "readings": [
+      "よっつ",
+      "yottsu"
+    ],
+    "meaning": "four things"
+  },
+  {
+    "kanji": "呼ぶ",
+    "readings": [
+      "よぶ",
+      "yobu"
+    ],
+    "meaning": "to call (one's name); to invite"
+  },
+  {
+    "kanji": "読む",
+    "readings": [
+      "よむ",
+      "yomu"
+    ],
+    "meaning": "to read"
+  },
+  {
+    "kanji": "夜",
+    "readings": [
+      "よる",
+      "yoru"
+    ],
+    "meaning": "evening, night"
+  },
+  {
+    "kanji": "弱い",
+    "readings": [
+      "よわい",
+      "yowai"
+    ],
+    "meaning": "weak"
+  },
+  {
+    "kanji": "来月",
+    "readings": [
+      "らいげつ",
+      "raigetsu"
+    ],
+    "meaning": "next month"
+  },
+  {
+    "kanji": "来週",
+    "readings": [
+      "らいしゅう",
+      "raishuu"
+    ],
+    "meaning": "next week"
+  },
+  {
+    "kanji": "来年",
+    "readings": [
+      "らいねん",
+      "rainen"
+    ],
+    "meaning": "next year"
+  },
+  {
+    "kanji": "留学生",
+    "readings": [
+      "りゅうがくせい",
+      "ryuugakusei"
+    ],
+    "meaning": "international student"
+  },
+  {
+    "kanji": "両親",
+    "readings": [
+      "りょうしん",
+      "ryoushin"
+    ],
+    "meaning": "parents (lit., both parents)"
+  },
+  {
+    "kanji": "料理",
+    "readings": [
+      "りょうり",
+      "ryouri"
+    ],
+    "meaning": "cooking; cuisine"
+  },
+  {
+    "kanji": "旅行",
+    "readings": [
+      "りょこう",
+      "ryokou"
+    ],
+    "meaning": "travel, trip"
+  },
+  {
+    "kanji": "零",
+    "readings": [
+      "れい",
+      "rei"
+    ],
+    "meaning": "zero, nought"
+  },
+  {
+    "kanji": "冷蔵庫",
+    "readings": [
+      "れいぞうこ",
+      "reizouko"
+    ],
+    "meaning": "refrigerator"
+  },
+  {
+    "kanji": "練習",
+    "readings": [
+      "れんしゅう",
+      "renshuu"
+    ],
+    "meaning": "(to) practice"
+  },
+  {
+    "kanji": "廊下",
+    "readings": [
+      "ろうか",
+      "rouka"
+    ],
+    "meaning": "corridor"
+  },
+  {
+    "kanji": "六",
+    "readings": [
+      "ろく",
+      "roku"
+    ],
+    "meaning": "six"
+  },
+  {
+    "kanji": "若い",
+    "readings": [
+      "わかい",
+      "wakai"
+    ],
+    "meaning": "young"
+  },
+  {
+    "kanji": "分かる",
+    "readings": [
+      "わかる",
+      "wakaru"
+    ],
+    "meaning": "to understand"
+  },
+  {
+    "kanji": "忘れる",
+    "readings": [
+      "わすれる",
+      "wasureru"
+    ],
+    "meaning": "to forget"
+  },
+  {
+    "kanji": "私",
+    "readings": [
+      "わたし",
+      "watashi",
+      "わたくし",
+      "watakushi"
+    ],
+    "meaning": "I, myself"
+  },
+  {
+    "kanji": "渡す",
+    "readings": [
+      "わたす",
+      "watasu"
+    ],
+    "meaning": "to hand (something) over (v.t.); to get across"
+  },
+  {
+    "kanji": "渡る",
+    "readings": [
+      "わたる",
+      "wataru"
+    ],
+    "meaning": "to cross over, to go across"
+  },
+  {
+    "kanji": "悪い",
+    "readings": [
+      "わるい",
+      "warui"
+    ],
+    "meaning": "bad, sinful; inferior"
+  }
+]
