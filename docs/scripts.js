@@ -184,7 +184,6 @@ function startQuizWithPrefectures(prefectures) {
         } else {
             numWrongAnswers++;
             wrongAnswers.push({ prefecture: prefectureName, flag: flagUrl }); // Record wrong answer with prefecture name and flag URL
-            console.log(flagUrl)
         }
 
         // Proceed to next question after a brief delay
