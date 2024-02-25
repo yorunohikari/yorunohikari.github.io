@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>N1 Journey: Documenting My Studying Method</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #fff;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .t-container {
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            color: #000;
+        }
+
+        h1,
+        .by,
+        .copy {
+            color: #000;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #555;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #000;
+            /* Black borders */
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #000;
+            /* Black header background */
+            color: #fff;
+            /* White header text */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+            /* Light gray background for even rows */
+        }
+
+        #countdown-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #countdown-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #countdown {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #000000;
+            /* Black text for the countdown */
+        }
+
+        #scoreTable tfoot tr {
+            background-color: black;
+            color: white;
+        }
+
+        #percentage-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #ddd;
+            margin-top: 20px;
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        #filler {
+            height: 100%;
+            width: 0;
+            background-color: #4caf50;
+            /* Green color for the filled part */
+            transition: width 1s ease-in-out;
+            /* Add a smooth transition effect */
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            margin-top: 30px;
+            margin: auto;
+            perspective: 1000px;
+            margin-bottom: 30px;
+        }
+
+        /* This container is needed to position the front and back side */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        /* Do a horizontal flip when you move the mouse over the flip box container */
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Position the front and back side */
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Style the front side */
+        .flip-card-front {
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style the back side */
+        .flip-card-back {
+            background-color: #3498db;
+            color: #fff;
+            transform: rotateY(180deg);
+            border: 1px solid #2980b9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .flip-card p {
+            font-size: 24px;
+        }
+
+        button {
+            background-color: #fff;
+            color: #000;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            display: block;
+            margin: auto;
+        }
+
+        button:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        @media (max-width: 767px) {
+
+            /* Adjust styles for smaller screens (e.g., smartphones) */
+            .flip-card {
+                width: 60vw;
+                /* 90% of the viewport width */
+                height: 60vw;
+                /* 45% of the viewport width */
+                margin-top: 5vw;
+                /* 5% of the viewport width */
+            }
+        }
+
+        .collapsible {
+            background-color: #f1f1f1;
+            cursor: pointer;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Style for the partially visible content */
+        .partial-content {
+            max-height: 450px;
+            /* Adjust the max height as needed */
+            overflow: hidden;
+        }
+
+        #blog-image {
+            max-width: 400px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .blog-container {
+            max-width: 70%;
+            margin-top: 100px;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blog-container">
+        <h1>My JLPT Journey</h1>
+        <p class="by">by Osha</p>
+        <img id="blog-image"
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQC-5N7dGF259oEPaDWC9B1baIinSX-XUVSdMcaneFVfrMIr75DyN0dw1YDThkSYJ_3rhUoqTaHh5eFPI4F44YJXPq-ouk5GNSuz9xfGV2d-soH6qh8BLd9ZNSdbflTae2Ali1pLJeQRhdyfzl4_ZUNkcZ4YLiSbI8ZmuIlMCoiLyP4014aTbrOS4jZ18/s1020/Thumb.png"
+            alt="Blog Image" />
+        <div class="t-container">
+            <nav>
+                <section id="tableofcontent">
+                    <h2>Table of Contents</h2>
+                    <ul>
+                        <li><a href="#tableofcontent">Table of Contents</a></li>
+                        <li><a href="#backgroundprofile">Me and My Background</a></li>
+                        <li>
+                            <a href="#methods">My Methods to Learn Japanese</a>
+                            <ul>
+                                <li><a href="#immersion">Immersion</a></li>
+                                <li><a href="#daily">Daily Quiz Routine</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#updates">Updates</a></li>
+                        <li><a href="#point-history">Point History</a></li>
+                        <li><a href="#resources-links">Resources and Link</a></li>
+                        <!-- Add more sections as needed -->
+                    </ul>
+                </section>
+            </nav>
+        </div>
+        <section id="backgroundprofile">
+            <h2>Me and My Background</h2>
+            <p>
+                You might be wondering, who's this guy, and why should you invest your
+                time reading this? Allow me to introduce myself and my story.
+            </p>
+            <p>
+                I go by the name Osha, a devoted student of Japanese literature
+                nestled in the landscapes of East Java, Indonesia. Embrace the
+                truth—I'm a certified weeb. My journey into Japanese language embarked
+                precisely when I set foot into the realm of college life. Picture
+                this: August 2020, a clueless soul armed with meager knowledge of
+                hiragana and katakana. A genuine dumbass, if you will.
+            </p>
+            <p>
+                Fast forward, and Japanese became a central focus in my academic
+                endeavors. It's not just a subject; it's the heartbeat of my major.
+                Yet, the language, elusive as it may be, 頭に入らなかった—didn't quite
+                click. Surviving the initial years, I even dared to challenge the JLPT
+                N3 exams twice, only to face crushing defeats. December brought
+                another attempt,
+                <s><a href="#updates_jlptresult">results still pending</a></s>.
+            </p>
+            <p>
+                Assessing my Japanese proficiency, I'd modestly place myself at the N3
+                level, though perhaps that's a generous estimation. It's time for a
+                perspective shift. No longer a self-proclaimed expert, I'll now
+                embrace the role of an ordinary individual. Hard work and hustle are
+                the new mantras; after all, no one is born special. Well, maybe
+                0.000001% of the population, but certainly not me—a normal person,
+                traversing a realm of linguistic complexities.
+            </p>
+            <p>
+                In this blog post, I extend an invitation for you to witness my
+                odyssey, a pursuit marked by the determination to achieve the coveted
+                合格 status in the JLPT N1. May my narrative inspire you, urging you
+                to toil and grind alongside me. Let's set our sights on the pinnacle
+                of achievement.
+            </p>
+        </section>
+        <section id="methods">
+            <h2>My Method to Learn Japanese</h2>
+            <p>
+                Let's be honest—learning Japanese is a genuine pain in the ass. It's
+                not a casual stroll in the linguistic park; it's a rigorous climb up a
+                mountain of hiragana, katakana, and the formidable kanji. Their
+                phonology dances to a different beat than English, but thankfully, I'm
+                Indonesian—a small blessing, considering our somewhat similar
+                pronunciations. Yet, the journey takes a twist; enter bunpo—the
+                labyrinth of Japanese grammar.
+            </p>
+            <p>
+                Oh my god indeed. Japanese boasts an array of bunpo, each more
+                intricate than the last. It's so bewildering that distinguishing one
+                from another feels like deciphering an ancient script. The struggle is
+                real, my friends.
+            </p>
+            <p>
+                Now, you might be curious—what's my secret method for tackling this
+                linguistic maze? Stay tuned as I unveil the unique concoction of
+                strategies that keeps me afloat in this sea of characters and
+                grammatical nuances. The journey is arduous, but the pursuit of
+                language mastery is a thrilling adventure in its own right. Let me be
+                your guide through the perplexities of learning Japanese.
+            </p>
+            <ol>
+                <li>
+                    <section id="immersion">
+                        <h3>Immersion</h3>
+                        <p>
+                            Every day, I plunge into the vibrant world of Japanese content.
+                            Anime, my daily visual escapade, takes the lead. Some folks
+                            argue that anime isn't the "real" Japanese experience, but hey,
+                            I've stumbled upon locals singing its praises. Confusing, right?
+                            Regardless, I shamelessly indulge in anime, driven more by love
+                            than linguistic purity. By the way, fun fact: I binged on 58
+                            anime titles last year—talk about passion!
+                        </p>
+                        <blockquote class="twitter-tweet">
+                            <p lang="in" dir="ltr">
+                                2023 Anime journal<br />Thread ini dibuat untuk mencatat anime
+                                apa saja yang aku tamatin di 2023.
+                            </p>
+                            &mdash; 緒写 (@goshintai_)
+                            <a href="https://twitter.com/goshintai_/status/1620756572933857282?ref_src=twsrc%5Etfw">February
+                                1, 2023</a>
+                        </blockquote>
+
+                        <p>
+                            Beyond anime, Japanese vlogs paint a lively picture of daily
+                            life. I gravitate toward those without English subtitles or,
+                            even better, with Japanese subtitles. Check out this channel
+                            that's got me hooked. She make lots of fun vlog and Japanese
+                            learning related videos.
+                        </p>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/sXMWgAVElxo?si=iZzb1yD3aWQ64Fye"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <p>
+                            Oh, and I've also developed a newfound love for DIY home
+                            renovation channels—pure fun. They bought 空き家 and renovate it
+                            by themselves. I'll definitely doing that if I had enough time.
+                        </p>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/igvdfUszwNE?si=PU17J4mSN2Geo0iT"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <p>
+                            Now, let's not forget the rhythm of Japanese music that graces
+                            my ears daily. "ムスビメ" and "Spiral," the earworms from the
+                            last season's Mushoku Tensei soundtrack, have found a cozy spot
+                            in my playlists. And Yuika? She's got the sweetest voice ever,
+                            and her simple yet touching lyrics hit differently. Go check her
+                            music.
+                        </p>
+                        <iframe style="border-radius: 12px"
+                            src="https://open.spotify.com/embed/artist/2EqaSEa0WkE59Aca9iXSYj?utm_source=generator"
+                            width="100%" height="152" frameborder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                        <p>
+                            Immersing yourself in Japanese content isn't just
+                            entertainment—it's a subconscious memory game. Words, kanji,
+                            grammatical patterns sneak into your mind effortlessly.
+                        </p>
+                    </section>
+                </li>
+
+                <li>
+                    <section id="daily">
+                        <h3>Daily Quiz Routine</h3>
+                        <p>
+                            Recognizing the limitations of pure immersion, I acknowledge
+                            that, unlike infants, my cognitive mechanisms are no longer
+                            optimized for seamless word acquisition. As someone well into
+                            their half-twenties, the need for a more structured study
+                            regimen becomes apparent. In this pursuit, I've discovered a
+                            valuable resource—a repository of past JLPT exam papers,
+                            including a formidable 1300 N1 grammar questions.
+                        </p>
+                        <img id="blog-image"
+                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhm59h0i2UKGJ81hpOOAJJJMPt05s1cAkcjD1F3ReSeqe0sV-H46tUMc4ZbG9xb9E7gmQ5dLiwlnlY1h4Vy2t5467jvASLo1IaJeQUdwvOXr3CxGkM_hdaFQ6wFCAvkf7PlLVmK-s5y0mWqaSoPwf8nj-WfLoi1JpqYU67MikN-uroXNHDE01czzdnyUbo/s2481/Answer.png"
+                            alt="Blog Image" />
+                        <p>
+                            Acknowledging my relative weakness in grammar, I've committed to
+                            a disciplined routine—answering 10 questions daily, now on a
+                            commendable 4-day streak
+                            <a href="#point-history">(my point's history)</a>. Adding a
+                            collaborative layer to this educational journey, my girlfriend
+                            assumes the role of a study partner. Her assistance ensures I
+                            remain accountable, checking my answers to prevent accidental
+                            exposure to subsequent question answer keys. To prevent
+                            counterproductive blind attempts, I've elevated my methodology.
+                            Each challenging question transforms into an educational quest,
+                            involving a meticulous lookup of unfamiliar words on Jisho,
+                            deconstruction of intricate grammatical structures,
+                            <s>and, when feasible, the creation of educational PowerPoints
+                                explaining grammar nuances. (you can find the PowerPoints link
+                                in <a href="#resources-links">here</a>)</s>
+                        </p>
+                    </section>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Include the rest of your content here -->
+
+        <p>
+            Currently, I've shared the basics of my Japanese learning journey, and
+            here's the deal—I'll regularly update this post with new,
+            straightforward study methods. As I explore Japanese, I'll find easy
+            tricks and tools, and I'll keep you in the loop with each update. It's
+            an ongoing conversation, so check back for fresh insights into
+            conquering Japanese without the need for complicated strategies. Stay
+            tuned for more updates!
+        </p>
+
+        <section id="updates">
+            <h2>Updates</h2>
+            <h3>Update 9/1/2024</h3>
+            <p>
+                The meticulous process of crafting PowerPoint presentations proved to
+                be labor-intensive, prompting a strategic shift in my approach.
+                Instead, I redirected my focus towards immersive reading, accompanied
+                by diligent note-taking within a dedicated document. Subsequently, I
+                transcribe these insights onto this
+                <a href="https://blog.oshapermadi.my.id/search/label/JLPT">blog</a>.
+                The efficacy of this method is discernible through a tangible
+                improvement in <a href="#point-history">my assessment scores</a>. I am
+                committed to consistently updating these notes as my understanding of
+                grammatical nuances evolves.
+                <br />
+                Furthermore, contemplations are underway regarding the integration of
+                a dedicated section within the blog to catalog my expanding
+                vocabulary. However, the exploration of refined and aesthetically
+                pleasing methods for this purpose is an ongoing endeavor. On a
+                positive note, I recently discovered a YouTube channel that adeptly
+                elucidates complex grammar points, presented entirely in Japanese.
+            </p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LAC4eykNJNA?si=BK8KtrrUEdrQGRpA"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+
+            <p>
+                This concludes the latest update. Future revelations and developments
+                in my study pursuits will be exclusively documented on this platform.
+                Stay tuned for next updates.
+            </p>
+
+            <h3>Update 19/01/2024</h3>
+            <p>
+                Hey there, quick update on my daily quizzes. Unfortunately, my scores
+                haven't seen much improvement over the past 15 days (except for a
+                brief hiatus from December 12-14 due to attending my girlfriend's
+                graduation ceremony – priorities, right?). Feeling a bit stuck, I
+                decided it was time to kick things up a notch.
+            </p>
+
+            <p>
+                Enter the Anki Deck project. This time, I'm not just relying on
+                pre-made decks; I'm building my own. Currently, I'm crafting a
+                vocabulary Anki Deck for "天気の子" (Weathering with You) – yep,
+                revisiting that light novel after three years since I first got my
+                hands on it. This time, I'm committed to reading it cover to cover.
+                Once completed, I'll make the deck available to the public, chapter by
+                chapter. Admittedly, I've only finished Page 1 of the prologue, so
+                don't hold your breath just yet.
+            </p>
+
+            <p>That's the scoop for now. Stay tuned for more updates!</p>
+
+            <section id="updates_jlptresult">
+                <h3>Update 22/01/2024</h3>
+                <img id="blog-image"
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfCygwPHl8HK0T4HUp2uSAUMsiiMV_bO6MD1wN95tS-m_Zywm67iS8RnztNomMZngHfkxZgVM_vb-JgFiMK5BDihi-tytDNKSIj2LROGgfg9brqbViJ73zK5la7364YK0eArsusw0qmcsiOqkvEimFz3JMAza-YA7yn-ZRgzZ8835oiRB1TV8rsiIpsvQ/s2200/Resultjlpt2023dec-1.png"
+                    alt="jlptresult" />
+                <p>
+                    Today marks a significant juncture—the release of the JLPT results.
+                    The outcome is in, and to be honest, it's a miss. Just a mere 3
+                    points shy, but hey, no biggie. I see it as a minor setback on the
+                    road to triumph. The plan? Redemption in December—I'm eyeing that
+                    N1, skipping past N3-N2. This setback served as a poignant
+                    realization: learning does make a difference. My initial attempts
+                    hovered around 68-69 points, and now, a solid 92. That's nearly half
+                    the gap closed, thanks to dedicated learning over the past 3-4
+                    months. A reassuring testament to the impact of consistent effort.
+                </p>
+                <p>
+                    Here's the real talk—this JLPT isn't just a test; it's my ticket out
+                    of Indonesia. Nailing N1 this year is non-negotiable, and I'm dead
+                    serious about it. Today's update may be a checkpoint, but the
+                    journey is far from over. Stay tuned for the next updates.
+                </p>
+            </section>
+        </section>
+
+        <!-- Add a collapsible button -->
+
+        <!-- Table Section with Partially Visible Content -->
+        <div class="partial-content">
+            <section id="point-history">
+                <h2>Points History</h2>
+                <table id="scoreTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Points Scored</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-01-02</td>
+                            <td>4/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-03</td>
+                            <td>0/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-04</td>
+                            <td>3/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-05</td>
+                            <td>2/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-06</td>
+                            <td>7/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-07</td>
+                            <td>0/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-08</td>
+                            <td>7/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-09</td>
+                            <td>4/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-10</td>
+                            <td>4/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-11</td>
+                            <td>4/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-15</td>
+                            <td>3/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-16</td>
+                            <td>4/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-17</td>
+                            <td>3/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-18</td>
+                            <td>2/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-19</td>
+                            <td>2/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-20</td>
+                            <td>5/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-21</td>
+                            <td>4/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-22</td>
+                            <td>2/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-23</td>
+                            <td>7/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-24</td>
+                            <td>4/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-25</td>
+                            <td>1/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-26</td>
+                            <td>2/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-27</td>
+                            <td>1/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-28</td>
+                            <td>3/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-29</td>
+                            <td>2/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-30</td>
+                            <td>3/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-31</td>
+                            <td>5/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-02-01</td>
+                            <td>4/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-02-02</td>
+                            <td>4/10</td>
+                        </tr>
+                        <tr>
+                            <td>2024-02-03</td>
+                            <td>4/10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <div class="collapsible" id="toggleButtonShow" onclick="toggleTable()">
+            +Show more
+        </div>
+
+        <canvas id="quizChart" width="400" height="200"></canvas>
+
+        <div id="countdown-container">
+            <p>Time until JLPT December 2024</p>
+            <div id="countdown"></div>
+        </div>
+
+        <div id="percentage-bar">
+            <div id="filler"></div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <p id="word"></p>
+                </div>
+                <div class="flip-card-back">
+                    <p id="furigana"></p>
+                    <p id="meaning"></p>
+                </div>
+            </div>
+        </div>
+        <button onclick="randomizeVocabulary()">⟳ Randomize</button>
+
+        <div id="resources-links">
+            <h2>Resources and Links</h2>
+            <p>
+                NihongoAZ - Past JLPT Exam Paper
+                <a href="https://nihongoaz.com/">nihongoaz.com/</a>
+            </p>
+            <p>
+                <a href="https://www.youtube.com/channel/UCsQCbl3a9FtYvA55BxdzYiQ">Miku Real Japanese Youtube
+                    Channel</a>
+            </p>
+            <p>
+                <a href="https://www.youtube.com/channel/UCNpHslsOxhZkWW_wFjXHnhw">setakara DIY channel</a>
+            </p>
+            <p>
+                <a href="https://drive.google.com/drive/folders/1GiuJnXgSrSktvuz7q7_3s61t1qewJRNj?usp=sharing"
+                    target="_blank">Bunpo N1 PowerPoints Google Drive Folder</a>
+            </p>
+        </div>
+        <p class="copy">Copyrights &#169; 2024 Osha Permadi. All Rights Reserved.</p>
+    </div>
+
+    <!-- graph fuction -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Extract data from the score table
+            const tableRows = document.querySelectorAll("#scoreTable tbody tr");
+            const dates = Array.from(tableRows, (row) => row.cells[0].textContent);
+            const scores = Array.from(tableRows, (row) =>
+                parseInt(row.cells[1].textContent)
+            );
+
+            // Create a chart
+            const ctx = document.getElementById("quizChart").getContext("2d");
+            const myChart = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: dates,
+                    datasets: [
+                        {
+                            label: "Quiz Scores",
+                            data: scores,
+                            fill: false,
+                            borderColor: "rgba(75, 192, 192, 1)",
+                            lineTension: 0.1,
+                        },
+                    ],
+                },
+                options: {
+                    scales: {
+                        x: {
+                            type: "category",
+                            labels: dates,
+                        },
+                        y: {
+                            beginAtZero: true,
+                            max: 10,
+                        },
+                    },
+                },
+            });
+        });
+    </script>
+
+    <!-- countdown and progress fuction -->
+    <script>
+        // Set the destined date (year, month (0-indexed), day, hours, minutes, seconds)
+        const destinedDate = new Date(2024, 11, 1, 0, 0, 0); // December 1, 2024, 12:00:00
+
+        function updateCountdown() {
+            const currentDate = new Date();
+            const timeRemaining = destinedDate - currentDate;
+            const totalTime = destinedDate - new Date(2024, 0, 1, 0, 0, 0); // Total time in milliseconds
+
+            if (timeRemaining > 0) {
+                const percentage = ((totalTime - timeRemaining) / totalTime) * 100;
+                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor(
+                    (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                );
+                const minutes = Math.floor(
+                    (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
+                );
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                document.getElementById(
+                    "countdown"
+                ).innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s (${percentage.toFixed(
+                    2
+                )}%)`;
+
+                // Update the width of the filler
+                document.getElementById("filler").style.width = `${percentage}%`;
+            } else {
+                document.getElementById("countdown").innerHTML = "Countdown expired!";
+            }
+        }
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+
+        // Initial update
+        updateCountdown();
+    </script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <!-- average and total function -->
+    <script>
+        // Get all the cells with points scored
+        const cells = document.querySelectorAll(
+            "#scoreTable tbody td:nth-child(2)"
+        );
+
+        // Extract scores and calculate the average
+        let totalScore = 0;
+        let totalQuestions = 0;
+
+        cells.forEach((cell) => {
+            const [score, total] = cell.textContent.split("/");
+            totalScore += parseInt(score);
+            totalQuestions += parseInt(total);
+        });
+
+        const averageScore = totalScore / cells.length;
+
+        // Create a new row for the average and total
+        const tfoot = document.createElement("tfoot");
+        const averageRow = document.createElement("tr");
+        const averageDateCell = document.createElement("td");
+        const averageScoreCell = document.createElement("td");
+
+        averageDateCell.textContent = "Average";
+        averageScoreCell.textContent = averageScore.toFixed(2) + "/10";
+
+        averageRow.appendChild(averageDateCell);
+        averageRow.appendChild(averageScoreCell);
+
+        const totalRow = document.createElement("tr");
+        const totalDateCell = document.createElement("td");
+        const totalScoreCell = document.createElement("td");
+
+        totalDateCell.textContent = "Total";
+        totalScoreCell.textContent = `${totalScore}/${totalQuestions}`;
+
+        totalRow.appendChild(totalDateCell);
+        totalRow.appendChild(totalScoreCell);
+
+        tfoot.appendChild(averageRow);
+        tfoot.appendChild(totalRow);
+
+        // Append the new rows to the table
+        document.getElementById("scoreTable").appendChild(tfoot);
+    </script>
+
+    <!-- random vocab fuction -->
+
+    <script>
+        const vocabularyList = [
+            {
+                kanji: "出港",
+                furigana: "しゅっこ",
+                meaning: "departure from a port; leaving port; setting sail",
+            },
+            { kanji: "汽笛", furigana: "きてき", meaning: "steam whistle" },
+            {
+                kanji: "巨大",
+                furigana: "きょだい",
+                meaning: "huge; gigantic; enormous (巨大な仏像)",
+            },
+            { kanji: "船体", furigana: "せんたい", meaning: "Hull" },
+            { kanji: "海水", furigana: "かいすい", meaning: "seawater; saltwater" },
+            {
+                kanji: "響く",
+                furigana: "ひびく",
+                meaning: "to reverberate; to shake; to vibrate; resound",
+            },
+            {
+                kanji: "押しのける",
+                furigana: "おしのける",
+                meaning: "to push aside; to brush aside",
+            },
+            {
+                kanji: "振動",
+                furigana: "しんどう",
+                meaning: "oscillation; vibration",
+            },
+            {
+                kanji: "尻",
+                furigana: "しり",
+                meaning: "buttocks; behind; rump; bottom; hips",
+            },
+            { kanji: "全身", furigana: "ぜんしん", meaning: "whole (body)" },
+            { kanji: "伝わる", furigana: "つたわる", meaning: "to spread" },
+            {
+                kanji: "船底",
+                furigana: "ふなぞこ",
+                meaning: "ship's bottom; bilge",
+            },
+            { kanji: "最も", furigana: "もっとも", meaning: "most; extremely" },
+            { kanji: "船室", furigana: "せんしつ", meaning: "stateroom; cabin" },
+            { kanji: "等", furigana: "とう", meaning: "class" },
+            {
+                kanji: "船旅",
+                furigana: "ふなたび",
+                meaning: "trip by boat; sea trip; voyage; cruise",
+            },
+            { kanji: "到着", furigana: "とうちゃく", meaning: "arrival" },
+            { kanji: "前科", furigana: "ぜんか", meaning: "criminal records" },
+            { kanji: "警察", furigana: "けいさつ", meaning: "police" },
+            {
+                kanji: "追う",
+                furigana: "おう",
+                meaning: "to chase; to run after; to pursue; to follow after",
+            },
+            { kanji: "噂", furigana: "うわさ", meaning: "rumor" },
+            {
+                kanji: "出来事",
+                furigana: "できごと",
+                meaning: "incident; affair; happening; event",
+            },
+            { kanji: "自体", furigana: "じたい", meaning: "itself" },
+            {
+                kanji: "当然",
+                furigana: "とうぜん",
+                meaning:
+                    "naturally; as a matter of course; rightly; deservedly; justly; of course",
+            },
+            { kanji: "断片的", furigana: "だんぺんてき", meaning: "fragmentary" },
+            {
+                kanji: "抱える",
+                furigana: "かかえる",
+                meaning:
+                    "to have (problems, debts, etc.); to take on (a responsibility);",
+            },
+            { kanji: "街", furigana: "まち", meaning: "city" },
+            {
+                kanji: "序章",
+                furigana: "じょしょう",
+                meaning: "preface; foreword; introduction; introductory chapter",
+            },
+            // Add more vocabulary items as needed
+        ];
+    </script>
+    <script>
+        function randomizeVocabulary() {
+            const shuffledVocabulary = vocabularyList.sort(
+                () => Math.random() - 0.5
+            );
+            const randomVocabularyItem =
+                shuffledVocabulary[
+                Math.floor(Math.random() * shuffledVocabulary.length)
+                ];
+
+            // Display the random vocabulary item on the front side
+            document.getElementById("word").textContent =
+                randomVocabularyItem.kanji;
+
+            // Display the furigana and meaning on the back side
+            document.getElementById("furigana").textContent =
+                randomVocabularyItem.furigana;
+            document.getElementById("meaning").textContent =
+                randomVocabularyItem.meaning;
+        }
+
+        // Initial display
+        randomizeVocabulary();
+    </script>
+
+    <!-- Existing scripts here -->
+
+    <!-- Add these scripts after the existing scripts -->
+    <script>
+        function toggleTable() {
+            const table = document.getElementById("scoreTable");
+            const partialContent = document.querySelector(".partial-content");
+            const button = document.getElementById("toggleButtonShow");
+
+            // Toggle the height to show/hide more rows
+            if (partialContent.style.maxHeight) {
+                partialContent.style.maxHeight = null;
+                button.textContent = "+ Show More";
+            } else {
+                partialContent.style.maxHeight = partialContent.scrollHeight + "px";
+                button.textContent = "- Show Less";
+            }
+
+            // Additional logic for other toggle (toggleTableExpand)
+            // Implement as needed
+        }
+    </script>
+</body>
+
+</html>
