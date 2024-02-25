@@ -1,1018 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <style>
-      @media screen and (max-width: 1400px) {
-        #profile {
-          height: 83vh;
-          margin-bottom: 6rem;
-        }
-        .about-containers {
-          flex-wrap: wrap;
-        }
 
-        #experience {
-          height: auto;
-        }
-      }
-
-      @media screen and (max-width: 1200px) {
-        #dekstop-nav {
-          display: none;
-        }
-        #hamburger-nav {
-          display: flex;
-        }
-        #experience,
-        .experience-details-container {
-          margin-top: 2rem;
-        }
-
-        #about {
-          height: auto;
-        }
-
-        #experience {
-          height: auto;
-        }
-        #profile,
-        .section-container {
-          display: block;
-        }
-
-        .arrow {
-          display: none;
-        }
-
-        section,
-        .section-container {
-          height: fit-content;
-        }
-        section {
-          margin: 0 5%;
-        }
-
-        .section__pic-container {
-          display: flex;
-          width: 275px;
-          height: 275px;
-          margin: 0 auto 2rem;
-          justify-content: center;
-        }
-        .about-containers {
-          margin-top: 0;
-        }
-      }
-
-      @media screen and (max-width: 600px) {
-        #contact,
-        footer {
-          height: 48vh;
-        }
-
-        #profile {
-          height: 83vh;
-          margin-bottom: 0;
-        }
-
-        article {
-          font-size: 1rem;
-        }
-
-        footer nav {
-          height: fit-content;
-          margin-bottom: 2rem;
-        }
-
-        .about-containers,
-        .contact-info-upper-container,
-        .btn-container {
-          flex-wrap: wrap;
-        }
-
-        .contact-info-container {
-          margin: 0;
-        }
-
-        .contact-info-container p,
-        .nav-links li a {
-          font-size: 1rem;
-        }
-
-        .experience-sub-title {
-          font-size: 1.25rem;
-        }
-
-        .logo {
-          font-size: 1.5rem;
-        }
-
-        .nav-links {
-          flex-direction: column;
-          gap: 0.5rem;
-          text-align: center;
-        }
-
-        .section__pic-container {
-          width: auto;
-          height: 46vw;
-          justify-content: center;
-        }
-
-        .section__text_p2 {
-          font-size: 1.2rem;
-        }
-
-        .title {
-          font-size: 2rem;
-        }
-
-        .text-container {
-          text-align: justify;
-        }
-
-        #scrollToTopArrow.show {
-          display: none; /* Show the arrow when it should be visible */
-        }
-
-        .about-pic {
-          padding: 1vh;
-        }
-      }
-    </style>
-
-    <style>
-      /* General */
-
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
-      * {
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        font-family: "Poppins", sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      .sidebar-container,
-      .post-sidebar,
-      #footer,
-      .centered-top-container.sticky,
-      .post-title,
-      .post-body-container:before,
-      .centered-top-container,
-      .centered-top-placeholder,
-      .centered-top {
-        display: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      p {
-        color: rgb(85, 85, 85);
-      }
-
-      /* Transition */
-
-      a,
-      .btn {
-        transition: all 300ms ease;
-      }
-
-      /* Dekstop Nav */
-
-      nav,
-      .nav-links {
-        display: flex;
-      }
-
-      nav {
-        justify-content: space-around;
-        align-items: center;
-        height: 17vh;
-      }
-
-      .nav-links {
-        gap: 2rem;
-        list-style: none;
-        font-size: 1.5rem;
-      }
-
-      a {
-        color: black;
-        text-decoration: none;
-        text-decoration-color: white;
-      }
-
-      a:hover {
-        color: grey;
-        text-decoration: underline;
-        text-underline-offset: 1rem;
-        text-decoration-color: rgb(181, 181, 181);
-      }
-
-      .logo {
-        font-size: 2rem;
-      }
-
-      .logo:hover {
-        cursor: default;
-      }
-
-      /* Hamburger Menu */
-
-      #hamburger-nav {
-        display: none;
-      }
-
-      .hamburger-menu {
-        position: relative;
-        display: inline-block;
-      }
-
-      .hamburger-icon {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 24px;
-        width: 20px;
-        cursor: pointer;
-      }
-
-      .hamburger-icon span {
-        width: 100%;
-        height: 2px;
-        background-color: black;
-        transition: all 0.3 ease-in-out;
-      }
-
-      .menu-links {
-        position: absolute;
-        top: 100%;
-        right: 0%;
-        background-color: white;
-        width: fit-content;
-        max-height: 0;
-        overflow: hidden;
-        transition: all 0.3 ease-in-out;
-      }
-
-      .menu-links a {
-        display: block;
-        padding: 10px;
-        text-align: center;
-        font-size: 1.5rem;
-        color: black;
-        text-decoration: none;
-        transition: all 0.3 ease-in-out;
-      }
-
-      .menu-links li {
-        list-style: none;
-      }
-
-      .menu-links.open {
-        max-height: 300px;
-      }
-
-      .hamburger-icon.open span:first-child {
-        transform: rotate(45deg) translate(10px, 5px);
-      }
-
-      .hamburger-icon.open span:nth-child(2) {
-        opacity: 0;
-      }
-
-      .hamburger-icon.open span:last-child {
-        transform: rotate(-45deg) translate(10px, -5px);
-      }
-
-      .hamburger-icon span:first-child {
-        transform: none;
-      }
-
-      .hamburger-icon span:first-child {
-        opacity: 1;
-      }
-
-      .hamburger-icon span:first-child {
-        transform: none;
-      }
-
-      /* Section */
-
-      section {
-        padding: 4vh;
-        height: 96hv;
-        margin: 0 10rem;
-        box-sizing: border-box;
-        min-height: fit-content;
-      }
-
-      .section-container {
-        display: flex;
-      }
-
-      /* Profile Section */
-      #profile {
-        display: flex;
-        justify-content: center;
-        gap: 5rem;
-        height: 83vh;
-      }
-
-      .section__pic-container {
-        display: flex;
-        height: 400px;
-        width: 400px;
-        margin: auto 0;
-        justify-content: center;
-      }
-
-      .section__text {
-        align-self: center;
-        text-align: center;
-      }
-
-      .section__text p {
-        font-weight: 600;
-      }
-
-      .section__text__p1 {
-        text-align: center;
-      }
-
-      .section__text__p2 {
-        font-size: 1.75rem;
-        margin-bottom: 1rem;
-      }
-
-      .title {
-        font-size: 3rem;
-        text-align: center;
-      }
-
-      #social-container {
-        display: flex;
-        justify-content: center;
-        margin: 1rem;
-        gap: 1rem;
-      }
-
-      /* Icon */
-      .icon {
-        cursor: pointer;
-        height: 2rem;
-      }
-
-      /* Button */
-
-      .btn-container {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-      }
-
-      .btn {
-        font-weight: 600;
-        transition: all 300ms ease;
-        padding: 1rem;
-        width: 8rem;
-        border-radius: 2rem;
-      }
-
-      .btn-color-1,
-      .btn-color-2 {
-        border: rgb(53, 53, 53) 0.1rem solid;
-      }
-
-      .btn-color-1:hover,
-      .btn-color-2:hover {
-        cursor: pointer;
-      }
-
-      .btn-color-1,
-      .btn-color-2:hover {
-        background: rgb(53, 53, 53);
-        color: white;
-      }
-
-      .btn-color-1:hover {
-        background: rgb(0, 0, 0);
-      }
-
-      .btn-color-2 {
-        background: none;
-      }
-
-      .btn-color-2:hover {
-        border: rgb(255, 255, 255) 0.1rem solid;
-      }
-
-      .btn-container {
-        gap: 1rem;
-      }
-
-      /* About section */
-
-      #about {
-        position: relative;
-        height: 100vh;
-      }
-
-      .about-containers {
-        gap: 2rem;
-        margin-bottom: 2rem;
-        margin-top: 2rem;
-      }
-
-      .about-details-container {
-        justify-content: center;
-        flex-direction: column;
-      }
-
-      .about-containers,
-      .about-details-container {
-        display: flex;
-      }
-
-      .about-pic {
-        border-radius: 2rem;
-      }
-
-      .arrow {
-        position: absolute;
-        right: -5rem;
-        bottom: 2.5rem;
-      }
-
-      .details-container {
-        padding: 1.5rem;
-        flex: 1;
-        background: white;
-        border-radius: 2rem;
-        border: rgb(53, 53, 53) 0.1rem solid;
-        border-color: rgb(163, 163, 163);
-        text-align: center;
-      }
-
-      .section-container {
-        gap: 4rem;
-        height: 80%;
-      }
-
-      .section__pic-container {
-        height: 400px;
-        width: 400px;
-        margin: auto 0;
-        justify-content: center;
-      }
-
-      /* Experience section */
-
-      #experience {
-        position: relative;
-        height: 100vh;
-      }
-
-      .experience-sub-title {
-        color: rgb(85, 85, 55);
-        font-weight: 600;
-        font-size: 1.75rem;
-        margin-bottom: 2rem;
-      }
-
-      .experience-details-container {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-      }
-
-      .article-container {
-        display: flex;
-        text-align: initial;
-        flex-wrap: wrap;
-        flex-direction: row;
-        gap: 2.5rem;
-        justify-content: space-around;
-      }
-
-      article {
-        display: flex;
-        width: 10rem;
-        gap: 0.5rem;
-      }
-
-      article .icon {
-        cursor: default;
-      }
-
-      /* Project Section */
-
-      #project {
-        position: relative;
-      }
-
-      .color-container {
-        border-color: rgb(163, 163, 163);
-        background: rgb(250, 250, 250);
-      }
-
-      .project-img {
-        border-radius: 2rem;
-        width: 90%;
-        height: 90%;
-      }
-
-      .project-title {
-        margin: 1rem;
-        color: black;
-      }
-
-      .project-btn {
-        color: black;
-        border-color: rgb(163, 163, 163);
-      }
-
-      /* contact section */
-
-      #contact {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        height: 70vh;
-        position: relative;
-      }
-
-      .contact-info-upper-container {
-        display: flex;
-        justify-content: center;
-        border-radius: 2rem;
-        border: rgb(53, 53, 53) 0.1rem solid;
-        border-color: rgb(163, 163, 163);
-        background: rgb(250, 250, 250);
-        margin: 2rem auto;
-        padding: 0.5rem;
-      }
-
-      .contact-info-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        margin: 1rem;
-      }
-
-      .contact info-container p {
-        font-size: larger;
-      }
-
-      .contact-icon {
-        cursor: default;
-      }
-
-      /*footer section */
-      footer {
-        height: 26vh;
-        margin: 0 1rem;
-      }
-
-      footer p {
-        text-align: center;
-      }
-
-      /* floating arrow*/
-      #scrollToTopArrow {
-        position: fixed;
-        top: 50%; /* Position it vertically in the middle */
-        left: 5rem; /* Adjust the value to control the horizontal position */
-        transform: translateY(-50%);
-        cursor: pointer;
-        display: none; /* Initially hide the arrow */
-      }
-
-      #scrollToTopArrow.show {
-        display: block; /* Show the arrow when it should be visible */
-      }
-    </style>
-  </head>
-  <body>
-    <nav id="dekstop-nav">
-      <div class="logo">Osha</div>
-      <div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media-queries.css">
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Osha</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experiences</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Osha</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experiences</a></li>
+        <li><a href="#project" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <img src="assets/home.png" alt="arrow icon"
+    class="icon arrow" id="scrollToTopArrow" onclick="scrollToTop()" />
+  <section id="profile">
+    <div class="section__pic-container">
+      <img class="osha_pp"
+        src="assets/profile-pic.png"
+        alt="Osha" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Osha</h1>
+      <p class="section__text__p2">Professional Google Searcher</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2"
+          onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact
+        </button>
+      </div>
+      <div id="social-container">
+        <img src="assets/x-icon.png"
+          alt="X Icon" class="icon" onclick="location.href='https://twitter.com/goshintai_'" />
+        <img src="assets/bsky-icon.png"
+          alt="bksy Icon" class="icon" onclick="location.href='https://bsky.app/profile/oshapermadi.my.id'" />
+        <img src="assets/github.png"
+          alt="github Icon" class="icon" onclick="location.href='https://github.com/yorunohikari'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get to know more</p>
+    <h1 class="title">About me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="assets/about-pic.jpg"
+          alt="profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="assets/experience.png"
+              alt="experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>
+              2 years of <br />
+              Frontend Developer
+            </p>
+          </div>
+          <div class="details-container">
+            <img src="assets/education.png"
+              alt="education icon" class="icon" />
+            <h3>Education</h3>
+            <p>Japanese Literature</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            Hi, I'm Osha Permadi, a passionate web developer.
+            I love building sleek and functional websites that leave a lasting impression.
+            When I'm not coding, you can find me immersed in a good book or brushing up on my Japanese skills. 
+            Feel free to reach out. I'm always up for a chat about tech or anything under the sun!
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="assets/arrow.png"
+      alt="arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore my</p>
+    <h1 class="title">Experiences</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="assets/checkmark.png"
+                alt="checkmark" class="icon" />
+              <div>
+                <h3>HTML</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="assets/checkmark.png"
+                alt="checkmark" class="icon" />
+              <div>
+                <h3>CSS</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="assets/checkmark.png"
+                alt="checkmark" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Ok, Guess</p>
+              </div>
+            </article>
+            <article>
+              <img src="assets/checkmark.png"
+                alt="checkmark" class="icon" />
+              <div>
+                <h3>Python</h3>
+                <p>Barely Know</p>
+              </div>
+            </article>
+            <article>
+              <img src="assets/checkmark.png"
+                alt="checkmark" class="icon" />
+              <div>
+                <h3>Material UI</h3>
+                <p>I have no idea</p>
+              </div>
+            </article>
+            <article>
+              <img src="assets/checkmark.png"
+                alt="checkmark" class="icon" />
+              <div>
+                <h3>SASS</h3>
+                <p>What's even this?</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Language Skills</h2>
+          <div class="article-container">
+            <article>
+              <img src="assets/checkmark.png"
+                alt="checkmark" class="icon" />
+              <div>
+                <h3>Bahasa Indonesia</h3>
+                <p>Native</p>
+              </div>
+            </article>
+            <article>
+              <img src="assets/checkmark.png"
+                alt="checkmark" class="icon" />
+              <div>
+                <h3>English</h3>
+                <p>Fluent</p>
+              </div>
+            </article>
+            <article>
+              <img src="assets/checkmark.png"
+                alt="checkmark" class="icon" />
+              <div>
+                <h3>Japanese</h3>
+                <p>Mehh</p>
+              </div>
+            </article>
+            <article>
+              <img src="assets/checkmark.png"
+                alt="checkmark" class="icon" />
+              <div>
+                <h3>Javanese</h3>
+                <p>Native</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="assets/arrow.png"
+      alt="arrow icon" class="icon arrow" onclick="location.href='./#project'" />
+  </section>
+  <section id="project">
+    <p class="section__text__p1">Browse my recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="assets/nekokanji_sc.png" alt="project1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Neko Kanji</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/yorunohikari/Kanji-Reading-Quiz/'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/yorunohikari'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="assets/prefec.png" alt="project2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Japan Prefectures Flag Quiz</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/yorunohikari/JapanesePrefecturesFlagQuiz'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://yorunohikari.github.io/flag-quiz/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/project-3.png?raw=true"
+              alt="project3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Project Three</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/yorunohikari'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/yorunohikari'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="assets/arrow.png"
+      alt="arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in touch</p>
+    <h1 class="title">Contact me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="assets/email.png"
+          alt="email icon" class="icon contact-icon" />
+        <p><a href="mailto:permadi.osha@gmail.com">permadi@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="assets/x-icon.png"
+          alt="x icon" class="icon contact-icon" />
+        <p><a href="https://twitter.com/goshintai_">goshintai_</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experiences</a></li>
           <li><a href="#project">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Osha</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experiences</a></li>
-          <li><a href="#project" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <img
-      src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/home.png?raw=true"
-      alt="arrow icon"
-      class="icon arrow"
-      id="scrollToTopArrow"
-      onclick="scrollToTop()"
-    />
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/profile-pic.png?raw=true" alt="Osha" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Osha</h1>
-        <p class="section__text__p2">Frontend Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact
-          </button>
-        </div>
-        <div id="social-container">
-          <img
-            src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/x-icon.png?raw=true"
-            alt="X Icon"
-            class="icon"
-            onclick="location.href='https://twitter.com/goshintai_'"
-          />
-          <img
-            src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/bsky-icon.png?raw=true"
-            alt="bksy Icon"
-            class="icon"
-            onclick="location.href='https://bsky.app/profile/oshapermadi.my.id'"
-          />
-          <img
-            src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/github.png?raw=true"
-            alt="github Icon"
-            class="icon"
-            onclick="location.href='https://github.com/yorunohikari'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get to know more</p>
-      <h1 class="title">About me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/about-pic.png?raw=true"
-            alt="profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/experience.png?raw=true"
-                alt="experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>
-                2 years of <br />
-                Frontend Developer
-              </p>
-            </div>
-            <div class="details-container">
-              <img
-                src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/education.png?raw=true"
-                alt="education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>Japanese Literature</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Hello, I'm Osha Permadi! I'm a web developer passionate about
-              creating amazing websites. In my free time, I enjoy coding,
-              reading, and learning. Currently I'm learning Japanese and trying
-              to find a way to move to Japan.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/arrow.png?raw=true"
-        alt="arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore my</p>
-      <h1 class="title">Experiences</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/checkmark.png?raw=true"
-                  alt="checkmark"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/checkmark.png?raw=true"
-                  alt="checkmark"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/checkmark.png?raw=true"
-                  alt="checkmark"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Ok, Guess</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/checkmark.png?raw=true"
-                  alt="checkmark"
-                  class="icon"
-                />
-                <div>
-                  <h3>Typescript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/checkmark.png?raw=true"
-                  alt="checkmark"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>I have no idea</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/checkmark.png?raw=true"
-                  alt="checkmark"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>What's even this?</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Language Skills</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/checkmark.png?raw=true"
-                  alt="checkmark"
-                  class="icon"
-                />
-                <div>
-                  <h3>Bahasa Indonesia</h3>
-                  <p>Native</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/checkmark.png?raw=true"
-                  alt="checkmark"
-                  class="icon"
-                />
-                <div>
-                  <h3>English</h3>
-                  <p>Fluent</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/checkmark.png?raw=true"
-                  alt="checkmark"
-                  class="icon"
-                />
-                <div>
-                  <h3>Japanese</h3>
-                  <p>Mehh</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/checkmark.png?raw=true"
-                  alt="checkmark"
-                  class="icon"
-                />
-                <div>
-                  <h3>Javanese</h3>
-                  <p>Native</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/arrow.png?raw=true"
-        alt="arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#project'"
-      />
-    </section>
-    <section id="project">
-      <p class="section__text__p1">Browse my recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/project-1.png?raw=true"
-                alt="project1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/yorunohikari'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/yorunohikari'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/project-2.png?raw=true"
-                alt="project2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/yorunohikari'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/yorunohikari'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/project-3.png?raw=true"
-                alt="project3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/yorunohikari'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/yorunohikari'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/arrow.png?raw=true"
-        alt="arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in touch</p>
-      <h1 class="title">Contact me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/email.png?raw=true"
-            alt="email icon"
-            class="icon contact-icon"
-          />
-          <p><a href="mailto:your@email.com">your@email.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/x-icon.png?raw=true"
-            alt="x icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://twitter.com/goshintai_">goshintai_</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experiences</a></li>
-            <li><a href="#project">Projects</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyrights &#169; 2023 Osha Permadi. All Rights Reserved.</p>
-    </footer>
-    <script>
-      function toggleMenu() {
-        const menu = document.querySelector(".menu-links");
-        const icon = document.querySelector(".hamburger-icon");
-        menu.classList.toggle("open");
-        icon.classList.toggle("open");
-      }
+    <p>Copyrights &#169; 2024 Osha Permadi. All Rights Reserved.</p>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector(".menu-links");
+      const icon = document.querySelector(".hamburger-icon");
+      menu.classList.toggle("open");
+      icon.classList.toggle("open");
+    }
 
-      function scrollToTop() {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }
-
-      // Add an event listener to show/hide the arrow based on the scroll position
-      window.addEventListener("scroll", function () {
-        var scrollToTopArrow = document.getElementById("scrollToTopArrow");
-        if (window.scrollY > 700) {
-          // Adjust the scroll position at which the arrow should appear
-          scrollToTopArrow.classList.add("show");
-        } else {
-          scrollToTopArrow.classList.remove("show");
-        }
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
       });
-    </script>
-  </body>
+    }
+
+    // Add an event listener to show/hide the arrow based on the scroll position
+    window.addEventListener("scroll", function () {
+      var scrollToTopArrow = document.getElementById("scrollToTopArrow");
+      if (window.scrollY > 700) {
+        // Adjust the scroll position at which the arrow should appear
+        scrollToTopArrow.classList.add("show");
+      } else {
+        scrollToTopArrow.classList.remove("show");
+      }
+    });
+  </script>
+</body>
+
 </html>
