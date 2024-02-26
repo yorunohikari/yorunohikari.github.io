@@ -1,12 +1,8 @@
 Welcome to my portfolio! This repository contains the source code for my personal portfolio website hosted on GitHub Pages.
 
-## Table of Contents
+## Blog
 
-- [About](#about)
-- [Experience](#experience)
-- [Projects](#projects)
-- [Contact](#contact)
-- [License](#license)
+This pages also containing my blog (currenly on progress)
 
 ## About
 
