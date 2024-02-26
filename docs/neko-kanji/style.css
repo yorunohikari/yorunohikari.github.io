@@ -1,10 +1,9 @@
-/* Reset and Global Styles */
+/* Global Styles */
 body {
-  font-family: "Tahoma", "Verdana", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #eceff1;
-  /* Light blue-gray background */
   text-align: center;
 }
 
@@ -32,8 +31,6 @@ h1 {
   margin: 50px auto;
   padding: 20px;
   background: linear-gradient(45deg, #ffffff, #f0f0f0);
-  /* Gradient for shiny effect */
-  /* White background */
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   text-align: center;
@@ -79,7 +76,6 @@ h1 {
 
 #unanswered-container {
   background-color: #ffffff;
-  /* White background */
   border: 1px solid #ccc;
   padding: 10px;
   margin-top: 20px;
@@ -107,7 +103,6 @@ h1 {
 
 #quiz-results th {
   background-color: #1877f2;
-  /* Facebook blue */
   color: white;
 }
 
@@ -157,9 +152,7 @@ h1 {
   display: block;
   width: 80%;
   background-color: #e0e0e0;
-  /* Light gray background for the progress bar container */
   height: 5px;
-  /* Set the height of the progress bar container */
   border-radius: 10px;
   margin: 30px auto 20px auto;
 }
@@ -167,19 +160,8 @@ h1 {
 #progress-bar {
   height: 100%;
   background-color: #1877f2;
-  /* Green color for the progress bar */
   width: 0;
-  /* Initial width, will be dynamically updated */
   border-radius: 10px;
-}
-
-/* Responsive Design */
-
-@media (max-width: 400px) {
-  #quiz-results th,
-  #quiz-results td {
-    padding: 6px;
-  }
 }
 
 /* This is necessary to remove blogger templates */
@@ -204,20 +186,14 @@ h1 {
 .label-hint {
   display: flex;
   justify-content: center;
-  /* Center items horizontally */
-  /* Use flexbox to arrange items */
 }
 
 .checkbox-wrapper-4 * {
   box-sizing: border-box;
   flex: 1;
-  /* Distribute the available space equally among the checkbox wrappers */
   display: flex;
-  /* Use flexbox for nested items */
   align-items: center;
-  /* Align items vertically in the center */
   margin-right: 10px;
-  /* Adjust the margin between checkbox wrappers */
 }
 
 .checkbox-wrapper-4 .cbx {
@@ -400,10 +376,8 @@ h1 {
 }
 
 .main-menu img {
-  /* Set image width and height to 100% of parent container */
   width: 30%;
   height: 30%;
-  /* Ensure the aspect ratio is maintained */
   object-fit: contain;
 }
 
@@ -464,6 +438,15 @@ h1 {
   }
 }
 
+/* Responsive Design */
+
+@media (max-width: 400px) {
+  #quiz-results th,
+  #quiz-results td {
+    padding: 6px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .checkbox-wrapper-4 .cbx {
     display: inline-block;
@@ -473,15 +456,11 @@ h1 {
   .label-hint {
     display: inline-block;
     text-align: center;
-    /* Center items horizontally */
-    /* Use flexbox to arrange items */
   }
 
   .main-menu img {
-    /* Set image width and height to 100% of parent container */
     width: 50%;
     height: 50%;
-    /* Ensure the aspect ratio is maintained */
     object-fit: contain;
   }
 
@@ -500,19 +479,16 @@ h1 {
   .score-history-table th:nth-child(1),
   .score-history-table td:nth-child(1) {
     width: 30%;
-    /* Adjust width for Date column */
   }
 
   .score-history-table th:nth-child(4),
   .score-history-table td:nth-child(4) {
     width: 30%;
-    /* Adjust width for Time Spent/Limit column */
   }
 
   .score-history-table th:nth-child(2),
   .score-history-table td:nth-child(2) {
     width: 20%;
-    /* Adjust width for Time Spent/Limit column */
   }
 }
 

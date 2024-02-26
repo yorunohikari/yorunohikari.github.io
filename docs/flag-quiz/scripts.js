@@ -52,10 +52,8 @@ function startQuiz() {
         .then(data => {
             // Shuffle the data
             const shuffledData = shuffleArray(data);
-
             // Slice the shuffled data to get the selected number of prefectures
             const selectedPrefectures = shuffledData.slice(0, numPrefectures);
-
             // Start the quiz with the selected prefectures
             startQuizWithPrefectures(selectedPrefectures);
         })
@@ -76,7 +74,6 @@ function endQuiz() {
     <p>不正解数：${numWrongAnswers}</p>
     ${wrongAnswers.length > 0 ? '<div id="wrong-answers"></div>' : ''}
     <button id="play-again-btn">もう一度プレイ</button>
-
     `;
 
     // Display wrong answers if there are any
@@ -89,7 +86,6 @@ function endQuiz() {
     playAgainBtn.classList.add('styled-button');
     playAgainBtn.addEventListener('click', resetQuiz);
 }
-
 
 
 // Function to display wrong answers
@@ -134,9 +130,7 @@ function shuffleArray(array) {
 function startQuizWithPrefectures(prefectures) {
     // Initialize quiz variables
     let currentQuestionIndex = 0;
-
     const optionButtons = [];
-
     // Function to display the current question
     function displayQuestion() {
         const currentQuestion = prefectures[currentQuestionIndex];

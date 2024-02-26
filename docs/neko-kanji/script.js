@@ -5,7 +5,6 @@ const quizData = {
     N3: [],
     N2: [],
     N1: [],
-    // Add other JLPT levels as needed
 };
 
 // Quiz Variables
@@ -63,7 +62,6 @@ function getUserPreferences() {
 
 // Start Quiz Function
 function startQuiz() {
-    // Display loading animation while fetching quiz data
     document.getElementById("loading-animation").style.display = "block";
     // Get selected JLPT level from dropdown
     selectedLevel = document.getElementById("jlpt-level").value;
@@ -661,7 +659,6 @@ function closeModal2() {
 }
 
 // Event listener to close the modal when clicking outside of it and remove blur effect
-// Event listener to close the modals when clicking outside of them and remove blur effect
 window.onclick = function (event) {
     if (event.target == modal) {
         closeModal();
