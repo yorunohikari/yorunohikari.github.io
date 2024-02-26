@@ -1,229 +1,232 @@
-        body {
-            font-family: "Poppins", sans-serif;
-            background-color: #fff;
-            color: #000;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        .t-container {
-            max-width: 400px;
-            padding: 20px;
-            border-radius: 8px;
-            background-color: #fff;
-            color: #000;
-        }
+.t-container {
+  max-width: 200px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #000;
+}
 
-        h1,
-        .by,
-        .copy {
-            color: #000;
-            text-align: center;
-        }
+h1,
+.by {
+  color: #000;
+  text-align: center;
+}
+header,
+footer {
+  text-align: center;
+}
 
-        p {
-            margin-bottom: 15px;
-        }
+a {
+  color: #000;
+  text-decoration: underline;
+}
 
-        a {
-            color: #000;
-            text-decoration: underline;
-        }
+a:hover {
+  color: #555;
+}
 
-        a:hover {
-            color: #555;
-        }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
 
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin-top: 20px;
-        }
+th,
+td {
+  border: 1px solid #000;
+  /* Black borders */
+  padding: 8px;
+  text-align: left;
+}
 
-        th,
-        td {
-            border: 1px solid #000;
-            /* Black borders */
-            padding: 8px;
-            text-align: left;
-        }
+th {
+  background-color: #000;
+  /* Black header background */
+  color: #fff;
+  /* White header text */
+}
 
-        th {
-            background-color: #000;
-            /* Black header background */
-            color: #fff;
-            /* White header text */
-        }
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+  /* Light gray background for even rows */
+}
 
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-            /* Light gray background for even rows */
-        }
+#countdown-container {
+  text-align: center;
+  margin-top: 50px;
+}
 
-        #countdown-container {
-            text-align: center;
-            margin-top: 50px;
-        }
+#countdown-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
-        #countdown-title {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+#countdown {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #000000;
+  /* Black text for the countdown */
+}
 
-        #countdown {
-            font-size: 36px;
-            font-weight: bold;
-            margin-top: 10px;
-            color: #000000;
-            /* Black text for the countdown */
-        }
+#scoreTable tfoot tr {
+  background-color: black;
+  color: white;
+}
 
-        #scoreTable tfoot tr {
-            background-color: black;
-            color: white;
-        }
+#percentage-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  margin-top: 20px;
+  position: relative;
+  margin-bottom: 50px;
+}
 
-        #percentage-bar {
-            width: 100%;
-            height: 20px;
-            background-color: #ddd;
-            margin-top: 20px;
-            position: relative;
-            margin-bottom: 50px;
-        }
+#filler {
+  height: 100%;
+  width: 0;
+  background-color: #4caf50;
+  /* Green color for the filled part */
+  transition: width 1s ease-in-out;
+  /* Add a smooth transition effect */
+}
 
-        #filler {
-            height: 100%;
-            width: 0;
-            background-color: #4caf50;
-            /* Green color for the filled part */
-            transition: width 1s ease-in-out;
-            /* Add a smooth transition effect */
-        }
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  margin-top: 30px;
+  margin: auto;
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
 
-        .flip-card {
-            background-color: transparent;
-            width: 300px;
-            height: 300px;
-            margin-top: 30px;
-            margin: auto;
-            perspective: 1000px;
-            margin-bottom: 30px;
-        }
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
 
-        /* This container is needed to position the front and back side */
-        .flip-card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-        }
+/* Do a horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
 
-        /* Do a horizontal flip when you move the mouse over the flip box container */
-        .flip-card:hover .flip-card-inner {
-            transform: rotateY(180deg);
-        }
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-        /* Position the front and back side */
-        .flip-card-front,
-        .flip-card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden;
-            /* Safari */
-            backface-visibility: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+/* Style the front side */
+.flip-card-front {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        /* Style the front side */
-        .flip-card-front {
-            background-color: #fff;
-            color: #333;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+/* Style the back side */
+.flip-card-back {
+  background-color: #3498db;
+  color: #fff;
+  transform: rotateY(180deg);
+  border: 1px solid #2980b9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        /* Style the back side */
-        .flip-card-back {
-            background-color: #3498db;
-            color: #fff;
-            transform: rotateY(180deg);
-            border: 1px solid #2980b9;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+.flip-card p {
+  font-size: 24px;
+}
 
-        .flip-card p {
-            font-size: 24px;
-        }
+button {
+  background-color: #fff;
+  color: #000;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  display: block;
+  margin: auto;
+}
 
-        button {
-            background-color: #fff;
-            color: #000;
-            font-size: 18px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-            display: block;
-            margin: auto;
-        }
+button:hover {
+  background-color: #000;
+  color: #fff;
+}
 
-        button:hover {
-            background-color: #000;
-            color: #fff;
-        }
+#blog-image {
+  max-width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-        @media (max-width: 767px) {
+@media (max-width: 767px) {
+  /* Adjust styles for smaller screens (e.g., smartphones) */
+  .flip-card {
+    width: 60vw;
+    /* 90% of the viewport width */
+    height: 60vw;
+    /* 45% of the viewport width */
+    margin-top: 5vw;
+    /* 5% of the viewport width */
+  }
+  #blog-image {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
-            /* Adjust styles for smaller screens (e.g., smartphones) */
-            .flip-card {
-                width: 60vw;
-                /* 90% of the viewport width */
-                height: 60vw;
-                /* 45% of the viewport width */
-                margin-top: 5vw;
-                /* 5% of the viewport width */
-            }
-        }
+.collapsible {
+  background-color: #f1f1f1;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+}
 
-        .collapsible {
-            background-color: #f1f1f1;
-            cursor: pointer;
-            padding: 10px;
-            text-align: center;
-        }
+/* Style for the partially visible content */
+.partial-content {
+  max-height: 450px;
+  /* Adjust the max height as needed */
+  overflow: hidden;
+}
 
-        /* Style for the partially visible content */
-        .partial-content {
-            max-height: 450px;
-            /* Adjust the max height as needed */
-            overflow: hidden;
-        }
-
-        #blog-image {
-            max-width: 100%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-
-        .blog-container {
-            max-width: 70%;
-            margin-top: 100px;
-            margin-bottom: 0;
-            margin-left: auto;
-            margin-right: auto;
-        }
+.blog-container {
+  max-width: 70%;
+  margin-top: 100px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}

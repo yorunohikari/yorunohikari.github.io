@@ -1,0 +1,25 @@
+@media screen and (max-width: 600px) {
+  .random-text {
+    font-size: 12px;
+  }
+  .blog-container {
+    max-width: 70%;
+    margin-top: 100px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img {
+    width: 90%;
+  }
+
+
+  .text-content {
+    text-align: justify;
+  }
+  header,
+  footer {
+    text-align: center;
+  }
+}

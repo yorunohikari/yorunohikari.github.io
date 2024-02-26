@@ -1,0 +1,66 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.blog-container {
+  max-width: 70%;
+  margin-top: 100px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style the refresh button */
+#refresh-button,
+#play-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Style the text frame */
+.text-frame {
+  border: 1px solid #ccc;
+  padding: 20px;
+  
+  background-color: #f9f9f9;
+  text-align: center;
+  /* Center the text */
+  font-size: 24px;
+  /* Increase the font size */
+  color: #333;
+  /* Change text color */
+  max-width: 100%;
+}
+
+/* Style the random text */
+.random-text {
+  font-size: 18px;
+}
+
+.image-caption {
+  font-style: italic;
+  font-size: 10px;
+  text-align: center;
+}
+
+figure {
+  text-align: center; /* Center the content */
+}
+
+/* Apply styling to the image */
+img {
+  width: 400px;
+}
+
+header,
+footer {
+  text-align: center;
+}
