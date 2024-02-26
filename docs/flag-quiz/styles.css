@@ -1,11 +1,18 @@
 /* Global Styles */
 body {
   background-color: rgb(249, 255, 255);
+  font-family: "Poppins", sans-serif;
+}
+
+.main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ensure the body fills the viewport height */
-  font-family: Helvetica;
+  height: 90vh; 
+}
+
+.copy {
+  text-align: center;
 }
 
 /* Common Styles for Multiple Elements */

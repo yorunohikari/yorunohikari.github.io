@@ -1,43 +1,47 @@
 body {
-    font-family: "Poppins", sans-serif;
-  }
-header, footer {
-    text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+header,
+footer {
+  text-align: center;
 }
 
 .blog-container {
-    max-width: 70%;
-    margin-top: 100px;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 70%;
+  margin-top: 100px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
 .thumbnail {
-    margin: 15px;
-    width: 300px;
-    border: 1px solid black; /* Add a 1px solid black border */
+  margin: 15px;
+  width: 300px;
+  border: 1px solid black; /* Add a 1px solid black border */
 }
 
 .item {
-    display: flex;
-    border: 1px solid black; /* Add a 1px solid black border */
-    margin: 10px;
-    background-color: rgb(240, 240, 240);
+  display: flex;
+  border: 1px solid black; /* Add a 1px solid black border */
+  margin: 10px;
+  background-color: rgb(240, 240, 240);
 }
 
 .item-text {
-    text-align: justify;
-    padding: 20px;
-    color: black;
-    text-decoration: none;
+  padding: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.item-text p {
+  text-align: justify;
 }
 
 .item-title {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .read-more {
-    text-align: right;
+  text-align: right;
 }
