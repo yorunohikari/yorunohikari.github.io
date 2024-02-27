@@ -15,3 +15,8 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
+
+#myFrame {
+  position: relative;
+}
+
