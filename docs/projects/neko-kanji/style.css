@@ -11,7 +11,7 @@ body {
 .quiz-container,
 #main-menu,
 #quiz-container button {
-  border-radius: 40px;
+  border-radius: 20px;
 }
 
 h1 {
