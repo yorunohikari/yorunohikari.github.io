@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #555555;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        .screenbox {
+            list-style: none;
+            max-width: 800px;
+            margin: 20px auto;
+            background: rgb(255, 255, 255);
+            border: 1px solid #333;
+            padding: 5px 14px;
+        }
+
+        .screenbox li {
+            font: 14px/18px Courier, fixed;
+        }
+
+        .screenplay-title {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .written-by {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .author-name {
+            font-size: 16px;
+        }
+
+        .screenplay-title,
+        .written-by,
+        .author-name,
+        .draft {
+            text-align: center;
+        }
+
+        .sceneheader,
+        .action,
+        .character {
+            padding-top: 1.5ex;
+        }
+
+        .action {
+            padding-right: 5%;
+        }
+
+        .character {
+            margin-left: 40%;
+        }
+
+        .dialogue {
+            margin-left: 25%;
+            padding-right: 25%;
+        }
+
+        .parenthetical {
+            margin-left: 32%;
+            padding-right: 30%;
+        }
+
+        /* special case: dialogue followed by a parenthetical; the extra line needs to be suppressed */
+
+        .dialogue+.parenthetical {
+            padding-bottom: 0;
+        }
+
+        .transition {
+            padding-top: 3ex;
+            margin-left: 65%;
+            padding-bottom: 1.5ex;
+        }
+
+        .under-construction {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            padding: 10px;
+            background: repeating-linear-gradient(45deg,
+                    #000,
+                    #000 25px,
+                    #ffd700 25px,
+                    #ffd700 50px);
+            /* Black and yellow striped background */
+            color: #ff0000;
+            /* Dark text color */
+            font-size: 20px;
+            /* Increased text size */
+            font-weight: bold;
+            text-shadow: -1px -1px 0 #ffd700, 1px -1px 0 #000000, -1px 1px 0 #000000,
+                1px 1px 0 #ffd700;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .screenbox {
+                width: 90%;
+                /* Adjust the width for smaller screens */
+                margin: 0 auto;
+                /* Center the screenbox on smaller screens */
+            }
+
+            .screenbox li {
+                font-size: 12px;
+                /* Decrease the font size for smaller screens if needed */
+            }
+        }
+
+        .toggle-fullscreen-btn {
+            position: fixed;
+            top: 20px;
+            /* Adjust top position as needed */
+            left: 20px;
+            /* Adjust right position as needed */
+            border: 0;
+            padding: 0;
+            background: none;
+            cursor: pointer;
+            outline: none;
+            z-index: 100;
+            /* Ensure button is above other content */
+        }
+
+
+
+        .toggle-fullscreen-svg {
+            display: block;
+            height: auto;
+        }
+
+        .toggle-fullscreen-svg path {
+            transform-box: view-box;
+            transform-origin: 12px 12px;
+            fill: none;
+            stroke: hsl(0, 0%, 100%);
+            stroke-width: 4;
+            transition: .15s;
+        }
+
+
+        .toggle-fullscreen-btn:hover path:nth-child(1),
+        .toggle-fullscreen-btn:focus path:nth-child(1) {
+            transform: translate(-2px, -2px);
+        }
+
+        .toggle-fullscreen-btn:hover path:nth-child(2),
+        .toggle-fullscreen-btn:focus path:nth-child(2) {
+            transform: translate(2px, -2px);
+        }
+
+        .toggle-fullscreen-btn:hover path:nth-child(3),
+        .toggle-fullscreen-btn:focus path:nth-child(3) {
+            transform: translate(2px, 2px);
+        }
+
+        .toggle-fullscreen-btn:hover path:nth-child(4),
+        .toggle-fullscreen-btn:focus path:nth-child(4) {
+            transform: translate(-2px, 2px);
+        }
+
+
+        .toggle-fullscreen-btn:not(.on) .icon-fullscreen-leave {
+            display: none;
+        }
+
+        .toggle-fullscreen-btn.on .icon-fullscreen-enter {
+            display: none;
+        }
+    </style>
+    <title>Pada Suatu Ketika</title>
+</head>
+
+<body>
+    <button onclick="openFullscreen()" class="js-toggle-fullscreen-btn toggle-fullscreen-btn"
+        aria-label="Enter fullscreen mode">
+        <svg class="toggle-fullscreen-svg" width="28" height="28" viewBox="-2 -2 28 28">
+            <g class="icon-fullscreen-enter">
+                <path d="M 2 9 v -7 h 7" />
+                <path d="M 22 9 v -7 h -7" />
+                <path d="M 22 15 v 7 h -7" />
+                <path d="M 2 15 v 7 h 7" />
+            </g>
+            <g class="icon-fullscreen-leave">
+                <path d="M 24 17 h -7 v 7" />
+                <path d="M 0 17 h 7 v 7" />
+                <path d="M 0 7 h 7 v -7" />
+                <path d="M 24 7 h -7 v -7" />
+            </g>
+        </svg>
+    </button>
+    <ul class="screenbox">
+        <li class="screenplay-title">Pada Suatu Ketika</li>
+        <li class="written-by">Written By</li>
+        <li class="author-name">Osha Fannya Permadi</li>
+        <li class="draft">DRAFT 3</li>
+        <li class="sceneheader">Act 1</li>
+        <li class="sceneheader">
+            Pada suatu ketika, di suatu kerajaan, hiduplah seorang putri cantik
+            jelita. Putri itu cantik dan cerdas, namun ia sangat manja.
+        </li>
+        <li class="action">
+            Suatu hari, ia sedang melukis di taman istana. Berkali kali ia melukis,
+            namun tidak puas dengan lukisannya. Dan tiba-tiba muncul lah seorang
+            laki laki ke hadapannya.
+        </li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="dialogue">
+            Ahhhh kesel banget. Dari tadi jelek terus hasilnya.
+        </li>
+        <li class="character">Malin Kundang</li>
+        <li class="dialogue">Putri, kau salah memilih warna.</li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="parenthetical">(kaget)</li>
+        <li class="dialogue">
+            Aaaaaaa kau muncul dari mana? Inikan taman privat istana?
+        </li>
+        <li class="character">Malin Kundang</li>
+        <li class="parenthetical">(sambil menunjuk ke kanvas)</li>
+        <li class="dialogue">
+            Itu tidak penting. Ini ini kan pohon. Seharusnya hijau warnanya.
+        </li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="dialogue">
+            Hehehe, aku tidak tahu caranya membuat warna hijau.
+        </li>
+        <li class="character">Malin Kundang</li>
+        <li class="parenthetical">(sambil mengarahkan tangan Dayang Sumbi)</li>
+        <li class="dialogue">
+            Begini, kau ambil warna kuning dan campurkan sedikit dengan warna biru.
+            Dan tadaa.. Jadilah warna hijau.
+        </li>
+        <li class="action">Dayang Sumbi terpesona dengan Malin Kundang.</li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="dialogue">Dari mana kau tahu tentang warna-warna?</li>
+        <li class="character">Malin Kundang</li>
+        <li class="dialogue">
+            Sebelum aku merantau, kakekku sering mengajarkanku melukis.
+        </li>
+        <li class="action">
+            Dayang Sumbi makin terpesona. Malin Kundang masih melanjutkan melukis.
+            Dan menyelesaikan lukisannya.
+        </li>
+        <li class="character">Malin Kundang</li>
+        <li class="dialogue">
+            Sipp, udah jadi. Seperti ini kah lukisan yang kamu mau?
+        </li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="parenthetical">(tidak melihat lukisan)</li>
+        <li class="dialogue">Iya, lukisannya indah sekali.</li>
+        <li class="character">Malin Kundang</li>
+        <li class="dialogue">
+            Kalau begitu aku harus pergi dulu. Ada masalah yang harus aku
+            selesaikan.
+        </li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="dialogue">Tunggu!!!! Aku belum tau namamu.</li>
+        <li class="action">Malin Kundang berlari menuju hutan.</li>
+        <li class="character">Malin Kundang</li>
+        <li class="parenthetical">(sambil berteriak)</li>
+        <li class="dialogue">Kita akan bertemu lagi di lain waktu.</li>
+        <li class="action">
+            Dayang Sumbi kecewa karena tidak tau siapa nama laki laki yang
+            ditemuinya. Ia murung sambil menatap lukisan. Tiba-tiba asisten kerajaan
+            datang.
+        </li>
+        <li class="character">Asisten Kerajaan</li>
+        <li class="dialogue">
+            Putriiii, ayo mandi. Jam 6 nanti kita akan pergi ke pesta.
+        </li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="parenthetical">(masih murung)</li>
+        <li class="dialogue">Bentar dulu deh mbak. Lagi ga mood.</li>
+        <li class="character">Asisten Kerajaan</li>
+        <li class="parenthetical">
+            (Sambil menyeret Dayang Sumbi ke dalam istana.)
+        </li>
+        <li class="dialogue">Ayoo putri. Sekarang sudah jam segini.</li>
+
+        <li class="sceneheader">Act 2</li>
+        <li class="sceneheader">
+            Dayang Sumbi tiba di pesta. Pesta ini adalah pesta yang diadakan oleh
+            kerajaan sebelah dalam rangka pencarian jodoh untuk sang pangeran. Pesta
+            ini dihadiri berbagai bangsawan. Raja juga mengundang berbagai putri
+            dari kerajaan lain.
+        </li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="dialogue">
+            Huft. Bosan sekali. Kira kira, cowok itu ada di pesta ini gak ya?
+        </li>
+        <li class="character">Cinderella</li>
+        <li class="dialogue">Cowok siapa tuuu? Btw, kenalin aku Cinderella.</li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="dialogue">
+            Eh, enggak enggak. Aku cuma bergumam sendiri hehehehe. Salam kenal, aku
+            Dayang Sumbi.
+        </li>
+        <li class="character">Cinderella</li>
+        <li class="dialogue">
+            Ciee, cowok siapa sih? Kamu lagi jatuh cinta ya kayaknya?
+        </li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="dialogue">
+            Iyaa. Tadi aku bertemu sama cowok. Tapi aku belum tau namanya. Dia kayak
+            cool banget gitu.
+        </li>
+        <li class="character">Cinderella</li>
+        <li class="dialogue">
+            Ooo tenang aja. Kalo dia memang jodoh kamu pasti ketemu lagi kalian.
+        </li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="dialogue">Wkwkwk jodoh apanya. Baru aja ketemu tadi sore.</li>
+        <li class="character">Cinderella</li>
+        <li class="dialogue">
+            Kan jodoh ga ada yang tau. Btw, Aku mau dansa dulu ya.
+        </li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="dialogue">
+            Oh iya iya. Makasih udah nemenin ngobrol. Have fun.
+        </li>
+        <li class="action">
+            Dayang Sumbi kembali sendiri, ditinggal Cinderella yang berdansa dengan
+            pangeran. Tiba-tiba Dayang Sumbi mendengar gonggongan dari luar. Dayang
+            Sumbi mengikuti suara itu.
+        </li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="dialogue">Anjing siapa ini?</li>
+        <li class="action">(Dayang Sumbi mengelus-elus kepala anjing itu)</li>
+        <li class="dialogue">Uuuuuu lucu sekali. Kamu anaknya siapaaaa? (</li>
+        <li class="action">
+            Anjing itu tetap menggonggong, seperti ingin memberitahu sesuatu. Namun
+            Dayang Sumbi tetap mengelus-elus anjing itu dan menggendong anjing itu.
+            Dayang Sumbi pun pulang sebelum pesta selesai karena bosan dan ia
+            membawa pulang anjing itu.
+        </li>
+        <li class="sceneheader">Act 3</li>
+        <li class="sceneheader">
+            Dayang Sumbi kembali ke istana kerajaanya. Esok harinya Ia masih mencari
+            kemana perginya laki laki yang ditemuinya. Ia bertanya tanya kepada
+            warga istana tentang laki laki itu.
+        </li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="dialogue">
+            Pak, bapak tau gak, cowok yang rambutnya segini, yang kemarin ke sini?
+        </li>
+        <li class="character">Butler 1</li>
+        <li class="dialogue">
+            Wah, saya kurang tahu putri. Sepengetahuan saya, kemarin tidak ada tamu.
+        </li>
+        <li class="character">Butler 2</li>
+        <li class="dialogue">
+            Iya, putri. Saya yang mendata buku tamu dan kemarin memang tidak ada
+            tamu.
+        </li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="parenthetical">(kecewa)</li>
+        <li class="dialogue">Yahh. Siapa ya laki laki kemarin?</li>
+        <li class="action">
+            Anjing yang Dayang Sumbi bawa menggonggong lagi seakan ingin memberitahu
+            sesuatu.
+        </li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="dialogue">Kamu kenapa? Lapar? Tadi kan sudah makan.</li>
+        <li class="action">Anjing itu tetap menggonggong.</li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="dialogue">
+            Jangan-jangan, kamu tahu sesuatu tentang laki itu?
+        </li>
+        <li class="action">Anjing itu menggonggong semakin keras.</li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="dialogue">
+            Hah, kamu tahu tentang laki laki itu? Cepat beritahu aku dia di mana!
+        </li>
+        <li class="action">
+            Anjing itu tiba-tiba lari. Dan Dayang Sumbi mengikuti Anjing itu. Mereka
+            sampai di hutan.
+        </li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="dialogue">Aaaaaaa!</li>
+        <li class="action">
+            Dayang Sumbi melihat Malin Kundang tergeletak di hutan. Ia pun segera
+            kembali ke istana untuk memanggil beberapa prajurit. Malin Kundang pun
+            dibawa ke istana untuk dirawat.
+        </li>
+        <li class="sceneheader">Act 4</li>
+        <li class="sceneheader">
+            Malin Kundang terbangun dari tidurnya disambut oleh Dayang Sumbi di
+            sampingnya.
+        </li>
+        <li class="character">Malin Kundang</li>
+        <li class="dialogue">Di mana aku?</li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="dialogue">Udah bangun ya, MALIN KUNDANG dari …</li>
+        <li class="parenthetical">(melihat kartu pengenal)</li>
+        <li class="dialogue">PADANG?</li>
+        <li class="character">Malin Kundang</li>
+        <li class="dialogue">Dari mana kau mendapatkan itu?</li>
+        <li class="character">Dayang Sumbi</li>
+        <li class="dialogue">
+            Itu tidak penting. Apa yang kau lakukan di hutan terbaring seperti orang
+            mati?
+        </li>
+        <li class="character">Malin Kundang</li>
+        <li class="dialogue">Kau tak akan percaya.</li>
+        <div class="under-construction">
+            Under Construction - This screenplay is a work in progress.
+        </div>
+    </ul>
+    <script>
+        if (document.fullscreenEnabled || document.webkitFullscreenEnabled) {
+            const toggleBtn = document.querySelector('.js-toggle-fullscreen-btn');
+
+            const styleEl = document.createElement('link');
+            styleEl.setAttribute('rel', 'stylesheet');
+            styleEl.setAttribute('href', 'https://codepen.io/tiggr/pen/poJoLyW.css');
+            styleEl.addEventListener('load', function () {
+                toggleBtn.hidden = false;
+            });
+            document.head.appendChild(styleEl);
+
+            toggleBtn.addEventListener('click', function () {
+                if (document.fullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitFullscreenElement) {
+                    document.webkitCancelFullScreen()
+                } else if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                } else {
+                    document.documentElement.webkitRequestFullScreen();
+                }
+            });
+
+            document.addEventListener('fullscreenchange', handleFullscreen);
+            document.addEventListener('webkitfullscreenchange', handleFullscreen);
+
+
+            function handleFullscreen() {
+                if (document.fullscreen || document.webkitFullscreenElement) {
+                    toggleBtn.classList.add('on');
+                    toggleBtn.setAttribute('aria-label', 'Exit fullscreen mode');
+                } else {
+                    toggleBtn.classList.remove('on');
+                    toggleBtn.setAttribute('aria-label', 'Enter fullscreen mode');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
