@@ -1,5 +1,5 @@
-let cooldownEndTime = localStorage.getItem('cooldownEndTime');
-let previousFortune = localStorage.getItem('previousFortune');
+let cooldownEndTime = localStorage.getItem("cooldownEndTime");
+let previousFortune = localStorage.getItem("previousFortune");
 
 window.onload = function () {
   if (cooldownEndTime && Date.now() < parseInt(cooldownEndTime)) {
@@ -13,55 +13,59 @@ window.onload = function () {
 };
 
 function generateFortune() {
-  const generateButton = document.getElementById('generateButton');
+  const generateButton = document.getElementById("generateButton");
 
   if (!cooldownEndTime || Date.now() >= parseInt(cooldownEndTime)) {
     const cooldownDuration = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
     cooldownEndTime = Date.now() + cooldownDuration;
-    localStorage.setItem('cooldownEndTime', cooldownEndTime);
+    localStorage.setItem("cooldownEndTime", cooldownEndTime);
 
     displayCooldownTimer();
 
-    fetch('fortunes.json')
-      .then(response => response.json())
-      .then(data => {
+    fetch("fortunes.json")
+      .then((response) => response.json())
+      .then((data) => {
         const fortunes = data.fortunes;
         const randomIndex = Math.floor(Math.random() * fortunes.length);
         const randomFortune = fortunes[randomIndex];
         displayFortune(randomFortune);
         previousFortune = randomFortune;
-        localStorage.setItem('previousFortune', previousFortune);
+        localStorage.setItem("previousFortune", previousFortune);
         generateLuckStats();
         const luckStats = getLuckStats();
-        console.log('Luck Stats:', luckStats);
+        console.log("Luck Stats:", luckStats);
         updateLuckTable();
       })
-      .catch(error => {
-        console.error('Error fetching fortunes:', error);
+      .catch((error) => {
+        console.error("Error fetching fortunes:", error);
       });
   } else {
-    alert('You can only generate fortune once a day. Please wait for tomorrow.');
+    alert(
+      "You can only generate fortune once a day. Please wait for tomorrow."
+    );
   }
 }
 
 function displayFortune(fortune) {
-  const fortuneDisplay = document.getElementById('fortuneDisplay');
+  const fortuneDisplay = document.getElementById("fortuneDisplay");
   fortuneDisplay.textContent = fortune;
-  const fortuneLabel = document.getElementById('fortuneLabel');
+  const fortuneLabel = document.getElementById("fortuneLabel");
   fortuneLabel.textContent = "Today's Fortune ✨";
 }
 
 function displayCooldownTimer() {
-  const generateButton = document.getElementById('generateButton');
+  const generateButton = document.getElementById("generateButton");
 
   const intervalId = setInterval(() => {
     const remainingTime = cooldownEndTime - Date.now();
     if (remainingTime <= 0) {
       clearInterval(intervalId);
-      generateButton.textContent = 'Generate Fortune';
+      generateButton.textContent = "Generate Fortune";
     } else {
       const hours = Math.floor(remainingTime / (1000 * 60 * 60));
-      const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+      const minutes = Math.floor(
+        (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
+      );
       const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
       generateButton.textContent = `Cooldown: ${hours}h ${minutes}m ${seconds}s`;
     }
@@ -84,17 +88,17 @@ function generateLuckStats() {
     Happiness: getRandomPercentage(),
     Prosperity: getRandomPercentage(),
     Fortune: getRandomPercentage(),
-    Serenity: getRandomPercentage()
+    Serenity: getRandomPercentage(),
   };
 
   // Store luck stats in local storage
-  localStorage.setItem('luckStats', JSON.stringify(luckStats));
+  localStorage.setItem("luckStats", JSON.stringify(luckStats));
 }
 
 // Function to retrieve luck stats from local storage
 function getLuckStats() {
   // Get luck stats from local storage
-  const luckStatsString = localStorage.getItem('luckStats');
+  const luckStatsString = localStorage.getItem("luckStats");
   // Parse luck stats string to JSON
   const luckStats = JSON.parse(luckStatsString);
   // Return luck stats object
@@ -106,11 +110,18 @@ function updateLuckTable() {
   const luckStats = getLuckStats();
 
   // Update the table cells with the new luck stats
-  document.getElementById('happines-percentage').textContent = `${luckStats.Happiness}%`;
-  document.getElementById('prosperity-percentage').textContent = `${luckStats.Prosperity}%`;
-  document.getElementById('fortune-percentage').textContent = `${luckStats.Fortune}%`;
-  document.getElementById('serenity-percentage').textContent = `${luckStats.Serenity}%`;
+  document.getElementById(
+    "happines-percentage"
+  ).textContent = `${luckStats.Happiness}%`;
+  document.getElementById(
+    "prosperity-percentage"
+  ).textContent = `${luckStats.Prosperity}%`;
+  document.getElementById(
+    "fortune-percentage"
+  ).textContent = `${luckStats.Fortune}%`;
+  document.getElementById(
+    "serenity-percentage"
+  ).textContent = `${luckStats.Serenity}%`;
 
-  document.getElementById('card').style.display = 'flex';
+  document.getElementById("card").style.display = "flex";
 }
-
