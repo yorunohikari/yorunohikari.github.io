@@ -2,6 +2,9 @@ body {
     font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     margin: 0;
     max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .fortune-container {
@@ -67,6 +70,79 @@ body {
     margin: 8px;
 }
 
+.card {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+  }
+  
+  .card-content {
+    /* Ensure the table populates the entire card */
+    width: 100%;
+    margin: 0;
+  }
+  
+  .card-header {
+    /* Add your card header styles here */
+    width: 100%;
+    margin: 0;
+  }
+  
+  .card-title {
+    /* Add your card title styles here */
+    padding-left: 10%;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .card-desc {
+    padding-left: 10%;
+    text-align: left;
+    color: #666666;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .font-semibold {
+    /* Add your font styles here for semi-bold text */
+    font-weight: 600;
+    text-align: left;
+  }
+  
+  .text-right {
+    /* Add your styles for right-aligned text here */
+    text-align: right;
+  }
+  
+  .table {
+    /* Add your table styles here */
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Ensure the table takes up the entire card width */
+    margin: 0;
+  }
+  
+  .table-cell {
+    /* Add your table cell styles here */
+    padding: 8px; /* Add padding for better spacing */
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 10%;
+    
+  }
+  
+  .table-row {
+    /* Add border only to the bottom of each row */
+    border-bottom: 1px solid #ccc;
+  }
+  
+
 
 /* Responsive CSS */
 
@@ -87,6 +163,8 @@ body {
         height: 30px;
         width: 70%;
     }
+
+
 }
 
 @media screen and (max-width: 400px) {

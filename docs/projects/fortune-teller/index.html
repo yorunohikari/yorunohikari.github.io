@@ -6,9 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Fortune Teller" />
-    <meta property="og:description" content="The Fortune Teller application is a web-based fortune-telling tool that provides users with random predictions for their day." />
+    <meta property="og:description"
+        content="The Fortune Teller application is a web-based fortune-telling tool that provides users with random predictions for their day." />
     <meta property="og:url" content="https://yorunohikari.github.io/projects/fortune-teller/" />
-    <meta property="og:image" content="https://github.com/yorunohikari/yorunohikari.github.io/blob/main/docs/assets/fortune.png?raw=true" />
+    <meta property="og:image"
+        content="https://github.com/yorunohikari/yorunohikari.github.io/blob/main/docs/assets/fortune.png?raw=true" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@goshintai_" />
+    <meta name="twitter:title" content="Fortune Teller" />
+    <meta name="twitter:description"
+        content="The Fortune Teller application is a web-based fortune-telling tool that provides users with random predictions for their day." />
+    <meta name="twitter:image"
+        content="https://github.com/yorunohikari/yorunohikari.github.io/blob/main/docs/assets/fortune.png?raw=true" />
+    <link rel="icon" type="image/x-icon" href="/assets/osha-logo.ico">
     <title>Fortune Teller</title>
     <link rel="stylesheet" href="style.css">
 
@@ -21,10 +31,39 @@
             <p class="fortune-description">🌟 Reveal Your Enchanted Fortune 🌟</p>
         </div>
         <div class="fortune-content">
-            <button id="generateButton" onclick="generateFortune()" class="fortune-button">🌟 Generate Fortune 🌟</button>
+            <button id="generateButton" onclick="generateFortune()" class="fortune-button">🌟 Generate Fortune
+                🌟</button>
             <div class="fortune-details">
-                <div class="fortune-label"  id="fortuneLabel">Your Fortune Awaits ✨</div>
+                <div class="fortune-label" id="fortuneLabel">Your Fortune Awaits ✨</div>
                 <p class="fortune-text" id="fortuneDisplay"></p>
+            </div>
+        </div>
+        <div class="card" id="card">
+            <div class="card-header">
+                <h2 class="card-title">Luck stats</h2>
+                <p class="card-desc">Your current luck parameters.</p>
+            </div>
+            <div class="card-content">
+                <table class="table">
+                    <tbody>
+                        <tr class="table-row">
+                            <td class="table-cell font-semibold">Happiness</td>
+                            <td class="table-cell text-right" id="happines-percentage"></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-cell font-semibold">Prosperity</td>
+                            <td class="table-cell text-right" id="prosperity-percentage"></td>
+                        </tr class="table-row">
+                        <tr class="table-row">
+                            <td class="table-cell font-semibold">Fortune</td>
+                            <td class="table-cell text-right" id="fortune-percentage"></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-cell font-semibold">Serenity</td>
+                            <td class="table-cell text-right" id="serenity-percentage"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
