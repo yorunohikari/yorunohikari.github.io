@@ -51,6 +51,7 @@ body {
 }
 
 .fortune-label {
+    margin: 8px;
     font-size: 1.5rem;
     font-weight: bold;
     color: #FFD700; /* Gold */
@@ -61,18 +62,11 @@ body {
     color: #666666; /* Gray */
 }
 
-.animate-bounce {
-    animation: bounce 0.5s infinite alternate;
+
+.fortune-button {
+    margin: 8px;
 }
 
-@keyframes bounce {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-10px);
-    }
-}
 
 /* Responsive CSS */
 
