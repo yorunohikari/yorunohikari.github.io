@@ -1,0 +1,124 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(124, 124, 124, 0.1);
+    text-align: center;
+    border: 2px solid #cecece;
+  }
+
+  .prompt {
+    color: #00ff00;
+    font-weight: bold;
+  }
+
+  .output {
+    color: #000000;
+  }
+
+  .command {
+    color: #ff00ff;
+  }
+
+  /* Center the image */
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    /* Add some top margin for separation */
+    width: 200px;
+  }
+
+  .p-4 {
+    padding: 1rem;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex-col {
+    flex-direction: column;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+
+  .space-y-2> :not([hidden])~ :not([hidden]) {
+    margin-top: 0.5rem;
+  }
+
+  .space-x-2> :not([hidden])~ :not([hidden]) {
+    margin-left: 0.5rem;
+  }
+
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+
+  .font-semibold {
+    font-weight: 600;
+  }
+
+  .text-xs {
+    font-size: 0.75rem;
+  }
+
+  .font-medium {
+    font-weight: 500;
+  }
+
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+  .tracking-wide {
+    letter-spacing: 0.05em;
+  }
+
+  .text-gray-500 {
+    color: #718096;
+  }
+
+  .dark\:text-gray-400 {
+    color: #cbd5e0;
+  }
+
+  .grid {
+    display: grid;
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+
+  .text-sm {
+    font-size: 0.875rem;
+  }
+
+  .text-xl {
+    font-size: 1.25rem;
+  }
