@@ -9,9 +9,9 @@
     "display": "fullscreen",
     "icons": [
         {
-            "src": "neko-logo.ico",
-            "type": "image/ico",
-            "sizes": "256x256"
+            "src": "assets\neko-pic.png",
+            "type": "image/png",
+            "sizes": "2048x2048"
         }
     ]
 }
