@@ -395,7 +395,7 @@ function endQuiz() {
     document.getElementById("main-menu").innerHTML = `
       <h1>${encouragementText}</h1>
       <div>
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhP0jUqq7HmUZGERn2xVb2mHC1Mj9ldwwt1V3YwMktthenB3arJaFT8jZKosRrxPqXDc-MEjveMZlieKldTfWlR_-O8HEH5U5PtFIoqg9oGX9zI0Nc8w4HAeszoBVkR73VHJOJryf7IqlysXIqSkmdCHaiFDoWjrACaxhETJ6jf_MaHalnwmA8tZoJiv-A/s2048/Neko%20without%20background.png" alt="Neko image" />
+        <img src="/assets/neko-pic.png" alt="Neko image" />
       </div>
       <p>Quiz Results</p>
       <table id="quiz-results">
