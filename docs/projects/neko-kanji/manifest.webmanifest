@@ -9,7 +9,7 @@
     "display": "fullscreen",
     "icons": [
         {
-            "src": "assets\neko-pic.png",
+            "src": "assets/neko-pic.png",
             "type": "image/png",
             "sizes": "2048x2048"
         }
