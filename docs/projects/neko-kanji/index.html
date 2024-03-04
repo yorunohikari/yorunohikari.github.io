@@ -169,6 +169,14 @@
     </div>
   </div>
   <p>Copyrights &#169; 2024 Osha Permadi. All Rights Reserved.</p>
+  <script>
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register(
+        '/projects/neko-kanji/sw.js',
+        { scope: '/projects/neko-kanji/' }
+      )
+    }
+  </script>
   <script src="script.js"></script>
 </body>
 
