@@ -1,0 +1,17 @@
+{
+    "name": "Neko Kanji",
+    "short_name": "NKJ",
+    "description": "Neko Kanji is kanji quiz app.",
+    "scope": "/projects/neko-kanji/",
+    "start_url": "/projects/neko-kanji/",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "display": "fullscreen",
+    "icons": [
+        {
+            "src": "/neko-logo.ico",
+            "type": "image/ico",
+            "sizes": "256x256"
+        }
+    ]
+}

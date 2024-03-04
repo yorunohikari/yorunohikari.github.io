@@ -792,3 +792,10 @@ function resetStoredData() {
     </div>
     <p style="text-align: center;">There is no score history available.</p>`;
 }
+
+if (navigator.serviceWorker) {
+    navigator.serviceWorker.register (
+      '/projects/neko-kanji/sw.js',
+      {scope: '/projects/neko-kanji/'}
+    )
+  }
