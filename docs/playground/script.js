@@ -1,34 +1,39 @@
-document.getElementById("messageForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-  
-    // Get input values
-    const professorName = document.getElementById("professorName").value;
-    const courseDetails = document.getElementById("courseDetails").value;
-    const absenceDates = document.getElementById("absenceDates").value;
-    const situation = document.getElementById("situation").value;
-    const yourName = document.getElementById("yourName").value;
-  
-    // Generate message
-    const message = `Dear Professor ${professorName},
+document.getElementById("messageForm").addEventListener("submit", function (event) {
+  event.preventDefault();
 
-I am writing to share with you that I will be unable to attend your class ${courseDetails} on the following dates: ${absenceDates} due to ${situation} situation. I hope to maintain and complete all course requirements that I will miss during my time away.
-Can we set up a time to meet and discuss my upcoming absence and coursework?
-Thank you in advance for your time. I look forward to talking to you soon.
+  // Get input values
+  const yourName = document.getElementById("yourName").value;
+  const NIM = document.getElementById("NIM").value;
+  const professorName = document.getElementById("professorName").value;
+  const professorTitle = document.getElementById("professorTitle").value;
+  const courseDetails = document.getElementById("courseDetails").value;
+  const absenceDates = document.getElementById("absenceDates").value;
+  const situation = document.getElementById("situation").value;
+  
 
-Sincerely,
-${yourName}`;
-  
-    // Display generated message
-    document.getElementById("outputMessage").value = message;
-  });
-  
-  document.getElementById("copyButton").addEventListener("click", function() {
-    // Copy message to clipboard
-    const outputMessage = document.getElementById("outputMessage");
-    outputMessage.select();
-    document.execCommand("copy");
-  
-    // Notify user
-    alert("Message copied to clipboard!");
-  });
-  
+  // Generate message
+  const message = `Assalamualaikum warahmatullahi wabarakatuh
+
+Mohon maaf mengganggu waktu ${professorTitle} ${professorName}.
+
+Saya ${yourName}, NIM ${NIM}, kelas ${courseDetails}. Melalui pesan ini, saya memberitahukan saat ini saya sedang ${situation}. Sehingga saya tidak bisa mengikuti kelas pada hari ${absenceDates}. 
+Untuk itu, saya mohon pengertian dari ${professorTitle} ${professorName} agar memberi izin saya untuk tidak mengikuti kelas. Demikian yang dapat saya sampaikan. Mohon maaf apabila ada kata-kata yang kurang berkenan. 
+
+Terima kasih 🙏🏻`;
+
+  // Display generated message
+  document.getElementById("outputMessage").value = message;
+});
+
+document.getElementById("copyButton").addEventListener("click", function() {
+  // Select the text inside the textarea
+  const outputMessage = document.getElementById("outputMessage");
+  outputMessage.select();
+  // Copy the selected text
+  document.execCommand("copy");
+  // Deselect the text
+  window.getSelection().removeAllRanges();
+  // Notify the user
+  alert("Pesan tersalin!");
+});
+
