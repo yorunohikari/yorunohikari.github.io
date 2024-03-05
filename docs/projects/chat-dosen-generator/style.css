@@ -17,6 +17,8 @@ body {
 
 footer {
   text-align: center;
+  color: #6b7280;
+  font-size: 18px;
 }
 
 .section {
@@ -150,5 +152,9 @@ textarea {
 @media screen and (max-width: 768px) {
   .container {
     width: 95%;
+  }
+  footer {
+    color: #6b7280;
+    font-size: 11px;
   }
 }
