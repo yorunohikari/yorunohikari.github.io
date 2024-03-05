@@ -18,6 +18,8 @@ Mohon maaf mengganggu waktu `;
   
   if (professorTitle === 'Sensei') {
     message += `${professorName} ${professorTitle}`;
+  } else if (professorTitle === 'Prof') {
+    message += `${professorTitle} ${professorName}`;
   } else {
     message += `${professorTitle} ${professorName}`;
   }

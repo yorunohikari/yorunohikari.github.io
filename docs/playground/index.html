@@ -20,39 +20,55 @@
       </div>
       <div class="section">
         <div class="input-group">
-          <label for="yourName">Nama Kamu</label>
+          <div class="inputlabel">
+            <label for="yourName">Nama Kamu</label>
+          </div>
           <input type="text" id="yourName" placeholder="Tulis nama kamu di sini" required>
         </div>
         <div class="input-group">
-          <label for="NIM">NIM Kamu</label>
+          <div class="inputlabel">
+            <label for="NIM">NIM Kamu</label>
+          </div>
           <input type="text" id="NIM" placeholder="Tulis NIM kamu di sini" required>
         </div>     
         <div class="input-group">
-          <label for="professorName">Nama Dosen</label>
+          <div class="inputlabel">
+            <label for="professorName">Nama dan gelar Dosen</label>
+          </div>
           <div class="radio-options">
-            <input type="radio" id="bapak" name="professorTitle" value="Bapak" checked>
+            <input class="inputlabel" type="radio" id="bapak" name="professorTitle" value="Bapak" checked>
             <label for="bapak">Bapak</label>
-            <input type="radio" id="ibu" name="professorTitle" value="Ibu">
+            <input class="inputlabel" type="radio" id="ibu" name="professorTitle" value="Ibu">
             <label for="ibu">Ibu</label>
-            <input type="radio" id="sensei" name="professorTitle" value="Sensei">
+            <input class="inputlabel" type="radio" id="prof" name="professorTitle" value="Prof">
+            <label for="prof">Prof</label>
+            <input class="inputlabel" type="radio" id="sensei" name="professorTitle" value="Sensei">
             <label for="sensei">Sensei</label>
           </div>
           <input type="text" id="professorName" placeholder="Tulis nama dosen di sini" required>
         </div>
         <div class="input-group">
-          <label for="courseDetails">Nama Mata Kuliah</label>
+          <div class="inputlabel">
+            <label for="courseDetails">Nama Mata Kuliah</label>
+          </div>
           <input type="text" id="courseDetails" placeholder="Tulis nama mata kuliah" required>
         </div>
         <div class="input-group">
-          <label for="absenceDates">Tanggal tidak masuk</label>
+          <div class="inputlabel">
+            <label for="absenceDates">Tanggal tidak masuk</label>
+          </div>
           <input type="date" id="absenceDates" required>
         </div>
         <div class="input-group">
-          <label for="situation">Alasan absen</label>
-          <textarea id="situation" placeholder="Tulis alasan absen di sini" required></textarea>
+          <div class="inputlabel">
+            <label for="situation">Alasan tidak masuk</label>
+          </div>
+          <textarea id="situation" placeholder="Tulis alasan tidak masuk di sini" required></textarea>
         </div>
         <div class="input-group">
-          <label>Pesan yang dibuat</label>
+          <div class="inputlabel">
+            <label>Pesan yang dibuat</label>
+          </div>
           <textarea id="outputMessage" rows="11" readonly placeholder="Generated message" readonly></textarea>
         </div>
         <button type="submit" class="generate-button">Buat Pesan</button>
