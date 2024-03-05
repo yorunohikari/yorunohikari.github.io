@@ -103,7 +103,7 @@
         </div>
       </div>
     </div>
-    <img src="assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+    <img src="assets/arrow.png" alt="arrow icon" class="icon arrow" id="arrowButton" />
   </section>
   <section id="experience">
     <p class="section__text__p1">Explore my</p>
@@ -192,7 +192,6 @@
         </div>
       </div>
     </div>
-    <img src="assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='./#project'" />
   </section>
   <section id="project">
     <p class="section__text__p1">Browse my recent</p>
@@ -242,7 +241,6 @@
         </div>
       </div>
     </div>
-    <img src="assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
   </section>
   <section id="contact">
     <p class="section__text__p1">Get in touch</p>
@@ -284,10 +282,8 @@
     }
 
     function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+      window.location.href = './#profile';
+      document.getElementById('arrowButton').style.display = "block";
     }
 
     window.addEventListener("scroll", function () {
@@ -305,6 +301,32 @@
         // If not scrolled past or viewport width is less than or equal to 768px, hide the arrow icon
         scrollToTopArrow.style.display = "none";
       }
+    });
+
+     // JavaScript
+    document.getElementById('arrowButton').addEventListener('click', function() {
+        // Get the current section's ID
+        var currentSectionId = window.location.hash;
+
+        // Define an array of section IDs you want to cycle through
+        var sectionIds = ['#profile','#about', '#experience', '#project', '#contact'];
+
+        // Find the index of the current section in the array
+        var currentIndex = sectionIds.indexOf(currentSectionId);
+
+        // Calculate the index of the next section to navigate to
+        var nextIndex = (currentIndex + 1) % sectionIds.length;
+
+        // Get the ID of the next section
+        var nextSectionId = sectionIds[nextIndex];
+
+        // If the next section is the "contact" section, hide the arrow button
+        if (nextSectionId === '#contact') {
+          document.getElementById('arrowButton').style.display = "none";
+        }
+
+        // Navigate to the next section
+        window.location.href = './' + nextSectionId;
     });
   </script>
 </body>

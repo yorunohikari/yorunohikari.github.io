@@ -323,15 +323,16 @@ section {
 }
 
 .arrow {
-  position: relative;
-  right: -100rem;
-  bottom: 4rem;
+  z-index: 1;
+  position: fixed;
+  right: 10rem;
+  bottom: 5rem;
 }
 
 .home {
   position: fixed;
   left: 5rem;
-  bottom: 20rem;
+  bottom: 25rem;
 }
 
 .details-container {
