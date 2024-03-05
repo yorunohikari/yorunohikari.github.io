@@ -83,12 +83,25 @@ button {
   font-weight: bold;
   background-color: #3b82f6;
   color: #ffffff;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, transform 0.2s;
+  border: none;
+  box-shadow: 0 3px 0 #2563eb; /* Add shadow to the bottom to create 3D effect */
 }
 
 button:hover {
   background-color: #2563eb;
 }
+
+button:active {
+  transform: translateY(1px); /* Move the button down slightly when pressed */
+  box-shadow: 0 1px 0 #2563eb; /* Adjust shadow on click */
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* Add a subtle shadow when focused */
+}
+
 
 .copy-button {
   margin-left: 0.5rem;
