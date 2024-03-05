@@ -324,7 +324,7 @@ section {
 
 .arrow {
   position: relative;
-  left: 80rem;
+  right: -100rem;
   bottom: 4rem;
 }
 
