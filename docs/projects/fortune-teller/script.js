@@ -13,7 +13,6 @@ window.onload = function () {
 };
 
 function generateFortune() {
-  const generateButton = document.getElementById("generateButton");
 
   if (!cooldownEndTime || Date.now() >= parseInt(cooldownEndTime)) {
     const cooldownDuration = 24 * 60 * 60 * 1000; // 24 hours in milliseconds

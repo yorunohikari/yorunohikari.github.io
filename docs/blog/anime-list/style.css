@@ -1,0 +1,33 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header,
+  footer {
+    text-align: center;
+  }
+  
+  .blog-container {
+    max-width: 70%;
+    margin-top: 100px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content {
+    text-align: justify;
+  }
+
+  table {
+    border-collapse: collapse;
+    border: 1px solid #ddd; /* Add borders to all tables */
+    margin-bottom: 20px; /* Add some spacing between tables */
+    width: 100%; /* Set width to 100% to fill the container */
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
