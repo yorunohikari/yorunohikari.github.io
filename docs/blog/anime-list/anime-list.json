@@ -239,6 +239,130 @@
         {
             "link": "https://myanimelist.net/anime/44511",
             "name": "Chainsaw Man"
+        },
+        {
+            "link": "https://myanimelist.net/anime/40748",
+            "name": "Jujutsu Kaisen (TV)"
+        },
+        {
+            "link": "https://myanimelist.net/anime/38000",
+            "name": "Demon Slayer: Kimetsu no Yaiba"
+        },
+        {
+            "link": "https://myanimelist.net/anime/47778",
+            "name": "Demon Slayer: Entertainment District Arc"
+        },
+        {
+            "link": "https://myanimelist.net/anime/31478",
+            "name": "Bungo Stray Dogs"
+        },
+        {
+            "link": "https://myanimelist.net/anime/32867",
+            "name": "Bungo Stray Dogs 2"
+        },
+        {
+            "link": "https://myanimelist.net/anime/38003",
+            "name": "Bungou Stray Dogs 3rd Season"
+        },
+        {
+            "link": "https://myanimelist.net/anime/32281",
+            "name": "Your Name"
+        },
+        {
+            "link": "https://myanimelist.net/anime/28171",
+            "name": "Food Wars! Shokugeki no Soma"
+        },
+        {
+            "link": "https://myanimelist.net/anime/31327",
+            "name": "Food Wars! Shokugeki no Soma OVA"
+        },
+        {
+            "link": "https://myanimelist.net/anime/32282",
+            "name": "Food Wars! The Second Plate"
+        },
+        {
+            "link": "https://myanimelist.net/anime/34480",
+            "name": "Food Wars! The Second Plate OVA"
+        },
+        {
+            "link": "https://myanimelist.net/anime/35788",
+            "name": "Food Wars! The Third Plate"
+        },
+        {
+            "link": "https://myanimelist.net/anime/36962",
+            "name": "Food Wars! The Third Plate OVA"
+        },
+        {
+            "link": "https://myanimelist.net/anime/39940",
+            "name": "Food Wars! The Fourth Plate"
+        },
+        {
+            "link": "https://myanimelist.net/anime/40902",
+            "name": "Food Wars! The Fifth Plate"
+        },
+        {
+            "link": "https://myanimelist.net/anime/37430",
+            "name": "That Time I Got Reincarnated as a Slime"
+        },
+        {
+            "link": "https://myanimelist.net/anime/39551",
+            "name": "That Time I Got Reincarnated as a Slime Season 2"
+        },
+        {
+            "link": "https://myanimelist.net/anime/41487",
+            "name": "That Time I Got Reincarnated as a Slime 2nd Season Part 2"
+        },
+        {
+            "link": "https://myanimelist.net/anime/49877",
+            "name": "That Time I Got Reincarnated as a Slime: The Movie - Scarlet Bond"
+        },
+        {
+            "link": "https://myanimelist.net/anime/30831",
+            "name": "KonoSuba: God's Blessing on This Wonderful World!"
+        },
+        {
+            "link": "https://myanimelist.net/anime/32937",
+            "name": "KonoSuba: God's Blessing on This Wonderful World! 2"
+        },
+        {
+            "link": "https://myanimelist.net/anime/49438",
+            "name": "Parallel World Pharmacy"
+        },
+        {
+            "link": "https://myanimelist.net/anime/52608",
+            "name": "The Aristocrat's Otherworldly Adventure: Serving Gods Who Go Too Far"
+        },
+        {
+            "link": "https://myanimelist.net/anime/39535",
+            "name": "Mushoku Tensei: Jobless Reincarnation"
+        },
+        {
+            "link": "https://myanimelist.net/anime/45576",
+            "name": "Mushoku Tensei: Jobless Reincarnation Part 2"
+        },
+        {
+            "link": "https://myanimelist.net/anime/30276",
+            "name": "One Punch Man"
+        },
+        {
+            "link": "https://myanimelist.net/anime/34134",
+            "name": "One Punch Man 2nd Season"
+        },
+        {
+            "link": "https://myanimelist.net/anime/41389",
+            "name": "TONIKAWA: Over the Moon For You"
+        },
+        {
+            "link": "https://myanimelist.net/anime/34618",
+            "name": "BLEND-S"
+        },
+        {
+            "link": "https://myanimelist.net/anime/38691",
+            "name": "Dr. Stone"
+        },
+        {
+            "link": "https://myanimelist.net/anime/40852",
+            "name": "Dr. Stone: Stone Wars"
         }
     ],
     "Dropped": [
@@ -297,16 +421,8 @@
             "name": "The Dangers in My Heart Season 2"
         },
         {
-            "link": "https://myanimelist.net/anime/56845",
-            "name": "The Strongest Tank's Labyrinth Raids: A Tank with a Rare 9999 Resistance Skill Got Kicked from the Hero's Party"
-        },
-        {
             "link": "https://myanimelist.net/anime/53421",
             "name": "Hokkaido Gals Are Super Adorable!"
-        },
-        {
-            "link": "https://myanimelist.net/anime/52081",
-            "name": "Otaku Elf"
         },
         {
             "link": "https://myanimelist.net/anime/56352",
@@ -337,6 +453,14 @@
         {
             "link": "https://myanimelist.net/anime/33731",
             "name": "Gabriel DropOut"
+        },
+        {
+            "link": "https://myanimelist.net/anime/56845",
+            "name": "The Strongest Tank's Labyrinth Raids: A Tank with a Rare 9999 Resistance Skill Got Kicked from the Hero's Party"
+        },
+        {
+            "link": "https://myanimelist.net/anime/52081",
+            "name": "Otaku Elf"
         }
     ]
 }
