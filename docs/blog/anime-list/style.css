@@ -2,15 +2,11 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #000000;
+  color: #d9d9d9;
 }
 
-body {
-  background-color: #ffffff;
-  color: #333;
-}
-
-header,
-footer {
+header, footer {
   text-align: center;
 }
 
@@ -29,14 +25,23 @@ table {
   width: 100%;
 }
 
-th,
-td {
-  border-bottom: 1px solid #ddd;
+th, td {
+  border-bottom: 1px solid #2f3336;
   padding: 12px;
   text-align: left;
 }
 
 th {
-  background-color: #f5f5f5;
+  background-color: #16181C;
   font-weight: bold;
+  color: #8899a6;
+}
+
+a {
+  color: #ffffff; /* White color */
+  text-decoration: none; /* Remove underline */
+}
+
+a:visited {
+  color: #ffffff; /* White color */
 }
