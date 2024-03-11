@@ -236,7 +236,7 @@ function checkAnswer() {
             incorrectAttempts = 0;
             // Display feedback indicating correctness and the question's meaning
             document.getElementById("feedback").innerHTML = `
-        <span style="color: green;">Correct!</span>
+        <span style="color: #90EE90;">Correct!</span>
         <br />
         Meaning: ${questionMeaning}`;
             document.getElementById("hint").innerHTML = ``; // Clear any hint displayed
@@ -260,7 +260,7 @@ function checkAnswer() {
                 // Display feedback indicating incorrectness, correct answers, and the question's meaning
                 document.getElementById("feedback").innerHTML = `
             <span style="color: red;">Incorrect!</span> Correct answers: 
-            <span style="color: green;">${correctReadings.join(", ")}</span>
+            <span style="color: #90EE90;">${correctReadings.join(", ")}</span>
             <br />
             Meaning: ${questionMeaning}`;
                 document.getElementById("hint").innerHTML = ` `; // Clear any hint displayed
@@ -548,6 +548,7 @@ function endQuiz() {
     }
 
     // Reset quiz parameters
+    resetProgressBar();
     resetQuiz();
     LoadScoreHistory();
     updateInputsFromSavedValues()
