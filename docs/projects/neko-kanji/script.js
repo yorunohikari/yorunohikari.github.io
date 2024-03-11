@@ -5,6 +5,7 @@ const quizData = {
     N3: [],
     N2: [],
     N1: [],
+    N6: [],
 };
 
 // Quiz Variables
@@ -425,6 +426,7 @@ function endQuiz() {
           <option value="N3">N3</option>
           <option value="N2">N2</option>
           <option value="N1">N1</option>
+          <option value="N6">神さまたちの遊ぶ庭</option>
           <!-- Add other JLPT levels as needed -->
         </select>
       </div>
