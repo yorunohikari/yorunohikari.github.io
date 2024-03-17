@@ -1,0 +1,512 @@
+/* Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eceff1;
+  text-align: center;
+}
+
+/* Common Styles for Containers */
+.quiz-container,
+#main-menu,
+#quiz-container button {
+  border-radius: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #1877f2;
+  background-color: #666666;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: rgba(245, 245, 245, 0.5) 3px 5px 1px;
+}
+
+.quiz-container,
+#main-menu {
+  max-width: 80%;
+  margin-top: 50px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background: linear-gradient(45deg, #ffffff, #f0f0f0);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  text-align: center;
+}
+
+#main-menu select,
+#main-menu button {
+  margin-top: 10px;
+}
+
+.label-hint,
+.help,
+.input-group,
+.timeattack,
+.numberlabel {
+  margin: 5px;
+}
+
+#answer-input {
+  position: relative;
+  cursor: text;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 8px 16px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #d6d6e7;
+  border-radius: 8px;
+  color: rgb(35, 38, 59);
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: all 100ms ease-in-out;
+  text-align: center;
+  width: 30%;
+}
+
+#answer-input:focus {
+  outline: 0;
+  border: 2px solid #1877f2;
+  box-shadow: inset 0 1px 4px 0 rgb(119 122 175 / 30%);
+  transition: all 100ms ease-in-out;
+}
+
+#unanswered-container {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: left;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset rgba(50, 50, 93, 0.25) -4px -4px 4px -5px,
+    inset rgba(0, 0, 0, 0.3) 4px 5px 5px -4px;
+}
+
+/* Quiz Results Table */
+#quiz-results {
+  width: 50%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+#quiz-results th,
+#quiz-results td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#quiz-results th {
+  background-color: #1877f2;
+  color: white;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100rem;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #ffffff;
+  /* White background */
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  text-align: left;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Add this to your existing CSS styles */
+#progress-bar-container {
+  display: block;
+  width: 80%;
+  background-color: #e0e0e0;
+  height: 5px;
+  border-radius: 10px;
+  margin: 30px auto 20px auto;
+}
+
+#progress-bar {
+  height: 100%;
+  background-color: #1877f2;
+  width: 0;
+  border-radius: 10px;
+}
+
+/* This is necessary to remove blogger templates */
+.post-header,
+.post-header a,
+.post-header button,
+.post-footer,
+.sidebar-container,
+.post-sidebar,
+#footer,
+.centered-top-container.sticky,
+.post-title,
+.post-body-container:before,
+.centered-top-container,
+.centered-top-placeholder,
+.centered-top {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+.label-hint {
+  display: flex;
+  justify-content: center;
+}
+
+.checkbox-wrapper-4 * {
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.checkbox-wrapper-4 .cbx {
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.checkbox-wrapper-4 .cbx:not(:last-child) {
+  margin-right: 6px;
+}
+
+.checkbox-wrapper-4 .cbx:hover {
+  background: rgba(0, 119, 255, 0.06);
+}
+
+.checkbox-wrapper-4 .cbx span {
+  float: left;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-4 .cbx span:first-child {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  transform: scale(1);
+  border: 1px solid #cccfdb;
+  transition: all 0.2s ease;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.checkbox-wrapper-4 .cbx span:first-child svg {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-4 .cbx span:last-child {
+  padding-left: 8px;
+  line-height: 18px;
+}
+
+.checkbox-wrapper-4 .cbx:hover span:first-child {
+  border-color: #07f;
+}
+
+.checkbox-wrapper-4 .inp-cbx {
+  position: absolute;
+  visibility: hidden;
+}
+
+.checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child {
+  background: #07f;
+  border-color: #07f;
+  animation: wave-4 0.4s ease;
+}
+
+.checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-4 .inline-svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+@-moz-keyframes wave-4 {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+@-webkit-keyframes wave-4 {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+@-o-keyframes wave-4 {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes wave-4 {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+.button-19 {
+  appearance: button;
+  background-color: #1877f2;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  margin: 10px;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 13px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.button-19:after {
+  background-clip: padding-box;
+  background-color: #00aeef;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button-19:main,
+.button-19:focus {
+  user-select: auto;
+}
+
+.button-19:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.button-19:disabled {
+  cursor: auto;
+}
+
+.button-19:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+
+.fsbtn {
+  display: flex;
+  justify-content: center;
+}
+
+.main-menu img {
+  width: 25%;
+  height: 25%;
+  object-fit: contain;
+}
+
+.loadop {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  margin: 8px;
+  border: 8px solid #00aeef;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #00aeef transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+
+@media (max-width: 400px) {
+  #quiz-results th,
+  #quiz-results td {
+    padding: 6px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .checkbox-wrapper-4 .cbx {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .label-hint {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .main-menu img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+  }
+
+  #quiz-results {
+    width: 90%;
+  }
+
+  .modal-content {
+    width: 80%;
+  }
+
+  #answer-input {
+    width: 60%;
+  }
+
+  .score-history-table th:nth-child(1),
+  .score-history-table td:nth-child(1) {
+    width: 30%;
+  }
+
+  .score-history-table th:nth-child(4),
+  .score-history-table td:nth-child(4) {
+    width: 30%;
+  }
+
+  .score-history-table th:nth-child(2),
+  .score-history-table td:nth-child(2) {
+    width: 20%;
+  }
+}
+
+/* CSS to hide scrollbar */
+body:-webkit-full-screen {
+  overflow: hidden;
+}
+
+body:-moz-full-screen {
+  overflow: hidden;
+}
+
+body:-ms-fullscreen {
+  overflow: hidden;
+}
+
+body:fullscreen {
+  overflow: hidden;
+}

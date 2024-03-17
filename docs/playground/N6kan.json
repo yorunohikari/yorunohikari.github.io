@@ -1,0 +1,227 @@
+[
+  {
+    "kanji": "引っ越す",
+    "readings": ["ひっこす", "hikkosu"],
+    "meaning": "to move (house), to change residence"
+  },
+  {
+    "kanji": "寛ぐ",
+    "readings": ["くつろぐ", "kutsurogu", "kuturogu"],
+    "meaning": "to relax, to feel at home"
+  },
+  {
+    "kanji": "帯広",
+    "readings": ["おびひろ", "obihiro"],
+    "meaning": "Obihiro"
+  },
+  {
+    "kanji": "札幌",
+    "readings": ["さっぽろ", "sapporo"],
+    "meaning": "Sapporo"
+  },
+  {
+    "kanji": "旭川",
+    "readings": ["あさひかわ", "asahikawa"],
+    "meaning": "Asahikawa"
+  },
+  {
+    "kanji": "十勝",
+    "readings": ["とかち", "tokachi"],
+    "meaning": "Tokachi"
+  },
+  {
+    "kanji": "本州",
+    "readings": ["ほんしゅう", "honshuu"],
+    "meaning": "Honshuu"
+  },
+  {
+    "kanji": "行き来",
+    "readings": ["ゆきき", "yukiki"],
+    "meaning": "coming and going"
+  },
+  {
+    "kanji": "文化圏",
+    "readings": ["ぶんかけん", "bunkaken"],
+    "meaning": "cultural sphere"
+  },
+  {
+    "kanji": "雄大",
+    "readings": ["ゆうだい", "yuudai"],
+    "meaning": "grand, magnificent, majestic, great, sublime"
+  },
+  {
+    "kanji": "延ばす",
+    "readings": ["のばす", "nobasu"],
+    "meaning": "to extend"
+  },
+  {
+    "kanji": "拠点",
+    "readings": ["きょてん", "kyouten"],
+    "meaning": "position, location, base, point, site"
+  },
+  {
+    "kanji": "白羽の矢を立てる",
+    "readings": ["しらはのやをたてる", "shirahanoyawotateru"],
+    "meaning": "to select someone (out of many people)"
+  },
+  {
+    "kanji": "運よく",
+    "readings": ["うんよく", "unyoku"],
+    "meaning": "luckly"
+  },
+  {
+    "kanji": "賛同",
+    "readings": ["さんどう", "sandou"],
+    "meaning": "approval "
+  },
+  {
+    "kanji": "振る",
+    "readings": ["ふる", "furu"],
+    "meaning": "to wave, to shake, to swing"
+  },
+  {
+    "kanji": "大自然",
+    "readings": ["だいしぜん", "daishizen"],
+    "meaning": "Nature, Mother Nature"
+  },
+  {
+    "kanji": "恵まれる",
+    "readings": ["めぐまる", "megumareru"],
+    "meaning": "to be blessed with, to be rich in, to abound in"
+  },
+  {
+    "kanji": "憧れ",
+    "readings": ["あこがれ", "akogare"],
+    "meaning": "yearning, longing"
+  },
+  {
+    "kanji": "分類",
+    "readings": ["ぶんるい", "bunrui"],
+    "meaning": "classification, categorization, sorting"
+  },
+  {
+    "kanji": "相応",
+    "readings": ["そうおう", "souou"],
+    "meaning": "suitable, appropriate, befitting, becoming, adequate, reasonable, proper"
+  },
+  {
+    "kanji": "大雪山国立公園",
+    "readings": ["だいせつざんこくりつこうえん", "daisetsuzankokuritsukouen", "daisetuzankokuritukouen"],
+    "meaning": "Daisetsuzan National Park"
+  },
+  {
+    "kanji": "集落",
+    "readings": ["しゅうらく", "shuuraku"],
+    "meaning": "settlement, village, community, town"
+  },
+  {
+    "kanji": "想像",
+    "readings": ["そうぞう", "souzou"],
+    "meaning": "imagination "
+  },
+  {
+    "kanji": "百名山",
+    "readings": ["ひゃくめいざん", "hyakumeizan"],
+    "meaning": "one hundred famous mountains (of Japan)"
+  },
+  {
+    "kanji": "重心",
+    "readings": ["じゅうしん", "juushin"],
+    "meaning": "centre of gravity (center)"
+  },
+  {
+    "kanji": "標高",
+    "readings": ["ひょうこう", "hyoukou"],
+    "meaning": "elevation, height above sea level "
+  },
+  {
+    "kanji": "大規模",
+    "readings": ["だいきぼ", "daikibo"],
+    "meaning": "large-scale)"
+  },
+  {
+    "kanji": "遭難",
+    "readings": ["そうなん", "sounan"],
+    "meaning": "(meeting with) disaster"
+  },
+  {
+    "kanji": "事故",
+    "readings": ["じこ", "jiko"],
+    "meaning": "Incident "
+  },
+  {
+    "kanji": "真夏",
+    "readings": ["まなつ", "manatsu", "manatu"],
+    "meaning": "middle of summer, height of summer, midsummer"
+  },
+  {
+    "kanji": "低体温症",
+    "readings": ["ていたいおんしょう", "teitaionshou"],
+    "meaning": "hypothermia"
+  },
+  {
+    "kanji": "倒れる",
+    "readings": ["たおれる", "taoreru"],
+    "meaning": "to fall (over, down), to collapse "
+  },
+  {
+    "kanji": "恐ろしい",
+    "readings": ["おそろしい", "osoroshii"],
+    "meaning": "terrible, dreadful, terrifying, frightening"
+  },
+  {
+    "kanji": "報告書",
+    "readings": ["ほうこくしょ", "houkokusho"],
+    "meaning": "(written) report"
+  },
+  {
+    "kanji": "土地",
+    "readings": ["とち", "tochi"],
+    "meaning": "plot of land, lot, soil"
+  },
+  {
+    "kanji": "検索",
+    "readings": ["けんさく", "kensaku"],
+    "meaning": "search (e.g. on the Internet)"
+  },
+  {
+    "kanji": "画像",
+    "readings": ["がぞう", "gazou"],
+    "meaning": "image, picture, portrait"
+  },
+  {
+    "kanji": "景観",
+    "readings": ["けいかん", "keikan"],
+    "meaning": "scenery"
+  },
+  {
+    "kanji": "麓",
+    "readings": ["ふもと", "fumoto"],
+    "meaning": "foot (of a mountain or hill), bottom, base"
+  },
+  {
+    "kanji": "牧場",
+    "readings": ["ぼくじょう", "bokujou"],
+    "meaning": "farm (livestock), stock farm, ranch, station"
+  },
+  {
+    "kanji": "僻地",
+    "readings": ["へきち", "hekichi"],
+    "meaning": "rural, remote area"
+  },
+  {
+    "kanji": "併置",
+    "readings": ["へいち", "heichi"],
+    "meaning": "placing side by side, running simultaneously (e.g. classes), juxtaposition"
+  },
+  {
+    "kanji": "級",
+    "readings": ["きゅう", "kyuu"],
+    "meaning": "(school) grade, year, class"
+  },
+  {
+    "kanji": "校区",
+    "readings": ["こうく", "kouku"],
+    "meaning": "school district, school area"
+  }
+]
