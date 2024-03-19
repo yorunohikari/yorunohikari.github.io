@@ -1,91 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/assets/logo.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Home Screen</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section id="project">
-        <p class="section__text__p1">Browse my recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img src="/assets/chat-dosen.png" alt="project0" class="project-img" />
-              </div>
-              <h2 class="experience-sub-title project-title">Chat Izin Dosen Generator</h2>
-              <div class="btn-container">
-                <button class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/yorunohikari/'">
-                  Github
-                </button>
-                <button class="btn btn-color-2 project-btn" onclick="location.href='chat-dosen-generator/'">
-                  Live Demo
-                </button>
-              </div>
-            </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img src="/assets/nekokanji_sc.png" alt="project1" class="project-img" />
-              </div>
-              <h2 class="experience-sub-title project-title">Neko Kanji</h2>
-              <div class="btn-container">
-                <button class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/yorunohikari/Kanji-Reading-Quiz/'">
-                  Github
-                </button>
-                <button class="btn btn-color-2 project-btn" onclick="location.href='neko-kanji/'">
-                  Live Demo
-                </button>
-              </div>
-            </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img src="/assets/prefec.png" alt="project2" class="project-img" />
-              </div>
-              <h2 class="experience-sub-title project-title">Flag Quiz</h2>
-              <div class="btn-container">
-                <button class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/yorunohikari/JapanesePrefecturesFlagQuiz'">
-                  Github
-                </button>
-                <button class="btn btn-color-2 project-btn" onclick="location.href='flag-quiz/'">
-                  Live Demo
-                </button>
-              </div>
-            </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                  <img src="/assets/fortune.png" alt="project2" class="project-img" />
-                </div>
-                <h2 class="experience-sub-title project-title">Fortune Teller</h2>
-                <div class="btn-container">
-                  <button class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://github.com/yorunohikari/'">
-                    Github
-                  </button>
-                  <button class="btn btn-color-2 project-btn" onclick="location.href='fortune-teller/'">
-                    Live Demo
-                  </button>
-                </div>
-              </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img src="/assets/blog-thumb.png" alt="project3" class="project-img" />
-              </div>
-              <h2 class="experience-sub-title project-title">Personal Blog</h2>
-              <div class="btn-container">
-                <button class="btn btn-color-2 project-btn" onclick="location.href='/blog/'">
-                  Visit Blog
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div class="phone-container">
+    <a href='neko-kanji/'>
+      <div class="app-icon">
+        <img src="/assets/projects/nekoappicon.png" alt="neko kanji App icon">
+      </div>
+      <div class="app-name">Neko Kanji</div>
+    </a>
+    <a href='flag-quiz/'>
+      <div class="app-icon">
+        <img src="/assets/projects/prefectureappicon.png" alt="prefecture flag quiz App icon">
+      </div>
+      <div class="app-name">Flag Quiz</div>
+    </a>
+    <a href='fortune-teller/'>
+      <div class="app-icon">
+        <img src="/assets/projects/fortuneappicon.png" alt="fortune teller App icon">
+      </div>
+      <div class="app-name">Fortune Teller</div>
+    </a>
+    <a href='chat-dosen-generator/'>
+      <div class="app-icon">
+        <img src="/assets/projects/ijinappicon.png" alt="Chat Izin Dosen App Icon">
+      </div>
+      <div class="app-name">Chat Izin App</div>
+    </a>
+    <div class="image-widget">
+      <img src="/assets/projects/gori.jpg" alt="Image Widget">
+    </div>
+    <!-- Add more app icons and names as needed -->
+  </div>
 </body>
 </html>
