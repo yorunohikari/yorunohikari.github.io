@@ -32,7 +32,7 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
-  border-radius: 50px;
+  border-radius: 30px;
   background: #ecf0f3;
   box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
   text-align: center;
@@ -150,7 +150,7 @@ h1 {
   cursor: pointer;
 }
 
-/* Add this to your existing CSS styles */
+/* Progress bar */
 #progress-bar-container {
   display: block;
   width: 80%;
@@ -165,6 +165,7 @@ h1 {
   background-color: #1877f2;
   width: 0;
   border-radius: 10px;
+  transition: width 0.1s ease-in-out;
 }
 
 /* This is necessary to remove blogger templates */
