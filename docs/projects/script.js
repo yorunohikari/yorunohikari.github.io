@@ -61,7 +61,7 @@ appIcons.forEach(function (appIcon) {
         var itemseparator = document.createElement('div');
         itemseparator.className = 'context-menu-separator';
         contextMenu.appendChild(itemseparator);
-        
+
         var repoMenuItem = document.createElement('div');
         repoMenuItem.className = 'context-menu-item';
         repoMenuItem.textContent = 'Go to the Repository';
@@ -160,6 +160,27 @@ document.addEventListener('contextmenu', function (event) {
         outsideContextMenu.style.top = event.pageY + 'px';
 
         // Add menu items for outside clicks
+        var sortMenuItem = document.createElement('div');
+        sortMenuItem.className = 'context-menu-item';
+        sortMenuItem.textContent = 'Sort App';
+        sortMenuItem.onclick = function () {
+            sortAppsByName();
+        };
+        outsideContextMenu.appendChild(sortMenuItem);
+
+        var refreshMenuItem = document.createElement('div');
+        refreshMenuItem.className = 'context-menu-item';
+        refreshMenuItem.textContent = 'Refresh';
+        refreshMenuItem.onclick = function () {
+            location.reload();
+        };
+        outsideContextMenu.appendChild(refreshMenuItem);
+
+        var itemseparator = document.createElement('div');
+        itemseparator.className = 'context-menu-separator';
+        outsideContextMenu.appendChild(itemseparator);
+        
+
         var changeBackgroundMenuItem = document.createElement('div');
         changeBackgroundMenuItem.className = 'context-menu-item';
         changeBackgroundMenuItem.textContent = 'Change Background';
@@ -173,24 +194,26 @@ document.addEventListener('contextmenu', function (event) {
                     const reader = new FileReader();
                     reader.onload = function (e) {
                         const imageUrl = e.target.result;
-                        localStorage.setItem('customBackground', imageUrl);
+                        try {
+                            localStorage.setItem('customBackground', imageUrl);
+                        } catch (error) {
+                            if (error instanceof DOMException && error.name === 'QuotaExceededError') {
+                                // Show a warning popup for quota exceeded error
+                                alert('file too big, try another files');
+                            } else {
+                                throw error; // Re-throw other errors
+                            }
+                        }
                         applyCustomBackground(); // Call the function to update the background
-                        closeOpenContextMenu()
+                        closeOpenContextMenu();
                     };
                     reader.readAsDataURL(file);
                 }
             };
             input.click();
         };
-        outsideContextMenu.appendChild(changeBackgroundMenuItem);
 
-        var refreshMenuItem = document.createElement('div');
-        refreshMenuItem.className = 'context-menu-item';
-        refreshMenuItem.textContent = 'Refresh';
-        refreshMenuItem.onclick = function () {
-            location.reload();
-        };
-        outsideContextMenu.appendChild(refreshMenuItem);
+        outsideContextMenu.appendChild(changeBackgroundMenuItem);
 
         // Add context menu for outside clicks to the document
         document.body.appendChild(outsideContextMenu);
@@ -228,40 +251,84 @@ phoneContainer.addEventListener('touchmove', touchMove);
 phoneContainer.addEventListener('touchend', touchEnd);
 
 function touchStart(e) {
-  startX = e.touches[0].clientX;
-  // Get the current translation value
-  translateX = parseInt(document.querySelector('.content-container').style.transform.replace(/[^0-9\-]/g, '')) || 0;
+    startX = e.touches[0].clientX;
+    // Get the current translation value
+    translateX = parseInt(document.querySelector('.content-container').style.transform.replace(/[^0-9\-]/g, '')) || 0;
 }
 
 function touchMove(e) {
-  currentX = e.touches[0].clientX;
-  const diff = currentX - startX; // Reversed the order of subtraction
-  const newTranslateX = translateX + diff;
+    currentX = e.touches[0].clientX;
+    const diff = currentX - startX; // Reversed the order of subtraction
+    const newTranslateX = translateX + diff;
 
-  // Limit the translation to the width of the content container
-  const contentContainer = document.querySelector('.content-container');
-  const maxTranslation = contentContainer.offsetWidth * 0.4; // 80% of the container width
-  const clampedTranslation = Math.max(-maxTranslation, Math.min(maxTranslation, newTranslateX));
-  contentContainer.style.transform = `translateX(${clampedTranslation}px)`;
+    // Limit the translation to the width of the content container
+    const contentContainer = document.querySelector('.content-container');
+    const maxTranslation = contentContainer.offsetWidth * 0.4; // 80% of the container width
+    const clampedTranslation = Math.max(-maxTranslation, Math.min(maxTranslation, newTranslateX));
+    contentContainer.style.transform = `translateX(${clampedTranslation}px)`;
 }
 
 function touchEnd(e) {
-  const contentContainer = document.querySelector('.content-container');
-  const containerWidth = contentContainer.offsetWidth;
-  const threshold = containerWidth * 0.2; // 20% of the container width
-  const maxTranslation = containerWidth * 0.4; // 80% of the container width
+    const contentContainer = document.querySelector('.content-container');
+    const containerWidth = contentContainer.offsetWidth;
+    const threshold = containerWidth * 0.2; // 20% of the container width
+    const maxTranslation = containerWidth * 0.4; // 80% of the container width
 
-  // Reverse the swipe direction: swiping from left to right moves to the previous "page"
-  if (translateX < -threshold) {
-    translateX += containerWidth;
-  } else if (translateX > threshold) {
-    translateX -= containerWidth;
-  }
+    // Reverse the swipe direction: swiping from left to right moves to the previous "page"
+    if (translateX < -threshold) {
+        translateX += containerWidth;
+    } else if (translateX > threshold) {
+        translateX -= containerWidth;
+    }
 
-  // Limit the translation to the maximum allowed value
-  translateX = Math.max(-maxTranslation, Math.min(maxTranslation, translateX));
+    // Limit the translation to the maximum allowed value
+    translateX = Math.max(-maxTranslation, Math.min(maxTranslation, translateX));
 
-  // Reset the translation to a multiple of the container width
-  const clampedTranslation = Math.round(translateX / containerWidth) * containerWidth;
-  contentContainer.style.transform = `translateX(${clampedTranslation}px)`;
+    // Reset the translation to a multiple of the container width
+    const clampedTranslation = Math.round(translateX / containerWidth) * containerWidth;
+    contentContainer.style.transform = `translateX(${clampedTranslation}px)`;
+}
+
+
+let isReverseSort = false;
+
+function sortAppsByName() {
+    const container = document.querySelector('.content-container');
+    const anchors = Array.from(container.querySelectorAll('a'));
+
+    const anchorTextsAndElements = anchors.map(anchor => {
+        const appNameDiv = anchor.querySelector('.app-name');
+        const textContent = appNameDiv ? appNameDiv.textContent : '';
+        return { text: textContent, element: anchor };
+    });
+
+    anchorTextsAndElements.sort((a, b) => {
+        if (isReverseSort) {
+            return a.text.localeCompare(b.text);
+        } else {
+            return b.text.localeCompare(a.text);
+        }
+    });
+
+    const fragment = document.createDocumentFragment();
+    const imageWidget = container.querySelector('.image-widget');
+
+    anchorTextsAndElements.forEach(({ element }) => {
+        if (!element.classList.contains('image-widget')) {
+            fragment.appendChild(element);
+        }
+    });
+
+    const childNodes = Array.from(container.childNodes);
+    childNodes.forEach(node => {
+        if (!node.classList?.contains('image-widget')) {
+            node.remove();
+        }
+    });
+    closeOpenContextMenu();
+    container.appendChild(fragment);
+    container.appendChild(imageWidget);
+
+    // Toggle the sorting order for the next function call
+    isReverseSort = !isReverseSort;
 }
