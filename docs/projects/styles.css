@@ -124,8 +124,17 @@ a {
   width: 80%;
 }
 
+.modal-content {
+  background-color: #f0f0f0;
+  margin: 10% auto;
+  border-radius: 9px;
+  border: 1px solid #888;
+  width: 20%;
+  font-family: Arial, sans-serif;
+}
 
-@media (max-width: 675px) {
+
+@media (max-width: 600px) {
   .phone-container {
     max-width: 100%;
     max-height: 95%;
@@ -152,14 +161,6 @@ a {
   overflow: auto;
 }
 
-.modal-content {
-  background-color: #f0f0f0;
-  margin: 10% auto;
-  border-radius: 9px;
-  border: 1px solid #888;
-  width: 40%;
-  font-family: Arial, sans-serif;
-}
 
 .modal-header {
   background-color: #237cea;
