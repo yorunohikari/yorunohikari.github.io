@@ -12,7 +12,7 @@ function applyCustomBackground() {
         phoneContainer.style.backgroundImage = `url('${customBackground}')`;
     } else {
         // Set the default background image here
-        phoneContainer.style.backgroundImage = 'url("/assets/projects/defaultBackground.jpg")';
+        phoneContainer.style.backgroundImage = 'url("/assets/projects/backgroundahomev2.png")';
     }
 }
 
