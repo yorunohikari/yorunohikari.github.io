@@ -64,3 +64,8 @@ header,
 footer {
   text-align: center;
 }
+
+footer {
+  color: #6b7280;
+  font-size: 18px;
+}
