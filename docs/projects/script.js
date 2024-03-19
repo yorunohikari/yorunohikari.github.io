@@ -27,7 +27,7 @@ function applyCustomImage() {
         widgetImage.src = customImage;
     } else {
         // Set the default image here
-        widgetImage.src = '/docs/assets/projects/nova.png';
+        widgetImage.src = '/assets/projects/nova.png';
     }
 }
 
