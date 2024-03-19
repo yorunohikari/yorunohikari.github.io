@@ -42,6 +42,10 @@ appIcons.forEach(function (appIcon) {
         };
         contextMenu.appendChild(openMenuItem);
 
+        var itemseparator = document.createElement('div');
+        itemseparator.className = 'context-menu-separator';
+        contextMenu.appendChild(itemseparator);
+        
         var repoMenuItem = document.createElement('div');
         repoMenuItem.className = 'context-menu-item';
         repoMenuItem.textContent = 'Go to the Repository';
