@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Home Screen</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .phone-container {
+      max-width: 375px;
+      max-height: 667px;
+      width: 90vw;
+      height: 80vh;
+      background-color: #000;
+      border-radius: 30px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      grid-gap: 10px;
+      grid-auto-rows: 80px;
+    }
+
+    .app-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 15px;
+      background-color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      margin-bottom: 5px;
+    }
+
+    .app-name {
+      font-size: 12px;
+      color: #fff;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: 675px) {
+      .phone-container {
+        max-width: 100%;
+        max-height: 90%;
+        height: 100vh;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="phone-container">
+    <a href='neko-kanji/'>
+      <div class="app-icon">
+        <img src="/assets/projects/nekoappicon.png" alt="App Icon 1">
+      </div>
+      <div class="app-name">Neko Kanji</div>
+    </a>
+    <a href="app2.html">
+      <div class="app-icon">B</div>
+      <div class="app-name">App Name 2</div>
+    </a>
+    <a href="app3.html">
+      <div class="app-icon">C</div>
+      <div class="app-name">App Name 3</div>
+    </a>
+    <!-- Add more app icons and names as needed -->
+  </div>
+</body>
+</html>
