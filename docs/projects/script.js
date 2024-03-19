@@ -62,6 +62,18 @@ appIcons.forEach(function (appIcon) {
         itemseparator.className = 'context-menu-separator';
         contextMenu.appendChild(itemseparator);
 
+        var copyLinkMenuItem = document.createElement('div');
+        copyLinkMenuItem.className = 'context-menu-item';
+        copyLinkMenuItem.textContent = 'Copy Link';
+        copyLinkMenuItem.onclick = function () {
+            var appLink = "https://yorunohikari.github.io/projects/" + appIcon.parentNode.getAttribute('href');
+            navigator.clipboard.writeText(appLink)
+                .then(() => console.log('Link copied to clipboard'))
+                .catch(err => console.error('Failed to copy link: ', err));
+            closeOpenContextMenu();
+        };
+        contextMenu.appendChild(copyLinkMenuItem);
+
         var repoMenuItem = document.createElement('div');
         repoMenuItem.className = 'context-menu-item';
         repoMenuItem.textContent = 'Go to the Repository';
@@ -71,6 +83,20 @@ appIcons.forEach(function (appIcon) {
             window.open(appRepoLink, '_blank');
         };
         contextMenu.appendChild(repoMenuItem);
+
+        var itemseparator = document.createElement('div');
+        itemseparator.className = 'context-menu-separator';
+        contextMenu.appendChild(itemseparator);
+
+        var propertiesMenuItem = document.createElement('div');
+        propertiesMenuItem.className = 'context-menu-item';
+        propertiesMenuItem.textContent = 'Properties';
+        propertiesMenuItem.onclick = function () {
+            // Custom action for the "Properties" menu item
+            closeOpenContextMenu()
+            showPropertiesModal(appIcon);
+        };
+        contextMenu.appendChild(propertiesMenuItem);
 
         // Add context menu to the document
         document.body.appendChild(contextMenu);
@@ -86,6 +112,209 @@ appIcons.forEach(function (appIcon) {
         });
     });
 });
+
+function fetchAppProperties(appLink) {
+    // Construct the URL of the JSON file based on the app link
+    const jsonUrl = `${appLink}properties.json`;
+
+    return fetch(jsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error ${response.status}`);
+            }
+            return response.json();
+        })
+        .catch(error => {
+            console.error('Error fetching app properties:', error);
+            // Return a default properties object or handle the error as needed
+            return {
+                version: 'Unknown',
+                lastUpdated: 'Unknown',
+                owner: 'Unknown'
+            };
+        });
+}
+
+function showPropertiesModal(appIcon) {
+    const appName = appIcon.parentNode.querySelector('.app-name').textContent;
+    const appLink = appIcon.parentNode.getAttribute('href');
+    const appIconSrc = appIcon.querySelector('img').src;
+
+    // Fetch app properties from JSON (you'll need to provide the JSON file)
+    fetchAppProperties(appLink)
+        .then(properties => {
+            // Create the modal
+            const modal = document.createElement('div');
+            modal.id = 'propertiesModal';
+            modal.className = 'modal';
+
+            const modalContent = document.createElement('div');
+            modalContent.className = 'modal-content';
+
+            // Create the main elements
+            const modalHeader = document.createElement('div');
+            modalHeader.className = 'modal-header';
+
+            const rowheadContainer = document.createElement('div');
+            rowheadContainer.className = 'rowhead';
+
+            const rowheadInner = document.createElement('div');
+            rowheadInner.className = 'rowhead';
+
+            const appIconMini = document.createElement('div');
+            appIconMini.className = 'app-icon-mini';
+
+            const img = document.createElement('img');
+            img.src = appIconSrc;
+            img.alt = '';
+
+            const appNameHeading = document.createElement('p');
+            appNameHeading.textContent = `${appName} Properties`;
+
+            const closeSpan = document.createElement('span');
+            closeSpan.className = 'close';
+            closeSpan.textContent = '×';
+            closeSpan.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // Append the elements to their respective parents
+            appIconMini.appendChild(img);
+            rowheadInner.appendChild(appIconMini);
+            rowheadInner.appendChild(appNameHeading);
+            rowheadContainer.appendChild(rowheadInner);
+            rowheadContainer.appendChild(closeSpan);
+            modalHeader.appendChild(rowheadContainer);
+
+
+            const modalContainer = document.createElement('div');
+            modalContainer.className = 'modal-container';
+
+            const modalBody = document.createElement('div');
+            modalBody.className = 'modal-body';
+
+            const appIconRow = document.createElement('div');
+            appIconRow.className = 'row';
+
+            const appIconElement = document.createElement('div');
+            appIconElement.className = 'app-icon-p';
+
+            const appIconImg = document.createElement('img');
+            appIconImg.src = appIconSrc;
+            appIconImg.alt = '';
+
+            appIconElement.appendChild(appIconImg);
+
+            const appNameInput = document.createElement('input');
+            appNameInput.type = 'text';
+            appNameInput.placeholder = appName + ".HTML";
+            appNameInput.style.height = '20px';
+
+            appIconRow.appendChild(appIconElement);
+            appIconRow.appendChild(appNameInput);
+
+            const fileTypeRow = document.createElement('div');
+            fileTypeRow.className = 'row';
+
+            const fileTypeLabel = document.createElement('p');
+            fileTypeLabel.textContent = 'Type of file:';
+
+            const fileTypeValue = document.createElement('p');
+            fileTypeValue.textContent = 'HTML Document (.HTML)';
+
+            fileTypeRow.appendChild(fileTypeLabel);
+            fileTypeRow.appendChild(fileTypeValue);
+
+            const separator1 = document.createElement('div');
+            separator1.className = 'row-separator';
+
+            const locationRow = document.createElement('div');
+            locationRow.className = 'row';
+
+            const locationLabel = document.createElement('p');
+            locationLabel.textContent = 'Location:';
+
+            const locationValue = document.createElement('p');
+            locationValue.textContent = "./" + appLink;
+
+            locationRow.appendChild(locationLabel);
+            locationRow.appendChild(locationValue);
+
+            const versionRow = document.createElement('div');
+            versionRow.className = 'row';
+
+            const versionLabel = document.createElement('p');
+            versionLabel.textContent = 'Version:';
+
+            const versionValue = document.createElement('p');
+            versionValue.textContent = properties.version || 'Unknown';
+
+            versionRow.appendChild(versionLabel);
+            versionRow.appendChild(versionValue);
+
+            const lastUpdatedRow = document.createElement('div');
+            lastUpdatedRow.className = 'row';
+
+            const lastUpdatedLabel = document.createElement('p');
+            lastUpdatedLabel.textContent = 'Last updated:';
+
+            const lastUpdatedValue = document.createElement('p');
+            lastUpdatedValue.textContent = properties.lastUpdated || 'Unknown';
+
+            lastUpdatedRow.appendChild(lastUpdatedLabel);
+            lastUpdatedRow.appendChild(lastUpdatedValue);
+
+            const separator2 = document.createElement('div');
+            separator2.className = 'row-separator';
+
+            const ownerRow = document.createElement('div');
+            ownerRow.className = 'row';
+
+            const ownerLabel = document.createElement('p');
+            ownerLabel.textContent = 'Owner:';
+
+            const ownerValue = document.createElement('p');
+            ownerValue.textContent = properties.owner || 'Unknown';
+
+            ownerRow.appendChild(ownerLabel);
+            ownerRow.appendChild(ownerValue);
+
+            modalBody.appendChild(appIconRow);
+            modalBody.appendChild(fileTypeRow);
+            modalBody.appendChild(separator1);
+            modalBody.appendChild(locationRow);
+            modalBody.appendChild(versionRow);
+            modalBody.appendChild(lastUpdatedRow);
+            modalBody.appendChild(separator2);
+            modalBody.appendChild(ownerRow);
+
+            modalContainer.appendChild(modalBody);
+
+            const modalFooter = document.createElement('div');
+            modalFooter.className = 'modal-footer';
+
+            const okButton = document.createElement('button');
+            okButton.id = 'okButton';
+            okButton.textContent = 'OK';
+            okButton.onclick = function () {
+                modal.remove();
+            };
+
+
+            modalFooter.appendChild(okButton);
+
+            modalContent.appendChild(modalHeader);
+            modalContent.appendChild(modalContainer);
+            modalContent.appendChild(modalFooter);
+
+            modal.appendChild(modalContent);
+
+            document.body.appendChild(modal);
+        })
+        .catch(error => {
+            console.error('Error fetching app properties:', error);
+        });
+}
 
 // Handle right-clicks on the image widget
 imageWidget.addEventListener('contextmenu', function (event) {
@@ -179,7 +408,7 @@ document.addEventListener('contextmenu', function (event) {
         var itemseparator = document.createElement('div');
         itemseparator.className = 'context-menu-separator';
         outsideContextMenu.appendChild(itemseparator);
-        
+
 
         var changeBackgroundMenuItem = document.createElement('div');
         changeBackgroundMenuItem.className = 'context-menu-item';
@@ -332,3 +561,4 @@ function sortAppsByName() {
     // Toggle the sorting order for the next function call
     isReverseSort = !isReverseSort;
 }
+
