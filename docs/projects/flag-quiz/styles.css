@@ -125,6 +125,12 @@ body {
   gap: 10px;
 }
 
+footer {
+  text-align: center;
+  color: #6b7280;
+  font-size: 18px;
+}
+
 .slidecontainer {
   padding-top: 15px;
   width: 70%; /* Width of the outside container */

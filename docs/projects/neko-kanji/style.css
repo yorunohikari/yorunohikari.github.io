@@ -7,6 +7,12 @@ body {
   text-align: center;
 }
 
+footer {
+  text-align: center;
+  color: #6b7280;
+  font-size: 18px;
+}
+
 /* Common Styles for Containers */
 .quiz-container,
 #main-menu,

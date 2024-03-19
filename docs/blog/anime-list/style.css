@@ -10,6 +10,11 @@ header, footer {
   text-align: center;
 }
 
+footer {
+  color: #6b7280;
+  font-size: 18px;
+}
+
 .blog-container {
   max-width: 70%;
   margin: 0 auto;
