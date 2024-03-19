@@ -319,11 +319,11 @@ function showPropertiesModal(appIcon) {
 
             // Add event listener for mousedown and touchstart events on the modal header
             modalHeaderdr.addEventListener("mousedown", dragStart);
-            modalHeaderdr.addEventListener("touchstart", dragStart, { passive: true });
+            modalHeaderdr.addEventListener("touchstart", dragStart, { passive: false });
 
             // Add event listener for mousemove and touchmove events on the document
             document.addEventListener("mousemove", dragMove);
-            document.addEventListener("touchmove", dragMove);
+            document.addEventListener("touchmove", dragMove, { passive: true });
 
             // Add event listener for mouseup and touchend events on the document
             document.addEventListener("mouseup", dragEnd);
@@ -332,6 +332,7 @@ function showPropertiesModal(appIcon) {
             // Function to handle the start of the drag
             function dragStart(e) {
                 e = e || window.event; // Get the event object
+                e.preventDefault();
 
                 // Get the current cursor position and modal position
                 initialX = e.clientX || e.touches[0].clientX;
