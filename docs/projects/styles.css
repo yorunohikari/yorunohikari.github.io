@@ -89,6 +89,8 @@ a {
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 5px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
 }
 
 .context-menu-item {
@@ -107,5 +109,10 @@ a {
     max-height: 95%;
     height: 100vh;
     border-radius: 0;
+  }
+
+  footer {
+    color: #6b7280;
+    font-size: 11px;
   }
 }

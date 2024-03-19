@@ -130,47 +130,74 @@
     });
   });
 
-  // Handle right-clicks outside of app icons
-  document.addEventListener('contextmenu', function (event) {
-    var isAppIconClicked = Array.from(appIcons).some(function (icon) {
-      return icon.contains(event.target);
-    });
-
-    if (!isAppIconClicked) {
-      event.preventDefault(); // Prevent default right-click menu
-
-      // Close any open context menu
-      closeOpenContextMenu();
-
-      // Create and position context menu for outside clicks
-      var outsideContextMenu = document.createElement('div');
-      outsideContextMenu.className = 'context-menu';
-      outsideContextMenu.style.left = event.pageX + 'px';
-      outsideContextMenu.style.top = event.pageY + 'px';
-
-      // Add menu items for outside clicks
-      var outsideMenuItem = document.createElement('div');
-      outsideMenuItem.className = 'context-menu-item';
-      outsideMenuItem.textContent = 'Refresh';
-      outsideMenuItem.onclick = function () {
-        location.reload();
-      };
-      outsideContextMenu.appendChild(outsideMenuItem);
-
-      // Add context menu for outside clicks to the document
-      document.body.appendChild(outsideContextMenu);
-
-      // Update openContextMenu variable
-      openContextMenu = outsideContextMenu;
-
-      // Close context menu for outside clicks when clicking outside of it
-      document.addEventListener('click', function (event) {
-        if (!outsideContextMenu.contains(event.target)) {
-          closeOpenContextMenu();
-        }
-      });
-    }
+// Handle right-clicks outside of app icons
+document.addEventListener('contextmenu', function (event) {
+  var isAppIconClicked = Array.from(appIcons).some(function (icon) {
+    return icon.contains(event.target);
   });
+
+  if (!isAppIconClicked) {
+    event.preventDefault(); // Prevent default right-click menu
+
+    // Close any open context menu
+    closeOpenContextMenu();
+
+    // Create and position context menu for outside clicks
+    var outsideContextMenu = document.createElement('div');
+    outsideContextMenu.className = 'context-menu';
+    outsideContextMenu.style.left = event.pageX + 'px';
+    outsideContextMenu.style.top = event.pageY + 'px';
+
+    // Add menu items for outside clicks
+    var changeBackgroundMenuItem = document.createElement('div');
+    changeBackgroundMenuItem.className = 'context-menu-item';
+    changeBackgroundMenuItem.textContent = 'Change Background';
+    changeBackgroundMenuItem.onclick = function () {
+      var input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'image/*';
+      input.onchange = function (e) {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            const imageUrl = e.target.result;
+            // Save image URL to local storage or send to server for storage
+            localStorage.setItem('customBackground', imageUrl);
+            // Set the image as the background of the body
+            var phoneContainer = document.querySelector('.phone-container');
+            phoneContainer.style.backgroundImage = `url('${imageUrl}')`;
+          };
+          reader.readAsDataURL(file);
+        }
+      };
+      input.click();
+    };
+    outsideContextMenu.appendChild(changeBackgroundMenuItem);
+
+    var refreshMenuItem = document.createElement('div');
+    refreshMenuItem.className = 'context-menu-item';
+    refreshMenuItem.textContent = 'Refresh';
+    refreshMenuItem.onclick = function () {
+      location.reload();
+    };
+    outsideContextMenu.appendChild(refreshMenuItem);
+
+    // Add context menu for outside clicks to the document
+    document.body.appendChild(outsideContextMenu);
+
+    // Update openContextMenu variable
+    openContextMenu = outsideContextMenu;
+
+    // Close context menu for outside clicks when clicking outside of it
+    document.addEventListener('click', function (event) {
+      if (!outsideContextMenu.contains(event.target)) {
+        closeOpenContextMenu();
+      }
+    });
+  }
+});
+
 
   // Function to close the currently open context menu
   function closeOpenContextMenu() {

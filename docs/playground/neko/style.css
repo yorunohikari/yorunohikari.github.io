@@ -481,6 +481,11 @@ footer {
   .score-history-table td:nth-child(2) {
     width: 20%;
   }
+  
+  footer {
+    color: #6b7280;
+    font-size: 11px;
+  }
 }
 
 /* CSS to hide scrollbar */
