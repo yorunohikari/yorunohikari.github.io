@@ -67,7 +67,7 @@
     </a>
     <a href="https://twitter.com/">
       <div class="app-icon">
-        <img src="/assets/x-icon.png" alt="x App Icon">
+        <img src="/assets/projects/xappicon.png" alt="x App Icon">
       </div>
       <div class="app-name">X</div>
     </a>
@@ -78,107 +78,107 @@
   // Get all app icons
   var appIcons = document.querySelectorAll('.app-icon');
 
-// Initialize variables to keep track of open context menus
-var openContextMenu = null;
+  // Initialize variables to keep track of open context menus
+  var openContextMenu = null;
 
-// Add context menu to each app icon
-appIcons.forEach(function(appIcon) {
-  appIcon.addEventListener('contextmenu', function(event) {
-    event.preventDefault(); // Prevent default right-click menu
+  // Add context menu to each app icon
+  appIcons.forEach(function (appIcon) {
+    appIcon.addEventListener('contextmenu', function (event) {
+      event.preventDefault(); // Prevent default right-click menu
 
-    // Close any open context menu
-    closeOpenContextMenu();
+      // Close any open context menu
+      closeOpenContextMenu();
 
-    // Create and position context menu
-    var contextMenu = document.createElement('div');
-    contextMenu.className = 'context-menu';
-    contextMenu.style.left = event.pageX + 'px';
-    contextMenu.style.top = event.pageY + 'px';
+      // Create and position context menu
+      var contextMenu = document.createElement('div');
+      contextMenu.className = 'context-menu';
+      contextMenu.style.left = event.pageX + 'px';
+      contextMenu.style.top = event.pageY + 'px';
 
-    // Add menu items
-    var openMenuItem = document.createElement('div');
-    openMenuItem.className = 'context-menu-item';
-    openMenuItem.textContent = 'Open';
-    openMenuItem.onclick = function() {
-      var appLink = appIcon.parentNode.getAttribute('href');
-      window.location.href = appLink;
-    };
-    contextMenu.appendChild(openMenuItem);
+      // Add menu items
+      var openMenuItem = document.createElement('div');
+      openMenuItem.className = 'context-menu-item';
+      openMenuItem.textContent = 'Open';
+      openMenuItem.onclick = function () {
+        var appLink = appIcon.parentNode.getAttribute('href');
+        window.location.href = appLink;
+      };
+      contextMenu.appendChild(openMenuItem);
 
-    var repoMenuItem = document.createElement('div');
-    repoMenuItem.className = 'context-menu-item';
-    repoMenuItem.textContent = 'Go to the Repository';
-    repoMenuItem.onclick = function() {
-      // Custom action for menu item 2 (go to repository)
-      var appRepoLink = appIcon.parentNode.getAttribute('href') + 'repo';
-      window.open(appRepoLink, '_blank');
-    };
-    contextMenu.appendChild(repoMenuItem);
+      var repoMenuItem = document.createElement('div');
+      repoMenuItem.className = 'context-menu-item';
+      repoMenuItem.textContent = 'Go to the Repository';
+      repoMenuItem.onclick = function () {
+        // Custom action for menu item 2 (go to repository)
+        var appRepoLink = appIcon.parentNode.getAttribute('href') + 'repo';
+        window.open(appRepoLink, '_blank');
+      };
+      contextMenu.appendChild(repoMenuItem);
 
-    // Add context menu to the document
-    document.body.appendChild(contextMenu);
+      // Add context menu to the document
+      document.body.appendChild(contextMenu);
 
-    // Update openContextMenu variable
-    openContextMenu = contextMenu;
+      // Update openContextMenu variable
+      openContextMenu = contextMenu;
 
-    // Close context menu when clicking outside of it
-    document.addEventListener('click', function(event) {
-      if (!contextMenu.contains(event.target)) {
-        closeOpenContextMenu();
-      }
+      // Close context menu when clicking outside of it
+      document.addEventListener('click', function (event) {
+        if (!contextMenu.contains(event.target)) {
+          closeOpenContextMenu();
+        }
+      });
     });
   });
-});
 
-// Handle right-clicks outside of app icons
-document.addEventListener('contextmenu', function(event) {
-  var isAppIconClicked = Array.from(appIcons).some(function(icon) {
-    return icon.contains(event.target);
+  // Handle right-clicks outside of app icons
+  document.addEventListener('contextmenu', function (event) {
+    var isAppIconClicked = Array.from(appIcons).some(function (icon) {
+      return icon.contains(event.target);
+    });
+
+    if (!isAppIconClicked) {
+      event.preventDefault(); // Prevent default right-click menu
+
+      // Close any open context menu
+      closeOpenContextMenu();
+
+      // Create and position context menu for outside clicks
+      var outsideContextMenu = document.createElement('div');
+      outsideContextMenu.className = 'context-menu';
+      outsideContextMenu.style.left = event.pageX + 'px';
+      outsideContextMenu.style.top = event.pageY + 'px';
+
+      // Add menu items for outside clicks
+      var outsideMenuItem = document.createElement('div');
+      outsideMenuItem.className = 'context-menu-item';
+      outsideMenuItem.textContent = 'Refresh';
+      outsideMenuItem.onclick = function () {
+        location.reload();
+      };
+      outsideContextMenu.appendChild(outsideMenuItem);
+
+      // Add context menu for outside clicks to the document
+      document.body.appendChild(outsideContextMenu);
+
+      // Update openContextMenu variable
+      openContextMenu = outsideContextMenu;
+
+      // Close context menu for outside clicks when clicking outside of it
+      document.addEventListener('click', function (event) {
+        if (!outsideContextMenu.contains(event.target)) {
+          closeOpenContextMenu();
+        }
+      });
+    }
   });
 
-  if (!isAppIconClicked) {
-    event.preventDefault(); // Prevent default right-click menu
-
-    // Close any open context menu
-    closeOpenContextMenu();
-
-    // Create and position context menu for outside clicks
-    var outsideContextMenu = document.createElement('div');
-    outsideContextMenu.className = 'context-menu';
-    outsideContextMenu.style.left = event.pageX + 'px';
-    outsideContextMenu.style.top = event.pageY + 'px';
-
-    // Add menu items for outside clicks
-    var outsideMenuItem = document.createElement('div');
-    outsideMenuItem.className = 'context-menu-item';
-    outsideMenuItem.textContent = 'Refresh';
-    outsideMenuItem.onclick = function() {
-      location.reload();
-    };
-    outsideContextMenu.appendChild(outsideMenuItem);
-
-    // Add context menu for outside clicks to the document
-    document.body.appendChild(outsideContextMenu);
-
-    // Update openContextMenu variable
-    openContextMenu = outsideContextMenu;
-
-    // Close context menu for outside clicks when clicking outside of it
-    document.addEventListener('click', function(event) {
-      if (!outsideContextMenu.contains(event.target)) {
-        closeOpenContextMenu();
-      }
-    });
+  // Function to close the currently open context menu
+  function closeOpenContextMenu() {
+    if (openContextMenu !== null) {
+      openContextMenu.remove();
+      openContextMenu = null;
+    }
   }
-});
-
-// Function to close the currently open context menu
-function closeOpenContextMenu() {
-  if (openContextMenu !== null) {
-    openContextMenu.remove();
-    openContextMenu = null;
-  }
-}
 
 </script>
 
