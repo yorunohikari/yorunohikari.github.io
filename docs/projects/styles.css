@@ -5,7 +5,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 91vh;
   font-family: Arial, sans-serif;
 }
 
@@ -18,24 +18,30 @@ body {
 }
 
 
+
 .phone-container {
   max-width: 375px;
   max-height: 667px;
-  width: 90vw;
+  width: 100vw;
   height: 80vh;
   background-color: #000;
   background-image: url("/assets/projects/backgroundahomev2.png");
-  background-size: cover; /* or contain, depending on your preference */
-  background-repeat: no-repeat; /* to prevent repeating */
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 30px;
   padding-top: 50px;
   padding-bottom: 50px;
   padding-left: 20px;
   padding-right: 20px;
+  overflow: hidden; /* Add this to hide the content that goes outside the container */
+}
+
+.content-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   grid-gap: 10px;
   grid-auto-rows: 80px;
+  transition: transform 0.3s ease-out;
 }
 
 .app-icon {
