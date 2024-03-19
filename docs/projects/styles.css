@@ -17,10 +17,6 @@ body {
   -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
-/* Prevent element dragging */
-.app-icon {
-  pointer-events: none;
-}
 
 .phone-container {
   max-width: 375px;
