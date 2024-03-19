@@ -16,13 +16,16 @@ body {
     height: 80vh;
     background-color: #000;
     background-image: url("/assets/projects/backgroundahome.png");
+    background-size: cover; /* or contain, depending on your preference */
+    background-repeat: no-repeat; /* to prevent repeating */
     border-radius: 30px;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     grid-gap: 10px;
     grid-auto-rows: 80px;
-  }
+}
+
   
   .app-icon {
     width: 60px;
