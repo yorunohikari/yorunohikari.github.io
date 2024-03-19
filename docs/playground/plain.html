@@ -14,7 +14,6 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
         }
 
         .modal-content {
@@ -124,6 +123,14 @@
             max-height: 100%;
             object-fit: contain;
         }
+
+        .modal-header {
+            cursor: move;
+        }
+
+        .modal.dragging {
+            cursor: move;
+        }
     </style>
 </head>
 
@@ -146,7 +153,7 @@
             <div class="modal-container">
                 <div class="modal-body">
                     <div class="row">
-                        <div class="app-icon"><img src="/docs/assets/projects/nekoappicon.png" alt=""></div>
+                        <div class="app-icon-p"><img src="/docs/assets/projects/nekoappicon.png" alt=""></div>
                         <input type="text" placeholder="App-Name.HTML" style="height: 20px;">
                     </div>
                     <div class="row">
@@ -179,7 +186,6 @@
                 <button id="applyButton">Apply</button>
             </div>
         </div>
-
     </div>
 
     <script>
@@ -224,6 +230,76 @@
             if (event.target == modal) {
                 modal.style.display = "none";
             }
+        }
+        var modal = document.getElementById("propertiesModal");
+        var modalHeader = document.querySelector(".modal-header");
+
+        // Variables to store the initial cursor position and modal position
+        var isDragging = false;
+        var initialX, initialY, currentX, currentY, xOffset = 0, yOffset = 0;
+
+        // Add event listener for mousedown and touchstart events on the modal header
+        modalHeader.addEventListener("mousedown", dragStart);
+        modalHeader.addEventListener("touchstart", dragStart);
+
+        // Add event listener for mousemove and touchmove events on the document
+        document.addEventListener("mousemove", dragMove);
+        document.addEventListener("touchmove", dragMove);
+
+        // Add event listener for mouseup and touchend events on the document
+        document.addEventListener("mouseup", dragEnd);
+        document.addEventListener("touchend", dragEnd);
+
+        // Function to handle the start of the drag
+        function dragStart(e) {
+            e = e || window.event; // Get the event object
+            e.preventDefault(); // Prevent default behavior (e.g., text selection)
+
+            // Get the current cursor position and modal position
+            initialX = e.clientX || e.touches[0].clientX;
+            initialY = e.clientY || e.touches[0].clientY;
+            currentX = modal.offsetLeft;
+            currentY = modal.offsetTop;
+
+            // Calculate the offset between the cursor position and the modal position
+            xOffset = initialX - currentX;
+            yOffset = initialY - currentY;
+
+            // Set the isDragging flag to true
+            isDragging = true;
+
+            // Add the 'dragging' class to the modal for styling purposes (optional)
+            modal.classList.add("dragging");
+        }
+
+        // Function to handle the movement of the drag
+        function dragMove(e) {
+            e = e || window.event; // Get the event object
+            e.preventDefault(); // Prevent default behavior (e.g., text selection)
+
+            // If the modal is being dragged
+            if (isDragging) {
+                // Get the new cursor position
+                currentX = e.clientX || e.touches[0].clientX;
+                currentY = e.clientY || e.touches[0].clientY;
+
+                // Calculate the new modal position
+                var newX = currentX - xOffset;
+                var newY = currentY - yOffset;
+
+                // Update the modal position
+                modal.style.left = newX + "px";
+                modal.style.top = newY + "px";
+            }
+        }
+
+        // Function to handle the end of the drag
+        function dragEnd(e) {
+            // Reset the isDragging flag to false
+            isDragging = false;
+
+            // Remove the 'dragging' class from the modal (optional)
+            modal.classList.remove("dragging");
         }
     </script>
 
