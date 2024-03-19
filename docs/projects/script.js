@@ -319,7 +319,7 @@ function showPropertiesModal(appIcon) {
 
             // Add event listener for mousedown and touchstart events on the modal header
             modalHeaderdr.addEventListener("mousedown", dragStart);
-            modalHeaderdr.addEventListener("touchstart", dragStart);
+            modalHeaderdr.addEventListener("touchstart", dragStart, { passive: true });
 
             // Add event listener for mousemove and touchmove events on the document
             document.addEventListener("mousemove", dragMove);
