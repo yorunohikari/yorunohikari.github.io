@@ -168,23 +168,10 @@ h1 {
   transition: width 0.1s ease-in-out;
 }
 
-/* This is necessary to remove blogger templates */
-.post-header,
-.post-header a,
-.post-header button,
-.post-footer,
-.sidebar-container,
-.post-sidebar,
-#footer,
-.centered-top-container.sticky,
-.post-title,
-.post-body-container:before,
-.centered-top-container,
-.centered-top-placeholder,
-.centered-top {
-  display: none;
-  margin: 0;
-  padding: 0;
+footer {
+  text-align: center;
+  color: #6b7280;
+  font-size: 18px;
 }
 
 .label-hint {
