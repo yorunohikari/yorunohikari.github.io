@@ -110,7 +110,7 @@ appIcons.forEach(function(appIcon) {
     repoMenuItem.textContent = 'Go to the Repository';
     repoMenuItem.onclick = function() {
       // Custom action for menu item 2 (go to repository)
-      var appRepoLink = appIcon.parentNode.getAttribute('href') + '/repo';
+      var appRepoLink = appIcon.parentNode.getAttribute('href') + 'repo';
       window.open(appRepoLink, '_blank');
     };
     contextMenu.appendChild(repoMenuItem);
