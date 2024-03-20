@@ -1,8 +1,3 @@
-window.addEventListener('load', function () {
-    // Add 'loaded' class to body when all content is loaded
-    document.body.classList.add('loaded');
-});
-
 function updateTime() {
     const now = new Date();
     const hours = String(now.getHours()).padStart(2, '0');
