@@ -705,6 +705,7 @@ function sortAppsByName() {
             node.remove();
         }
     });
+    saveOrder();
     closeOpenContextMenu();
     container.appendChild(fragment);
     container.appendChild(imageWidget);
@@ -787,3 +788,46 @@ function saveOrder() {
   });
   localStorage.setItem('contentOrder', JSON.stringify(order));
 }
+
+// Get all the app links
+const appLinks = Array.from(document.querySelectorAll('.content-container a'));
+let selectedLink = null; // Track the currently selected link
+
+// Detect if the user is on a desktop or mobile device
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+// Function to remove the 'selected' class from the currently selected link
+function removeSelectedClass() {
+  if (selectedLink) {
+    selectedLink.classList.remove('selected');
+    selectedLink = null;
+  }
+}
+
+// Loop through each app link
+appLinks.forEach(link => {
+  // If on desktop, add a click event listener for double click
+  if (!isMobile) {
+    link.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent the default link behavior
+
+      removeSelectedClass(); // Remove the 'selected' class from the previously selected link
+
+      // Add the 'selected' class to the clicked link
+      link.classList.add('selected');
+      selectedLink = link; // Update the currently selected link
+    });
+
+    link.addEventListener('dblclick', () => {
+      window.location.href = link.href; // Navigate to the link on double click
+    });
+  }
+});
+
+// Add event listener to the document or parent container to remove the 'selected' class when clicking outside the app links
+document.addEventListener('click', (e) => {
+  const isClickInsideAppLinks = appLinks.some(link => link.contains(e.target));
+  if (!isClickInsideAppLinks) {
+    removeSelectedClass();
+  }
+});
