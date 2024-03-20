@@ -20,11 +20,14 @@
   <meta property="og:url" content="https://yorunohikari.github.io/projects/" />
   <meta property="og:image" content="/assets/projects/depr.jpg" />
   <title>Projects</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="/assets/logo.ico">
 </head>
 
 <body>
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
   <div class="phone-container">
     <div class="content-container">
       <a href='neko-kanji/' oncontextmenu="return false;">
@@ -72,8 +75,21 @@
         </div>
         <div class="app-name">Tic Tac Toe</div>
       </a>
+      
           <!-- Add more app icons and names as needed -->
     </div>
+    <footer>
+      <div class="start-button">
+        <img src="/docs/assets/windicon.png" alt="">
+      </div>
+      <div class="taskbar-container">
+       <img class="taskbar-app-icon" id="taskbar-app-icon" src="" alt="">
+      </div>
+      <div class="time">
+        <!-- JavaScript will be used to display the current time -->
+        <span id="current-time"></span>
+      </div>
+    </footer>
   </div>
 </body>
 <script src="script.js"></script>

@@ -1,3 +1,29 @@
+window.addEventListener('load', function () {
+    // Add 'loaded' class to body when all content is loaded
+    document.body.classList.add('loaded');
+});
+
+function updateTime() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const month = String(now.getMonth() + 1).padStart(2, '0'); // Adding 1 because January is 0-indexed
+    const year = now.getFullYear();
+
+    const timeString = `${hours}:${minutes}`;
+    const dateString = `${month}/${day}/${year}`;
+
+    document.getElementById('current-time').innerHTML = `${timeString}<br/>${dateString}`;
+}
+
+// Update time every second
+setInterval(updateTime, 5000);
+
+// Initial call to display time immediately
+updateTime();
+
+
 // Get all app icons
 var appIcons = document.querySelectorAll('.app-icon');
 
@@ -6,6 +32,8 @@ var imageWidget = document.querySelector('.image-widget');
 
 // Initialize variables to keep track of open context menus
 var openContextMenu = null;
+
+const phoneContainer = document.querySelector('.phone-container');
 
 function applyCustomBackground() {
     var phoneContainer = document.querySelector('.phone-container');
@@ -37,16 +65,34 @@ window.addEventListener('load', applyCustomImage);
 // Add context menu to each app icon
 appIcons.forEach(function (appIcon) {
     appIcon.addEventListener('contextmenu', function (event) {
-        event.preventDefault(); // Prevent default right-click menu
-
-        // Close any open context menu
+        event.preventDefault();
         closeOpenContextMenu();
 
-        // Create and position context menu
         var contextMenu = document.createElement('div');
         contextMenu.className = 'context-menu';
-        contextMenu.style.left = event.pageX + 'px';
-        contextMenu.style.top = event.pageY + 'px';
+
+        // Get screen dimensions
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+        // Get context menu dimensions
+        var contextMenuWidth = 200; // Replace with the actual width of your context menu
+        var contextMenuHeight = 150; // Replace with the actual height of your context menu
+
+        // Calculate the position of the context menu based on cursor location and screen dimensions
+        var left = event.pageX;
+        var top = event.pageY;
+
+        // Check if the context menu will go out of the visible screen area
+        if (left + contextMenuWidth > screenWidth) {
+            left = screenWidth - contextMenuWidth;
+        }
+        if (top + contextMenuHeight > screenHeight) {
+            top = screenHeight - contextMenuHeight;
+        }
+
+        contextMenu.style.left = left + 'px';
+        contextMenu.style.top = top + 'px';
 
         // Add menu items
         var openMenuItem = document.createElement('div');
@@ -139,6 +185,11 @@ function showPropertiesModal(appIcon) {
     const appName = appIcon.parentNode.querySelector('.app-name').textContent;
     const appLink = appIcon.parentNode.getAttribute('href');
     const appIconSrc = appIcon.querySelector('img').src;
+    const taksbarico = document.getElementById('taskbar-app-icon');
+
+    // Set the src attribute of the taskbar app icon to the appIconSrc
+    taksbarico.src = appIconSrc;
+    taksbarico.style.display = 'flex';
 
     // Fetch app properties from JSON (you'll need to provide the JSON file)
     fetchAppProperties(appLink)
@@ -176,6 +227,7 @@ function showPropertiesModal(appIcon) {
             closeSpan.textContent = '×';
             closeSpan.onclick = function () {
                 modal.remove();
+                taksbarico.style.display = 'none';
             }
 
             // Append the elements to their respective parents
@@ -298,6 +350,7 @@ function showPropertiesModal(appIcon) {
             okButton.textContent = 'OK';
             okButton.onclick = function () {
                 modal.remove();
+                taksbarico.style.display = 'none';
             };
 
 
@@ -387,16 +440,34 @@ function showPropertiesModal(appIcon) {
 
 // Handle right-clicks on the image widget
 imageWidget.addEventListener('contextmenu', function (event) {
-    event.preventDefault(); // Prevent default right-click menu
-
-    // Close any open context menu
+    event.preventDefault();
     closeOpenContextMenu();
 
-    // Create and position context menu
     var contextMenu = document.createElement('div');
     contextMenu.className = 'context-menu';
-    contextMenu.style.left = event.pageX + 'px';
-    contextMenu.style.top = event.pageY + 'px';
+
+    // Get screen dimensions
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+    // Get context menu dimensions
+    var contextMenuWidth = 200; // Replace with the actual width of your context menu
+    var contextMenuHeight = 150; // Replace with the actual height of your context menu
+
+    // Calculate the position of the context menu based on cursor location and screen dimensions
+    var left = event.pageX;
+    var top = event.pageY;
+
+    // Check if the context menu will go out of the visible screen area
+    if (left + contextMenuWidth > screenWidth) {
+        left = screenWidth - contextMenuWidth;
+    }
+    if (top + contextMenuHeight > screenHeight) {
+        top = screenHeight - contextMenuHeight;
+    }
+
+    contextMenu.style.left = left + 'px';
+    contextMenu.style.top = top + 'px';
 
     // Add menu item to change the image
     var changeImageMenuItem = document.createElement('div');
@@ -446,16 +517,34 @@ document.addEventListener('contextmenu', function (event) {
     var isImageWidgetClicked = imageWidget.contains(event.target);
 
     if (!isAppIconClicked && !isImageWidgetClicked) {
-        event.preventDefault(); // Prevent default right-click menu
-
-        // Close any open context menu
+        event.preventDefault();
         closeOpenContextMenu();
 
-        // Create and position context menu for outside clicks
         var outsideContextMenu = document.createElement('div');
         outsideContextMenu.className = 'context-menu';
-        outsideContextMenu.style.left = event.pageX + 'px';
-        outsideContextMenu.style.top = event.pageY + 'px';
+
+        // Get screen dimensions
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+        // Get context menu dimensions
+        var contextMenuWidth = 160; // Replace with the actual width of your context menu
+        var contextMenuHeight = 145; // Replace with the actual height of your context menu
+
+        // Calculate the position of the context menu based on cursor location and screen dimensions
+        var left = event.pageX;
+        var top = event.pageY;
+
+        // Check if the context menu will go out of the visible screen area
+        if (left + contextMenuWidth > screenWidth) {
+            left = screenWidth - contextMenuWidth;
+        }
+        if (top + contextMenuHeight > screenHeight) {
+            top = screenHeight - contextMenuHeight;
+        }
+
+        outsideContextMenu.style.left = left + 'px';
+        outsideContextMenu.style.top = top + 'px';
 
         // Add menu items for outside clicks
         var sortMenuItem = document.createElement('div');
@@ -537,15 +626,13 @@ function closeOpenContextMenu() {
     }
 }
 
-// Get the phone container element
-const phoneContainer = document.querySelector('.phone-container');
 
 // Define variables for touch events
 let startX, currentX, translateX = 0;
 
 // Add event listeners for touch events
 phoneContainer.addEventListener('touchstart', touchStart, { passive: true });
-phoneContainer.addEventListener('touchmove', touchMove,  { passive: true });
+phoneContainer.addEventListener('touchmove', touchMove, { passive: true });
 phoneContainer.addEventListener('touchend', touchEnd);
 
 function touchStart(e) {
