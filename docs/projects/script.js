@@ -713,3 +713,77 @@ function sortAppsByName() {
     isReverseSort = !isReverseSort;
 }
 
+
+const draggables = document.querySelectorAll('.content-container > a, .content-container > #nova-widget');
+const container = document.querySelector('.content-container');
+
+window.addEventListener('load', () => {
+    const order = JSON.parse(localStorage.getItem('contentOrder'));
+  if (order && order.length > 0) {
+    const container = document.querySelector('.content-container');
+    order.forEach(item => {
+      if (item.startsWith('image-widget-')) {
+        const widgetId = item.replace('image-widget-', '');
+        const widget = container.querySelector(`#${widgetId}`);
+        if (widget) {
+          container.appendChild(widget);
+        }
+      } else {
+        const link = container.querySelector(`a[href="${item}"]`);
+        if (link) {
+          container.appendChild(link);
+        }
+      }
+    });
+  }
+  });
+  
+
+draggables.forEach(draggable => {
+  draggable.addEventListener('dragstart', () => {
+    draggable.classList.add('dragging');
+  });
+
+  draggable.addEventListener('dragend', () => {
+    draggable.classList.remove('dragging');
+    saveOrder();
+  });
+});
+
+container.addEventListener('dragover', e => {
+  e.preventDefault();
+  const afterElement = getDragAfterElement(container, e.clientX);
+  const draggable = document.querySelector('.dragging');
+
+  if (afterElement == null) {
+    container.appendChild(draggable);
+  } else {
+    container.insertBefore(draggable, afterElement);
+  }
+});
+
+function getDragAfterElement(container, x) {
+  const draggableElements = [...container.querySelectorAll('.content-container > a:not(.dragging), .content-container > #nova-widget:not(.dragging)')];
+
+  return draggableElements.reduce((closest, child) => {
+    const box = child.getBoundingClientRect();
+    const offset = x - box.left - box.width / 2;
+
+    if (offset < 0 && offset > closest.offset) {
+      return { offset: offset, element: child };
+    } else {
+      return closest;
+    }
+  }, { offset: Number.NEGATIVE_INFINITY }).element;
+}
+
+function saveOrder() {
+  const order = [...container.querySelectorAll('.content-container > a, .content-container > #nova-widget')].map(item => {
+    if (item.tagName === 'A') {
+      return item.getAttribute('href');
+    } else {
+      return `image-widget-${item.id}`;
+    }
+  });
+  localStorage.setItem('contentOrder', JSON.stringify(order));
+}
