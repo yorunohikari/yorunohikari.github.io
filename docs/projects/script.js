@@ -181,15 +181,15 @@ function showPropertiesModal(appIcon) {
     const appLink = appIcon.parentNode.getAttribute('href');
     const appIconSrc = appIcon.querySelector('img').src;
     const taksbarico = document.getElementById('taskbar-app-icon');
-
     // Set the src attribute of the taskbar app icon to the appIconSrc
-    taksbarico.src = appIconSrc;
-    taksbarico.style.display = 'flex';
+
 
     // Fetch app properties from JSON (you'll need to provide the JSON file)
     fetchAppProperties(appLink)
         .then(properties => {
             // Create the modal
+            taksbarico.src = appIconSrc;
+            taksbarico.style.display = 'flex';
             const modal = document.createElement('div');
             modal.id = 'propertiesModal';
             modal.className = 'modal';
