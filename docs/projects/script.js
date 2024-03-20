@@ -705,10 +705,10 @@ function sortAppsByName() {
             node.remove();
         }
     });
-    saveOrder();
     closeOpenContextMenu();
     container.appendChild(fragment);
     container.appendChild(imageWidget);
+    saveOrder();
 
     // Toggle the sorting order for the next function call
     isReverseSort = !isReverseSort;
