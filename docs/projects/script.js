@@ -720,73 +720,73 @@ const container = document.querySelector('.content-container');
 
 window.addEventListener('load', () => {
     const order = JSON.parse(localStorage.getItem('contentOrder'));
-  if (order && order.length > 0) {
-    const container = document.querySelector('.content-container');
-    order.forEach(item => {
-      if (item.startsWith('image-widget-')) {
-        const widgetId = item.replace('image-widget-', '');
-        const widget = container.querySelector(`#${widgetId}`);
-        if (widget) {
-          container.appendChild(widget);
-        }
-      } else {
-        const link = container.querySelector(`a[href="${item}"]`);
-        if (link) {
-          container.appendChild(link);
-        }
-      }
-    });
-  }
-  });
-  
+    if (order && order.length > 0) {
+        const container = document.querySelector('.content-container');
+        order.forEach(item => {
+            if (item.startsWith('image-widget-')) {
+                const widgetId = item.replace('image-widget-', '');
+                const widget = container.querySelector(`#${widgetId}`);
+                if (widget) {
+                    container.appendChild(widget);
+                }
+            } else {
+                const link = container.querySelector(`a[href="${item}"]`);
+                if (link) {
+                    container.appendChild(link);
+                }
+            }
+        });
+    }
+});
+
 
 draggables.forEach(draggable => {
-  draggable.addEventListener('dragstart', () => {
-    draggable.classList.add('dragging');
-  });
+    draggable.addEventListener('dragstart', () => {
+        draggable.classList.add('appdragging');
+    });
 
-  draggable.addEventListener('dragend', () => {
-    draggable.classList.remove('dragging');
-    saveOrder();
-  });
+    draggable.addEventListener('dragend', () => {
+        draggable.classList.remove('appdragging');
+        saveOrder();
+    });
 });
 
 container.addEventListener('dragover', e => {
-  e.preventDefault();
-  const afterElement = getDragAfterElement(container, e.clientX);
-  const draggable = document.querySelector('.dragging');
+    e.preventDefault();
+    const afterElement = getDragAfterElement(container, e.clientX);
+    const draggable = document.querySelector('.appdragging');
 
-  if (afterElement == null) {
-    container.appendChild(draggable);
-  } else {
-    container.insertBefore(draggable, afterElement);
-  }
+    if (afterElement == null) {
+        container.appendChild(draggable);
+    } else {
+        container.insertBefore(draggable, afterElement);
+    }
 });
 
 function getDragAfterElement(container, x) {
-  const draggableElements = [...container.querySelectorAll('.content-container > a:not(.dragging), .content-container > #nova-widget:not(.dragging)')];
+    const draggableElements = [...container.querySelectorAll('.content-container > a:not(.appdragging), .content-container > #nova-widget:not(.appdragging)')];
 
-  return draggableElements.reduce((closest, child) => {
-    const box = child.getBoundingClientRect();
-    const offset = x - box.left - box.width / 2;
+    return draggableElements.reduce((closest, child) => {
+        const box = child.getBoundingClientRect();
+        const offset = x - box.left - box.width / 2;
 
-    if (offset < 0 && offset > closest.offset) {
-      return { offset: offset, element: child };
-    } else {
-      return closest;
-    }
-  }, { offset: Number.NEGATIVE_INFINITY }).element;
+        if (offset < 0 && offset > closest.offset) {
+            return { offset: offset, element: child };
+        } else {
+            return closest;
+        }
+    }, { offset: Number.NEGATIVE_INFINITY }).element;
 }
 
 function saveOrder() {
-  const order = [...container.querySelectorAll('.content-container > a, .content-container > #nova-widget')].map(item => {
-    if (item.tagName === 'A') {
-      return item.getAttribute('href');
-    } else {
-      return `image-widget-${item.id}`;
-    }
-  });
-  localStorage.setItem('contentOrder', JSON.stringify(order));
+    const order = [...container.querySelectorAll('.content-container > a, .content-container > #nova-widget')].map(item => {
+        if (item.tagName === 'A') {
+            return item.getAttribute('href');
+        } else {
+            return `image-widget-${item.id}`;
+        }
+    });
+    localStorage.setItem('contentOrder', JSON.stringify(order));
 }
 
 // Get all the app links
@@ -798,36 +798,36 @@ const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 // Function to remove the 'selected' class from the currently selected link
 function removeSelectedClass() {
-  if (selectedLink) {
-    selectedLink.classList.remove('selected');
-    selectedLink = null;
-  }
+    if (selectedLink) {
+        selectedLink.classList.remove('selected');
+        selectedLink = null;
+    }
 }
 
 // Loop through each app link
 appLinks.forEach(link => {
-  // If on desktop, add a click event listener for double click
-  if (!isMobile) {
-    link.addEventListener('click', (e) => {
-      e.preventDefault(); // Prevent the default link behavior
+    // If on desktop, add a click event listener for double click
+    if (!isMobile) {
+        link.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent the default link behavior
 
-      removeSelectedClass(); // Remove the 'selected' class from the previously selected link
+            removeSelectedClass(); // Remove the 'selected' class from the previously selected link
 
-      // Add the 'selected' class to the clicked link
-      link.classList.add('selected');
-      selectedLink = link; // Update the currently selected link
-    });
+            // Add the 'selected' class to the clicked link
+            link.classList.add('selected');
+            selectedLink = link; // Update the currently selected link
+        });
 
-    link.addEventListener('dblclick', () => {
-      window.location.href = link.href; // Navigate to the link on double click
-    });
-  }
+        link.addEventListener('dblclick', () => {
+            window.location.href = link.href; // Navigate to the link on double click
+        });
+    }
 });
 
 // Add event listener to the document or parent container to remove the 'selected' class when clicking outside the app links
 document.addEventListener('click', (e) => {
-  const isClickInsideAppLinks = appLinks.some(link => link.contains(e.target));
-  if (!isClickInsideAppLinks) {
-    removeSelectedClass();
-  }
+    const isClickInsideAppLinks = appLinks.some(link => link.contains(e.target));
+    if (!isClickInsideAppLinks) {
+        removeSelectedClass();
+    }
 });
