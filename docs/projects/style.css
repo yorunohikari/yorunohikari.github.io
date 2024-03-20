@@ -17,7 +17,6 @@ body {
   -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
-
 .phone-container {
   width: 100vw;
   height: 89vh;
@@ -62,7 +61,9 @@ body {
   font-size: 12px;
   color: #fff;
   text-align: center;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-text-stroke: 0.01px black;
+  /* Text with two shadows */
+  text-shadow: 0 0 6px rgb(0, 0, 0), 0 2px 3px rgb(0, 0, 0), 0 2px 6px rgba(0, 0, 0, 0.463); 
 }
 
 a {
@@ -312,7 +313,6 @@ footer {
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: 0.1s all ease-in-out;
 }
-
 
 .time {
   font-size: 14px;
