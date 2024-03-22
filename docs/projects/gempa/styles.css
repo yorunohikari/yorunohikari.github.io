@@ -1,0 +1,80 @@
+/* Stylish Earthquake Info */
+body {
+    background-color: aliceblue;
+}
+
+.earthquake-info {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: aliceblue;
+    border-radius: 10px;
+  }
+  
+  h2 {
+    font-size: 32px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 700;
+  }
+  
+  .info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .info-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .label {
+    font-weight: 600;
+    color: #3498db;
+  }
+  
+  .value {
+    color: #2c3e50;
+    font-weight: 500;
+  }
+  
+  .sourcedata {
+    text-align: center;
+    font-weight: 600;
+    color: #7f8c8d;
+    margin-top: 2rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media only screen and (max-width: 768px) {
+    .earthquake-info {
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+  
+    h2 {
+      font-size: 26px;
+      margin-bottom: 1rem;
+    }
+  
+    .info-item {
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    .label {
+      font-size: 18px;
+    }
+  
+    .value {
+      font-size: 16px;
+    }
+  }
+  
