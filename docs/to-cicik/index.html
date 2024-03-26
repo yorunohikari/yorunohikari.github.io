@@ -1,0 +1,209 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"></meta>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+    <title>Happy Birthday Sayangku</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+        min-height: 0;
+      }
+
+      .page_body {
+        min-height: 0;
+      }
+
+      #lockedContent {
+        display: none;
+      }
+
+      table {
+        border-collapse: collapse;
+        margin: 20px auto; /* Set margin to auto to center the table horizontally */
+        font-family: "MS Mincho", sans-serif;
+        
+      }
+
+      td {
+        border: 1px solid #000;
+        width: 30px; /* Adjust the width of each cell */
+        height: 30px; /* Adjust the height of each cell */
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid transparent;
+      }
+
+      /* Additional styles for specific elements */
+      .empty {
+        background-color: #fff; /* Set background color for empty cells */
+      }
+
+      #countdown {
+        font-size: 36px;
+        font-weight: bold;
+        margin-top: 10px;
+        color: #000000; /* Black text for the countdown */
+      }
+      .post-header, .post-header a, .post-header button, .post-footer, .sidebar-container, .post-sidebar, #footer, .centered-top-container.sticky, .post-title, .post-body-container:before, .centered-top-container, .centered-top-placeholder, .centered-top {
+      		display : none;
+          	margin : 0;
+          padding : 0;
+      	}
+    </style>
+  </head>
+  <body>
+    <h1>Happy Birthday Sayangku</h1>
+
+    <div id="countdown"></div>
+
+    <div id="lockedContent">
+      <table>
+        <!-- Create an empty 7x10 table -->
+        <tr class="empty">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="empty">
+          <td></td>
+          <td></td>
+          <td>君</td>
+          <td>誕</td>
+          <td>雪</td>
+          <td>C</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="empty">
+          <td></td>
+          <td></td>
+          <td>の</td>
+          <td>生</td>
+          <td>の</td>
+          <td>I</td>
+          <td></td>
+          <td>23</td>
+        </tr>
+        <tr class="empty">
+          <td></td>
+          <td></td>
+          <td>笑</td>
+          <td>日</td>
+          <td>花</td>
+          <td>C</td>
+          <td></td>
+          <td>日</td>
+        </tr>
+        <tr class="empty">
+          <td></td>
+          <td></td>
+          <td>顔</td>
+          <td>お</td>
+          <td></td>
+          <td>I</td>
+          <td></td>
+          <td>1</td>
+        </tr>
+        <tr class="empty">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>め</td>
+          <td></td>
+          <td>K</td>
+          <td></td>
+          <td>月</td>
+        </tr>
+        <tr class="empty">
+          <td></td>
+          <td>オ</td>
+          <td></td>
+          <td>で</td>
+          <td></td>
+          <td>へ</td>
+          <td></td>
+          <td>20</td>
+        </tr>
+        <tr class="empty">
+          <td></td>
+          <td>シ</td>
+          <td></td>
+          <td>と</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>24</td>
+        </tr>
+        <tr class="empty">
+          <td></td>
+          <td>ャ</td>
+          <td></td>
+          <td>う</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>年</td>
+        </tr>
+        <tr class="empty">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script>
+      // Set the birthday date and time (in UTC)
+      const birthdayDate = new Date("2024-01-23T00:00:01");
+
+      // Update the countdown every second
+      const countdownElement = document.getElementById("countdown");
+      const lockedContentElement = document.getElementById("lockedContent");
+
+      function updateCountdown() {
+        const currentTime = new Date();
+        const timeDifference = birthdayDate - currentTime;
+
+        if (timeDifference <= 0) {
+          // Birthday has arrived, show the locked content
+          countdownElement.innerHTML = "";
+          lockedContentElement.style.display = "block";
+          confetti();
+          document.querySelector('h1').style.display = 'none';
+        } else {
+          // Calculate remaining days, hours, minutes, and seconds
+          const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+          // Display the countdown
+          countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+      }
+
+      // Initial update
+      updateCountdown();
+
+      // Update every second
+      setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>
