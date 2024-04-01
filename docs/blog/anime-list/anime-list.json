@@ -33,6 +33,10 @@
             "name": "Bottom-Tier Character Tomozaki"
         },
         {
+            "link": "https://myanimelist.net/anime/50803",
+            "name": "Bottom-Tier Character Tomozaki 2nd Stage"
+        },
+        {
             "link": "https://myanimelist.net/anime/31478",
             "name": "Bungo Stray Dogs"
         },
@@ -63,6 +67,10 @@
         {
             "link": "https://myanimelist.net/anime/44511",
             "name": "Chainsaw Man"
+        },
+        {
+            "link": "https://myanimelist.net/anime/51180",
+            "name": "Classroom of the Elite III"
         },
         {
             "link": "https://myanimelist.net/anime/47778",
@@ -159,6 +167,10 @@
         {
             "link": "https://myanimelist.net/anime/36296",
             "name": "Hinamatsuri"
+        },
+        {
+            "link": "https://myanimelist.net/anime/53421",
+            "name": "Hokkaido Gals Are Super Adorable!"
         },
         {
             "link": "https://myanimelist.net/anime/42897",
@@ -285,6 +297,10 @@
             "name": "Skip and Loafer"
         },
         {
+            "link": "https://myanimelist.net/anime/56885",
+            "name": "Sousou no Frieren - Marumaru no Mahou (Mini Anime)"
+        },
+        {
             "link": "https://myanimelist.net/anime/51252",
             "name": "Spy Classroom"
         },
@@ -337,6 +353,10 @@
             "name": "The Dangers in My Heart"
         },
         {
+            "link": "https://myanimelist.net/anime/55690",
+            "name": "The Dangers in My Heart Season 2"
+        },
+        {
             "link": "https://myanimelist.net/anime/53200",
             "name": "The Devil is a Part-Timer!! 2nd Season"
         },
@@ -363,6 +383,10 @@
         {
             "link": "https://myanimelist.net/anime/54103",
             "name": "The Vexations of a Shut-In Vampire Princess"
+        },
+        {
+            "link": "https://myanimelist.net/anime/49613",
+            "name": "The Wrong Way to Use Healing Magic"
         },
         {
             "link": "https://myanimelist.net/anime/50307",
@@ -401,24 +425,16 @@
     ],
     "Watching": [
         {
-            "link": "https://myanimelist.net/anime/50803",
-            "name": "Bottom-Tier Character Tomozaki 2nd Stage"
-        },
-        {
             "link": "https://myanimelist.net/anime/55358",
             "name": "Bucchigiri?!"
-        },
-        {
-            "link": "https://myanimelist.net/anime/51180",
-            "name": "Classroom of the Elite III"
         },
         {
             "link": "https://myanimelist.net/anime/52701",
             "name": "Delicious in Dungeon"
         },
         {
-            "link": "https://myanimelist.net/anime/53421",
-            "name": "Hokkaido Gals Are Super Adorable!"
+            "link": "https://myanimelist.net/anime/49458",
+            "name": "KonoSuba: God's Blessing on This Wonderful World! 3"
         },
         {
             "link": "https://myanimelist.net/anime/55813",
@@ -427,22 +443,6 @@
         {
             "link": "https://myanimelist.net/anime/52299",
             "name": "Solo Leveling"
-        },
-        {
-            "link": "https://myanimelist.net/anime/56885",
-            "name": "Sousou no Frieren - Marumaru no Mahou (Mini Anime)"
-        },
-        {
-            "link": "https://myanimelist.net/anime/55690",
-            "name": "The Dangers in My Heart Season 2"
-        },
-        {
-            "link": "https://myanimelist.net/anime/55397",
-            "name": "The Way of Pon"
-        },
-        {
-            "link": "https://myanimelist.net/anime/49613",
-            "name": "The Wrong Way to Use Healing Magic"
         }
     ],
     "On-Hold": [
@@ -465,6 +465,10 @@
         {
             "link": "https://myanimelist.net/anime/56845",
             "name": "The Strongest Tank's Labyrinth Raids: A Tank with a Rare 9999 Resistance Skill Got Kicked from the Hero's Party"
+        },
+        {
+            "link": "https://myanimelist.net/anime/55397",
+            "name": "The Way of Pon"
         }
     ]
 }
