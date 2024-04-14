@@ -2,8 +2,8 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #000000;
-  color: #d9d9d9;
+  background-color: #e8e7fd; /* Light gray background */
+  color: #1c1e21; /* Dark text color */
 }
 
 header, footer {
@@ -11,7 +11,7 @@ header, footer {
 }
 
 footer {
-  color: #6b7280;
+  color: #65676b; /* Muted text color */
   font-size: 18px;
 }
 
@@ -19,6 +19,10 @@ footer {
   max-width: 70%;
   margin: 0 auto;
   margin-top: 100px;
+  background-color: #ffffff; /* White content area */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px; /* Add some padding */
 }
 
 .content {
@@ -28,25 +32,26 @@ footer {
 table {
   border-collapse: collapse;
   width: 100%;
+  background-color: #ffffff; /* White table background */
 }
 
 th, td {
-  border-bottom: 1px solid #2f3336;
+  border-bottom: 1px solid #dddfe2; /* Light gray border */
   padding: 12px;
   text-align: left;
 }
 
 th {
-  background-color: #16181C;
+  background-color: #f0f2f5; /* Light gray header background */
   font-weight: bold;
-  color: #8899a6;
+  color: #1c1e21; /* Dark text color */
 }
 
 a {
-  color: #ffffff; /* White color */
+  color: #1877f2; /* Facebook blue color */
   text-decoration: none; /* Remove underline */
 }
 
 a:visited {
-  color: #ffffff; /* White color */
+  color: #8b9dc3; /* Lighter shade of blue for visited links */
 }
