@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500問 Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 1%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 1%;
+            background-image: linear-gradient(to bottom, #fff, #f5f5f5);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            width: 100%;
+            height: 30px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .button:active {
+            transform: translateY(1px);
+        }
+
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+        }
+
+        li button[type="button"] {
+            margin-left: 10px;
+        }
+
+        #exportData {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Japanese Language Exercise Tracker</h1>
+
+        <div class="section">
+            <label for="dayInput">Day:</label>
+            <input type="number" id="dayInput" min="1" max="6" value="1">
+        </div>
+
+        <div class="section">
+            <h2>Score Section</h2>
+            <div>
+                <label for="kanjiScore">Kanji:</label>
+                <input type="number" id="kanjiScore" placeholder="Enter score (1-5)" min="1" max="5">
+            </div>
+            <div>
+                <label for="goiScore">Goi:</label>
+                <input type="number" id="goiScore" placeholder="Enter score (1-5)" min="1" max="5">
+            </div>
+            <div>
+                <label for="bunpouScore">Bunpou:</label>
+                <input type="number" id="bunpouScore" placeholder="Enter score (1-5)" min="1" max="5">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Add New Vocabulary</h2>
+            <div>
+                <label for="newWord">Word:</label>
+                <input type="text" id="newWord">
+            </div>
+            <div>
+                <label for="newMeaning">Meaning:</label>
+                <input type="text" id="newMeaning">
+            </div>
+            <button id="addVocab">Add</button>
+        </div>
+
+        <div class="section">
+            <h2>Vocabulary List</h2>
+            <ul id="vocabList"></ul>
+        </div>
+
+        <button id="exportData">Export to JSON</button>
+    </div>
+
+    <script>
+        const dayInput = document.getElementById('dayInput');
+        const kanjiScoreInput = document.getElementById('kanjiScore');
+        const goiScoreInput = document.getElementById('goiScore');
+        const bunpouScoreInput = document.getElementById('bunpouScore');
+        const newWordInput = document.getElementById('newWord');
+        const newMeaningInput = document.getElementById('newMeaning');
+        const addVocabButton = document.getElementById('addVocab');
+        const vocabList = document.getElementById('vocabList');
+        const exportDataButton = document.getElementById('exportData');
+
+        let vocabularyList = JSON.parse(localStorage.getItem('vocabularyList')) || {};
+
+        function saveVocabularyToLocalStorage() {
+            localStorage.setItem('vocabularyList', JSON.stringify(vocabularyList));
+        }
+
+        function addVocabularyToList(word, meaning) {
+            const li = document.createElement('li');
+            const wordSpan = document.createElement('span');
+            wordSpan.textContent = word;
+            const meaningSpan = document.createElement('span');
+            meaningSpan.textContent = meaning;
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.addEventListener('click', () => {
+                const day = dayInput.value;
+                const index = vocabularyList[day].findIndex(vocab => vocab.word === word && vocab.meaning === meaning);
+                vocabularyList[day].splice(index, 1);
+                saveVocabularyToLocalStorage();
+                vocabList.removeChild(li);
+            });
+
+            li.appendChild(wordSpan);
+            li.appendChild(meaningSpan);
+            li.appendChild(removeButton);
+            vocabList.appendChild(li);
+        }
+
+        function loadVocabularyList() {
+            vocabList.innerHTML = '';
+            const day = dayInput.value;
+            if (vocabularyList[day]) {
+                vocabularyList[day].forEach(vocab => {
+                    addVocabularyToList(vocab.word, vocab.meaning);
+                });
+            }
+        }
+
+        dayInput.addEventListener('change', loadVocabularyList);
+
+        addVocabButton.addEventListener('click', () => {
+            const word = newWordInput.value.trim();
+            const meaning = newMeaningInput.value.trim();
+            if (word && meaning) {
+                const day = dayInput.value;
+                if (!vocabularyList[day]) {
+                    vocabularyList[day] = [];
+                }
+                vocabularyList[day].push({ word, meaning });
+                saveVocabularyToLocalStorage();
+                addVocabularyToList(word, meaning);
+                newWordInput.value = '';
+                newMeaningInput.value = '';
+            }
+        });
+
+        exportDataButton.addEventListener('click', () => {
+            const day = dayInput.value;
+            const scores = {
+                kanji: kanjiScoreInput.value + '/5',
+                goi: goiScoreInput.value + '/5',
+                bunpou: bunpouScoreInput.value + '/5',
+            };
+            const vocabulary = vocabularyList[day] || [];
+
+            const data = {
+                [day]: {
+                    scores,
+                    vocabulary,
+                },
+            };
+
+            const jsonData = JSON.stringify(data, null, 2);
+            const blob = new Blob([jsonData], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `japanese-tracker-day-${day}.json`;
+            link.click();
+            URL.revokeObjectURL(url);
+        });
+
+        loadVocabularyList();
+
+    </script>
+</body>
+
+</html>
