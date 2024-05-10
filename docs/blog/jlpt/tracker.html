@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/logo.ico">
     <title>500問 Tracker</title>
     <style>
         body {
@@ -136,6 +137,7 @@
         </div>
 
         <button id="exportData">Export to JSON</button>
+        <button id="clearLocalStorageButton">Clear Local Storage</button>
     </div>
 
     <script>
@@ -148,12 +150,21 @@
         const addVocabButton = document.getElementById('addVocab');
         const vocabList = document.getElementById('vocabList');
         const exportDataButton = document.getElementById('exportData');
+        const clearLocalStorageButton = document.getElementById('clearLocalStorageButton');
 
         let vocabularyList = JSON.parse(localStorage.getItem('vocabularyList')) || {};
 
         function saveVocabularyToLocalStorage() {
             localStorage.setItem('vocabularyList', JSON.stringify(vocabularyList));
         }
+
+        function clearLocalStorage() {
+            vocabularyList = {}; // Clear the vocabularyList object
+            saveVocabularyToLocalStorage(); // Save the empty object to local storage
+            loadVocabularyList(); // Reload the vocabulary list on the page
+        }
+
+        clearLocalStorageButton.addEventListener('click', clearLocalStorage);
 
         function addVocabularyToList(word, meaning) {
             const li = document.createElement('li');

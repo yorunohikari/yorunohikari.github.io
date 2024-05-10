@@ -1,9 +1,198 @@
 {
     "1": [
-        { "word": "新しい", "meaning": "New" },
-        { "word": "単語", "meaning": "Word" },
-        { "word": "言葉", "meaning": "Language" }
-    ],
+        {
+          "word": "税金",
+          "meaning": "Tax"
+        },
+        {
+          "word": "納める",
+          "meaning": "to pay"
+        },
+        {
+          "word": "義務",
+          "meaning": "Obligation"
+        },
+        {
+          "word": "営業",
+          "meaning": "Sales"
+        },
+        {
+          "word": "なれなれしい",
+          "meaning": "overly friendly"
+        },
+        {
+          "word": "態度",
+          "meaning": "attitude"
+        },
+        {
+          "word": "限る",
+          "meaning": "to be limited to;"
+        },
+        {
+          "word": "免許証",
+          "meaning": "licence"
+        },
+        {
+          "word": "履歴書",
+          "meaning": "personal history"
+        },
+        {
+          "word": "写真撮影",
+          "meaning": "taking photographs"
+        },
+        {
+          "word": "当店",
+          "meaning": "this store"
+        },
+        {
+          "word": "法案",
+          "meaning": "bill (law); measure"
+        },
+        {
+          "word": "予想",
+          "meaning": "expectation"
+        },
+        {
+          "word": "すんなり",
+          "meaning": "smoothly"
+        },
+        {
+          "word": "通る",
+          "meaning": "to pass through"
+        },
+        {
+          "word": "通う",
+          "meaning": "to go to (school, work, etc.); to attend"
+        },
+        {
+          "word": "かたわら",
+          "meaning": "while (doing); in addition to; at the same time​"
+        },
+        {
+          "word": "学費",
+          "meaning": "tuition; school expenses"
+        },
+        {
+          "word": "稼ぐ",
+          "meaning": "to earn (income); to make (money)"
+        },
+        {
+          "word": "団体",
+          "meaning": "association"
+        },
+        {
+          "word": "医者",
+          "meaning": "doctor"
+        },
+        {
+          "word": "看護師",
+          "meaning": "nurse"
+        },
+        {
+          "word": "派遣",
+          "meaning": "deployment"
+        },
+        {
+          "word": "趣旨",
+          "meaning": "goal; intent; object; aim; point"
+        },
+        {
+          "word": "活動",
+          "meaning": "activity"
+        },
+        {
+          "word": "賛同",
+          "meaning": "approval; endorsement​"
+        },
+        {
+          "word": "寄付",
+          "meaning": "contribution; donation"
+        },
+        {
+          "word": "我が社",
+          "meaning": "our company; my company"
+        },
+        {
+          "word": "経営",
+          "meaning": "management; administration; operation"
+        },
+        {
+          "word": "状態",
+          "meaning": "condition"
+        },
+        {
+          "word": "著しく",
+          "meaning": "considerably; remarkably; strikingly"
+        },
+        {
+          "word": "悪化",
+          "meaning": "getting worse"
+        },
+        {
+          "word": "機内",
+          "meaning": "inside a plane; in-flight"
+        },
+        {
+          "word": "迷惑行為",
+          "meaning": "disruptive behaviour; harassment; abusive behaviour"
+        },
+        {
+          "word": "罰金",
+          "meaning": "fine; penalty"
+        },
+        {
+          "word": "驚く",
+          "meaning": "to be surprised; to be astonished"
+        },
+        {
+          "word": "とっさに",
+          "meaning": "instantly; in an instant; quickly"
+        },
+        {
+          "word": "縦",
+          "meaning": "the vertical; height"
+        },
+        {
+          "word": "横",
+          "meaning": "horizontal (as opposed to vertical); lying down"
+        },
+        {
+          "word": "斜め",
+          "meaning": "diagonal; oblique"
+        },
+        {
+          "word": "伸縮",
+          "meaning": "expansion and contraction; elasticity; flexibility"
+        },
+        {
+          "word": "関節",
+          "meaning": "joint (Anatomy)"
+        },
+        {
+          "word": "貼る",
+          "meaning": "to stick, to paste, to apply"
+        },
+        {
+          "word": "無茶",
+          "meaning": "absurd"
+        },
+        {
+          "word": "壊れる",
+          "meaning": "to be broken"
+        },
+        {
+          "word": "食事会",
+          "meaning": "dinner party; ceremonial dinner"
+        },
+        {
+          "word": "下見",
+          "meaning": "preliminary inspection; having a look in advance"
+        },
+        {
+          "word": "かねて",
+          "meaning": "beforehand, previously"
+        }
+      ],
     "2": [
         { "word": "新しい", "meaning": "Nemw" },
         { "word": "単語", "meaning": "Word" },
