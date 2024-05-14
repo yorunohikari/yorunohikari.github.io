@@ -34,8 +34,8 @@ const quizData = {
         {3: "限って"},
         {4: "限った"},
       ],
-      answer: 2,
-      answer_text: "限らない",
+      answer: 4,
+      answer_text: "限った",
     },
     {
       number: 61,
