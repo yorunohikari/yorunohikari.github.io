@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Learning Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Japanese Learning Tracker</h1>
+            <form id="tracker-form">
+                <label for="week">Week:</label>
+                <input type="number" id="week" name="week" required>
+                
+                <label for="kanji">Kanji (out of 12):</label>
+                <input type="number" id="kanji" name="kanji" min="0" max="12" required>
+                
+                <label for="goi">Goi (out of 12):</label>
+                <input type="number" id="goi" name="goi" min="0" max="12" required>
+                
+                <label for="bunpou">Bunpou (out of 12):</label>
+                <input type="number" id="bunpou" name="bunpou" min="0" max="12" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+
+        </div>
+
+        <div id="progress-container">
+            <h2>Progress</h2>
+            <table id="progress-table">
+                <thead>
+                    <tr>
+                        <th>Week</th>
+                        <th>Kanji</th>
+                        <th>Goi</th>
+                        <th>Bunpou</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div id="copy-div">
+                <label for="week-select">Select Week to Copy:</label>
+                <select id="week-select"></select>
+                <button id="copy-json">Copy to JSON</button>
+                <textarea id="json-output" readonly></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="week.js"></script>
+</body>
+</html>
