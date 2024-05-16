@@ -107,25 +107,46 @@ fetch('new_words_data.json')
     });
 
 
-// Get the current page number from the URL
+// Get the current page URL
 const currentPageUrl = window.location.href;
-const pageNumberMatch = currentPageUrl.match(/day-(\d+)\.html/);
-const currentPageNumber = pageNumberMatch ? parseInt(pageNumberMatch[1]) : 1;
+
+// Extract the current week and day from the URL
+const weekMatch = currentPageUrl.match(/week-(\d+)/);
+const currentDayMatch = currentPageUrl.match(/day-(\d+)\.html/);
+
+const currentWeekNumber = weekMatch ? parseInt(weekMatch[1]) : 1;
+const currentDayNumber = currentDayMatch ? parseInt(currentDayMatch[1]) : 1;
 
 // Previous page button
 const prevPageBtn = document.getElementById('prevPage');
 prevPageBtn.addEventListener('click', () => {
-    const newPageNumber = currentPageNumber - 1;
-    if (newPageNumber > 0) {
-        const newUrl = currentPageUrl.replace(/day-\d+\.html/, `day-${newPageNumber}.html`);
-        window.location.href = newUrl;
+    let newDayNumber = currentDayNumber - 1;
+    let newWeekNumber = currentWeekNumber;
+
+    if (newDayNumber < 1) {
+        newWeekNumber = Math.max(currentWeekNumber - 1, 1);
+        newDayNumber = 7;
     }
+
+    const newUrl = currentPageUrl
+        .replace(/week-\d+/, `week-${newWeekNumber}`)
+        .replace(/day-\d+\.html/, `day-${newDayNumber}.html`);
+    window.location.href = newUrl;
 });
 
 // Next page button
 const nextPageBtn = document.getElementById('nextPage');
 nextPageBtn.addEventListener('click', () => {
-    const newPageNumber = currentPageNumber + 1;
-    const newUrl = currentPageUrl.replace(/day-\d+\.html/, `day-${newPageNumber}.html`);
+    let newDayNumber = currentDayNumber + 1;
+    let newWeekNumber = currentWeekNumber;
+
+    if (newDayNumber > 7) {
+        newWeekNumber += 1;
+        newDayNumber = 1;
+    }
+
+    const newUrl = currentPageUrl
+        .replace(/week-\d+/, `week-${newWeekNumber}`)
+        .replace(/day-\d+\.html/, `day-${newDayNumber}.html`);
     window.location.href = newUrl;
 });
