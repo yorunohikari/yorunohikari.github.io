@@ -317,128 +317,184 @@
   ],
   "3": [
     {
-      "word": "後輩",
-      "meaning": "subordinate"
+      "word": "頑張る",
+      "meaning": "to do one's best"
     },
     {
-      "word": "鉄道",
-      "meaning": "railroad"
+      "word": "無駄",
+      "meaning": "waste; uselessness"
     },
     {
-      "word": "興味",
-      "meaning": "interest"
+      "word": "挑戦",
+      "meaning": "attempt; try"
     },
     {
-      "word": "模型",
-      "meaning": "model; dummy; maquette"
+      "word": "はかどる",
+      "meaning": "to make (good) progress;"
     },
     {
-      "word": "列車",
-      "meaning": "train"
+      "word": "弊社",
+      "meaning": "our company"
     },
     {
-      "word": "優秀",
-      "meaning": "superior; excellent; brilliant"
+      "word": "今期",
+      "meaning": "this term"
     },
     {
-      "word": "意欲",
-      "meaning": "will; desire"
+      "word": "及び",
+      "meaning": "and; as well as"
     },
     {
-      "word": "失う",
-      "meaning": "to lose"
+      "word": "営業",
+      "meaning": "sales"
     },
     {
-      "word": "患者",
-      "meaning": "patient (medical context)"
+      "word": "過去",
+      "meaning": "past"
     },
     {
-      "word": "食卓",
-      "meaning": "dining table"
+      "word": "利益",
+      "meaning": "profit"
     },
     {
-      "word": "詳細",
-      "meaning": "detail"
+      "word": "あやふや",
+      "meaning": "indecisive"
     },
     {
-      "word": "添付",
-      "meaning": "attaching (documents, etc.)"
+      "word": "態度",
+      "meaning": "attitude; manner"
     },
     {
-      "word": "作業",
-      "meaning": "work"
+      "word": "誤解",
+      "meaning": "misunderstanding"
     },
     {
-      "word": "適宜",
-      "meaning": "suitable; appropriate; fitting; proper"
+      "word": "招く",
+      "meaning": "to lead to; to result in"
     },
     {
-      "word": "商品",
-      "meaning": "Product"
+      "word": "非",
+      "meaning": "fault; error; mistake"
     },
     {
-      "word": "取り寄せる",
-      "meaning": "to order; to send away for; to have (something) sent to one"
+      "word": "責任",
+      "meaning": "responsibility"
     },
     {
-      "word": "健康",
-      "meaning": "healthy"
+      "word": "先方",
+      "meaning": "other party"
     },
     {
-      "word": "趣味",
-      "meaning": "hobby"
+      "word": "矢",
+      "meaning": "arrow"
     },
     {
-      "word": "糖分",
-      "meaning": "sugar content"
+      "word": "的",
+      "meaning": "mark"
     },
     {
-      "word": "塩分",
-      "meaning": "salt content"
+      "word": "射る",
+      "meaning": "to shoot"
     },
     {
-      "word": "控える",
-      "meaning": "to restrain oneself from excessive ...​"
+      "word": "吉凶",
+      "meaning": "good or bad luck; fortune​"
     },
     {
-      "word": "耳を澄ます",
-      "meaning": "to listen carefully"
+      "word": "占う",
+      "meaning": "to tell someone's fortune"
     },
     {
-      "word": "極まりない",
-      "meaning": "extremely"
+      "word": "厳",
+      "meaning": "strict; stern"
     },
     {
-      "word": "天然資源",
-      "meaning": "natural resources"
+      "word": "儀式",
+      "meaning": "ceremony; rite; ritual; service"
     },
     {
-      "word": "乏しい",
-      "meaning": "scarce"
+      "word": "梅雨",
+      "meaning": "rainy season"
     },
     {
-      "word": "工芸品",
-      "meaning": "handicraft; industrial art object"
+      "word": "むしる",
+      "meaning": "to pluck; to pick"
     },
     {
-      "word": "見事",
-      "meaning": "splendid; magnificent; excellent"
+      "word": "雑誌",
+      "meaning": "journal; magazine"
     },
     {
-      "word": "霜",
-      "meaning": "frost"
+      "word": "組織",
+      "meaning": "organization; organisation"
     },
     {
-      "word": "成功",
-      "meaning": "success; achievement"
+      "word": "人事",
+      "meaning": "personel"
     },
     {
-      "word": "だぶだぶ",
-      "meaning": "loose (of clothing); baggy​"
+      "word": "企業",
+      "meaning": "enterprise; business; company"
     },
     {
-      "word": "ズボン",
-      "meaning": "trousers; pants"
+      "word": "掲載",
+      "meaning": "publication"
+    },
+    {
+      "word": "就職",
+      "meaning": "finding employment;"
+    },
+    {
+      "word": "もはや",
+      "meaning": "no longer"
+    },
+    {
+      "word": "歌舞伎",
+      "meaning": "kabuki"
+    },
+    {
+      "word": "伝統芸能",
+      "meaning": "traditional art; traditional performance art​"
+    },
+    {
+      "word": "喪中",
+      "meaning": "in mourning​"
+    },
+    {
+      "word": "挨拶",
+      "meaning": "greeting"
+    },
+    {
+      "word": "失礼",
+      "meaning": "discourtesy; impoliteness"
+    },
+    {
+      "word": "身内",
+      "meaning": "relatives; one's family"
+    },
+    {
+      "word": "亡く",
+      "meaning": "to die; to pass away"
+    },
+    {
+      "word": "年賀状",
+      "meaning": "New Year's card"
+    },
+    {
+      "word": "支える",
+      "meaning": "to support; to prop; to sustain"
+    },
+    {
+      "word": "若い",
+      "meaning": "young"
+    },
+    {
+      "word": "年寄り",
+      "meaning": "old person; elderly person"
+    },
+    {
+      "word": "怒る",
+      "meaning": "to get angry; to get mad;"
     }
   ],
   "4": [
