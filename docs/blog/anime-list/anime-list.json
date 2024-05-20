@@ -1,44 +1,308 @@
 {
     "Completed": [
         {
-            "link": "https://myanimelist.net/anime/54041",
-            "name": "16bit Sensation: Another Layer"
+            "link": "https://myanimelist.net/anime/53446",
+            "name": "Campfire Cooking in Another World with My Absurd Skill"
         },
         {
-            "link": "https://myanimelist.net/anime/56352",
-            "name": "7th Time Loop: The Villainess Enjoys a Carefree Life Married to Her Worst Enemy!"
+            "link": "https://myanimelist.net/anime/52736",
+            "name": "The Magical Revolution of the Reincarnated Princess and the Genius Young Lady"
         },
         {
-            "link": "https://myanimelist.net/anime/54852",
-            "name": "A Returner's Magic Should Be Special"
+            "link": "https://myanimelist.net/anime/50330",
+            "name": "Bungo Stray Dogs 4"
         },
         {
-            "link": "https://myanimelist.net/anime/52193",
-            "name": "Akiba Maid War"
+            "link": "https://myanimelist.net/anime/51462",
+            "name": "Farming Life in Another World"
         },
         {
-            "link": "https://myanimelist.net/anime/52969",
-            "name": "Am I Actually the Strongest?"
+            "link": "https://myanimelist.net/anime/50739",
+            "name": "The Angel Next Door Spoils Me Rotten"
         },
         {
-            "link": "https://myanimelist.net/anime/22147",
-            "name": "Amagi Brilliant Park"
+            "link": "https://myanimelist.net/anime/50932",
+            "name": "The Reincarnation of the Strongest Exorcist in Another World"
         },
         {
-            "link": "https://myanimelist.net/anime/34618",
-            "name": "BLEND-S"
+            "link": "https://myanimelist.net/anime/52461",
+            "name": "Saving 80,000 Gold in Another World for My Retirement"
+        },
+        {
+            "link": "https://myanimelist.net/anime/51105",
+            "name": "NieR:Automata Ver1.1a"
+        },
+        {
+            "link": "https://myanimelist.net/anime/51019",
+            "name": "Demon Slayer: Kimetsu no Yaiba Swordsmith Village Arc"
+        },
+        {
+            "link": "https://myanimelist.net/anime/50307",
+            "name": "Tonikawa: Over The Moon For You: 2nd Season"
+        },
+        {
+            "link": "https://myanimelist.net/anime/51252",
+            "name": "Spy Classroom"
+        },
+        {
+            "link": "https://myanimelist.net/anime/52034",
+            "name": "My Star"
+        },
+        {
+            "link": "https://myanimelist.net/anime/51958",
+            "name": "KonoSuba: An Explosion on This Wonderful World!"
+        },
+        {
+            "link": "https://myanimelist.net/anime/50425",
+            "name": "More than a married couple, but not lovers."
         },
         {
             "link": "https://myanimelist.net/anime/40530",
             "name": "Bottom-Tier Character Tomozaki"
         },
         {
+            "link": "https://myanimelist.net/anime/31376",
+            "name": "Flying Witch"
+        },
+        {
+            "link": "https://myanimelist.net/anime/50854",
+            "name": "Handyman Saitou in Another World"
+        },
+        {
+            "link": "https://myanimelist.net/anime/53126",
+            "name": "Loving Yamada at Lv999"
+        },
+        {
+            "link": "https://myanimelist.net/anime/52578",
+            "name": "The Dangers in My Heart"
+        },
+        {
+            "link": "https://myanimelist.net/anime/52830",
+            "name": "I Got a Cheat Skill in Another World and Became Unrivaled in The Real World, Too"
+        },
+        {
+            "link": "https://myanimelist.net/anime/48549",
+            "name": "Dr. Stone: New World"
+        },
+        {
+            "link": "https://myanimelist.net/anime/51693",
+            "name": "KamiKatsu: Working for God in a Godless World"
+        },
+        {
+            "link": "https://myanimelist.net/anime/50416",
+            "name": "Skip and Loafer"
+        },
+        {
+            "link": "https://myanimelist.net/anime/46569",
+            "name": "Hell's Paradise"
+        },
+        {
+            "link": "https://myanimelist.net/anime/52619",
+            "name": "Reborn as a Vending Machine, Now I Wander the Dungeon"
+        },
+        {
+            "link": "https://myanimelist.net/anime/53200",
+            "name": "The Devil is a Part-Timer!! 2nd Season"
+        },
+        {
+            "link": "https://myanimelist.net/anime/51009",
+            "name": "Jujutsu Kaisen 2nd Season"
+        },
+        {
+            "link": "https://myanimelist.net/anime/54898",
+            "name": "Bungo Stray Dogs 5"
+        },
+        {
+            "link": "https://myanimelist.net/anime/55651",
+            "name": "TONIKAWA: Over The Moon For You - High School Days"
+        },
+        {
+            "link": "https://myanimelist.net/anime/55454",
+            "name": "Record of Ragnarok II Part 2"
+        },
+        {
+            "link": "https://myanimelist.net/anime/51179",
+            "name": "Mushoku Tensei: Jobless Reincarnation Season 2"
+        },
+        {
+            "link": "https://myanimelist.net/anime/53050",
+            "name": "Rent-a-Girlfriend Season 3"
+        },
+        {
+            "link": "https://myanimelist.net/anime/52611",
+            "name": "Sweet Reincarnation"
+        },
+        {
+            "link": "https://myanimelist.net/anime/53263",
+            "name": "The Great Cleric"
+        },
+        {
+            "link": "https://myanimelist.net/anime/51764",
+            "name": "My Unique Skill Makes Me OP Even at Level 1"
+        },
+        {
+            "link": "https://myanimelist.net/anime/52969",
+            "name": "Am I Actually the Strongest?"
+        },
+        {
+            "link": "https://myanimelist.net/anime/42897",
+            "name": "Horimiya"
+        },
+        {
+            "link": "https://myanimelist.net/anime/54112",
+            "name": "Zom 100: Bucket List of the Dead"
+        },
+        {
+            "link": "https://myanimelist.net/anime/22147",
+            "name": "Amagi Brilliant Park"
+        },
+        {
+            "link": "https://myanimelist.net/anime/48406",
+            "name": "Re-Main"
+        },
+        {
+            "link": "https://myanimelist.net/anime/45055",
+            "name": "Taisho Otome Fairy Tale"
+        },
+        {
+            "link": "https://myanimelist.net/anime/51552",
+            "name": "My Happy Marriage"
+        },
+        {
+            "link": "https://myanimelist.net/anime/32615",
+            "name": "The Saga of Tanya the Evil"
+        },
+        {
+            "link": "https://myanimelist.net/anime/34798",
+            "name": "Laid-Back Camp"
+        },
+        {
+            "link": "https://myanimelist.net/anime/52991",
+            "name": "Frieren: Beyond Journey's End"
+        },
+        {
+            "link": "https://myanimelist.net/anime/40357",
+            "name": "The Rising of the Shield Hero Season 3"
+        },
+        {
+            "link": "https://myanimelist.net/anime/54041",
+            "name": "16bit Sensation: Another Layer"
+        },
+        {
+            "link": "https://myanimelist.net/anime/50583",
+            "name": "Butareba -The Story of a Man Who Turned into a Pig-"
+        },
+        {
+            "link": "https://myanimelist.net/anime/52741",
+            "name": "Undead Unluck"
+        },
+        {
+            "link": "https://myanimelist.net/anime/54852",
+            "name": "A Returner's Magic Should Be Special"
+        },
+        {
+            "link": "https://myanimelist.net/anime/55644",
+            "name": "Dr. Stone 3rd Season Part 2"
+        },
+        {
+            "link": "https://myanimelist.net/anime/54103",
+            "name": "The Vexations of a Shut-In Vampire Princess"
+        },
+        {
+            "link": "https://myanimelist.net/anime/53040",
+            "name": "Girlfriend, Girlfriend Season 2"
+        },
+        {
+            "link": "https://myanimelist.net/anime/54492",
+            "name": "The Apothecary Diaries"
+        },
+        {
+            "link": "https://myanimelist.net/anime/54616",
+            "name": "I Shall Survive Using Potions!"
+        },
+        {
+            "link": "https://myanimelist.net/anime/43969",
+            "name": "Girlfriend, Girlfriend"
+        },
+        {
+            "link": "https://myanimelist.net/anime/49766",
+            "name": "Under Ninja"
+        },
+        {
+            "link": "https://myanimelist.net/anime/36296",
+            "name": "Hinamatsuri"
+        },
+        {
+            "link": "https://myanimelist.net/anime/4688",
+            "name": "Minna Agechau♡"
+        },
+        {
+            "link": "https://myanimelist.net/anime/42822",
+            "name": "Dr. Ramune -Mysterious Disease Specialist-"
+        },
+        {
+            "link": "https://myanimelist.net/anime/51180",
+            "name": "Classroom of the Elite III"
+        },
+        {
             "link": "https://myanimelist.net/anime/50803",
             "name": "Bottom-Tier Character Tomozaki 2nd Stage"
         },
         {
+            "link": "https://myanimelist.net/anime/52482",
+            "name": "Sasaki and Peeps"
+        },
+        {
+            "link": "https://myanimelist.net/anime/52299",
+            "name": "Solo Leveling"
+        },
+        {
+            "link": "https://myanimelist.net/anime/55690",
+            "name": "The Dangers in My Heart Season 2"
+        },
+        {
+            "link": "https://myanimelist.net/anime/53421",
+            "name": "Hokkaido Gals Are Super Adorable!"
+        },
+        {
+            "link": "https://myanimelist.net/anime/52211",
+            "name": "Mashle: Magic and Muscles"
+        },
+        {
+            "link": "https://myanimelist.net/anime/56352",
+            "name": "7th Time Loop: The Villainess Enjoys a Carefree Life Married to Her Worst Enemy!"
+        },
+        {
+            "link": "https://myanimelist.net/anime/55813",
+            "name": "Mashle: Magic and Muscles Season 2"
+        },
+        {
             "link": "https://myanimelist.net/anime/55358",
             "name": "Bucchigiri?!"
+        },
+        {
+            "link": "https://myanimelist.net/anime/49613",
+            "name": "The Wrong Way to Use Healing Magic"
+        },
+        {
+            "link": "https://myanimelist.net/anime/52193",
+            "name": "Akiba Maid War"
+        },
+        {
+            "link": "https://myanimelist.net/anime/44511",
+            "name": "Chainsaw Man"
+        },
+        {
+            "link": "https://myanimelist.net/anime/40748",
+            "name": "Jujutsu Kaisen (TV)"
+        },
+        {
+            "link": "https://myanimelist.net/anime/38000",
+            "name": "Demon Slayer: Kimetsu no Yaiba"
+        },
+        {
+            "link": "https://myanimelist.net/anime/47778",
+            "name": "Demon Slayer: Entertainment District Arc"
         },
         {
             "link": "https://myanimelist.net/anime/31478",
@@ -49,72 +313,12 @@
             "name": "Bungo Stray Dogs 2"
         },
         {
-            "link": "https://myanimelist.net/anime/50330",
-            "name": "Bungo Stray Dogs 4"
-        },
-        {
-            "link": "https://myanimelist.net/anime/54898",
-            "name": "Bungo Stray Dogs 5"
-        },
-        {
             "link": "https://myanimelist.net/anime/38003",
             "name": "Bungou Stray Dogs 3rd Season"
         },
         {
-            "link": "https://myanimelist.net/anime/50583",
-            "name": "Butareba -The Story of a Man Who Turned into a Pig-"
-        },
-        {
-            "link": "https://myanimelist.net/anime/53446",
-            "name": "Campfire Cooking in Another World with My Absurd Skill"
-        },
-        {
-            "link": "https://myanimelist.net/anime/44511",
-            "name": "Chainsaw Man"
-        },
-        {
-            "link": "https://myanimelist.net/anime/51180",
-            "name": "Classroom of the Elite III"
-        },
-        {
-            "link": "https://myanimelist.net/anime/47778",
-            "name": "Demon Slayer: Entertainment District Arc"
-        },
-        {
-            "link": "https://myanimelist.net/anime/38000",
-            "name": "Demon Slayer: Kimetsu no Yaiba"
-        },
-        {
-            "link": "https://myanimelist.net/anime/51019",
-            "name": "Demon Slayer: Kimetsu no Yaiba Swordsmith Village Arc"
-        },
-        {
-            "link": "https://myanimelist.net/anime/42822",
-            "name": "Dr. Ramune -Mysterious Disease Specialist-"
-        },
-        {
-            "link": "https://myanimelist.net/anime/38691",
-            "name": "Dr. Stone"
-        },
-        {
-            "link": "https://myanimelist.net/anime/55644",
-            "name": "Dr. Stone 3rd Season Part 2"
-        },
-        {
-            "link": "https://myanimelist.net/anime/48549",
-            "name": "Dr. Stone: New World"
-        },
-        {
-            "link": "https://myanimelist.net/anime/40852",
-            "name": "Dr. Stone: Stone Wars"
-        },
-        {
-            "link": "https://myanimelist.net/anime/51462",
-            "name": "Farming Life in Another World"
-        },
-        {
-            "link": "https://myanimelist.net/anime/31376",
-            "name": "Flying Witch"
+            "link": "https://myanimelist.net/anime/32281",
+            "name": "Your Name"
         },
         {
             "link": "https://myanimelist.net/anime/28171",
@@ -123,14 +327,6 @@
         {
             "link": "https://myanimelist.net/anime/31327",
             "name": "Food Wars! Shokugeki no Soma OVA"
-        },
-        {
-            "link": "https://myanimelist.net/anime/40902",
-            "name": "Food Wars! The Fifth Plate"
-        },
-        {
-            "link": "https://myanimelist.net/anime/39940",
-            "name": "Food Wars! The Fourth Plate"
         },
         {
             "link": "https://myanimelist.net/anime/32282",
@@ -149,60 +345,28 @@
             "name": "Food Wars! The Third Plate OVA"
         },
         {
-            "link": "https://myanimelist.net/anime/52991",
-            "name": "Frieren: Beyond Journey's End"
+            "link": "https://myanimelist.net/anime/39940",
+            "name": "Food Wars! The Fourth Plate"
         },
         {
-            "link": "https://myanimelist.net/anime/43969",
-            "name": "Girlfriend, Girlfriend"
+            "link": "https://myanimelist.net/anime/40902",
+            "name": "Food Wars! The Fifth Plate"
         },
         {
-            "link": "https://myanimelist.net/anime/53040",
-            "name": "Girlfriend, Girlfriend Season 2"
+            "link": "https://myanimelist.net/anime/37430",
+            "name": "That Time I Got Reincarnated as a Slime"
         },
         {
-            "link": "https://myanimelist.net/anime/50854",
-            "name": "Handyman Saitou in Another World"
+            "link": "https://myanimelist.net/anime/39551",
+            "name": "That Time I Got Reincarnated as a Slime Season 2"
         },
         {
-            "link": "https://myanimelist.net/anime/46569",
-            "name": "Hell's Paradise"
+            "link": "https://myanimelist.net/anime/41487",
+            "name": "That Time I Got Reincarnated as a Slime 2nd Season Part 2"
         },
         {
-            "link": "https://myanimelist.net/anime/36296",
-            "name": "Hinamatsuri"
-        },
-        {
-            "link": "https://myanimelist.net/anime/53421",
-            "name": "Hokkaido Gals Are Super Adorable!"
-        },
-        {
-            "link": "https://myanimelist.net/anime/42897",
-            "name": "Horimiya"
-        },
-        {
-            "link": "https://myanimelist.net/anime/52830",
-            "name": "I Got a Cheat Skill in Another World and Became Unrivaled in The Real World, Too"
-        },
-        {
-            "link": "https://myanimelist.net/anime/54616",
-            "name": "I Shall Survive Using Potions!"
-        },
-        {
-            "link": "https://myanimelist.net/anime/40748",
-            "name": "Jujutsu Kaisen (TV)"
-        },
-        {
-            "link": "https://myanimelist.net/anime/51009",
-            "name": "Jujutsu Kaisen 2nd Season"
-        },
-        {
-            "link": "https://myanimelist.net/anime/51693",
-            "name": "KamiKatsu: Working for God in a Godless World"
-        },
-        {
-            "link": "https://myanimelist.net/anime/51958",
-            "name": "KonoSuba: An Explosion on This Wonderful World!"
+            "link": "https://myanimelist.net/anime/49877",
+            "name": "That Time I Got Reincarnated as a Slime: The Movie - Scarlet Bond"
         },
         {
             "link": "https://myanimelist.net/anime/30831",
@@ -213,28 +377,12 @@
             "name": "KonoSuba: God's Blessing on This Wonderful World! 2"
         },
         {
-            "link": "https://myanimelist.net/anime/34798",
-            "name": "Laid-Back Camp"
+            "link": "https://myanimelist.net/anime/49438",
+            "name": "Parallel World Pharmacy"
         },
         {
-            "link": "https://myanimelist.net/anime/53126",
-            "name": "Loving Yamada at Lv999"
-        },
-        {
-            "link": "https://myanimelist.net/anime/52211",
-            "name": "Mashle: Magic and Muscles"
-        },
-        {
-            "link": "https://myanimelist.net/anime/55813",
-            "name": "Mashle: Magic and Muscles Season 2"
-        },
-        {
-            "link": "https://myanimelist.net/anime/4688",
-            "name": "Minna Agechau\u00e2\u2122\u00a1"
-        },
-        {
-            "link": "https://myanimelist.net/anime/50425",
-            "name": "More than a married couple, but not lovers."
+            "link": "https://myanimelist.net/anime/52608",
+            "name": "The Aristocrat's Otherworldly Adventure: Serving Gods Who Go Too Far"
         },
         {
             "link": "https://myanimelist.net/anime/39535",
@@ -245,26 +393,6 @@
             "name": "Mushoku Tensei: Jobless Reincarnation Part 2"
         },
         {
-            "link": "https://myanimelist.net/anime/51179",
-            "name": "Mushoku Tensei: Jobless Reincarnation Season 2"
-        },
-        {
-            "link": "https://myanimelist.net/anime/51552",
-            "name": "My Happy Marriage"
-        },
-        {
-            "link": "https://myanimelist.net/anime/52034",
-            "name": "My Star"
-        },
-        {
-            "link": "https://myanimelist.net/anime/51764",
-            "name": "My Unique Skill Makes Me OP Even at Level 1"
-        },
-        {
-            "link": "https://myanimelist.net/anime/51105",
-            "name": "NieR:Automata Ver1.1a"
-        },
-        {
             "link": "https://myanimelist.net/anime/30276",
             "name": "One Punch Man"
         },
@@ -273,155 +401,27 @@
             "name": "One Punch Man 2nd Season"
         },
         {
-            "link": "https://myanimelist.net/anime/49438",
-            "name": "Parallel World Pharmacy"
-        },
-        {
-            "link": "https://myanimelist.net/anime/48406",
-            "name": "Re-Main"
-        },
-        {
-            "link": "https://myanimelist.net/anime/52619",
-            "name": "Reborn as a Vending Machine, Now I Wander the Dungeon"
-        },
-        {
-            "link": "https://myanimelist.net/anime/55454",
-            "name": "Record of Ragnarok II Part 2"
-        },
-        {
-            "link": "https://myanimelist.net/anime/53050",
-            "name": "Rent-a-Girlfriend Season 3"
-        },
-        {
-            "link": "https://myanimelist.net/anime/52482",
-            "name": "Sasaki and Peeps"
-        },
-        {
-            "link": "https://myanimelist.net/anime/52461",
-            "name": "Saving 80,000 Gold in Another World for My Retirement"
-        },
-        {
-            "link": "https://myanimelist.net/anime/50416",
-            "name": "Skip and Loafer"
-        },
-        {
-            "link": "https://myanimelist.net/anime/56885",
-            "name": "Sousou no Frieren - Marumaru no Mahou (Mini Anime)"
-        },
-        {
-            "link": "https://myanimelist.net/anime/51252",
-            "name": "Spy Classroom"
-        },
-        {
-            "link": "https://myanimelist.net/anime/52611",
-            "name": "Sweet Reincarnation"
-        },
-        {
-            "link": "https://myanimelist.net/anime/55651",
-            "name": "TONIKAWA: Over The Moon For You - High School Days"
-        },
-        {
             "link": "https://myanimelist.net/anime/41389",
             "name": "TONIKAWA: Over the Moon For You"
         },
         {
-            "link": "https://myanimelist.net/anime/45055",
-            "name": "Taisho Otome Fairy Tale"
+            "link": "https://myanimelist.net/anime/34618",
+            "name": "BLEND-S"
         },
         {
-            "link": "https://myanimelist.net/anime/37430",
-            "name": "That Time I Got Reincarnated as a Slime"
+            "link": "https://myanimelist.net/anime/38691",
+            "name": "Dr. Stone"
         },
         {
-            "link": "https://myanimelist.net/anime/41487",
-            "name": "That Time I Got Reincarnated as a Slime 2nd Season Part 2"
+            "link": "https://myanimelist.net/anime/40852",
+            "name": "Dr. Stone: Stone Wars"
         },
         {
-            "link": "https://myanimelist.net/anime/39551",
-            "name": "That Time I Got Reincarnated as a Slime Season 2"
-        },
-        {
-            "link": "https://myanimelist.net/anime/49877",
-            "name": "That Time I Got Reincarnated as a Slime: The Movie - Scarlet Bond"
-        },
-        {
-            "link": "https://myanimelist.net/anime/50739",
-            "name": "The Angel Next Door Spoils Me Rotten"
-        },
-        {
-            "link": "https://myanimelist.net/anime/54492",
-            "name": "The Apothecary Diaries"
-        },
-        {
-            "link": "https://myanimelist.net/anime/52608",
-            "name": "The Aristocrat's Otherworldly Adventure: Serving Gods Who Go Too Far"
-        },
-        {
-            "link": "https://myanimelist.net/anime/52578",
-            "name": "The Dangers in My Heart"
-        },
-        {
-            "link": "https://myanimelist.net/anime/55690",
-            "name": "The Dangers in My Heart Season 2"
-        },
-        {
-            "link": "https://myanimelist.net/anime/53200",
-            "name": "The Devil is a Part-Timer!! 2nd Season"
-        },
-        {
-            "link": "https://myanimelist.net/anime/53263",
-            "name": "The Great Cleric"
-        },
-        {
-            "link": "https://myanimelist.net/anime/52736",
-            "name": "The Magical Revolution of the Reincarnated Princess and the Genius Young Lady"
-        },
-        {
-            "link": "https://myanimelist.net/anime/50932",
-            "name": "The Reincarnation of the Strongest Exorcist in Another World"
-        },
-        {
-            "link": "https://myanimelist.net/anime/40357",
-            "name": "The Rising of the Shield Hero Season 3"
-        },
-        {
-            "link": "https://myanimelist.net/anime/32615",
-            "name": "The Saga of Tanya the Evil"
-        },
-        {
-            "link": "https://myanimelist.net/anime/54103",
-            "name": "The Vexations of a Shut-In Vampire Princess"
-        },
-        {
-            "link": "https://myanimelist.net/anime/49613",
-            "name": "The Wrong Way to Use Healing Magic"
-        },
-        {
-            "link": "https://myanimelist.net/anime/50307",
-            "name": "Tonikawa: Over The Moon For You: 2nd Season"
-        },
-        {
-            "link": "https://myanimelist.net/anime/52741",
-            "name": "Undead Unluck"
-        },
-        {
-            "link": "https://myanimelist.net/anime/49766",
-            "name": "Under Ninja"
-        },
-        {
-            "link": "https://myanimelist.net/anime/32281",
-            "name": "Your Name"
-        },
-        {
-            "link": "https://myanimelist.net/anime/54112",
-            "name": "Zom 100: Bucket List of the Dead"
+            "link": "https://myanimelist.net/anime/56885",
+            "name": "Sousou no Frieren - Marumaru no Mahou (Mini Anime)"
         }
     ],
     "Dropped": [
-        {
-            "link": "https://myanimelist.net/anime/54431",
-            "name": "A Playthrough of a Certain Dude's VRMMO Life"
-        },
         {
             "link": "https://myanimelist.net/anime/10165",
             "name": "Nichijou - My Ordinary Life"
@@ -429,40 +429,56 @@
         {
             "link": "https://myanimelist.net/anime/47159",
             "name": "The Genius Prince's Guide to Raising a Nation Out of Debt"
+        },
+        {
+            "link": "https://myanimelist.net/anime/54431",
+            "name": "A Playthrough of a Certain Dude's VRMMO Life"
         }
     ],
     "Watching": [
         {
-            "link": "https://myanimelist.net/anime/53407",
-            "name": "Bartender: Glass of God"
-        },
-        {
-            "link": "https://myanimelist.net/anime/54309",
-            "name": "Blue Archive the Animation"
-        },
-        {
             "link": "https://myanimelist.net/anime/52701",
             "name": "Delicious in Dungeon"
-        },
-        {
-            "link": "https://myanimelist.net/anime/52588",
-            "name": "Kaiju No. 8"
-        },
-        {
-            "link": "https://myanimelist.net/anime/49458",
-            "name": "KonoSuba: God's Blessing on This Wonderful World! 3"
-        },
-        {
-            "link": "https://myanimelist.net/anime/52299",
-            "name": "Solo Leveling"
         },
         {
             "link": "https://myanimelist.net/anime/53580",
             "name": "That Time I Got Reincarnated as a Slime Season 3"
         },
         {
+            "link": "https://myanimelist.net/anime/49458",
+            "name": "KonoSuba: God's Blessing on This Wonderful World! 3"
+        },
+        {
+            "link": "https://myanimelist.net/anime/55701",
+            "name": "Demon Slayer: Kimetsu no Yaiba Hashira Training Arc"
+        },
+        {
+            "link": "https://myanimelist.net/anime/55888",
+            "name": "Mushoku Tensei: Jobless Reincarnation Season 2 Part 2"
+        },
+        {
+            "link": "https://myanimelist.net/anime/54309",
+            "name": "Blue Archive the Animation"
+        },
+        {
+            "link": "https://myanimelist.net/anime/53407",
+            "name": "Bartender: Glass of God"
+        },
+        {
+            "link": "https://myanimelist.net/anime/52588",
+            "name": "Kaiju No. 8"
+        },
+        {
             "link": "https://myanimelist.net/anime/51461",
             "name": "Tonari no Youkai-san"
+        },
+        {
+            "link": "https://myanimelist.net/anime/55597",
+            "name": "A Condition Called Love"
+        },
+        {
+            "link": "https://myanimelist.net/anime/55911",
+            "name": "The Fable"
         }
     ],
     "On-Hold": [
@@ -471,24 +487,24 @@
             "name": "Firefighter Daigo: Rescuer in Orange"
         },
         {
+            "link": "https://myanimelist.net/anime/52990",
+            "name": "Our Dating Story: The Experienced You and The Inexperienced Me, Kimizero"
+        },
+        {
             "link": "https://myanimelist.net/anime/33731",
             "name": "Gabriel DropOut"
         },
         {
-            "link": "https://myanimelist.net/anime/52081",
-            "name": "Otaku Elf"
-        },
-        {
-            "link": "https://myanimelist.net/anime/52990",
-            "name": "Our Dating Story: The Experienced You and The Inexperienced Me, Kimizero"
+            "link": "https://myanimelist.net/anime/55397",
+            "name": "The Way of Pon"
         },
         {
             "link": "https://myanimelist.net/anime/56845",
             "name": "The Strongest Tank's Labyrinth Raids: A Tank with a Rare 9999 Resistance Skill Got Kicked from the Hero's Party"
         },
         {
-            "link": "https://myanimelist.net/anime/55397",
-            "name": "The Way of Pon"
+            "link": "https://myanimelist.net/anime/52081",
+            "name": "Otaku Elf"
         }
     ]
 }
