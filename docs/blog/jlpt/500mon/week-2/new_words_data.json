@@ -499,140 +499,184 @@
   ],
   "4": [
     {
-      "word": "宮殿",
-      "meaning": "palace"
+      "word": "昆虫",
+      "meaning": "insect; bug"
     },
     {
-      "word": "装飾",
-      "meaning": "ornament; decoration"
+      "word": "図鑑",
+      "meaning": "picture book; illustrated reference book"
     },
     {
-      "word": "滴",
-      "meaning": "drop (e.g. of water); drip"
+      "word": "蛍",
+      "meaning": "fireflies"
     },
     {
-      "word": "輝く",
-      "meaning": "to shine; to sparkle"
+      "word": "生態",
+      "meaning": "ecology; life and habits (of an animal)"
     },
     {
-      "word": "浮上",
-      "meaning": "surfacing; rising to the surface​"
+      "word": "金庫",
+      "meaning": "safe; strongbox; cashbox; vault"
     },
     {
-      "word": "予想",
-      "meaning": "expectation"
+      "word": "人目につく",
+      "meaning": "attrack public attention"
     },
     {
-      "word": "羊",
-      "meaning": "sheep"
+      "word": "誤り",
+      "meaning": "error; mistake; slip; bug​"
     },
     {
-      "word": "あっけなく",
-      "meaning": "too quick; too short"
+      "word": "壊す",
+      "meaning": "to break; to destroy"
     },
     {
-      "word": "逃げる",
-      "meaning": "to escape"
+      "word": "弁償",
+      "meaning": "compensation"
     },
     {
-      "word": "豪華",
-      "meaning": "luxury"
+      "word": "機内",
+      "meaning": "inside plane"
     },
     {
-      "word": "優勝",
-      "meaning": "overall victory"
+      "word": "刃物",
+      "meaning": "knive"
     },
     {
-      "word": "獲得",
-      "meaning": "acquisition; possession"
+      "word": "熱中",
+      "meaning": "being enthusiastic about; being wild about; being absorbed in"
     },
     {
-      "word": "賞品",
-      "meaning": "prize; trophy"
+      "word": "おろそかに",
+      "meaning": "to neglect; to ignore"
     },
     {
-      "word": "同僚",
-      "meaning": "colleague"
+      "word": "並外れ",
+      "meaning": "out of the common; far above the average; extraordinary"
     },
     {
-      "word": "こってり",
-      "meaning": "thick, rich"
+      "word": "容姿",
+      "meaning": "(physical) appearance (of a person); one's face and figure"
     },
     {
-      "word": "業界",
-      "meaning": "industry"
+      "word": "振り返る",
+      "meaning": "to turn one's head; to look over one's shoulder;"
     },
     {
-      "word": "厳しい",
-      "meaning": "severe; strict; rigid"
+      "word": "浄水器",
+      "meaning": "water purification system"
     },
     {
-      "word": "経費",
-      "meaning": "cost"
+      "word": "付属",
+      "meaning": "being attached (to);"
     },
     {
-      "word": "削減",
-      "meaning": "cut; reduction;"
+      "word": "蛇口",
+      "meaning": "faucet; tap​"
     },
     {
-      "word": "迫る",
-      "meaning": "to press (someone for something);"
+      "word": "濁り",
+      "meaning": "muddiness; murkiness; cloudiness; unclearness​"
     },
     {
-      "word": "違反",
-      "meaning": "violation"
+      "word": "仲直り",
+      "meaning": "being friends again;"
     },
     {
-      "word": "取り締まり",
-      "meaning": "control; management; supervision"
+      "word": "相談",
+      "meaning": "consultation; discussion"
     },
     {
-      "word": "天使",
-      "meaning": "angel"
+      "word": "余計",
+      "meaning": "extra; more; too much"
     },
     {
-      "word": "微笑",
-      "meaning": "smile"
+      "word": "こじれる",
+      "meaning": "to get complicated"
     },
     {
-      "word": "浮かべる",
-      "meaning": "to show on one's face (smile, sadness, etc.)​"
+      "word": "挑戦",
+      "meaning": "dare; attempt; try"
     },
     {
-      "word": "お盆",
-      "meaning": "Obon"
+      "word": "靴",
+      "meaning": "shoes"
     },
     {
-      "word": "帰省",
-      "meaning": "homecoming"
+      "word": "脱ぐ",
+      "meaning": "to take off (clothes, shoes, etc.);"
     },
     {
-      "word": "道路",
-      "meaning": "road; highway"
+      "word": "裸足",
+      "meaning": "barefoot"
     },
     {
-      "word": "渋滞",
-      "meaning": "(traffic) congestion; traffic jam; gridlock"
+      "word": "沖",
+      "meaning": "open sea"
     },
     {
-      "word": "徐行運転",
-      "meaning": "driving at reduced speed"
+      "word": "眺め",
+      "meaning": "scene; view"
     },
     {
-      "word": "残業",
-      "meaning": "overtime (work)"
+      "word": "浜辺",
+      "meaning": "beach; foreshore"
     },
     {
-      "word": "休日",
-      "meaning": "holiday; day off"
+      "word": "翌朝",
+      "meaning": "next morning"
     },
     {
-      "word": "ひたすら",
-      "meaning": "intently"
+      "word": "及ぶ",
+      "meaning": "to reach; to amount to; to befall"
     },
     {
-      "word": "尊敬",
-      "meaning": "respect"
+      "word": "事実",
+      "meaning": "fact"
+    },
+    {
+      "word": "報道",
+      "meaning": "report (of news); reporting; news"
+    },
+    {
+      "word": "苗",
+      "meaning": "seedling; young plant​"
+    },
+    {
+      "word": "稲",
+      "meaning": "rice plant (Oryza sativa)​"
+    },
+    {
+      "word": "穂",
+      "meaning": "ear (of a cereal plant); head; spike​"
+    },
+    {
+      "word": "実る",
+      "meaning": "to bear fruit; to ripen"
+    },
+    {
+      "word": "収穫",
+      "meaning": "harvest; crop"
+    },
+    {
+      "word": "時期",
+      "meaning": "period; phase; stage"
+    },
+    {
+      "word": "迎える",
+      "meaning": "to reach (a certain time, a point in one's life, etc.); to enter (a new phase, new era, etc.)"
+    },
+    {
+      "word": "両党",
+      "meaning": "both political parties"
+    },
+    {
+      "word": "大筋",
+      "meaning": "outline; summary; gist; basic points"
+    },
+    {
+      "word": "合意",
+      "meaning": "(coming to an) agreement; consent; mutual understanding"
     }
   ],
   "5": [
