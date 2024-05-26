@@ -123,6 +123,7 @@ button:hover, .option:hover {
 
 
 em {
+  font-style: normal;
   text-decoration: underline;
 }
 
