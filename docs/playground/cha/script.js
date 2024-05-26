@@ -28,7 +28,6 @@ function startQuiz() {
   resetQuiz();
   selectQuestions();
   loadQuestion();
-  resetProgressBar();
 }
 
 // Function to reset the quiz
@@ -39,6 +38,7 @@ function resetQuiz() {
   wrongAnswers = [];
   localStorage.removeItem("wrongAnswers");
   document.getElementById("score").innerText = score;
+  resetProgressBar();
   document.getElementById("quiz-container").style.display = "block";
   document.getElementById("completed-container").style.display = "none";
 }
@@ -56,7 +56,7 @@ function selectQuestions() {
 // Function to load a question
 function loadQuestion() {
   const currentQuestion = selectedQuestions[currentQuestionIndex];
-  document.getElementById("question-text").innerHTML = currentQuestion.question;
+  document.getElementById("question-text").innerHTML = currentQuestion.question.replace('B「', '<br>B「');
   const optionsContainer = document.getElementById("options-container");
   optionsContainer.innerHTML = "";
 
@@ -107,17 +107,17 @@ function updateScore() {
   document.getElementById("score").innerText = score;
 }
 
-// Add progress bar update and reset functions
+// Function to update the progress bar
 function updateProgressBar() {
-    const progressBar = document.getElementById("progress-bar");
-    const progressPercentage = ((currentQuestionIndex + 1) / questionsPerDay) * 100;
-    progressBar.style.width = `${progressPercentage}%`;
-    console.log(progressPercentage);  // For debugging purposes
+  const progressBar = document.getElementById("progress-bar");
+  const progressPercentage = ((currentQuestionIndex + 1) / questionsPerDay) * 100;
+  progressBar.style.width = `${progressPercentage}%`;
 }
 
+// Function to reset the progress bar
 function resetProgressBar() {
-    const progressBar = document.getElementById("progress-bar");
-    progressBar.style.width = "0%";
+  const progressBar = document.getElementById("progress-bar");
+  progressBar.style.width = "0%";
 }
 
 // Function to show the completed message and wrong answers
@@ -128,27 +128,35 @@ function showCompletedMessage() {
   displayWrongAnswers();
 }
 
-// Function to display the wrong answers in a table
+// Function to display the wrong answers in a card format
 function displayWrongAnswers() {
   const wrongAnswers = JSON.parse(localStorage.getItem("wrongAnswers")) || [];
-  const tableBody = document.getElementById("wrong-answers-table").querySelector("tbody");
-  tableBody.innerHTML = "";
+  const answersContainer = document.getElementById("wrong-answers-container");
+  answersContainer.innerHTML = "";
 
   wrongAnswers.forEach(answer => {
-    const row = document.createElement("tr");
-    const questionCell = document.createElement("td");
-    questionCell.innerHTML = answer.question;
-    questionCell.style.textAlign = "left"; // Align question text to the left
-    const yourAnswerCell = document.createElement("td");
-    yourAnswerCell.innerText = answer.yourAnswer;
-    const correctAnswerCell = document.createElement("td");
-    correctAnswerCell.innerText = answer.correctAnswer;
+    const card = document.createElement("div");
+    card.classList.add("answer-card");
 
-    row.appendChild(questionCell);
-    row.appendChild(yourAnswerCell);
-    row.appendChild(correctAnswerCell);
+    const questionText = document.createElement("p");
+    questionText.innerHTML = answer.question.replace('B「', '<br>B「');
+    questionText.classList.add("question-text");
 
-    tableBody.appendChild(row);
+    const yourAnswerText = document.createElement("p");
+    yourAnswerText.innerText = `Your Answer: ${answer.yourAnswer}`;
+    yourAnswerText.classList.add("your-answer");
+    yourAnswerText.style.color = 'red'; // Incorrect answer in red
+
+    const correctAnswerText = document.createElement("p");
+    correctAnswerText.innerText = `Correct Answer: ${answer.correctAnswer}`;
+    correctAnswerText.classList.add("correct-answer");
+    correctAnswerText.style.color = 'green'; // Correct answer in green
+
+    card.appendChild(questionText);
+    card.appendChild(yourAnswerText);
+    card.appendChild(correctAnswerText);
+
+    answersContainer.appendChild(card);
   });
 }
 

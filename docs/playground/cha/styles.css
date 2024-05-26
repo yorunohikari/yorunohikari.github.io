@@ -5,6 +5,7 @@ body {
   height: 100vh;
   background-color: #f0f0f0;
   font-family: Arial, sans-serif;
+  margin: 0;
 }
 
 .progress-bar-container {
@@ -30,45 +31,6 @@ body {
   margin-bottom: 20px;
 }
 
-.styled-table-container {
-  overflow-x: auto; /* Allows horizontal scrolling on small screens */
-}
-
-.styled-table {
-  margin: 0 auto;
-  margin-bottom: 15px;
-  border-collapse: collapse;
-  font-size: 1em;
-  font-family: 'Arial', sans-serif;
-  min-width: 100%; /* Ensures table takes up full width on small screens */
-  border: 1px solid #dddddd;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-
-.styled-table thead tr {
-  background-color: #009879;
-  color: #ffffff;
-  text-align: left;
-}
-
-.styled-table th,
-.styled-table td {
-  padding: 12px 15px;
-  text-align: left;
-}
-
-.styled-table tbody tr {
-  border-bottom: 1px solid #dddddd;
-}
-
-.styled-table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
-}
-
-.styled-table tbody tr:last-of-type {
-  border-bottom: 2px solid #009879;
-}
-
 .main-container {
   background: #fff;
   border-radius: 10px;
@@ -77,6 +39,8 @@ body {
   width: 80%;
   max-width: 600px;
   text-align: center;
+  max-height: 90vh; /* Limit height to 90% of the viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .quiz-container, .completed-container {
@@ -85,11 +49,6 @@ body {
 
 #question-container {
   margin-bottom: 20px;
-}
-
-#question-number {
-  font-weight: bold;
-  margin-bottom: 10px;
 }
 
 #question-text {
@@ -124,6 +83,28 @@ em {
   font-style: normal;
   text-decoration: underline;
 }
+
+.answer-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.answer-card .question-text {
+  font-weight: bold;
+}
+
+.answer-card .your-answer {
+  color: red;
+}
+
+.answer-card .correct-answer {
+  color: green;
+}
+
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 600px) {
