@@ -21,7 +21,6 @@ body {
   border-radius: 25px;
 }
 
-
 .completed-container {
   text-align: center;
   padding: 20px;
@@ -31,13 +30,17 @@ body {
   margin-bottom: 20px;
 }
 
+.styled-table-container {
+  overflow-x: auto; /* Allows horizontal scrolling on small screens */
+}
+
 .styled-table {
   margin: 0 auto;
   margin-bottom: 15px;
   border-collapse: collapse;
   font-size: 1em;
   font-family: 'Arial', sans-serif;
-  min-width: 400px;
+  min-width: 100%; /* Ensures table takes up full width on small screens */
   border: 1px solid #dddddd;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
@@ -66,7 +69,6 @@ body {
   border-bottom: 2px solid #009879;
 }
 
-
 .main-container {
   background: #fff;
   border-radius: 10px;
@@ -76,7 +78,6 @@ body {
   max-width: 600px;
   text-align: center;
 }
-
 
 .quiz-container, .completed-container {
   display: none;
@@ -100,7 +101,6 @@ body {
   flex-direction: column;
 }
 
-
 button, .option {
   background: #f9f9f9;
   border: 1px solid #ddd;
@@ -116,14 +116,29 @@ button:hover, .option:hover {
   transform: scale(1.02);
 }
 
-#score-container,
-#progress-container {
+#score-container {
   margin-bottom: 10px;
 }
-
 
 em {
   font-style: normal;
   text-decoration: underline;
 }
 
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 600px) {
+  .main-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 8px 10px;
+    font-size: 0.9em;
+  }
+
+  .styled-table thead tr {
+    font-size: 1em;
+  }
+}

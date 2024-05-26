@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz Application</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div class="main-container">
     <div class="quiz-container" id="quiz-container">
@@ -26,21 +28,24 @@
       </div>
       <div id="wrong-answers-table-container">
         <h3>Review your incorrect answers:</h3>
-        <table id="wrong-answers-table" class="styled-table">
-          <thead>
-            <tr>
-              <th>Question</th>
-              <th>Your Answer</th>
-              <th>Correct Answer</th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
+        <div class="styled-table-container">
+          <table id="wrong-answers-table" class="styled-table">
+            <thead>
+              <tr>
+                <th>Question</th>
+                <th>Your Answer</th>
+                <th>Correct Answer</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
       </div>
       <button onclick="restartQuiz()">Play Again</button>
     </div>
   </div>
   <script src="script.js"></script>
 </body>
+
 </html>
