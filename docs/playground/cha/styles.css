@@ -36,7 +36,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 80%;
+  width: 100%;
   max-width: 600px;
   text-align: center;
   max-height: 90vh; /* Limit height to 90% of the viewport height */
@@ -105,11 +105,38 @@ em {
   color: green;
 }
 
+/* Custom Scrollbar Styles */
+.main-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-container::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.main-container::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0;
+}
+
+.main-container::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0;
+}
+
+/* Ensure the custom scrollbar is applied for both Webkit and Firefox */
+.main-container {
+  scrollbar-width: thin;
+  scrollbar-color: #c0c0c0 #f0f0f0;
+}
+
+
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 600px) {
   .main-container {
-    width: 100%;
+    width: 90%;
     padding: 10px;
   }
 
