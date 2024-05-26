@@ -8,34 +8,37 @@
 </head>
 <body>
   <div class="main-container">
-    <div class="password-container" id="password-container">
-      <input type="password" id="password-input" placeholder="Enter password">
-      <button onclick="checkPassword()">Submit</button>
-      <div id="password-error"></div>
-    </div>
-    <div class="quiz-container" id="quiz-container" style="display: none;">
+    <div class="quiz-container" id="quiz-container">
       <div id="question-container">
-        <div id="question-number"></div>
         <div id="question-text"></div>
         <div id="options-container"></div>
       </div>
       <div id="score-container">
         Score: <span id="score">0</span>
       </div>
-      <div id="progress-container">
-        Progress: <span id="progress">0</span>%
+      <div class="progress-bar-container">
+        <div id="progress-bar"></div>
       </div>
     </div>
     <div class="completed-container" id="completed-container" style="display: none;">
-      You've already answered the quiz, please come back again tomorrow.
-      <div id="countdown"></div>
-    </div>
-    <!-- Modal -->
-    <div class="modal" id="completed-modal" style="display: none;">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <p>Quiz Completed!</p>
+      <div id="final-score-container">
+        <h2>Final Score: <span id="final-score">0</span></h2>
       </div>
+      <div id="wrong-answers-table-container">
+        <h3>Review your incorrect answers:</h3>
+        <table id="wrong-answers-table" class="styled-table">
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th>Your Answer</th>
+              <th>Correct Answer</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+      <button onclick="restartQuiz()">Play Again</button>
     </div>
   </div>
   <script src="script.js"></script>

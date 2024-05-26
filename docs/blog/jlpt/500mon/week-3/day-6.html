@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新にほんご500問 N1 進捗トラッカー</title>
+    <link rel="icon" type="image/x-icon" href="/assets/logo.ico">
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="新にほんご500問 N1 進捗トラッカー" />
+    <meta property="og:description" content="Progress tracker for the Shin Nihongo 500 Mon N1" />
+    <meta property="og:url" content="https://yorunohikari.github.io/blog/jlpt/500mon/week-3/day-6.html" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>新にほんご500問 N1 進捗トラッカー</h1>
+        <div class="banner">週: 3 日: 6</div>
+        <div class="section">
+            <h2>スコア</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>セクション</th>
+                        <th>スコア</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>漢字</td>
+                        <td id="kanji-score">0/5</td>
+                    </tr>
+                    <tr>
+                        <td>語い</td>
+                        <td id="goi-score">0/5</td>
+                    </tr>
+                    <tr>
+                        <td>文法</td>
+                        <td id="bunpou-score">0/5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="section">
+            <h2>新しい言葉</h2>
+            <div class="new-words">
+            </div>
+        </div>
+        <div class="section">
+            <h2>個人ノート</h2>
+            <p>ここに個人ノートを記入します。</p>
+        </div>
+
+        <div class="progress-chart">
+            <h2>全体の進捗状況</h2>
+            <canvas id="progress-chart"></canvas>
+        </div>
+
+        <div class="pagination">
+            <button id="prevPage">前のページ</button>
+            <button id="nextPage">次のページ</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

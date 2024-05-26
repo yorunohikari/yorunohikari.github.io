@@ -1,148 +1,65 @@
-const PASSWORD = "123";
-const quizData = {
-  questions: [
-    {
-      number: 1,
-      question: "税金を納めるのは、国民の義務です。",
-      options: [
-        {1: "せめる"},
-        {2: "なかめる"},
-        {3: "しめる"},
-        {4: "おさめる"},
-      ],
-      answer: 4,
-      answer_text: "おさめる",
-    },
-    {
-      number: 2,
-      question: "_________ 言葉で話しかけてくる営業マンに、注意しよう。",
-      options: [
-        {1: "なれなれしい"},
-        {2: "すがすがしい"},
-        {3: "はなはなしい"},
-        {4: "そうぞうしい"},
-      ],
-      answer: 1,
-      answer_text: "なれなれしい",
-    },
-    {
-      number: 3,
-      question: "態度が悪いのはあの店員に_________ ことではない。",
-      options: [
-        {1: "限る"},
-        {2: "限らない"},
-        {3: "限って"},
-        {4: "限った"},
-      ],
-      answer: 4,
-      answer_text: "限った",
-    },
-    {
-      number: 61,
-      question: "趣味は俳句や詩を作ること、それに漫画も描いたりします。",
-      options: [
-        { 1: "きょうみ" },
-        { 2: "しゅみ" },
-        { 3: "きゅうみ" },
-        { 4: "ちゃみ" },
-      ],
-      answer: 2,
-      answer_text: "しゅみ",
-    },
-    {
-      number: 62,
-      question:
-        "_______ をこぼす相手を間違えると、誤解を招くので気をつけよう。",
-      options: [{ 1: "本音" }, { 2: "お世辞" }, { 3: "ぐち" }, { 4: "建前" }],
-      answer: 2,
-      answer_text: "お世辞",
-    },
-    {
-      number: 63,
-      question: "これは皮膚科の医師が驚いている_______、肌に優しい石けんだ。",
-      options: [
-        { 1: "とおって" },
-        { 2: "あっての" },
-        { 3: "にあたって" },
-        { 4: "とあれば" },
-      ],
-      answer: 3,
-      answer_text: "にあたって",
-    },
-  ],
-};
-
+// Define the quiz data
+let quizData = [];
 let currentQuestionIndex = 0;
 let score = 0;
-const questionsPerDay = 3;
+const questionsPerDay = 10;
+let selectedQuestions = [];
+let wrongAnswers = [];
 
-function checkPassword() {
-  const passwordInput = document.getElementById("password-input").value;
-  const passwordError = document.getElementById("password-error");
-  const passwordContainer = document.getElementById("password-container");
+// Load the quiz data once the DOM content is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  loadQuizData();
+});
 
-  if (passwordInput === PASSWORD) {
-    passwordContainer.style.display = "none";
-    checkQuizStatus();
-  } else {
-    passwordError.innerText = "Password is incorrect";
-    passwordContainer.classList.add("shake");
-    setTimeout(() => passwordContainer.classList.remove("shake"), 500);
-  }
-}
-
-function checkQuizStatus() {
-  const today = new Date().toDateString();
-  const lastCompletedDate = localStorage.getItem("lastCompletedDate");
-
-  if (lastCompletedDate === today) {
-    showCompletedMessage();
-  } else {
+// Fetch the quiz data from the JSON file
+async function loadQuizData() {
+  try {
+    const response = await fetch('quizData.json');
+    const data = await response.json();
+    quizData = data.questions;
     startQuiz();
+  } catch (error) {
+    console.error('Error loading quiz data:', error);
   }
 }
 
+// Function to start the quiz
 function startQuiz() {
-  const quizContainer = document.getElementById("quiz-container");
-  quizContainer.style.display = "block";
+  resetQuiz();
+  selectQuestions();
   loadQuestion();
+  resetProgressBar();
 }
 
-function showCompletedMessage() {
-  const completedContainer = document.getElementById("completed-container");
-  completedContainer.style.display = "block";
-
-  const now = new Date();
-  const tomorrow = new Date();
-  tomorrow.setDate(now.getDate() + 1);
-  tomorrow.setHours(0, 0, 0, 0);
-
-  const countdownElement = document.getElementById("countdown");
-  updateCountdown(countdownElement, tomorrow - now);
-
-  setInterval(() => {
-    updateCountdown(countdownElement, tomorrow - new Date());
-  }, 1000);
+// Function to reset the quiz
+function resetQuiz() {
+  currentQuestionIndex = 0;
+  score = 0;
+  selectedQuestions = [];
+  wrongAnswers = [];
+  localStorage.removeItem("wrongAnswers");
+  document.getElementById("score").innerText = score;
+  document.getElementById("quiz-container").style.display = "block";
+  document.getElementById("completed-container").style.display = "none";
 }
 
-function updateCountdown(element, ms) {
-  const hours = Math.floor(ms / 3600000);
-  const minutes = Math.floor((ms % 3600000) / 60000);
-  const seconds = Math.floor((ms % 60000) / 1000);
-  element.innerText = `Time left: ${hours}h ${minutes}m ${seconds}s`;
+// Function to select random questions
+function selectQuestions() {
+  while (selectedQuestions.length < questionsPerDay) {
+    const randomIndex = Math.floor(Math.random() * quizData.length);
+    if (!selectedQuestions.includes(quizData[randomIndex])) {
+      selectedQuestions.push(quizData[randomIndex]);
+    }
+  }
 }
 
+// Function to load a question
 function loadQuestion() {
-  const questionContainer = document.getElementById("question-container");
-  const questionNumber = document.getElementById("question-number");
-  const questionText = document.getElementById("question-text");
+  const currentQuestion = selectedQuestions[currentQuestionIndex];
+  document.getElementById("question-text").innerHTML = currentQuestion.question;
   const optionsContainer = document.getElementById("options-container");
-
-  const currentQuestion = quizData.questions[currentQuestionIndex];
-  questionNumber.innerText = `Question ${currentQuestion.number}`;
-  questionText.innerText = currentQuestion.question;
-
   optionsContainer.innerHTML = "";
+
   currentQuestion.options.forEach((optionObj) => {
     const key = Object.keys(optionObj)[0];
     const value = optionObj[key];
@@ -154,59 +71,89 @@ function loadQuestion() {
     optionsContainer.appendChild(option);
   });
 
-  updateProgress();
+  updateProgressBar();
 }
 
+// Function to handle option selection
 function selectOption(selectedOption) {
-  const currentQuestion = quizData.questions[currentQuestionIndex];
+  const currentQuestion = selectedQuestions[currentQuestionIndex];
   if (parseInt(selectedOption) === currentQuestion.answer) {
     score++;
+  } else {
+    // Store the wrong answer
+    wrongAnswers.push({
+      question: currentQuestion.question,
+      yourAnswer: currentQuestion.options.find(option => option[selectedOption])[selectedOption],
+      correctAnswer: currentQuestion.answer_text
+    });
   }
   updateScore();
   nextQuestion();
 }
 
+// Function to go to the next question
 function nextQuestion() {
   if (currentQuestionIndex < questionsPerDay - 1) {
     currentQuestionIndex++;
     loadQuestion();
   } else {
-    localStorage.setItem("lastCompletedDate", new Date().toDateString());
-    showModal();
+    localStorage.setItem("wrongAnswers", JSON.stringify(wrongAnswers));
+    showCompletedMessage();
   }
 }
 
+// Function to update the score
 function updateScore() {
-  const scoreContainer = document.getElementById("score");
-  scoreContainer.innerText = score;
+  document.getElementById("score").innerText = score;
 }
 
-function updateProgress() {
-  const progressContainer = document.getElementById("progress");
-  const progress = ((currentQuestionIndex + 1) / questionsPerDay) * 100;
-  progressContainer.innerText = progress.toFixed(0);
+// Add progress bar update and reset functions
+function updateProgressBar() {
+    const progressBar = document.getElementById("progress-bar");
+    const progressPercentage = ((currentQuestionIndex + 1) / questionsPerDay) * 100;
+    progressBar.style.width = `${progressPercentage}%`;
+    console.log(progressPercentage);  // For debugging purposes
 }
 
-function showModal() {
-  const modal = document.getElementById("completed-modal");
-  modal.style.display = "block";
+function resetProgressBar() {
+    const progressBar = document.getElementById("progress-bar");
+    progressBar.style.width = "0%";
 }
 
-function closeModal() {
-  const modal = document.getElementById("completed-modal");
-  modal.style.display = "none";
-
-  // Hide the quiz container
-  const quizContainer = document.getElementById("quiz-container");
-  quizContainer.style.display = "none";
-
-  // Show the completed message container
-  const completedContainer = document.getElementById("completed-container");
-  completedContainer.style.display = "block";
-
-  showCompletedMessage();
+// Function to show the completed message and wrong answers
+function showCompletedMessage() {
+  document.getElementById("quiz-container").style.display = "none";
+  document.getElementById("completed-container").style.display = "block";
+  document.getElementById("final-score").innerText = score;
+  displayWrongAnswers();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Load the password input first
-});
+// Function to display the wrong answers in a table
+function displayWrongAnswers() {
+  const wrongAnswers = JSON.parse(localStorage.getItem("wrongAnswers")) || [];
+  const tableBody = document.getElementById("wrong-answers-table").querySelector("tbody");
+  tableBody.innerHTML = "";
+
+  wrongAnswers.forEach(answer => {
+    const row = document.createElement("tr");
+    const questionCell = document.createElement("td");
+    questionCell.innerHTML = answer.question;
+    questionCell.style.textAlign = "left"; // Align question text to the left
+    const yourAnswerCell = document.createElement("td");
+    yourAnswerCell.innerText = answer.yourAnswer;
+    const correctAnswerCell = document.createElement("td");
+    correctAnswerCell.innerText = answer.correctAnswer;
+
+    row.appendChild(questionCell);
+    row.appendChild(yourAnswerCell);
+    row.appendChild(correctAnswerCell);
+
+    tableBody.appendChild(row);
+  });
+}
+
+// Function to handle quiz restart
+function restartQuiz() {
+  resetQuiz();
+  startQuiz();
+}

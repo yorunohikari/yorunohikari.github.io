@@ -7,6 +7,65 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.progress-bar-container {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 25px;
+}
+
+#progress-bar {
+  width: 0%;
+  height: 20px;
+  background-color: #76c7c0;
+  border-radius: 25px;
+}
+
+
+.completed-container {
+  text-align: center;
+  padding: 20px;
+}
+
+#final-score-container {
+  margin-bottom: 20px;
+}
+
+.styled-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 1em;
+  font-family: 'Arial', sans-serif;
+  min-width: 400px;
+  border: 1px solid #dddddd;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+
 .main-container {
   background: #fff;
   border-radius: 10px;
@@ -83,7 +142,8 @@ body {
   flex-direction: column;
 }
 
-.option {
+
+button, .option {
   background: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -93,7 +153,7 @@ body {
   transition: background 0.3s, transform 0.3s;
 }
 
-.option:hover {
+button:hover, .option:hover {
   background: #e0e0e0;
   transform: scale(1.02);
 }
@@ -140,3 +200,8 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+
+em {
+  text-decoration: underline;
+}
+
