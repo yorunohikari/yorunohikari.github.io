@@ -33,6 +33,7 @@ body {
 
 .styled-table {
   margin: 0 auto;
+  margin-bottom: 15px;
   border-collapse: collapse;
   font-size: 1em;
   font-family: 'Arial', sans-serif;
