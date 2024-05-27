@@ -3,7 +3,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #000;
+  background-image: url("/assets/megumegu.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: Arial, sans-serif;
   margin: 0;
 }
