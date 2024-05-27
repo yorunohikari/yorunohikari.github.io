@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz Application</title>
+  <title>N1 GrindMaster</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -22,14 +22,11 @@
         <div id="progress-bar"></div>
       </div>
     </div>
-    <div class="completed-container" id="completed-container" style="display: none;">
+    <div class="completed-container" id="completed-container">
       <div id="final-score-container">
         <h2>Final Score: <span id="final-score">0</span></h2>
       </div>
-      <div id="wrong-answers-container">
-        <h3>Review your incorrect answers:</h3>
-        <!-- Answers will be displayed here -->
-      </div>
+      <div id="wrong-answers-list"></div>
       <button onclick="restartQuiz()">Play Again</button>
     </div>
   </div>
