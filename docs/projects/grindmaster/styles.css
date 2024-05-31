@@ -25,15 +25,6 @@ body {
   border-radius: 25px;
 }
 
-.completed-container {
-  text-align: center;
-  padding: 20px;
-}
-
-#final-score-container {
-  margin-bottom: 20px;
-}
-
 .main-container {
   background: #fff;
   border-radius: 10px;
@@ -44,168 +35,12 @@ body {
   text-align: center;
   max-height: 90vh; /* Limit height to 90% of the viewport height */
   overflow-y: auto; /* Enable vertical scrolling */
-}
-
-.quiz-container, .completed-container {
-  display: none;
-}
-
-#question-container {
-  margin-bottom: 20px;
-}
-
-#question-text {
-  margin-bottom: 20px;
-}
-
-#options-container {
-  display: flex;
-  flex-direction: column;
-}
-
-button, .option {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
-}
-
-button:hover, .option:hover {
-  background: #e0e0e0;
-  transform: scale(1.02);
-}
-
-#score-container {
-  margin-bottom: 10px;
-}
-
-em {
-  font-style: normal;
-  text-decoration: underline;
-  text-underline-offset: 5px; /* Adjust this value as needed */
-}
-
-
-.answer-card {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-.answer-card .question-text {
-  font-weight: bold;
-}
-
-.answer-card .your-answer {
-  color: red;
-}
-
-.answer-card .correct-answer {
-  color: green;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #c0c0c0 #f0f0f0; /* Firefox */
 }
 
 /* Custom Scrollbar Styles */
-.main-container::-webkit-scrollbar {body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
-}
-
-
-.completed-container {
-  text-align: center;
-  padding: 20px;
-}
-
-#final-score-container {
-  margin-bottom: 20px;
-}
-
-.wrong-answer {
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-.wrong-answer .question {
-  font-weight: bold;
-}
-
-.wrong-answer .your-answer {
-  color: red;
-}
-
-.wrong-answer .correct-answer {
-  color: green;
-}
-
-.main-container {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 80%;
-  max-width: 600px;
-  text-align: center;
-}
-
-.quiz-container, .completed-container {
-  display: none;
-}
-
-#question-container {
-  margin-bottom: 20px;
-}
-
-#question-text {
-  margin-bottom: 20px;
-}
-
-#options-container {
-  display: flex;
-  flex-direction: column;
-}
-
-button, .option {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
-}
-
-button:hover, .option:hover {
-  background: #e0e0e0;
-  transform: scale(1.02);
-}
-
-#navigation-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-#navigation-buttons button {
-  width: 45%;
-}
-
-#score-container {
-  margin-bottom: 10px;
-}
-
+.main-container::-webkit-scrollbar {
   width: 8px;
 }
 
@@ -224,13 +59,98 @@ button:hover, .option:hover {
   background-color: #a0a0a0;
 }
 
-/* Ensure the custom scrollbar is applied for both Webkit and Firefox */
-.main-container {
-  scrollbar-width: thin;
-  scrollbar-color: #c0c0c0 #f0f0f0;
+.quiz-container,
+.completed-container {
+  display: none;
 }
 
+.completed-container {
+  text-align: center;
+  padding: 20px;
+}
 
+#final-score-container {
+  margin-bottom: 20px;
+}
+
+#question-container {
+  margin-bottom: 20px;
+}
+
+#question-text {
+  margin-bottom: 20px;
+  user-select: none; /* Prevents text selection */
+  -webkit-user-select: none; /* For WebKit-based browsers (Safari, Chrome) */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For older versions of Internet Explorer */
+}
+
+#options-container {
+  display: flex;
+  flex-direction: column;
+}
+
+button,
+.option {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover,
+.option:hover {
+  background: #e0e0e0;
+  transform: scale(1.02);
+}
+
+#score-container {
+  margin-bottom: 10px;
+}
+
+.answer-card,
+.wrong-answer {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.answer-card .question-text,
+.wrong-answer .question {
+  font-weight: bold;
+}
+
+.answer-card .your-answer,
+.wrong-answer .your-answer {
+  color: red;
+}
+
+.answer-card .correct-answer,
+.wrong-answer .correct-answer {
+  color: green;
+}
+
+em {
+  font-style: normal;
+  text-decoration: underline;
+  text-underline-offset: 5px; /* Adjust this value as needed */
+}
+
+#navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+#navigation-buttons button {
+  width: 45%;
+}
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 600px) {
