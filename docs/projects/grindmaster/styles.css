@@ -85,7 +85,9 @@ button:hover, .option:hover {
 em {
   font-style: normal;
   text-decoration: underline;
+  text-underline-offset: 5px; /* Adjust this value as needed */
 }
+
 
 .answer-card {
   background: #f9f9f9;
