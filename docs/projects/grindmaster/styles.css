@@ -79,10 +79,10 @@ body {
 
 #question-text {
   margin-bottom: 20px;
-  user-select: none; /* Prevents text selection */
-  -webkit-user-select: none; /* For WebKit-based browsers (Safari, Chrome) */
-  -moz-user-select: none; /* For Firefox */
-  -ms-user-select: none; /* For older versions of Internet Explorer */
+/*  user-select: none; */
+/*  -webkit-user-select: none; /* For WebKit-based browsers (Safari, Chrome) */
+/*  -moz-user-select: none; /* For Firefox */
+/*  -ms-user-select: none; /* For older versions of Internet Explorer */
 }
 
 #options-container {
