@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,21 +18,24 @@
             margin: 0;
             padding: 0;
         }
+
         .container {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
             transition: all 0.5s ease;
         }
+
         .logo-container {
             display: flex;
             justify-content: center;
             margin-bottom: 20px;
             transition: all 0.5s ease;
         }
+
         .search-container {
             display: flex;
             justify-content: center;
@@ -40,18 +44,22 @@
             position: relative;
             transition: all 0.5s ease;
         }
+
         .search-container .logo {
             width: 50px;
             height: auto;
             margin-right: 20px;
             transition: all 0.5s ease;
         }
+
         .search-container.with-logo .logo {
             display: block;
         }
+
         .search-container.no-logo .logo {
             display: none;
         }
+
         #search-input {
             width: 100%;
             padding: 10px;
@@ -59,6 +67,7 @@
             border: 1px solid #ddd;
             border-radius: 5px;
         }
+
         #clear-btn {
             position: absolute;
             right: 10px;
@@ -70,49 +79,60 @@
             font-size: 18px;
             display: none;
         }
+
         .question-container {
             margin-bottom: 20px;
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 5px;
         }
+
         .question-number {
             font-weight: bold;
             color: #1a0dab;
         }
+
         .question-text {
             margin: 10px 0;
             color: #4d5156;
         }
+
         .highlight {
             background-color: yellow;
         }
+
         .options {
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
+
         .options li {
             margin: 5px 0;
             color: #3c4043;
         }
+
         .options li.correct {
             color: #34a853;
             font-weight: bold;
         }
+
         #results-container {
             display: none;
         }
+
         .statistics {
             margin-top: 20px;
             font-size: 14px;
             color: #70757a;
         }
+
         .pagination {
             margin-top: 20px;
             display: flex;
             justify-content: center;
         }
+
         .pagination button {
             padding: 10px;
             margin: 0 5px;
@@ -121,18 +141,36 @@
             cursor: pointer;
             border-radius: 5px;
         }
+
         .pagination button.active {
             background-color: #1a73e8;
             color: #fff;
             border-color: #1a73e8;
         }
+
         em {
             font-style: normal;
             text-decoration: underline;
             text-underline-offset: 5px;
         }
+
+        @media (max-width: 768px) {
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #fff;
+            }
+
+            .container {
+                width: auto;
+                margin: 0;
+                height: auto;
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="logo-container">
@@ -193,8 +231,8 @@
                 clearBtn.style.display = 'block';
             }
 
-            const filteredQuestions = quizData.questions.filter(q => 
-                q.question.toLowerCase().includes(input) || 
+            const filteredQuestions = quizData.questions.filter(q =>
+                q.question.toLowerCase().includes(input) ||
                 q.options.some(option => Object.values(option)[0].toLowerCase().includes(input))
             );
 
@@ -317,4 +355,5 @@
         }
     </script>
 </body>
+
 </html>
