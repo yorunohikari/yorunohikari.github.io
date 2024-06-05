@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Search Engine</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: #000;
+            background-image: url("/assets/megumegumin.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        #search-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .question-container {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .question-number {
+            font-weight: bold;
+            color: #1a0dab;
+        }
+
+        .question-text {
+            margin: 10px 0;
+            color: #4d5156;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        .options {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .options li {
+            margin: 5px 0;
+            color: #3c4043;
+        }
+
+        .options li.correct {
+            color: #34a853;
+            /* Google green for correct answer */
+            font-weight: bold;
+        }
+
+        #results-container {
+            display: none;
+        }
+
+        em {
+            font-style: normal;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="logo-container">
+            <img src="kensaku.png" alt="Logo">
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for questions..." onkeyup="searchQuestions()">
+        </div>
+        <div id="results-container"></div>
+    </div>
+
+    <script>
+        let quizData = { questions: [] };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('quizData.json')
+                .then(response => response.json())
+                .then(data => {
+                    quizData = data;
+                })
+                .catch(error => console.error('Error fetching the quiz data:', error));
+        });
+
+        function searchQuestions() {
+            const input = document.getElementById('search-input').value.toLowerCase();
+            const resultsContainer = document.getElementById('results-container');
+            resultsContainer.innerHTML = '';
+
+            if (input === '') {
+                resultsContainer.style.display = 'none';
+                return;
+            }
+
+            const filteredQuestions = quizData.questions.filter(q =>
+                q.question.toLowerCase().includes(input) ||
+                q.options.some(option => Object.values(option)[0].toLowerCase().includes(input))
+            );
+
+            if (filteredQuestions.length > 0) {
+                resultsContainer.style.display = 'block';
+            } else {
+                resultsContainer.style.display = 'none';
+            }
+
+            filteredQuestions.forEach(q => {
+                const questionElement = document.createElement('div');
+                questionElement.className = 'question-container';
+
+                const questionNumber = document.createElement('div');
+                questionNumber.className = 'question-number';
+                questionNumber.textContent = `Question ${q.number}`;
+
+                const questionText = document.createElement('div');
+                questionText.className = 'question-text';
+                questionText.innerHTML = highlightText(q.question, input);
+
+                const optionsList = document.createElement('ul');
+                optionsList.className = 'options';
+
+                q.options.forEach(option => {
+                    const optionItem = document.createElement('li');
+                    const optionKey = Object.keys(option)[0];
+                    const optionValue = option[optionKey];
+                    optionItem.innerHTML = `${optionKey}: ${highlightText(optionValue, input)}`;
+                    if (parseInt(optionKey) === q.answer) {
+                        optionItem.classList.add('correct');
+                    }
+                    optionsList.appendChild(optionItem);
+                });
+
+                questionElement.appendChild(questionNumber);
+                questionElement.appendChild(questionText);
+                questionElement.appendChild(optionsList);
+                resultsContainer.appendChild(questionElement);
+            });
+        }
+
+        function highlightText(text, keyword) {
+            const regex = new RegExp(`(${keyword})`, 'gi');
+            return text.replace(regex, '<span class="highlight">$1</span>');
+        }
+    </script>
+
+</body>
+
+</html>
