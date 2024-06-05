@@ -3,13 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>検索猫</title>
-    <link rel="icon" type="image/x-icon" href="kensaku.ico">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@goshintai_" />
-    <meta name="twitter:title" content="検索猫" />
-    <meta name="twitter:description" content="Search Engine to Browse GrindMaster Question" />
-    <meta name="twitter:image" content="/assets/twittermeta.png" />
+    <title>Quiz Search Engine</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,7 +31,6 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 20px;
-            position: relative;
             transition: all 0.5s ease;
         }
         .search-container .logo {
@@ -58,17 +51,6 @@
             font-size: 18px;
             border: 1px solid #ddd;
             border-radius: 5px;
-        }
-        #clear-btn {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-            display: none;
         }
         .question-container {
             margin-bottom: 20px;
@@ -141,7 +123,6 @@
         <div class="search-container no-logo">
             <img src="logo.png" alt="Logo" class="logo">
             <input type="text" id="search-input" placeholder="Search for questions..." onkeyup="searchQuestions()">
-            <button id="clear-btn" onclick="clearSearch()">×</button>
         </div>
         <div id="results-container"></div>
         <div id="statistics-container" class="statistics"></div>
@@ -170,27 +151,21 @@
             const searchContainer = document.querySelector('.search-container');
             const logoContainer = document.querySelector('.logo-container');
             const paginationContainer = document.getElementById('pagination-container');
-            const clearBtn = document.getElementById('clear-btn');
 
             resultsContainer.innerHTML = '';
             statisticsContainer.innerHTML = '';
             paginationContainer.innerHTML = '';
-
-            // Update the page title
-            document.title = input ? `検索猫 - ${input}` : '検索猫';
 
             if (input === '') {
                 resultsContainer.style.display = 'none';
                 searchContainer.classList.remove('with-logo');
                 searchContainer.classList.add('no-logo');
                 logoContainer.style.display = 'flex';
-                clearBtn.style.display = 'none';
                 return;
             } else {
                 searchContainer.classList.add('with-logo');
                 searchContainer.classList.remove('no-logo');
                 logoContainer.style.display = 'none';
-                clearBtn.style.display = 'block';
             }
 
             const filteredQuestions = quizData.questions.filter(q => 
@@ -208,12 +183,6 @@
 
             const totalResults = filteredQuestions.length;
             statisticsContainer.textContent = `${totalResults} result(s) found.`;
-        }
-
-        function clearSearch() {
-            document.getElementById('search-input').value = '';
-            document.getElementById('clear-btn').style.display = 'none';
-            searchQuestions();
         }
 
         function highlightText(text, keyword) {
