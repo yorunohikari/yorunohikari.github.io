@@ -12,7 +12,7 @@ class Question {
   }
 
   isCorrect(selectedOption) {
-    return parseInt(selectedOption) === this.answer;
+    return parseInt(selectedOption, 10) === this.answer;
   }
 
   getCorrectOptionText() {
@@ -33,6 +33,9 @@ class Quiz {
   async loadQuizData() {
     try {
       const response = await fetch('quizData.json');
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
       const data = await response.json();
       this.quizData = data.questions.map(
         q => new Question(q.number, q.question, q.options, q.answer, q.answer_text)
@@ -40,6 +43,7 @@ class Quiz {
       this.startQuiz();
     } catch (error) {
       console.error('Error loading quiz data:', error);
+      alert('Failed to load quiz data. Please try again later.');
     }
   }
 
@@ -62,12 +66,12 @@ class Quiz {
   }
 
   selectQuestions() {
-    while (this.selectedQuestions.length < this.questionsPerDay) {
+    const selectedSet = new Set();
+    while (selectedSet.size < this.questionsPerDay) {
       const randomIndex = Math.floor(Math.random() * this.quizData.length);
-      if (!this.selectedQuestions.includes(this.quizData[randomIndex])) {
-        this.selectedQuestions.push(this.quizData[randomIndex]);
-      }
+      selectedSet.add(this.quizData[randomIndex]);
     }
+    this.selectedQuestions = Array.from(selectedSet);
   }
 
   loadQuestion() {
@@ -76,7 +80,7 @@ class Quiz {
     const optionsContainer = document.getElementById("options-container");
     optionsContainer.innerHTML = "";
 
-    currentQuestion.options.forEach((optionObj) => {
+    currentQuestion.options.forEach(optionObj => {
       const key = Object.keys(optionObj)[0];
       const value = optionObj[key];
       const option = document.createElement("div");
