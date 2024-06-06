@@ -24,7 +24,7 @@ class SearchEngine {
 
   async fetchQuizData() {
     try {
-      const response = await fetch('\projects\grindmaster\quizData.json');
+      const response = await fetch('/projects/grindmaster/quizData.json');
       if (!response.ok) throw new Error('Network response was not ok');
       const data = await response.json();
       this.quizData = data;
