@@ -16,26 +16,25 @@
 
 <body>
   <div class="main-container">
-    <div class="quiz-container" id="quiz-container">
-      <div id="question-container">
-        <div id="question-text"></div>
-        <div id="options-container"></div>
+    <div id="quiz-container">
+      <div id="question-text"></div>
+      <div id="options-container" class="options-container"></div>
+      <div id="progress-bar-container">
+          <div id="progress-bar" style="width: 0%; height: 10px; background-color: #4caf50;"></div>
       </div>
-      <div id="score-container">
-        Score: <span id="score">0</span>
-      </div>
-      <div class="progress-bar-container">
-        <div id="progress-bar"></div>
-      </div>
-    </div>
-    <div class="completed-container" id="completed-container">
-      <div id="final-score-container">
-        <h2>Final Score: <span id="final-score">0</span></h2>
-      </div>
-      <div id="wrong-answers-list"></div>
-      <button onclick="restartQuiz()">Play Again</button>
-    </div>
+      <div>Score: <span id="score">0</span></div>
   </div>
+  <div id="completed-container" style="display: none;">
+      <h2>Quiz Completed!</h2>
+      <div>Final Score: <span id="final-score">0</span></div>
+  </div>
+  <div id="summary-container" style="display: none;">
+      <h2>Quiz Summary</h2>
+      <div id="summary-list"></div>
+      <button onclick="window.restartQuiz()">Restart Quiz</button>
+  </div>
+  </div>
+  
   <script src="script.js"></script>
 </body>
 

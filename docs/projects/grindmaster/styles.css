@@ -23,6 +23,7 @@ body {
   height: 5px;
   background-color: #76c7c0;
   border-radius: 25px;
+  margin-bottom: 10px;
 }
 
 .main-container {
@@ -150,6 +151,56 @@ em {
 
 #navigation-buttons button {
   width: 45%;
+}
+
+.option.correct {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.option.incorrect {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.option.correct::after {
+  content: '✔';
+  color: green;
+  margin-left: 10px;
+}
+
+.option.incorrect::after {
+  content: '✖';
+  color: red;
+  margin-left: 10px;
+}
+
+.option.disabled {
+  pointer-events: none; /* Disables clicking */
+  opacity: 0.6; /* Makes the option appear faded */
+}
+
+
+.summary-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.summary-card .question-text {
+  font-weight: bold;
+}
+
+.summary-card .time-taken {
+  color: #555;
+}
+
+.summary-card .result {
+  font-weight: bold;
+}
+
+.summary-card .your-answer, .summary-card .correct-answer {
+  margin-top: 5px;
 }
 
 /* Media Queries for Mobile Responsiveness */

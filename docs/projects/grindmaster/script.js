@@ -28,6 +28,8 @@ class Quiz {
     this.questionsPerDay = questionsPerDay;
     this.selectedQuestions = [];
     this.wrongAnswers = [];
+    this.questionTimes = []; // To store time taken for each question
+    this.startTime = null;
   }
 
   async loadQuizData() {
@@ -58,10 +60,12 @@ class Quiz {
     this.score = 0;
     this.selectedQuestions = [];
     this.wrongAnswers = [];
+    this.questionTimes = [];
     localStorage.removeItem("wrongAnswers");
     document.getElementById("score").innerText = this.score;
     document.getElementById("quiz-container").style.display = "block";
     document.getElementById("completed-container").style.display = "none";
+    document.getElementById("summary-container").style.display = "none";
     this.resetProgressBar();
   }
 
@@ -76,6 +80,8 @@ class Quiz {
 
   loadQuestion() {
     const currentQuestion = this.selectedQuestions[this.currentQuestionIndex];
+    this.startTime = Date.now(); // Start timing the question
+
     document.getElementById("question-text").innerHTML = currentQuestion.getFormattedQuestion();
     const optionsContainer = document.getElementById("options-container");
     optionsContainer.innerHTML = "";
@@ -95,27 +101,67 @@ class Quiz {
   }
 
   selectOption(selectedOption) {
+    const timeTaken = (Date.now() - this.startTime) / 1000; // Calculate time taken
     const currentQuestion = this.selectedQuestions[this.currentQuestionIndex];
-    if (currentQuestion.isCorrect(selectedOption)) {
+    const isCorrect = currentQuestion.isCorrect(selectedOption);
+    const selectedOptionElement = document.querySelector(`.option[data-option-key="${selectedOption}"]`);
+    const selectedText = currentQuestion.options.find(option => option[selectedOption])[selectedOption];
+    const correctText = currentQuestion.answerText;
+
+    this.questionTimes.push({
+      question: currentQuestion.questionText,
+      timeTaken: timeTaken,
+      correct: isCorrect,
+      selectedAnswer: selectedText,
+      correctAnswer: correctText
+    });
+
+    if (isCorrect) {
+      selectedOptionElement.classList.add('correct');
       this.score++;
     } else {
+      selectedOptionElement.classList.add('incorrect');
+      document.querySelector(`.option[data-option-key="${currentQuestion.answer}"]`).classList.add('correct');
       this.wrongAnswers.push({
         question: currentQuestion.questionText,
-        yourAnswer: currentQuestion.options.find(option => option[selectedOption])[selectedOption],
-        correctAnswer: currentQuestion.answerText
+        yourAnswer: selectedText,
+        correctAnswer: correctText
       });
     }
+
+    // Disable all options immediately after selection
+    this.disableOptions();
+
     this.updateScore();
-    this.nextQuestion();
+    setTimeout(() => {
+      this.enableOptions(); // Enable options before loading the next question
+      this.nextQuestion();
+    }, 1000); // Wait a second before loading the next question
   }
+
+  disableOptions() {
+    const options = document.querySelectorAll('.option');
+    options.forEach(option => {
+      option.classList.add('disabled');
+      option.style.pointerEvents = 'none'; // Prevent clicking
+    });
+  }
+
+  enableOptions() {
+    const options = document.querySelectorAll('.option');
+    options.forEach(option => {
+      option.classList.remove('disabled');
+      option.style.pointerEvents = 'auto'; // Allow clicking again
+    });
+  }
+
 
   nextQuestion() {
     if (this.currentQuestionIndex < this.questionsPerDay - 1) {
       this.currentQuestionIndex++;
       this.loadQuestion();
     } else {
-      localStorage.setItem("wrongAnswers", JSON.stringify(this.wrongAnswers));
-      this.showCompletedMessage();
+      this.showSummary();
     }
   }
 
@@ -123,39 +169,47 @@ class Quiz {
     document.getElementById("score").innerText = this.score;
   }
 
-  showCompletedMessage() {
-    document.getElementById("quiz-container").style.display = "none";
-    document.getElementById("completed-container").style.display = "block";
-    document.getElementById("final-score").innerText = this.score;
-    this.displayWrongAnswers();
-  }
+  showSummary() {
+    const summaryContainer = document.getElementById('summary-list');
+    summaryContainer.innerHTML = '';
 
-  displayWrongAnswers() {
-    const wrongAnswers = JSON.parse(localStorage.getItem("wrongAnswers")) || [];
-    const answerList = document.getElementById("wrong-answers-list");
-    answerList.innerHTML = "";
+    this.questionTimes.forEach((q, index) => {
+      const questionCard = document.createElement('div');
+      questionCard.classList.add('summary-card');
 
-    wrongAnswers.forEach(answer => {
-      const card = document.createElement("div");
-      card.classList.add("answer-card");
+      const questionText = document.createElement('div');
+      questionText.classList.add('question-text');
+      questionText.innerHTML = `${index + 1}. ${q.question}`;
+      questionCard.appendChild(questionText);
 
-      const questionText = document.createElement("div");
-      questionText.classList.add("question-text");
-      questionText.innerHTML = answer.question.replace("B「", "<br>B「");
-      card.appendChild(questionText);
+      const timeTaken = document.createElement('div');
+      timeTaken.classList.add('time-taken');
+      timeTaken.innerText = `Time: ${q.timeTaken.toFixed(2)} seconds`;
+      questionCard.appendChild(timeTaken);
 
-      const yourAnswer = document.createElement("div");
-      yourAnswer.classList.add("your-answer");
-      yourAnswer.innerText = `Your Answer: ${answer.yourAnswer}`;
-      card.appendChild(yourAnswer);
+      const result = document.createElement('div');
+      result.classList.add('result');
+      result.innerText = q.correct ? 'Correct' : 'Incorrect';
+      result.style.color = q.correct ? 'green' : 'red';
+      questionCard.appendChild(result);
 
-      const correctAnswer = document.createElement("div");
-      correctAnswer.classList.add("correct-answer");
-      correctAnswer.innerText = `Correct Answer: ${answer.correctAnswer}`;
-      card.appendChild(correctAnswer);
+      const yourAnswer = document.createElement('div');
+      yourAnswer.classList.add('your-answer');
+      yourAnswer.innerText = `Your Answer: ${q.selectedAnswer}`;
+      questionCard.appendChild(yourAnswer);
 
-      answerList.appendChild(card);
+      const correctAnswer = document.createElement('div');
+      correctAnswer.classList.add('correct-answer');
+      correctAnswer.innerText = `Correct Answer: ${q.correctAnswer}`;
+      questionCard.appendChild(correctAnswer);
+
+      summaryContainer.appendChild(questionCard);
     });
+
+    document.getElementById('quiz-container').style.display = 'none';
+    document.getElementById('completed-container').style.display = 'block';
+    document.getElementById('summary-container').style.display = 'block';
+    document.getElementById('final-score').innerText = this.score;
   }
 
   updateProgressBar() {
@@ -171,7 +225,7 @@ class Quiz {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const quiz = new Quiz(10);
+  const quiz = new Quiz(20);
   quiz.loadQuizData();
   window.restartQuiz = () => quiz.startQuiz();
 });
