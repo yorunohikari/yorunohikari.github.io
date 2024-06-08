@@ -240,6 +240,10 @@ table td {
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 600px) {
+  body {
+    background-image: url("/assets/megustand.jpg");
+  }
+
   .main-container {
     width: 90%;
     padding: 10px;
