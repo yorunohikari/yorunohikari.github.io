@@ -61,6 +61,13 @@ body {
   background-color: #a0a0a0;
 }
 
+img {
+  width: 25%;
+  height: 25%;
+  object-fit: contain;
+  padding-bottom: 20px;
+}
+
 .quiz-container,
 .completed-container {
   display: none;
