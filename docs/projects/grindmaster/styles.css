@@ -71,6 +71,13 @@ body {
   padding: 20px;
 }
 
+#history-list .history-entry {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
 #final-score-container {
   margin-bottom: 20px;
 }
@@ -202,6 +209,26 @@ em {
 
 .summary-card .your-answer, .summary-card .correct-answer {
   margin-top: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+table th {
+  background-color: #f4f4f4;
+}
+
+table td {
+  background-color: #fff;
 }
 
 /* Media Queries for Mobile Responsiveness */

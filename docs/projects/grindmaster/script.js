@@ -161,6 +161,7 @@ class Quiz {
       this.currentQuestionIndex++;
       this.loadQuestion();
     } else {
+      this.saveScore();
       this.showSummary();
     }
   }
@@ -179,53 +180,124 @@ class Quiz {
 
       const questionText = document.createElement('div');
       questionText.classList.add('question-text');
-      questionText.innerHTML = `${index + 1}. ${q.question}`;
+      questionText.innerHTML = `<strong>Question ${index + 1}:</strong> ${q.question}`;
+
+      const timeTakenText = document.createElement('div');
+      timeTakenText.classList.add('time-taken-text');
+      timeTakenText.innerHTML = `Time Taken: ${q.timeTaken.toFixed(2)} seconds`;
+
+      const correctnessText = document.createElement('div');
+      correctnessText.classList.add('correctness-text');
+      correctnessText.innerHTML = q.correct ? '<span style="color:green">Correct</span>' : '<span style="color:red">Incorrect</span>';
+
+      const answerText = document.createElement('div');
+      answerText.classList.add('answer-text');
+      answerText.innerHTML = `Your Answer: ${q.selectedAnswer} <br> Correct Answer: ${q.correctAnswer}`;
+
       questionCard.appendChild(questionText);
-
-      const timeTaken = document.createElement('div');
-      timeTaken.classList.add('time-taken');
-      timeTaken.innerText = `Time: ${q.timeTaken.toFixed(2)} seconds`;
-      questionCard.appendChild(timeTaken);
-
-      const result = document.createElement('div');
-      result.classList.add('result');
-      result.innerText = q.correct ? 'Correct' : 'Incorrect';
-      result.style.color = q.correct ? 'green' : 'red';
-      questionCard.appendChild(result);
-
-      const yourAnswer = document.createElement('div');
-      yourAnswer.classList.add('your-answer');
-      yourAnswer.innerText = `Your Answer: ${q.selectedAnswer}`;
-      questionCard.appendChild(yourAnswer);
-
-      const correctAnswer = document.createElement('div');
-      correctAnswer.classList.add('correct-answer');
-      correctAnswer.innerText = `Correct Answer: ${q.correctAnswer}`;
-      questionCard.appendChild(correctAnswer);
+      questionCard.appendChild(timeTakenText);
+      questionCard.appendChild(correctnessText);
+      questionCard.appendChild(answerText);
 
       summaryContainer.appendChild(questionCard);
     });
 
     document.getElementById('quiz-container').style.display = 'none';
-    document.getElementById('completed-container').style.display = 'block';
     document.getElementById('summary-container').style.display = 'block';
     document.getElementById('final-score').innerText = this.score;
   }
 
+  resetProgressBar() {
+    const progressBar = document.getElementById('progress-bar');
+    progressBar.style.width = '0%';
+  }
+
   updateProgressBar() {
-    const progressBar = document.getElementById("progress-bar");
-    const progressPercentage = ((this.currentQuestionIndex) / this.questionsPerDay) * 100;
+    const progressBar = document.getElementById('progress-bar');
+    const progressPercentage = ((this.currentQuestionIndex + 0) / this.questionsPerDay) * 100;
     progressBar.style.width = `${progressPercentage}%`;
   }
 
-  resetProgressBar() {
-    const progressBar = document.getElementById("progress-bar");
-    progressBar.style.width = "0%";
+  saveScore() {
+    const date = new Date().toLocaleDateString();
+    const history = JSON.parse(localStorage.getItem('scoreHistory')) || [];
+    history.push({
+      date: date,
+      questions: this.questionsPerDay,
+      score: this.score
+    });
+    localStorage.setItem('scoreHistory', JSON.stringify(history));
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const quiz = new Quiz(20);
+// Global Variables
+let quiz;
+
+// Main Menu Functions
+function startQuiz() {
+  const questionsCount = parseInt(document.getElementById('questions-count').value, 10);
+  quiz = new Quiz(questionsCount);
   quiz.loadQuizData();
-  window.restartQuiz = () => quiz.startQuiz();
+  document.getElementById('main-menu').style.display = 'none';
+  document.getElementById('quiz-container').style.display = 'block';
+}
+
+function showSettings() {
+  document.getElementById('main-menu').style.display = 'none';
+  document.getElementById('settings-container').style.display = 'block';
+}
+
+function saveSettings() {
+  const questionsCount = document.getElementById('questions-count').value;
+  localStorage.setItem('questionsCount', questionsCount);
+  alert('Settings saved!');
+  showMenu();
+}
+
+function showMenu() {
+  document.getElementById('main-menu').style.display = 'block';
+  document.getElementById('settings-container').style.display = 'none';
+  document.getElementById('quiz-container').style.display = 'none';
+  document.getElementById('history-container').style.display = 'none';
+  document.getElementById('completed-container').style.display = 'none';
+  document.getElementById('summary-container').style.display = 'none';
+}
+
+function viewHistory() {
+  const historyTableBody = document.getElementById('history-list');
+  const history = JSON.parse(localStorage.getItem('scoreHistory')) || [];
+  historyTableBody.innerHTML = '';
+
+  history.forEach(entry => {
+    const row = document.createElement('tr');
+    const dateCell = document.createElement('td');
+    const questionsCell = document.createElement('td');
+    const scoreCell = document.createElement('td');
+
+    dateCell.textContent = entry.date;
+    questionsCell.textContent = entry.questions;
+    scoreCell.textContent = entry.score;
+
+    row.appendChild(dateCell);
+    row.appendChild(questionsCell);
+    row.appendChild(scoreCell);
+    historyTableBody.appendChild(row);
+  });
+
+  document.getElementById('main-menu').style.display = 'none';
+  document.getElementById('history-container').style.display = 'block';
+}
+
+function restartQuiz() {
+  quiz.resetQuiz();
+  document.getElementById('quiz-container').style.display = 'block';
+  document.getElementById('summary-container').style.display = 'none';
+}
+
+// Load settings on page load
+document.addEventListener('DOMContentLoaded', () => {
+  const savedQuestionsCount = localStorage.getItem('questionsCount');
+  if (savedQuestionsCount) {
+    document.getElementById('questions-count').value = savedQuestionsCount;
+  }
 });
