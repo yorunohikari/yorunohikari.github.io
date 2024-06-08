@@ -240,7 +240,19 @@ function startQuiz() {
   quiz.loadQuizData();
   document.getElementById('main-menu').style.display = 'none';
   document.getElementById('quiz-container').style.display = 'block';
+
+  // Request full-screen mode for the entire document
+  if (document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen();
+  } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+    document.documentElement.mozRequestFullScreen();
+  } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+    document.documentElement.webkitRequestFullscreen();
+  } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+    document.documentElement.msRequestFullscreen();
+  }
 }
+
 
 function showSettings() {
   document.getElementById('main-menu').style.display = 'none';
