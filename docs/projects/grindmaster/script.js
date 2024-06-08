@@ -182,10 +182,6 @@ class Quiz {
       questionText.classList.add('question-text');
       questionText.innerHTML = `<strong>Question ${index + 1}:</strong> ${q.question}`;
 
-      const timeTakenText = document.createElement('div');
-      timeTakenText.classList.add('time-taken-text');
-      timeTakenText.innerHTML = `Time Taken: ${q.timeTaken.toFixed(2)} seconds`;
-
       const correctnessText = document.createElement('div');
       correctnessText.classList.add('correctness-text');
       correctnessText.innerHTML = q.correct ? '<span style="color:green">Correct</span>' : '<span style="color:red">Incorrect</span>';
@@ -194,10 +190,14 @@ class Quiz {
       answerText.classList.add('answer-text');
       answerText.innerHTML = `Your Answer: ${q.selectedAnswer} <br> Correct Answer: ${q.correctAnswer}`;
 
+      const timeTakenText = document.createElement('div');
+      timeTakenText.classList.add('time-taken-text');
+      timeTakenText.innerHTML = `Time Taken: ${q.timeTaken.toFixed(2)} seconds`;
+
       questionCard.appendChild(questionText);
-      questionCard.appendChild(timeTakenText);
       questionCard.appendChild(correctnessText);
       questionCard.appendChild(answerText);
+      questionCard.appendChild(timeTakenText);
 
       summaryContainer.appendChild(questionCard);
     });
