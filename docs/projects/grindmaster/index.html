@@ -24,6 +24,7 @@
       <button onclick="startQuiz()">Play Quiz</button>
       <button onclick="showSettings()">Settings</button>
       <button onclick="viewHistory()">View Score History</button>
+      <button onclick="window.location.href='search/';">Browse Questions</button>
     </div>
 
     <div id="settings-container" style="display: none;">
@@ -64,15 +65,9 @@
       <div>Score: <span id="score">0</span></div>
     </div>
 
-    <div id="completed-container" style="display: none;">
-      <h2>Quiz Completed!</h2>
-      <div>Final Score: <span id="final-score">0</span></div>
-      <button onclick="showSummary()">View Summary</button>
-      <button onclick="showMenu()">Back to Menu</button>
-    </div>
-
     <div id="summary-container" style="display: none;">
       <h2>Quiz Summary</h2>
+      <div>Final Score: <span id="final-score">0</span></div>
       <div id="summary-list"></div>
       <button onclick="startQuiz()">Restart Quiz</button>
       <button onclick="showMenu()">Back to Menu</button>

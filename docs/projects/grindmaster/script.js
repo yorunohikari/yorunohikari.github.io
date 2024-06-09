@@ -64,7 +64,6 @@ class Quiz {
     localStorage.removeItem("wrongAnswers");
     document.getElementById("score").innerText = this.score;
     document.getElementById("quiz-container").style.display = "block";
-    document.getElementById("completed-container").style.display = "none";
     document.getElementById("summary-container").style.display = "none";
     this.resetProgressBar();
   }
@@ -271,7 +270,6 @@ function showMenu() {
   document.getElementById('settings-container').style.display = 'none';
   document.getElementById('quiz-container').style.display = 'none';
   document.getElementById('history-container').style.display = 'none';
-  document.getElementById('completed-container').style.display = 'none';
   document.getElementById('summary-container').style.display = 'none';
 }
 
