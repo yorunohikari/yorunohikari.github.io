@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar Point Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="bumpo-logo.ico">
+</head>
+<body>
+    <div class="container">
+        <h1>Grammar Point Form</h1>
+        <form id="grammar-form">
+            <label for="grammar-title">[文型] (Grammar Pattern):</label>
+            <input type="text" id="grammar-title" name="grammarTitle" required>
+
+            <label for="meaning">[意味] (Meaning):</label>
+            <input type="text" id="meaning" name="meaning" required>
+
+            <label for="translation">[英訳] (Translation):</label>
+            <input type="text" id="translation" name="translation" required>
+
+            <label for="connection">[接続] (Connection):</label>
+            <input type="text" id="connection" name="connection" required>
+
+            <label for="notes">[備考] (Notes):</label>
+            <input type="text" id="notes" name="notes">
+
+            <label for="examples">[例文] (Examples):</label>
+            <textarea id="examples" name="examples" rows="6"></textarea>
+
+            <button type="button" id="save-button">Save HTML</button>
+            <button type="button" id="clear-button">Clear Form</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

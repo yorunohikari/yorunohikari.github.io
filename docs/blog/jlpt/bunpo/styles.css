@@ -1,0 +1,142 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow-container {
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow-header {
+    background-color: #4285f4;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.slideshow-header h2 {
+    margin: 0;
+}
+
+.grammar-point {
+    padding: 20px;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.structure, .examples {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.structure {
+    background-color: #e9f4fb;
+    border: 1px solid #bcd9ea;
+}
+
+.examples {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.grammar-title {
+    font-size: 1.5em;
+    color: #4285f4;
+}
+
+.grammar-description, .grammar-note {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.grammar-note {
+    color: #d9534f;
+}
+
+.examples ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.examples li {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.examples li:nth-child(odd) {
+    background-color: #e7e7e7;
+}
+
+.prev, .next {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #357ae8;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.dot-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #4285f4;
+}
+
+.fade {
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+@media screen and (max-width: 600px) {
+    .prev, .next {
+        padding: 8px 16px;
+        font-size: 12px;
+        bottom: 5px;
+    }
+    .slideshow-container {
+        margin: 0;
+    }
+}

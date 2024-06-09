@@ -3,14 +3,14 @@ body {
   font-family: "Poppins", sans-serif;
   text-align: center;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 100vh; /* Ensure the body takes up the full viewport height */
-  margin: 0; /* Remove default margin */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 #main {
-  text-align: center; /* Center content inside #main horizontally */
+  text-align: center;
 }
 
 #board {
@@ -32,20 +32,31 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
 .cell.winner {
-  background-color: #4caf50; /* Green */
+  background-color: #4caf50;
   color: #fff;
   font-weight: bold;
+  animation: win-bounce 0.3s infinite;
 }
 
 .cell:hover {
   background-color: #e0e0e0;
+  transform: scale(1.05);
 }
 
-#status {
+@keyframes win-bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+#status, #score, #controls {
   font-size: 1.5rem;
   margin-top: 20px;
 }
@@ -61,8 +72,14 @@ button {
   margin-top: 20px;
 }
 
+#score span {
+  display: inline-block;
+  margin: 0 10px;
+}
+
 footer {
   text-align: center;
   color: #6b7280;
   font-size: 18px;
+  margin-top: 20px;
 }
