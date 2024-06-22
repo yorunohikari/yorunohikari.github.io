@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>検索猫</title>
+    <link rel="icon" type="image/x-icon" href="bumpo-logo.ico">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@goshintai_" />
+    <meta name="twitter:title" content="検索猫" />
+    <meta name="twitter:description" content="Search Engine to Browse GrindMaster Question" />
+    <meta name="twitter:image" content="/assets/twittermeta.png" />
+    <link rel="stylesheet" href="kensaku.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="bumpo_logo_hd.png" alt="Logo" class="logo">
+        </div>
+        <div class="search-container no-logo">
+            <img src="bumpo_logo_hd.png" alt="Logo" class="logo">
+            <input type="text" id="search-input" placeholder="Search for questions...">
+            <button id="clear-btn">×</button>
+        </div>
+        <div id="results-container"></div>
+        <div id="statistics-container" class="statistics"></div>
+        <div class="pagination" id="pagination-container"></div>
+    </div>
+    <script src="kensaku.js"></script>
+</body>
+</html>

@@ -4,9 +4,9 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-}
+  }
 
-.slideshow-container {
+  .slideshow-container {
     max-width: 800px;
     margin: 50px auto;
     position: relative;
@@ -14,72 +14,106 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+  }
 
-.slideshow-header {
+  .slideshow-header {
     background-color: #4285f4;
     color: #fff;
     padding: 20px;
-    text-align: center;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.slideshow-header h2 {
+  .search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .search-container input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    width: 200px;
+  }
+
+  .search-container button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #4285f4;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .search-container button:hover {
+    background-color: #357ae8;
+    color: #fff;
+  }
+
+  .slideshow-header h2 {
     margin: 0;
-}
+  }
 
-.grammar-point {
+  .grammar-point {
     padding: 20px;
     margin: 0;
     border-bottom: 1px solid #ddd;
-}
+  }
 
-.structure, .examples {
+  .structure, .examples {
     padding: 15px;
     margin: 10px 0;
     border-radius: 5px;
-}
+  }
 
-.structure {
+  .structure {
     background-color: #e9f4fb;
     border: 1px solid #bcd9ea;
-}
+  }
 
-.examples {
+  .examples {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-}
+  }
 
-.grammar-title {
+  .grammar-title {
     font-size: 1.5em;
     color: #4285f4;
-}
+  }
 
-.grammar-description, .grammar-note {
+  .grammar-description, .grammar-note {
     margin-bottom: 10px;
     line-height: 1.5;
-}
+  }
 
-.grammar-note {
+  .grammar-note {
     color: #d9534f;
-}
+  }
 
-.examples ul {
+  .examples ul {
     list-style-type: none;
     padding: 0;
-}
+  }
 
-.examples li {
+  .examples li {
     margin: 5px 0;
     padding: 10px;
     background-color: #f2f2f2;
     border-radius: 5px;
-}
+  }
 
-.examples li:nth-child(odd) {
+  .examples li:nth-child(odd) {
     background-color: #e7e7e7;
-}
+  }
 
-.prev, .next {
+  .prev, .next {
     background-color: #4285f4;
     color: white;
     border: none;
@@ -88,26 +122,27 @@ body {
     border-radius: 5px;
     position: fixed;
     bottom: 10px;
-}
+    transition: background-color 0.3s;
+  }
 
-.prev:hover, .next:hover {
+  .prev:hover, .next:hover {
     background-color: #357ae8;
-}
+  }
 
-.prev {
+  .prev {
     left: 10px;
-}
+  }
 
-.next {
+  .next {
     right: 10px;
-}
+  }
 
-.dot-container {
+  .dot-container {
     text-align: center;
     padding: 10px;
-}
+  }
 
-.dot {
+  .dot {
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -115,28 +150,30 @@ body {
     background-color: #bbb;
     border-radius: 50%;
     cursor: pointer;
-}
+    transition: background-color 0.3s;
+  }
 
-.dot.active {
+  .dot.active {
     background-color: #4285f4;
-}
+  }
 
-.fade {
+  .fade {
     animation: fade 1.5s;
-}
+  }
 
-@keyframes fade {
+  @keyframes fade {
     from { opacity: 0.4; }
     to { opacity: 1; }
-}
+  }
 
-@media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     .prev, .next {
-        padding: 8px 16px;
-        font-size: 12px;
-        bottom: 5px;
+      padding: 8px 16px;
+      font-size: 12px;
+      bottom: 5px;
     }
     .slideshow-container {
-        margin: 0;
+      margin: 0;
+      border-radius: 0;
     }
-}
+  }

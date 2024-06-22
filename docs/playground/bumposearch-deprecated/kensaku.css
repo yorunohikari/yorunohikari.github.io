@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+}
+
+.logo {
+    max-width: 100px; /* Set the maximum width you want for the logo */
+    max-height: 100px; /* Set the maximum height you want for the logo */
+    height: auto;
+    width: auto;
+    transition: all 0.5s ease;
+}
+
+
+
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.search-container .logo {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+    transition: all 0.5s ease;
+}
+
+.search-container.with-logo .logo {
+    display: block;
+}
+
+.search-container.no-logo .logo {
+    display: none;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#clear-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: none;
+}
+
+.result-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.result-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.result-url {
+    color: green;
+}
+
+.result-description {
+    color: gray;
+}
+
+#results-container {
+    display: none;
+}
+
+.statistics {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #70757a;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination button {
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination button.active {
+    background-color: #1a73e8;
+    color: #fff;
+    border-color: #1a73e8;
+}
+
+em {
+    font-style: normal;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+    }
+
+    .container {
+        width: auto;
+        margin: 0;
+        height: auto;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
