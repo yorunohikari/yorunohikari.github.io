@@ -381,39 +381,24 @@ function showPropertiesModal(appIcon) {
             function dragStart(e) {
                 e = e || window.event; // Get the event object
                 e.preventDefault();
-
-                // Get the current cursor position and modal position
                 initialX = e.clientX || e.touches[0].clientX;
                 initialY = e.clientY || e.touches[0].clientY;
                 currentX = modaldr.offsetLeft;
                 currentY = modaldr.offsetTop;
-
-                // Calculate the offset between the cursor position and the modal position
                 xOffset = initialX - currentX;
                 yOffset = initialY - currentY;
-
-                // Set the isDragging flag to true
                 isDragging = true;
-
-                // Add the 'dragging' class to the modal for styling purposes (optional)
                 modaldr.classList.add("dragging");
             }
 
             // Function to handle the movement of the drag
             function dragMove(e) {
-                e = e || window.event; // Get the event object
-
-                // If the modal is being dragged
+                e = e || window.event; 
                 if (isDragging) {
-                    // Get the new cursor position
                     currentX = e.clientX || e.touches[0].clientX;
                     currentY = e.clientY || e.touches[0].clientY;
-
-                    // Calculate the new modal position
                     var newX = currentX - xOffset;
                     var newY = currentY - yOffset;
-
-                    // Update the modal position
                     modaldr.style.left = newX + "px";
                     modaldr.style.top = newY + "px";
                 }
@@ -421,10 +406,7 @@ function showPropertiesModal(appIcon) {
 
             // Function to handle the end of the drag
             function dragEnd(e) {
-                // Reset the isDragging flag to false
                 isDragging = false;
-
-                // Remove the 'dragging' class from the modal (optional)
                 modaldr.classList.remove("dragging");
             }
         })
@@ -446,8 +428,8 @@ imageWidget.addEventListener('contextmenu', function (event) {
     var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
     // Get context menu dimensions
-    var contextMenuWidth = 200; // Replace with the actual width of your context menu
-    var contextMenuHeight = 150; // Replace with the actual height of your context menu
+    var contextMenuWidth = 200; 
+    var contextMenuHeight = 150; 
 
     // Calculate the position of the context menu based on cursor location and screen dimensions
     var left = event.pageX;
@@ -479,7 +461,7 @@ imageWidget.addEventListener('contextmenu', function (event) {
                 reader.onload = function (e) {
                     const imageUrl = e.target.result;
                     localStorage.setItem('customImage', imageUrl);
-                    applyCustomImage(); // Call the function to update the image
+                    applyCustomImage(); 
                     closeOpenContextMenu();
                 };
                 reader.readAsDataURL(file);
@@ -523,8 +505,8 @@ document.addEventListener('contextmenu', function (event) {
         var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
         // Get context menu dimensions
-        var contextMenuWidth = 160; // Replace with the actual width of your context menu
-        var contextMenuHeight = 145; // Replace with the actual height of your context menu
+        var contextMenuWidth = 160; 
+        var contextMenuHeight = 175; 
 
         // Calculate the position of the context menu based on cursor location and screen dimensions
         var left = event.pageX;
@@ -562,7 +544,6 @@ document.addEventListener('contextmenu', function (event) {
         itemseparator.className = 'context-menu-separator';
         outsideContextMenu.appendChild(itemseparator);
 
-
         var changeBackgroundMenuItem = document.createElement('div');
         changeBackgroundMenuItem.className = 'context-menu-item';
         changeBackgroundMenuItem.textContent = 'Change Background';
@@ -583,10 +564,10 @@ document.addEventListener('contextmenu', function (event) {
                                 // Show a warning popup for quota exceeded error
                                 alert('file too big, try another files');
                             } else {
-                                throw error; // Re-throw other errors
+                                throw error; 
                             }
                         }
-                        applyCustomBackground(); // Call the function to update the background
+                        applyCustomBackground(); 
                         closeOpenContextMenu();
                     };
                     reader.readAsDataURL(file);
@@ -594,8 +575,29 @@ document.addEventListener('contextmenu', function (event) {
             };
             input.click();
         };
-
         outsideContextMenu.appendChild(changeBackgroundMenuItem);
+
+        var itemseparator = document.createElement('div');
+        itemseparator.className = 'context-menu-separator';
+        outsideContextMenu.appendChild(itemseparator);
+
+        // Add Fullscreen/Exit Fullscreen menu item
+        var fullscreenMenuItem = document.createElement('div');
+        fullscreenMenuItem.className = 'context-menu-item';
+        if (!document.fullscreenElement) {
+            fullscreenMenuItem.textContent = 'Fullscreen';
+        } else {
+            fullscreenMenuItem.textContent = 'Exit Fullscreen';
+        }
+        fullscreenMenuItem.onclick = function () {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+            closeOpenContextMenu();
+        };
+        outsideContextMenu.appendChild(fullscreenMenuItem);
 
         // Add context menu for outside clicks to the document
         document.body.appendChild(outsideContextMenu);
@@ -611,6 +613,7 @@ document.addEventListener('contextmenu', function (event) {
         });
     }
 });
+
 
 
 // Function to close the currently open context menu
@@ -638,12 +641,12 @@ function touchStart(e) {
 
 function touchMove(e) {
     currentX = e.touches[0].clientX;
-    const diff = currentX - startX; // Reversed the order of subtraction
+    const diff = currentX - startX; 
     const newTranslateX = translateX + diff;
 
     // Limit the translation to the width of the content container
     const contentContainer = document.querySelector('.content-container');
-    const maxTranslation = contentContainer.offsetWidth * 0.4; // 80% of the container width
+    const maxTranslation = contentContainer.offsetWidth * 0.4; 
     const clampedTranslation = Math.max(-maxTranslation, Math.min(maxTranslation, newTranslateX));
     contentContainer.style.transform = `translateX(${clampedTranslation}px)`;
 }
@@ -651,8 +654,8 @@ function touchMove(e) {
 function touchEnd(e) {
     const contentContainer = document.querySelector('.content-container');
     const containerWidth = contentContainer.offsetWidth;
-    const threshold = containerWidth * 0.2; // 20% of the container width
-    const maxTranslation = containerWidth * 0.4; // 80% of the container width
+    const threshold = containerWidth * 0.2; 
+    const maxTranslation = containerWidth * 0.4; 
 
     // Reverse the swipe direction: swiping from left to right moves to the previous "page"
     if (translateX < -threshold) {
@@ -791,7 +794,7 @@ function saveOrder() {
 
 // Get all the app links
 const appLinks = Array.from(document.querySelectorAll('.content-container a'));
-let selectedLink = null; // Track the currently selected link
+let selectedLink = null; 
 
 // Detect if the user is on a desktop or mobile device
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -806,20 +809,16 @@ function removeSelectedClass() {
 
 // Loop through each app link
 appLinks.forEach(link => {
-    // If on desktop, add a click event listener for double click
     if (!isMobile) {
         link.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent the default link behavior
-
-            removeSelectedClass(); // Remove the 'selected' class from the previously selected link
-
-            // Add the 'selected' class to the clicked link
+            e.preventDefault(); 
+            removeSelectedClass(); 
             link.classList.add('selected');
-            selectedLink = link; // Update the currently selected link
+            selectedLink = link; 
         });
 
         link.addEventListener('dblclick', () => {
-            window.location.href = link.href; // Navigate to the link on double click
+            window.location.href = link.href; 
         });
     }
 });
