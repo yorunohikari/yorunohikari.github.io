@@ -288,7 +288,7 @@ class UI {
     if (confirm('Are you sure you want to reset the score history?')) {
       localStorage.removeItem('scoreHistory');
       alert('Score history has been reset.');
-      UI.viewHistory(); // Refresh the view to reflect the reset
+      UI.viewHistory(); 
     }
   }
 
@@ -595,6 +595,7 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener('click', UI.showMenu);
   });
   document.getElementById('history-button').addEventListener('click', () => UI.viewHistory());
+  document.getElementById('resethistory-button').addEventListener('click', UI.resetHistory);
   const savedQuestionsCount = localStorage.getItem('questionsCount');
   if (savedQuestionsCount) {
     document.getElementById('questions-count').value = savedQuestionsCount;
