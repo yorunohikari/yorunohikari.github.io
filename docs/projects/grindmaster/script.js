@@ -298,9 +298,9 @@ class UI {
     const itemsPerPage = 5;
 
     history.sort((a, b) => {
-        const dateA = parseDateTime(a.datetime);
-        const dateB = parseDateTime(b.datetime);
-        return dateB - dateA;
+      const dateA = parseDateTime(a.datetime);
+      const dateB = parseDateTime(b.datetime);
+      return dateB - dateA;
     });
 
     const totalPages = Math.ceil(history.length / itemsPerPage);
@@ -310,19 +310,19 @@ class UI {
     historyTableBody.innerHTML = '';
 
     history.slice(start, end).forEach(entry => {
-        const row = document.createElement('tr');
-        const dateCell = document.createElement('td');
-        const questionsCell = document.createElement('td');
-        const scoreCell = document.createElement('td');
+      const row = document.createElement('tr');
+      const dateCell = document.createElement('td');
+      const questionsCell = document.createElement('td');
+      const scoreCell = document.createElement('td');
 
-        dateCell.textContent = entry.datetime || 'N/A';
-        questionsCell.textContent = entry.questions;
-        scoreCell.textContent = entry.score;
+      dateCell.textContent = entry.datetime || 'N/A';
+      questionsCell.textContent = entry.questions;
+      scoreCell.textContent = entry.score;
 
-        row.appendChild(dateCell);
-        row.appendChild(questionsCell);
-        row.appendChild(scoreCell);
-        historyTableBody.appendChild(row);
+      row.appendChild(dateCell);
+      row.appendChild(questionsCell);
+      row.appendChild(scoreCell);
+      historyTableBody.appendChild(row);
     });
 
     const paginationControls = document.getElementById('pagination-controls');
@@ -333,43 +333,43 @@ class UI {
     let startPage = Math.max(1, page - Math.floor(maxPagesToShow / 2));
     let endPage = startPage + maxPagesToShow - 1;
     if (endPage > totalPages) {
-        endPage = totalPages;
-        startPage = Math.max(1, endPage - maxPagesToShow + 1);
+      endPage = totalPages;
+      startPage = Math.max(1, endPage - maxPagesToShow + 1);
     }
 
     // Add « and ‹ if not on the first page
     if (page > 1) {
-        const firstButton = document.createElement('button');
-        firstButton.textContent = '«';
-        firstButton.addEventListener('click', () => UI.viewHistory(1));
-        paginationControls.appendChild(firstButton);
+      const firstButton = document.createElement('button');
+      firstButton.textContent = '«';
+      firstButton.addEventListener('click', () => UI.viewHistory(1));
+      paginationControls.appendChild(firstButton);
 
-        const prevButton = document.createElement('button');
-        prevButton.textContent = '‹';
-        prevButton.addEventListener('click', () => UI.viewHistory(page - 1));
-        paginationControls.appendChild(prevButton);
+      const prevButton = document.createElement('button');
+      prevButton.textContent = '‹';
+      prevButton.addEventListener('click', () => UI.viewHistory(page - 1));
+      paginationControls.appendChild(prevButton);
     }
 
     // Add page buttons
     for (let i = startPage; i <= endPage; i++) {
-        const button = document.createElement('button');
-        button.textContent = i;
-        button.disabled = i === page;
-        button.addEventListener('click', () => UI.viewHistory(i));
-        paginationControls.appendChild(button);
+      const button = document.createElement('button');
+      button.textContent = i;
+      button.disabled = i === page;
+      button.addEventListener('click', () => UI.viewHistory(i));
+      paginationControls.appendChild(button);
     }
 
     // Add › and » if not on the last page
     if (page < totalPages) {
-        const nextButton = document.createElement('button');
-        nextButton.textContent = '›';
-        nextButton.addEventListener('click', () => UI.viewHistory(page + 1));
-        paginationControls.appendChild(nextButton);
+      const nextButton = document.createElement('button');
+      nextButton.textContent = '›';
+      nextButton.addEventListener('click', () => UI.viewHistory(page + 1));
+      paginationControls.appendChild(nextButton);
 
-        const lastButton = document.createElement('button');
-        lastButton.textContent = '»';
-        lastButton.addEventListener('click', () => UI.viewHistory(totalPages));
-        paginationControls.appendChild(lastButton);
+      const lastButton = document.createElement('button');
+      lastButton.textContent = '»';
+      lastButton.addEventListener('click', () => UI.viewHistory(totalPages));
+      paginationControls.appendChild(lastButton);
     }
 
     document.getElementById('main-menu').style.display = 'none';
@@ -378,7 +378,7 @@ class UI {
     drawChart(history);
     updateStats(history); // Call updateStats here
     updateUI();
-}
+  }
 
 
   static restartQuiz(quiz) {
@@ -389,6 +389,54 @@ class UI {
 }
 
 // Utility Functions
+
+function exportData() {
+  const data = {
+    weeklyGoals: localStorage.getItem('weeklyGoals'),
+    qCount: localStorage.getItem('questionsCount'),
+    history: localStorage.getItem('scoreHistory'),
+  };
+  const dataStr = JSON.stringify(data, null, 2);
+  const dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+
+  const exportFileDefaultName = 'progress_data.json';
+
+  const linkElement = document.createElement('a');
+  linkElement.setAttribute('href', dataUri);
+  linkElement.setAttribute('download', exportFileDefaultName);
+  linkElement.click();
+}
+
+function importData(event) {
+  const file = event.target.files[0];
+  if (!file) {
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    const content = e.target.result;
+    try {
+      const data = JSON.parse(content);
+      if (data.weeklyGoals) {
+        localStorage.setItem('weeklyGoals', data.weeklyGoals);
+      }
+      if (data.qCount) {
+        localStorage.setItem('questionsCount', data.qCount);
+      }
+      if (data.history) {
+        localStorage.setItem('scoreHistory', data.history);
+      }
+      alert('Data imported successfully.');
+      location.reload(); // Refresh the page to apply imported data
+    } catch (error) {
+      alert('Failed to import data. Invalid file format.');
+    }
+  };
+  reader.readAsText(file);
+}
+
+
 function updateStats(history) {
   const totalQuestions = history.reduce((total, entry) => total + entry.questions, 0);
   const correctAnswers = history.reduce((total, entry) => total + entry.score, 0);
@@ -401,7 +449,7 @@ function updateStats(history) {
     const today = moment().startOf('day');
     let currentStreak = 0;
     let previousDate = today.clone().add(1, 'day'); // A day after today to handle streak start
-    
+
     for (let date of uniqueDays) {
       let currentDate = moment(date);
       if (currentDate.isSame(previousDate, 'day')) {
@@ -472,8 +520,8 @@ function drawChart(history) {
         {
           label: "Score",
           data: scores,
-          borderColor: "rgba(220, 53, 69, 1)", 
-          backgroundColor: "rgba(220, 53, 69, 0.2)", 
+          borderColor: "rgba(220, 53, 69, 1)",
+          backgroundColor: "rgba(220, 53, 69, 0.2)",
           fill: true,
           tension: 0.1,
         },
@@ -529,16 +577,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const target = parseInt(targetInput);
 
     if (targetInput === '') {
-        alert('Settings saved!');
+      alert('Settings saved!');
     } else if (target > 0) {
-        window.weeklyGoals.setTarget(target);
-        window.weeklyGoals.resetProgress();
-        updateUI();
-        alert('Settings saved!');
+      window.weeklyGoals.setTarget(target);
+      window.weeklyGoals.resetProgress();
+      updateUI();
+      alert('Settings saved!');
     } else {
-        alert('Please set a goal greater than 0.');
+      alert('Please set a goal greater than 0.');
     }
-});
+  });
 
 
   document.getElementById('toggle-fullscreen-button').addEventListener('click', UI.toggleFullscreen);

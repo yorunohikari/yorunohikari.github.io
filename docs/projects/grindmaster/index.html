@@ -39,11 +39,11 @@
 
     <div id="settings-container" style="display: none;">
       <h2>Settings</h2>
-      <div>
-        <div>
-          <img src="/assets/marchile1.png" alt="marchile" class="project-img" />
-        </div>
-        <div>
+      <div class="settings-column">
+        <img src="/assets/marchile4.png" alt="marchile" class="project-img" />
+      </div>
+      <div class="settings-row">
+        <div class="settings-column">
           <label for="questions-count">Number of Questions:</label>
           <select id="questions-count">
             <option value="10">10</option>
@@ -52,17 +52,34 @@
             <option value="50">50</option>
           </select>
         </div>
-        <div>
+        <div class="settings-column">
           <label for="goal-input">Set your weekly goal:</label>
           <input type="number" id="goal-input" min="1" placeholder="Enter number of questions">
         </div>
       </div>
-      <div>
-        <button id="save-setting-button" class="primary">Save</button>
-        <button id="toggle-fullscreen-button" class="secondary">Toggle Fullscreen</button>
-        <button class="menu-button tertiary">Back to Menu</button>
+      <div class="settings-row">
+        <div class="settings-column">
+          <label for="import-file" class="file-label">Import Data</label>
+          <input type="file" id="import-file" accept="application/json" onchange="importData(event)">
+        </div>
+        <div class="settings-column">
+          <button id="export-button" class="secondary" onclick="exportData()">Export Data</button>
+        </div>
+        <div class="settings-column">
+          <button id="toggle-fullscreen-button" class="secondary">Toggle Fullscreen</button>
+        </div>
+      </div>
+      <div class="settings-row">
+        <div class="settings-column">
+          <button id="save-setting-button" class="primary">Save</button>
+        </div>
+        <div class="settings-column">
+          <button class="menu-button tertiary">Back to Menu</button>
+        </div>
       </div>
     </div>
+
+
 
     <div id="history-container" style="display: none;">
       <h2>Progress</h2>

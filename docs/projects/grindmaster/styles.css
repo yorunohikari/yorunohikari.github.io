@@ -82,6 +82,7 @@ em {
   width: 50%;
   height: auto;
   margin-bottom: 20px;
+  align-self: center;
 }
 
 @keyframes shake {
@@ -103,7 +104,7 @@ em {
 
 
 /* Buttons */
-button {
+button, .file-label {
   background: #ff6e6e; 
   color: #ffffff; 
   border: none;
@@ -354,8 +355,6 @@ h2 {
   background-repeat: no-repeat;
 }
 
-
-
 #progress-text {
   margin-top: 10px;
 }
@@ -367,6 +366,55 @@ h2 {
 #goal-input, #set-goal-button {
   margin-bottom: 20px;
   font-size: 1em;
+}
+
+.settings-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Optional: for spacing between columns */
+}
+
+.settings-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-column {
+  margin-bottom: 5px;
+}
+
+.settings-column select,
+.settings-column input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  max-height: 50%;
+  width: 100%; /* Ensures the elements take full width of the container */
+  box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+}
+
+.settings-column input,
+.settings-column button {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+}
+
+
+
+.file-label:hover {
+  background-color: #ff4747;
+  transform: translateY(-2px);
+}
+
+.file-label:active {
+  transform: translateY(0);
+}
+
+#import-file {
+  display: none;
 }
 
 /* Media Queries for Mobile Responsiveness */
