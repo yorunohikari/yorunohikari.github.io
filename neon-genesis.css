@@ -1,0 +1,65 @@
+/* neon-genesis.css */
+body.neon-theme {
+    background-color: #000; /* Dark background */
+    color: #fff; /* White text for contrast */
+    font-family: 'Poppins', sans-serif;
+}
+
+.neon-nav {
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
+    border-bottom: 2px solid #FF0000; /* Neon red border */
+}
+
+.neon-logo {
+    color: #39FF14; /* Neon green color */
+    text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14;
+}
+
+.neon-link {
+    color: #00FFFF; /* Neon blue color */
+    text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.neon-link:hover {
+    color: #FF00FF; /* Neon purple color */
+    text-shadow: 0 0 5px #FF00FF, 0 0 10px #FF00FF;
+}
+
+.loader-wrapper {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+}
+
+.loader {
+    border: 8px solid #555; /* Dark grey */
+    border-top: 8px solid #FF0000; /* Neon red */
+}
+
+section {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border: 1px solid #FF0000; /* Neon red border */
+    box-shadow: 0 0 10px #FF0000, 0 0 20px #FF0000;
+}
+
+.section-container {
+    color: #00FFFF; /* Neon blue text */
+}
+
+.btn {
+    background-color: #39FF14; /* Neon green */
+    color: #000;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #FF0000; /* Neon red */
+    box-shadow: 0 0 10px #FF0000, 0 0 20px #FF0000;
+}
+
+.contact-info-container {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border: 1px solid #00FFFF; /* Neon blue border */
+    color: #FFF;
+}

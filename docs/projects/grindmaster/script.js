@@ -1,6 +1,7 @@
 class Question {
-  constructor(number, questionText, options, answer, answerText) {
+  constructor(number, type, questionText, options, answer, answerText) {
     this.number = number;
+    this.type = type;
     this.questionText = questionText;
     this.options = options;
     this.answer = answer;
@@ -21,38 +22,42 @@ class Question {
 }
 
 class Quiz {
-  constructor(questionsPerDay) {
+  constructor(questionsPerDay, level, selectedTypes) {
     this.quizData = [];
     this.currentQuestionIndex = 0;
     this.score = 0;
     this.questionsPerDay = questionsPerDay;
     this.selectedQuestions = [];
+    this.selectedTypes = selectedTypes;
     this.wrongAnswers = [];
-    this.questionTimes = []; // To store time taken for each question
+    this.questionTimes = [];
+    this.level = level;
     this.startTime = null;
   }
 
   async loadQuizData() {
     try {
-      const response = await fetch('quizData.json');
+      const response = await fetch(`quizData${this.level}.json`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
       this.quizData = data.questions.map(
-        q => new Question(q.number, q.question, q.options, q.answer, q.answer_text)
+        q => new Question(q.number, q.type, q.question, q.options, q.answer, q.answer_text)
       );
-      this.startQuiz();
+      return this.quizData;
     } catch (error) {
       console.error('Error loading quiz data:', error);
-      alert('Failed to load quiz data. Please try again later.');
+      alert('Selected level is not available yet. Please try again later.');
     }
   }
 
   startQuiz() {
     this.resetQuiz();
-    this.selectQuestions();
-    this.loadQuestion();
+    this.loadQuizData().then(() => {
+      this.selectQuestions();
+      this.loadQuestion();
+    });
   }
 
   resetQuiz() {
@@ -61,25 +66,47 @@ class Quiz {
     this.selectedQuestions = [];
     this.wrongAnswers = [];
     this.questionTimes = [];
-    localStorage.removeItem("wrongAnswers");
     document.getElementById("score").innerText = this.score;
-    document.getElementById("quiz-container").style.display = "block";
-    document.getElementById("summary-container").style.display = "none";
+    UI.hideSummaryContainer();
+    UI.hideQuestionReview();
+    UI.showQuizContainer();
     this.resetProgressBar();
   }
 
   selectQuestions() {
     const selectedSet = new Set();
+    const typeCounts = {};
+    this.selectedTypes.forEach(type => typeCounts[type] = 0);
+
     while (selectedSet.size < this.questionsPerDay) {
-      const randomIndex = Math.floor(Math.random() * this.quizData.length);
-      selectedSet.add(this.quizData[randomIndex]);
+      const availableQuestions = this.quizData.filter(q =>
+        this.selectedTypes.includes(q.type) &&
+        !selectedSet.has(q)
+      );
+
+      if (availableQuestions.length === 0) break;
+
+      const randomIndex = Math.floor(Math.random() * availableQuestions.length);
+      const selectedQuestion = availableQuestions[randomIndex];
+
+      if (this.isBalanced(typeCounts, selectedQuestion.type)) {
+        selectedSet.add(selectedQuestion);
+        typeCounts[selectedQuestion.type]++;
+      }
     }
+
     this.selectedQuestions = Array.from(selectedSet);
+  }
+
+  isBalanced(typeCounts, currentType) {
+    const totalSelected = Object.values(typeCounts).reduce((a, b) => a + b, 0);
+    const targetCount = Math.ceil(this.questionsPerDay / this.selectedTypes.length);
+    return typeCounts[currentType] < targetCount;
   }
 
   loadQuestion() {
     const currentQuestion = this.selectedQuestions[this.currentQuestionIndex];
-    this.startTime = Date.now(); // Start timing the question
+    this.startTime = Date.now();
 
     document.getElementById("question-text").innerHTML = currentQuestion.getFormattedQuestion();
     const optionsContainer = document.getElementById("options-container");
@@ -90,7 +117,7 @@ class Quiz {
       const value = optionObj[key];
       const option = document.createElement("div");
       option.classList.add("option");
-      option.innerText = value;
+      option.innerHTML = value;
       option.dataset.optionKey = key;
       option.addEventListener("click", () => this.selectOption(key));
       optionsContainer.appendChild(option);
@@ -100,7 +127,7 @@ class Quiz {
   }
 
   selectOption(selectedOption) {
-    const timeTaken = (Date.now() - this.startTime) / 1000; // Calculate time taken
+    const timeTaken = (Date.now() - this.startTime) / 1000;
     const currentQuestion = this.selectedQuestions[this.currentQuestionIndex];
     const isCorrect = currentQuestion.isCorrect(selectedOption);
     const selectedOptionElement = document.querySelector(`.option[data-option-key="${selectedOption}"]`);
@@ -109,10 +136,12 @@ class Quiz {
 
     this.questionTimes.push({
       question: currentQuestion.questionText,
+      options: currentQuestion.options,
       timeTaken: timeTaken,
       correct: isCorrect,
       selectedAnswer: selectedText,
-      correctAnswer: correctText
+      correctAnswer: correctText,
+      type: currentQuestion.type
     });
 
     if (isCorrect) {
@@ -159,7 +188,8 @@ class Quiz {
       this.loadQuestion();
     } else {
       this.saveScore();
-      this.showSummary();
+      this.generateSummary();
+      this.generateQuestionReview();
     }
   }
 
@@ -167,41 +197,168 @@ class Quiz {
     document.getElementById("score").innerText = this.score;
   }
 
-  showSummary() {
-    const summaryContainer = document.getElementById('summary-list');
-    summaryContainer.innerHTML = '';
+  generateSummary() {
+    const progressScore = document.getElementById('progress-score');
+    const quizTypeContainer = document.getElementById('quiz-info-container');
+    const typeScores = document.getElementById('type-scores');
+    const timeSpent = document.getElementById('time-spent');
+    const totalScore = document.getElementById('total-score');
 
+    // Set the score in the circular progress bar
+    progressScore.textContent = this.score / this.questionsPerDay * 100;
+    quizTypeContainer.innerHTML = '';
+    const levelSpan = document.createElement('span');
+    levelSpan.textContent = `N${this.level}`;
+    levelSpan.className = `quiz-label level-${this.level}`;
+    quizTypeContainer.appendChild(levelSpan);
+
+    if (this.selectedTypes.length === 3) {
+      const allSpan = document.createElement('span');
+      allSpan.textContent = 'All';
+      allSpan.className = 'type-all-label';
+      quizTypeContainer.appendChild(allSpan);
+    } else {
+      this.selectedTypes.forEach(type => {
+        const typeSpan = document.createElement('span');
+        typeSpan.textContent = type.charAt(0).toUpperCase() + type.slice(1);
+        typeSpan.className = `type-${type.toLowerCase()}-label`;
+        quizTypeContainer.appendChild(typeSpan);
+
+        // Add a space after each span except the last one
+        if (type !== this.selectedTypes[this.selectedTypes.length - 1]) {
+          quizTypeContainer.appendChild(document.createTextNode(' '));
+        }
+      });
+    }
+
+
+    // Populate type-specific scores
+    typeScores.innerHTML = '';
+    const typeScoreMap = this.calculateTypeScores();
+    for (const [type, scores] of Object.entries(typeScoreMap)) {
+      const row = `
+        <tr>
+          <td style="text-transform: capitalize;">${type}</td>
+          <td>${scores.wrong}</td>
+          <td>${scores.correct}</td>
+        </tr>
+      `;
+      typeScores.innerHTML += row;
+    }
+
+    // Set time spent and total score
+    const totalTime = this.calculateTotalTime();
+    timeSpent.textContent = this.formatTime(totalTime);
+    totalScore.textContent = `${this.score}/${this.questionsPerDay}`;
+
+    UI.hideQuizContainer();
+    UI.showSummaryContainer();
+  }
+
+  calculateTypeScores() {
+    const typeScores = {};
+
+    this.selectedTypes.forEach(type => {
+      typeScores[type] = { correct: 0, wrong: 0 };
+    });
+
+    this.selectedQuestions.forEach((question, index) => {
+      const questionType = question.type;
+      const isCorrect = this.questionTimes[index].correct;
+
+      if (isCorrect) {
+        typeScores[questionType].correct++;
+      } else {
+        typeScores[questionType].wrong++;
+      }
+    });
+
+    return typeScores;
+  }
+
+  calculateTotalTime() {
+    return this.questionTimes.reduce((total, question) => total + question.timeTaken, 0);
+  }
+
+  formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.round(seconds % 60);
+
+    const formattedMinutes = String(minutes).padStart(2, '0');
+    const formattedSeconds = String(remainingSeconds).padStart(2, '0');
+
+    return `${formattedMinutes}:${formattedSeconds}`;
+  }
+
+  generateQuestionReview() {
+    const summaryContainer = document.getElementById('question-review');
+    UI.clearQuestionReview();
     this.questionTimes.forEach((q, index) => {
       const questionCard = document.createElement('div');
       questionCard.classList.add('summary-card');
 
+      // Part 1: Question Number
+      const questionNumber = document.createElement('div');
+      questionNumber.classList.add('question-number');
+      questionNumber.textContent = `${index + 1}`;
+
+      // Part 2: Question and answers
+      const questionContent = document.createElement('div');
+      questionContent.classList.add('question-content');
+
+      // Question text
       const questionText = document.createElement('div');
       questionText.classList.add('question-text');
-      questionText.innerHTML = `<strong>Question ${index + 1}:</strong> ${q.question}`;
+      questionText.innerHTML = q.question;
 
-      const correctnessText = document.createElement('div');
-      correctnessText.classList.add('correctness-text');
-      correctnessText.innerHTML = q.correct ? '<span style="color:#00c200">Correct</span>' : '<span style="color:red">Incorrect</span>';
-
+      // Answer text
       const answerText = document.createElement('div');
       answerText.classList.add('answer-text');
-      answerText.innerHTML = `Your Answer: ${q.selectedAnswer} <br> Correct Answer: ${q.correctAnswer}`;
 
-      const timeTakenText = document.createElement('div');
-      timeTakenText.classList.add('time-taken-text');
-      timeTakenText.innerHTML = `Time Taken: ${q.timeTaken.toFixed(2)} seconds`;
+      const yourAnswerSpan = document.createElement('span');
+      yourAnswerSpan.classList.add(q.correct ? 'correct-answer' : 'wrong-answer');
+      yourAnswerSpan.innerHTML = q.selectedAnswer;
 
-      questionCard.appendChild(questionText);
-      questionCard.appendChild(correctnessText);
-      questionCard.appendChild(answerText);
-      questionCard.appendChild(timeTakenText);
+      const correctAnswerSpan = document.createElement('span');
+      correctAnswerSpan.classList.add('correct-answer');
+      correctAnswerSpan.innerHTML = q.correctAnswer;
+
+      answerText.innerHTML = `Your Answer: `;
+      answerText.appendChild(yourAnswerSpan);
+      answerText.innerHTML += `<br>Correct Answer: `;
+      answerText.appendChild(correctAnswerSpan);
+
+      questionContent.appendChild(questionText);
+      questionContent.appendChild(answerText);
+
+      // Part 3: Question type label
+      const typeLabel = document.createElement('div');
+      typeLabel.classList.add(`type-${q.type.toLowerCase()}-label-summary`);
+      switch (q.type.toLowerCase()) {
+        case 'moji':
+          typeLabel.textContent = '文字';
+          break;
+        case 'goi':
+          typeLabel.textContent = '語い';
+          break;
+        case 'bunpo':
+          typeLabel.textContent = '文法';
+          break;
+        default:
+          typeLabel.textContent = q.type;
+      }
+
+      // Append all parts to the question card
+      questionCard.appendChild(questionNumber);
+      questionCard.appendChild(questionContent);
+      questionCard.appendChild(typeLabel);
 
       summaryContainer.appendChild(questionCard);
     });
 
-    document.getElementById('quiz-container').style.display = 'none';
-    document.getElementById('summary-container').style.display = 'block';
-    document.getElementById('final-score').innerText = this.score;
+    UI.hideQuizContainer();
+    UI.showSummaryContainer();
+
   }
 
   resetProgressBar() {
@@ -211,19 +368,21 @@ class Quiz {
 
   updateProgressBar() {
     const progressBar = document.getElementById('progress-bar');
-    const progressPercentage = ((this.currentQuestionIndex + 0) / this.questionsPerDay) * 100;
+    const progressPercentage = ((this.currentQuestionIndex + 1) / this.questionsPerDay) * 100;
     progressBar.style.width = `${progressPercentage}%`;
   }
 
   saveScore() {
     const datetime = formatDateTime(new Date());
-    const history = JSON.parse(localStorage.getItem('scoreHistory')) || [];
+    const history = QuizSettings.getHistoryData();
     history.push({
       datetime: datetime,
       questions: this.questionsPerDay,
-      score: this.score
+      score: this.score,
+      level: this.level,
+      types: this.selectedTypes
     });
-    localStorage.setItem('scoreHistory', JSON.stringify(history));
+    QuizSettings.setHistoryData(history);
 
     // Update weekly goals progress
     if (window.weeklyGoals) {
@@ -266,42 +425,142 @@ class UI {
     }
   }
 
-  static showMenu() {
-    document.getElementById('main-menu').style.display = 'block';
-    document.getElementById('settings-container').style.display = 'none';
+  static hideMainmenu() {
+    document.getElementById('main-menu').style.display = 'none';
+  }
+
+  static showQuizContainer() {
+    document.getElementById('quiz-container').style.display = 'block';
+  }
+
+  static hideQuizContainer() {
     document.getElementById('quiz-container').style.display = 'none';
-    document.getElementById('history-container').style.display = 'none';
+  }
+
+  static clearQuestionReview() {
+    const summaryContainer = document.getElementById('question-review');
+    summaryContainer.innerHTML = '';
+  }
+
+  static toggleQuestionReview() {
+    var toggleQuestionReview = document.getElementById("question-review");
+    var toggleQuestionReviewLabel = document.getElementById("review-link");
+    if (toggleQuestionReview.style.display === "none") {
+      toggleQuestionReview.style.display = "block";
+      toggleQuestionReviewLabel.innerText = "Hide Question Review";
+    } else {
+      toggleQuestionReview.style.display = "none";
+      toggleQuestionReviewLabel.innerText = "Show Question Review";
+    }
+  }
+
+  static showSummaryContainer() {
+    document.getElementById('summary-container').style.display = 'block';
+  }
+
+  static hideSummaryContainer() {
     document.getElementById('summary-container').style.display = 'none';
   }
 
-  static showSettings() {
-    document.getElementById('main-menu').style.display = 'none';
-    document.getElementById('settings-container').style.display = 'block';
+  static hideQuestionReview() {
+    document.getElementById("question-review").style.display = "none";
   }
 
-  static saveSettings() {
-    const questionsCount = document.getElementById('questions-count').value;
-    localStorage.setItem('questionsCount', questionsCount);
+  static hideElementsForSharing() {
+    const elementsToHide = document.querySelectorAll('#summary-container .button-group, #summary-container .review-link-bt');
+    elementsToHide.forEach(el => el.style.display = 'none');
+    const sumtitle = document.getElementById("summary-title");
+    sumtitle.textContent = "My Score is :";
   }
 
-  static resetHistory() {
-    if (confirm('Are you sure you want to reset the score history?')) {
-      localStorage.removeItem('scoreHistory');
-      alert('Score history has been reset.');
-      UI.viewHistory(); 
+  static showElementsAfterSharing() {
+    const elementsToHide = document.querySelectorAll('#summary-container .button-group, #summary-container .review-link-bt');
+    elementsToHide.forEach(el => el.style.display = '');
+    const sumtitle = document.getElementById("summary-title");
+    sumtitle.textContent = "Your Score is :";
+  }
+
+  static createWatermark() {
+    const watermark = document.createElement('div');
+    watermark.className = 'watermark';
+    watermark.textContent = 'Test Your Japanese Skills on JLPT GrindMaster!';
+    document.querySelector("#summary-container").appendChild(watermark);
+    return watermark;
+  }
+
+  static createModal(imageSrc) {
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <img id="capturedImage" alt="Quiz Result">
+        <div class="modal-buttons">
+          <button id="downloadBtn">Download</button>
+          <button id="copyBtn">Copy to Clipboard</button>
+        </div>
+      </div>
+    `;
+    const img = modal.querySelector('#capturedImage');
+    img.src = imageSrc;
+    return modal;
+  }
+
+  static addModalListeners(modal, canvas) {
+    document.getElementById('downloadBtn').addEventListener('click', () => UI.downloadImage(canvas));
+    document.getElementById('copyBtn').addEventListener('click', () => UI.copyImageToClipboard(canvas));
+
+    const closeModal = () => document.body.removeChild(modal);
+    modal.querySelector('.close-button').addEventListener('click', closeModal);
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) closeModal();
+    });
+  }
+
+  static downloadImage(canvas) {
+    const link = document.createElement('a');
+    link.download = 'quiz-result.png';
+    link.href = canvas.toDataURL();
+    link.click();
+  }
+
+  static copyImageToClipboard(canvas) {
+    canvas.toBlob(blob => {
+      const item = new ClipboardItem({ "image/png": blob });
+      navigator.clipboard.write([item]).then(() => {
+        alert('Image copied to clipboard!');
+      }, err => {
+        console.error('Error copying image to clipboard:', err);
+      });
+    });
+  }
+
+  static showMenu() {
+    document.getElementById('main-menu').style.display = 'block';
+    function hideElements(elementIds) {
+      elementIds.forEach(id => {
+        document.getElementById(id).style.display = 'none';
+      });
     }
+    hideElements(['settings-container', 'quiz-container', 'history-container', 'summary-container']);
+  }
+
+  static showSettings() {
+    UI.hideMainmenu();
+    document.getElementById('settings-container').style.display = 'block';
   }
 
   static viewHistory(page = 1) {
     const historyTableBody = document.getElementById('history-list');
-    const history = JSON.parse(localStorage.getItem('scoreHistory')) || [];
+    const history = QuizSettings.getHistoryData();
     const itemsPerPage = 5;
 
     history.sort((a, b) => {
       const dateA = parseDateTime(a.datetime);
       const dateB = parseDateTime(b.datetime);
       return dateB - dateA;
-    });
+    }).reverse();
+
 
     const totalPages = Math.ceil(history.length / itemsPerPage);
     const start = (page - 1) * itemsPerPage;
@@ -312,18 +571,71 @@ class UI {
     history.slice(start, end).forEach(entry => {
       const row = document.createElement('tr');
       const dateCell = document.createElement('td');
-      const questionsCell = document.createElement('td');
+      const levelQuestionsCell = document.createElement('td');
       const scoreCell = document.createElement('td');
 
       dateCell.textContent = entry.datetime || 'N/A';
-      questionsCell.textContent = entry.questions;
+
+      const levelSpan = document.createElement('span');
+      levelSpan.className = `level-label level-${entry.level || '1'}`;
+      levelSpan.textContent = `N${entry.level || '1'}`;
+
+      const questionsSpan = document.createElement('span');
+      questionsSpan.className = 'questions-label';
+      questionsSpan.textContent = `${entry.questions}`;
+
+      const typesSpan = document.createElement('span');
+      typesSpan.className = 'types-label';
+
+      // Assuming these are the total available types
+      const totalAvailableTypes = ["moji", "goi", "bunpo"];
+
+      function updateTypesLabel(entry, typesSpan) {
+        const typeSpan = document.createElement('span');
+        if (entry.types) {
+          // Check if all types are selected
+          const allSelected = totalAvailableTypes.every(type => entry.types.includes(type));
+
+          if (allSelected) {
+            typeSpan.className = 'type-all-label';
+            typeSpan.textContent = 'all';
+          } else {
+            entry.types.forEach((type, index) => {
+              const typeSpanItem = document.createElement('span');
+              typeSpanItem.className = `type-${type.toLowerCase()}-label`;
+              typeSpanItem.textContent = type;
+              typeSpan.appendChild(typeSpanItem);
+              if (index < entry.types.length - 1) {
+                typeSpan.appendChild(document.createTextNode(' ')); // Adjust the separator if needed
+              }
+            });
+          }
+        } else {
+          typeSpan.className = 'type-all-label';
+          typeSpan.textContent = 'all';
+        }
+        typesSpan.appendChild(typeSpan);
+      }
+
+
+      updateTypesLabel(entry, typesSpan);
+      document.body.appendChild(typesSpan);  // Append to your desired parent element
+
+
+
+      levelQuestionsCell.innerHTML = '';
+      levelQuestionsCell.appendChild(levelSpan);
+      levelQuestionsCell.appendChild(questionsSpan);
+      levelQuestionsCell.appendChild(typesSpan);
+
       scoreCell.textContent = entry.score;
 
       row.appendChild(dateCell);
-      row.appendChild(questionsCell);
+      row.appendChild(levelQuestionsCell);
       row.appendChild(scoreCell);
       historyTableBody.appendChild(row);
     });
+
 
     const paginationControls = document.getElementById('pagination-controls');
     paginationControls.innerHTML = '';
@@ -372,19 +684,206 @@ class UI {
       paginationControls.appendChild(lastButton);
     }
 
-    document.getElementById('main-menu').style.display = 'none';
+    UI.hideMainmenu();
     document.getElementById('history-container').style.display = 'block';
 
-    drawChart(history);
-    updateStats(history); // Call updateStats here
+    UI.drawChart(history);
+    updateStats(history);
     updateUI();
   }
 
+  static drawChart(history) {
+    const ctx = document.getElementById("scoreChart").getContext("2d");
+    const dates = history.map((entry) =>
+      moment(entry.datetime, "DD/MM/YYYY").format("MMM DD")
+    ).reverse();
+    const scores = history.map((entry) => entry.score).reverse();
+
+    // Extract the year from the first and last entries in the history
+    const startYear = moment(history[0].datetime, "DD/MM/YYYY").format("YYYY");
+    const endYear = moment(history[history.length - 1].datetime, "DD/MM/YYYY").format("YYYY");
+
+    // Create the year range string
+    const yearRange = startYear === endYear ? startYear : `${startYear} - ${endYear}`;
+
+    if (window.scoreChartInstance) {
+      window.scoreChartInstance.destroy();
+    }
+
+    window.scoreChartInstance = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: dates,
+        datasets: [
+          {
+            label: "Score",
+            data: scores,
+            borderColor: "rgba(220, 53, 69, 1)",
+            backgroundColor: "rgba(220, 53, 69, 0.2)",
+            fill: true,
+            tension: 0.1,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: "Progress Over Time",
+          },
+          legend: {
+            display: false,
+          },
+        },
+        scales: {
+          x: {
+            type: "category",
+            title: {
+              display: true,
+              text: `Date and Time (${yearRange})`,
+            },
+          },
+          y: {
+            title: {
+              display: true,
+              text: "Score",
+            },
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+  }
 
   static restartQuiz(quiz) {
     quiz.resetQuiz();
-    document.getElementById('quiz-container').style.display = 'block';
-    document.getElementById('summary-container').style.display = 'none';
+    UI.hideSummaryContainer();
+    UI.showQuizContainer();
+  }
+}
+
+class QuizSettings {
+  static getQuizLevel() {
+    const quizLevel = document.getElementById('quiz-level').value;
+    return quizLevel;
+  }
+
+  static getSelectedTypes() {
+    const types = ['moji', 'goi', 'bunpo'];
+    return types.filter(type => document.getElementById(type).checked);
+  }
+
+  static getQuestionCount() {
+    const qCount = document.getElementById('questions-count').value;
+    return parseInt(qCount, 10);
+  }
+
+  static getHistoryData() {
+    return JSON.parse(localStorage.getItem('scoreHistory')) || [];
+  }
+
+  static setHistoryData(history) {
+    localStorage.setItem('scoreHistory', JSON.stringify(history));
+  }
+
+  static resetHistory() {
+    if (confirm('Are you sure you want to reset the score history?')) {
+      localStorage.removeItem('scoreHistory');
+      alert('Score history has been reset.');
+      location.reload();
+    }
+  }
+
+  static loadSavedSettings() {
+    // Load saved questions count
+    const savedQuestionsCount = localStorage.getItem('questionsCount');
+    if (savedQuestionsCount) {
+      document.getElementById('questions-count').value = savedQuestionsCount;
+    }
+
+    // Load saved quiz level
+    const savedQuizLevel = localStorage.getItem('quizLevel');
+    if (savedQuizLevel) {
+      document.getElementById('quiz-level').value = savedQuizLevel;
+    }
+
+    // Load saved question types settings
+    const checkboxes = document.querySelectorAll('input[name="category"]');
+    const savedSettings = JSON.parse(localStorage.getItem('questionTypes')) || [];
+
+    if (savedSettings.length > 0) {
+      checkboxes.forEach(checkbox => {
+        checkbox.checked = savedSettings.includes(checkbox.value);
+      });
+    } else {
+      // Check all checkboxes if there are no saved settings
+      checkboxes.forEach(checkbox => {
+        checkbox.checked = true;
+      });
+    }
+  }
+
+  static saveSettings() {
+    const questionsCount = document.getElementById('questions-count').value;
+    const quizLevel = QuizSettings.getQuizLevel();
+    const checkboxes = document.querySelectorAll('input[name="category"]');
+    const selectedTypes = Array.from(checkboxes)
+      .filter(checkbox => checkbox.checked)
+      .map(checkbox => checkbox.value);
+
+    localStorage.setItem('questionTypes', JSON.stringify(selectedTypes));
+    localStorage.setItem('questionsCount', questionsCount);
+    localStorage.setItem('quizLevel', quizLevel);
+
+    const targetInput = document.getElementById('goal-input').value;
+    const target = parseInt(targetInput);
+
+    if (targetInput === '') {
+      alert('Settings saved!');
+    } else if (target > 0) {
+      window.weeklyGoals.setTarget(target);
+      window.weeklyGoals.resetProgress();
+      updateUI();
+      alert('Settings saved!');
+    } else {
+      alert('Please set a goal greater than 0.');
+    }
+  }
+
+  static updateExistingEntries() {
+    const history = QuizSettings.getHistoryData();
+    history.forEach(entry => {
+      const dateTimeParts = entry.datetime.split(' ');
+      const dateParts = dateTimeParts[0].split('/');
+      const timeParts = dateTimeParts[1].split(':');
+      entry.datetime = `${dateParts[0]}/${dateParts[1]}/${dateParts[2]} ${timeParts[0]}:${timeParts[1]}`;
+    });
+    QuizSettings.setHistoryData(history);
+  }
+}
+
+class EventHandler {
+  static initialize() {
+    // UI interaction listeners
+    document.getElementById('settings-button').addEventListener('click', UI.showSettings);
+    document.getElementById('history-button').addEventListener('click', () => UI.viewHistory());
+    document.getElementById('toggle-fullscreen-button').addEventListener('click', UI.toggleFullscreen);
+    document.getElementById('share-result').addEventListener('click', shareQuizResult);
+    document.getElementById("review-link").addEventListener("click", UI.toggleQuestionReview);
+
+
+    // Menu navigation listeners
+    const backToMenuButtons = document.querySelectorAll('.menu-button');
+    backToMenuButtons.forEach(button => {
+      button.addEventListener('click', UI.showMenu);
+    });
+
+    // History and settings listeners
+    document.getElementById('save-setting-button').addEventListener('click', QuizSettings.saveSettings);
+    document.getElementById('resethistory-button').addEventListener('click', QuizSettings.resetHistory);
+
+    // Add any other event listeners here
   }
 }
 
@@ -394,7 +893,8 @@ function exportData() {
   const data = {
     weeklyGoals: localStorage.getItem('weeklyGoals'),
     qCount: localStorage.getItem('questionsCount'),
-    history: localStorage.getItem('scoreHistory'),
+    qType: localStorage.getItem('questionTypes'),
+    history: QuizSettings.getHistoryData(),
   };
   const dataStr = JSON.stringify(data, null, 2);
   const dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
@@ -424,6 +924,9 @@ function importData(event) {
       if (data.qCount) {
         localStorage.setItem('questionsCount', data.qCount);
       }
+      if (data.qType) {
+        localStorage.setItem('questionTypes', data.qType);
+      }
       if (data.history) {
         localStorage.setItem('scoreHistory', data.history);
       }
@@ -436,7 +939,6 @@ function importData(event) {
   reader.readAsText(file);
 }
 
-
 function updateStats(history) {
   const totalQuestions = history.reduce((total, entry) => total + entry.questions, 0);
   const correctAnswers = history.reduce((total, entry) => total + entry.score, 0);
@@ -448,7 +950,7 @@ function updateStats(history) {
     const uniqueDays = new Set(history.map(entry => moment(entry.datetime, "DD/MM/YYYY HH:mm:ss").format("YYYY-MM-DD")));
     const today = moment().startOf('day');
     let currentStreak = 0;
-    let previousDate = today.clone().add(1, 'day'); // A day after today to handle streak start
+    let previousDate = today.clone().add(1, 'day');
 
     for (let date of uniqueDays) {
       let currentDate = moment(date);
@@ -460,7 +962,7 @@ function updateStats(history) {
       }
       previousDate = currentDate.clone().subtract(1, 'day');
     }
-    dayStreak = Math.max(dayStreak, currentStreak); // Update the final streak value
+    dayStreak = Math.max(dayStreak, currentStreak);
   }
 
   // Update the stats table
@@ -490,116 +992,43 @@ function formatDateTime(date) {
   const day = String(date.getDate()).padStart(2, '0');
   const hours = String(date.getHours()).padStart(2, '0');
   const minutes = String(date.getMinutes()).padStart(2, '0');
-  const seconds = String(date.getSeconds()).padStart(2, '0');
-  return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+  return `${day}/${month}/${year} ${hours}:${minutes}`;
 }
 
-function drawChart(history) {
-  const ctx = document.getElementById("scoreChart").getContext("2d");
-  const dates = history.map((entry) =>
-    moment(entry.datetime, "DD/MM/YYYY").format("MMM DD")
-  ).reverse();
-  const scores = history.map((entry) => entry.score).reverse();
-
-  // Extract the year from the first and last entries in the history
-  const startYear = moment(history[0].datetime, "DD/MM/YYYY").format("YYYY");
-  const endYear = moment(history[history.length - 1].datetime, "DD/MM/YYYY").format("YYYY");
-
-  // Create the year range string
-  const yearRange = startYear === endYear ? startYear : `${startYear} - ${endYear}`;
-
-  if (window.scoreChartInstance) {
-    window.scoreChartInstance.destroy();
-  }
-
-  window.scoreChartInstance = new Chart(ctx, {
-    type: "line",
-    data: {
-      labels: dates,
-      datasets: [
-        {
-          label: "Score",
-          data: scores,
-          borderColor: "rgba(220, 53, 69, 1)",
-          backgroundColor: "rgba(220, 53, 69, 0.2)",
-          fill: true,
-          tension: 0.1,
-        },
-      ],
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        title: {
-          display: true,
-          text: "User Progress Over Time",
-        },
-        legend: {
-          display: false,
-        },
-      },
-      scales: {
-        x: {
-          type: "category", // Use category scale instead of time
-          title: {
-            display: true,
-            text: `Date and Time (${yearRange})`,
-          },
-        },
-        y: {
-          title: {
-            display: true,
-            text: "Score",
-          },
-          beginAtZero: true,
-        },
-      },
-    },
-  });
-}
-
-
-// Main Menu Functions
 function startQuiz() {
-  const questionsCount = parseInt(document.getElementById('questions-count').value, 10);
-  const quiz = new Quiz(questionsCount);
-  quiz.loadQuizData();
-  document.getElementById('main-menu').style.display = 'none';
-  document.getElementById('quiz-container').style.display = 'block';
+  const questionsCount = QuizSettings.getQuestionCount();
+  const quizLevel = QuizSettings.getQuizLevel();
+  const selectedTypes = QuizSettings.getSelectedTypes();
+
+  if (selectedTypes.length === 0) {
+    alert('Please select at least one question type.');
+    return;
+  }
+
+  const quiz = new Quiz(questionsCount, quizLevel, selectedTypes);
+  quiz.startQuiz();
+  UI.hideMainmenu();
+  UI.showQuizContainer();
 }
 
-// Load settings on page load
+function shareQuizResult() {
+  UI.hideElementsForSharing();
+  const watermark = UI.createWatermark();
+
+  html2canvas(document.querySelector("#summary-container")).then(canvas => {
+    UI.showElementsAfterSharing();
+    document.querySelector("#summary-container").removeChild(watermark);
+
+    const modal = UI.createModal(canvas.toDataURL());
+    document.body.appendChild(modal);
+    UI.addModalListeners(modal, canvas);
+  });
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('settings-button').addEventListener('click', UI.showSettings);
-  document.getElementById('save-setting-button').addEventListener('click', function () {
-    UI.saveSettings();
-    const targetInput = document.getElementById('goal-input').value;
-    const target = parseInt(targetInput);
-
-    if (targetInput === '') {
-      alert('Settings saved!');
-    } else if (target > 0) {
-      window.weeklyGoals.setTarget(target);
-      window.weeklyGoals.resetProgress();
-      updateUI();
-      alert('Settings saved!');
-    } else {
-      alert('Please set a goal greater than 0.');
-    }
-  });
-
-
-  document.getElementById('toggle-fullscreen-button').addEventListener('click', UI.toggleFullscreen);
-  const backToMenuButtons = document.querySelectorAll('.menu-button');
-  backToMenuButtons.forEach(button => {
-    button.addEventListener('click', UI.showMenu);
-  });
-  document.getElementById('history-button').addEventListener('click', () => UI.viewHistory());
-  document.getElementById('resethistory-button').addEventListener('click', UI.resetHistory);
-  const savedQuestionsCount = localStorage.getItem('questionsCount');
-  if (savedQuestionsCount) {
-    document.getElementById('questions-count').value = savedQuestionsCount;
-  }
+  EventHandler.initialize();
+  QuizSettings.loadSavedSettings();
+  QuizSettings.updateExistingEntries();
   updateUI();
 });
-

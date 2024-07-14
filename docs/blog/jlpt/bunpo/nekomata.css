@@ -199,6 +199,48 @@ em {
     border-color: #26204e;
 }
 
+.level-label, .type-label{
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: white;
+    margin: 0 5px 10px 0;
+  }
+
+  .level-1 {
+    background-color: #261fdf; /* Green for N1 */
+  }
+  
+  .level-2 {
+    background-color: #dc3545; /* Blue for N2 */
+  }
+  
+  .level-3 {
+    background-color: #ffc107; /* Yellow for N3 */
+  }
+  
+  .level-4 {
+    background-color: #2fd74b; /* Red for N4 */
+  }
+  
+  .type-moji {
+    background-color: #e6b52d;
+  }
+  
+  .type-goi {
+    background-color: #2adede;
+  }
+  
+  .type-bunpo {
+    background-color: #df4384;
+  }
+  
+  .type-all-label {
+    background-color: #bbbbbb;
+  }
+
 @media (max-width: 768px) {
     body {
         font-family: Arial, sans-serif;

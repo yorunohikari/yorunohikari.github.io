@@ -41,10 +41,21 @@ class SearchEngine {
 
     async fetchQuizData() {
         try {
-            const response = await fetch('/projects/grindmaster/quizData.json');
-            if (!response.ok) throw new Error('Network response was not ok');
-            const data = await response.json();
-            this.quizData = data.questions;
+            const files = ['quizData1.json', 'quizData2.json', 'quizData4.json']; // Add more files as needed
+            const allQuizData = [];
+            
+            for (const file of files) {
+                const response = await fetch(`/projects/grindmaster/${file}`);
+                if (!response.ok) throw new Error(`Failed to fetch ${file}`);
+                const data = await response.json();
+                const labeledData = data.questions.map(question => ({
+                    ...question,
+                    source: file // Add source label
+                }));
+                allQuizData.push(...labeledData);
+            }
+    
+            this.quizData = allQuizData;
             this.handleInitialSearch();
         } catch (error) {
             console.error('Error fetching the quiz data:', error);
@@ -159,24 +170,34 @@ class SearchEngine {
         const start = (page - 1) * this.resultsPerPage;
         const end = start + this.resultsPerPage;
         const paginatedResults = results.slice(start, end);
-
+    
         paginatedResults.forEach(result => {
             if (result.hasOwnProperty('question')) {
                 // Quiz result
                 const questionElement = document.createElement('div');
                 questionElement.className = 'question-container';
+    
+                const sourceLabel = document.createElement('span');
+                const sourceNumber = result.source.match(/\d+/)[0];
+                sourceLabel.className =  `level-label level-${sourceNumber}`
+                sourceLabel.textContent = `N${sourceNumber}`;
 
+                const TypeLabel = document.createElement('span');
+                const QType = result.source.match(/\d+/)[0];
+                TypeLabel.className =  `type-label type-${result.type}`
+                TypeLabel.textContent = `${result.type}`;
+    
                 const questionNumber = document.createElement('div');
                 questionNumber.className = 'question-number';
                 questionNumber.textContent = `Question ${result.number}`;
-
+    
                 const questionText = document.createElement('div');
                 questionText.className = 'question-text';
                 questionText.innerHTML = this.highlightText(result.question, document.getElementById('search-input').value.toLowerCase());
-
+    
                 const optionsList = document.createElement('ul');
                 optionsList.className = 'options';
-
+    
                 result.options.forEach(option => {
                     const optionItem = document.createElement('li');
                     const optionKey = Object.keys(option)[0];
@@ -187,7 +208,9 @@ class SearchEngine {
                     }
                     optionsList.appendChild(optionItem);
                 });
-
+    
+                questionElement.appendChild(sourceLabel);
+                questionElement.appendChild(TypeLabel);
                 questionElement.appendChild(questionNumber);
                 questionElement.appendChild(questionText);
                 questionElement.appendChild(optionsList);

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Osha's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media-queries.css">
+  <link rel="stylesheet" href="neon-genesis.css"> <!-- New CSS file for Evangelion theme -->
+  <link rel="icon" type="image/x-icon" href="assets/logo.ico">
+  <meta name="google-site-verification" content="puB9F88Hy6qAsJhtiRhWmfJel4aaOwuMid5UexJhlmA" />
+</head>
+
+<body class="neon-theme"> <!-- Add class for new theme -->
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+  <nav id="desktop-nav" class="neon-nav">
+    <div class="logo neon-logo">Osha</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about" class="neon-link">About</a></li>
+        <li><a href="#experience" class="neon-link">Experiences</a></li>
+        <li><a href="#project" class="neon-link">Projects</a></li>
+        <li><a href="#contact" class="neon-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav" class="neon-nav">
+    <div class="logo neon-logo">Osha</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" class="neon-link" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" class="neon-link" onclick="toggleMenu()">Experiences</a></li>
+        <li><a href="#project" class="neon-link" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" class="neon-link" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+
+  <!-- The rest of your HTML remains the same -->
+</body>
+</html>

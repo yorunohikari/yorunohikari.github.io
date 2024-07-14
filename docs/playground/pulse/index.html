@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="saveIndicator" style="display:none;">Saving...</div>
+    <div id="warningDiv" style="display:none;">Warning</div>
+    <button class="btn" onclick="addNewEntry()">Add New Entry</button>
+    <button class="btn" onclick="exportJSON()">Export JSON</button>
+    <input type="file" id="importFile" style="display:none" onchange="importJSON(event)">
+    <label for="importFile" class="btn">Import JSON</label>
+
+    <div id="gotoDiv">
+        <input type="number" id="gotoNumber" placeholder="Go to number" />
+        <button class="btn" onclick="goToNumber()">Go</button>
+    </div>
+
+    <table id="jsonTable">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Type</th>
+                <th>Question</th>
+                <th>Options</th>
+                <th>Answer</th>
+                <th>Answer Text</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div id="pagination"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

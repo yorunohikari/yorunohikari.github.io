@@ -7,6 +7,10 @@
   <title>N1 GrindMaster</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/x-icon" href="/assets/marchile.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@goshintai_" />
   <meta name="twitter:title" content="GrindMaster" />
@@ -42,10 +46,21 @@
       <div class="settings-column">
         <img src="/assets/marchile4.png" alt="marchile" class="project-img" />
       </div>
+      <div class="settings-column">
+        <label for="quiz-level">Quiz Level :</label>
+        <select id="quiz-level">
+          <option value="1">N1</option>
+          <option value="2">N2</option>
+          <option value="3">N3 (not yet available)</option>
+          <option value="4">N4-N5</option>
+          <!-- Add more levels as needed -->
+        </select>
+      </div>
       <div class="settings-row">
         <div class="settings-column">
-          <label for="questions-count">Number of Questions:</label>
+          <label for="questions-count">Number of Questions :</label>
           <select id="questions-count">
+            <option value="5">5</option>
             <option value="10">10</option>
             <option value="15">15</option>
             <option value="20" selected>20</option>
@@ -57,6 +72,18 @@
           <input type="number" id="goal-input" min="1" placeholder="Enter number of questions">
         </div>
       </div>
+      <div class="settings-row">
+        <fieldset>
+          <legend>Question Types :</legend>
+          <input type="checkbox" id="moji" name="category" value="moji">
+          <label for="moji">Moji</label>
+          <input type="checkbox" id="goi" name="category" value="goi">
+          <label for="reading">Goi</label>
+          <input type="checkbox" id="bunpo" name="category" value="bunpo">
+          <label for="grammar">Bunpo</label>
+        </fieldset>
+      </div>
+
       <div class="settings-row">
         <div class="settings-column">
           <label for="import-file" class="file-label">Import Data</label>
@@ -78,8 +105,6 @@
         </div>
       </div>
     </div>
-
-
 
     <div id="history-container" style="display: none;">
       <h2>Progress</h2>
@@ -117,7 +142,7 @@
         <thead>
           <tr>
             <th>Date</th>
-            <th>Questions</th>
+            <th>Settings</th>
             <th>Score</th>
           </tr>
         </thead>
@@ -140,15 +165,57 @@
     </div>
 
     <div id="summary-container" style="display: none;">
-      <h2>Quiz Summary</h2>
-      <div>Final Score: <span id="final-score">0</span></div>
-      <div id="summary-list"></div>
-      <button class="primary" onclick="startQuiz()">Restart Quiz</button>
-      <button class="menu-button tertiary">Back to Menu</button>
+      <h1 id="summary-title">Your score is :</h1>
+      <div class="final-score">
+        <span class="final-score" id="progress-score"></span>
+      </div>
+
+      <div id="quiz-info-container" class="quiz-info">
+      </div>
+
+      <hr class="divider">
+      <table class="score-table">
+        <thead>
+          <tr>
+            <th>Question type</th>
+            <th>Wrong</th>
+            <th>Correct</th>
+          </tr>
+        </thead>
+        <tbody id="type-scores">
+          <!-- This will be populated dynamically -->
+        </tbody>
+      </table>
+
+      <hr class="divider">
+      <h3>Summary</h3>
+      <table class="summary-table">
+        <tr>
+          <td>Time spent :</td>
+          <td id="time-spent"></td>
+        </tr>
+        <tr>
+          <td>Total point :</td>
+          <td id="total-score"></td>
+        </tr>
+      </table>
+      <div class="review-link-bt">
+        <a href="#" id="review-link" class="review-link">Show Question Review</a>
+      </div>
+      <div class="question-review" id="question-review" style="display: none;"></div>
+      <div class="button-group">
+        <button class="primary" onclick="startQuiz()">Play Again</button>
+        <button id="share-result" class="summary-button">Share</button>
+        <button class="menu-button tertiary">Back to Menu</button>
+      </div>
     </div>
+
+
+  </div>
   </div>
 
   <script src="goal.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/min/moment.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script>
