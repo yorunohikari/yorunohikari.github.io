@@ -1,15 +1,15 @@
 /* Global Styles */
 body {
   font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   background-color: #eceff1;
   text-align: center;
 }
 
 /* Common Styles for Containers */
-.quiz-container,
-#main-menu,
 #quiz-container button {
   border-radius: 20px;
 }
@@ -26,12 +26,8 @@ h1 {
 
 .quiz-container,
 #main-menu {
-  max-width: 80%;
-  margin-top: 50px;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
+  max-width: 50%;
+  padding: 50px;
   border-radius: 30px;
   background: #ecf0f3;
   box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
@@ -66,7 +62,7 @@ h1 {
   overflow: hidden;
   transition: all 100ms ease-in-out;
   text-align: center;
-  width: 30%;
+  width: 50%;
 }
 
 #answer-input:focus {
@@ -428,6 +424,7 @@ footer {
     transform: rotate(360deg);
   }
 }
+
 
 
 /* Responsive Design */

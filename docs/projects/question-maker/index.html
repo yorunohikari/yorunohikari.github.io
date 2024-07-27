@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="\assets\json.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="head-nav">
+        <div id="saveIndicator" style="display:none;">Saving...</div>
+        <div id="warningDiv" style="display:none;">Warning</div>
+        <img src="\assets\json.png" style="width: 50px;" alt="">
+        <button class="btn" onclick="addNewEntry()">Add New Entry</button>
+        <button class="btn" onclick="addNewEntryTwo()">Add New Entry (two option)</button>
+        <button class="btn" onclick="exportJSON()">Export JSON</button>
+        <input type="file" id="importFile" style="display:none" onchange="importJSON(event)">
+        <label for="importFile" class="btn">Import JSON</label>
+        <div class="shortcut-sheet">
+            <p>Ctrl + R = Insert Ruby</p>
+            <p>Ctrl + M = Insert Em</p>
+        </div>
+        <div class="shortcut-sheet">
+            <p>Ctrl + Q = New Normal Entry</p>
+            <p>Ctrl + E = New Two Options Entry</p>
+            <p>Ctrl + G = Go to Number</p>
+        </div>
+        <div id="gotoDiv" class="floating-search" style="display: none;">
+            <form id="gotoForm" onsubmit="return goToNumber()">
+                <input type="number" id="gotoNumber" placeholder="Go to number" />
+                <button type="submit" class="btn">Go</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="table-container">
+        <table id="jsonTable">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Type</th>
+                    <th>Question</th>
+                    <th>Options</th>
+                    <th>Answer</th>
+                    <th>Answer Text</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+   
+
+    <div id="pagination"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

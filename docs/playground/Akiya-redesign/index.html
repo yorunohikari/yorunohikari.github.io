@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Container Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="top-nav">
+            <img src="setting.png" alt="Settings" class="setting-icon" id="settings-button">
+        </div>
+
+        <div id="main-menu" class="pd-10">
+            <img src="logo.jpg" alt="Logo" class="logo">
+            <button class="bg-primary text-secondary t-button-structure" onclick="startQuiz()">Play Quiz</button>
+        </div>
+
+        <div id="settings-container" class="pd-10" style="display: none;">
+            <h2 class="mb-20">Settings</h2>
+            <div class="settings-row">
+                <div class="settings-column flex">
+                    <label for="quiz-level">Quiz Level :</label>
+                    <select id="quiz-level" class="pd-10">
+                        <option value="1">N1</option>
+                        <option value="2">N2</option>
+                        <option value="3">N3 (not yet available)</option>
+                        <option value="4">N4-N5</option>
+                        <!-- Add more levels as needed -->
+                    </select>
+                </div>
+            </div>
+            <div class="settings-row">
+                <fieldset class="w-100">
+                    <legend>Question Types :</legend>
+                    <input type="checkbox" id="moji" name="category" value="moji">
+                    <label for="moji">Moji</label>
+                    <input type="checkbox" id="goi" name="category" value="goi">
+                    <label for="reading">Goi</label>
+                    <input type="checkbox" id="bunpo" name="category" value="bunpo">
+                    <label for="grammar">Bunpo</label>
+                </fieldset>
+            </div>
+            <div class="settings-row">
+                <div class="settings-column flex">
+                    <label for="questions-count">Number of Questions :</label>
+                    <select id="questions-count" class="pd-10">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20" selected>20</option>
+                        <option value="50">50</option>
+                    </select>
+                </div>
+                <div class="settings-column flex">
+                    <label for="goal-input">Set your weekly goal:</label>
+                    <input type="number" id="goal-input" class="pd-10" min="1" placeholder="Enter number of questions">
+                </div>
+            </div>
+            <div class="settings-row">
+                <div class="settings-column flex">
+                    <label for="import-file" class="bg-primary file-label text-secondary t-button-structure">Import
+                        Data</label>
+                    <input type="file" id="import-file" class="t-button-structure pd-10" accept="application/json"
+                        onchange="importData(event)">
+                </div>
+                <div class="settings-column flex">
+                    <button id="export-button" class="bg-primary text-secondary t-button-structure pd-10"
+                        onclick="exportData()">Export Data</button>
+                </div>
+                <div class="settings-column flex">
+                    <button id="toggle-fullscreen-button"
+                        class="bg-primary text-secondary t-button-structure pd-10">Toggle Fullscreen</button>
+                </div>
+            </div>
+            <div class="settings-row">
+                <div class="settings-column flex">
+                    <button id="save-setting-button"
+                        class="text-secondary t-button-structure bg-primary pd-10">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="stats-container" class="pd-10" style="display: none;">
+            <h2 class="mb-20">Progress</h2>
+            <div class="progress-container">
+                <div class="stats">
+                    <div class="goal-section bg-tertiary pd-20">
+                        <div id="progress-title">Weekly Goal</div>
+                        <div id="progress-circle" class="progress-circle flex-center"></div>
+                        <div id="progress-text">0 / 0</div>
+                    </div>
+                    <div class="stats-section bg-tertiary pd-20">
+                        <table id="stats-table">
+                            <tr>
+                                <th class="text-secondary">Total Questions Answered</th>
+                                <td id="total-questions">0</td>
+                            </tr>
+                            <tr>
+                                <th class="text-secondary">Accuracy</th>
+                                <td id="accuracy">0%</td>
+                            </tr>
+                            <tr>
+                                <th class="text-secondary">Day Streak</th>
+                                <td id="day-streak">0</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <canvas id="scoreChart" width="400" height="150"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div id="history-container" class="pd-10" style="display: none;">
+            <table id="history-table">
+                <thead>
+                    <tr>
+                        <th class="text-secondary">Date</th>
+                        <th class="text-secondary">Settings</th>
+                        <th class="text-secondary">Score</th>
+                    </tr>
+                </thead>
+                <tbody id="history-list"></tbody>
+            </table>
+            <div id="pagination-controls"></div>
+            <div class="button-group">
+                <button id="resethistory-button" class="text-secondary bg-primary t-button-structure">Reset
+                    Data</button>
+            </div>
+        </div>
+
+        <div class="bottom-nav">
+            <div class="bottom-nav-item" id="history-nav">
+                <img src="history.png" alt="History" class="bottom-nav-icon">
+                <div class="active-indicator" style="display: none;"></div>
+            </div>
+            <div class="bottom-nav-item" id="home-nav">
+                <img src="home.png" alt="Home" class="bottom-nav-icon">
+                <div class="active-indicator"></div>
+            </div>
+            <div class="bottom-nav-item" id="stats-nav">
+                <img src="stat.png" alt="Stats" class="bottom-nav-icon">
+                <div class="active-indicator" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

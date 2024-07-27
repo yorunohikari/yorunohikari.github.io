@@ -16,10 +16,10 @@ body {
 /* Variables */
 
 :root {
-  --primary-color: #DE3840;
+  --primary-color: #46B2FA;
   --primary-color-disabled: #9c0023;
   --secondary-color: #242424;
-  --tertiary-color: #ffe0e1;
+  --tertiary-color: #DFEAEC;
   --neutral-color: #FFFFFF;
 }
 
@@ -149,7 +149,6 @@ body {
 
 /* Main Container */
 .main-container {
-  padding: 30px 20px 35px 20px;
   max-width: 600px;
   max-height: 90vh;
   overflow-y: auto;

@@ -1,0 +1,202 @@
+/* Reset some common styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 4px;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.qinput {
+  border: none;
+  outline: none;
+}
+
+qinput:focus {
+  border: none;
+  outline: none;
+}
+
+textarea {
+  resize: none; /* Disable manual resizing */
+  overflow: hidden; /* Hide overflow */
+  min-height: 30px; /* Set a minimum height */
+  max-height: 200px; /* Set a maximum height */
+}
+
+.head-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 0 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.shortcut-sheet {
+  background-color: #ffffff;
+  color: #004fa3;
+  margin-left: 100px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #007bff;
+}
+
+.table-container {
+  padding: 0 20px;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.option-input {
+  display: flex;
+  align-items: center;
+}
+
+.option-input label {
+  margin-right: 8px;
+  width: 20px;
+  text-align: right;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 2px 0;
+  text-align: center;
+  border-radius: 5px;
+  font-size: medium;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+#pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#pagination .btn {
+  margin: 0 5px;
+}
+
+.btn.current-page {
+  background-color: #ff46d1;
+  color: white;
+  font-weight: bold;
+}
+
+#gotoDiv {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+#gotoNumber {
+  width: 100px;
+  margin-right: 10px;
+}
+
+#saveIndicator {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.floating-search {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
+}
+
+.floating-search input {
+  margin-right: 10px;
+}
+
+/* Base style for all rows */
+table tr {
+  background-color: #ffffff;
+}
+
+/* Style for Type 1 questions */
+table tr[data-type="1"] {
+  background-color: #f1f8ff; /* Light blue */
+}
+
+/* Style for Type 2 questions */
+table tr[data-type="2"] {
+  background-color: #efffef; /* Light green */
+}
+
+/* Style for Type 3 questions */
+table tr[data-type="3"] {
+  background-color: #fef3eb; /* Light orange */
+}
+
+/* Hover effect for all rows */
+table tr:hover {
+  filter: brightness(90%);
+}
