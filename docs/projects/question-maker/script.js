@@ -378,6 +378,21 @@ document.getElementById('gotoForm').addEventListener('submit', function (event) 
     goToNumber();
 });
 
+const input = document.getElementById('persistentInput');
+const storageKey = 'persistentInputValue';
+
+// Load the saved value when the page loads
+window.addEventListener('load', () => {
+    const savedValue = localStorage.getItem(storageKey);
+    if (savedValue) {
+        input.value = savedValue;
+    }
+});
+
+// Save the value whenever it changes
+input.addEventListener('input', () => {
+    localStorage.setItem(storageKey, input.value);
+});
 
 function toggleGotoDiv() {
     const gotoDiv = document.getElementById('gotoDiv');

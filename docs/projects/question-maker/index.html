@@ -18,13 +18,17 @@
         <input type="file" id="importFile" style="display:none" onchange="importJSON(event)">
         <label for="importFile" class="btn">Import JSON</label>
         <div class="shortcut-sheet">
-            <p>Ctrl + R = Insert Ruby</p>
-            <p>Ctrl + M = Insert Em</p>
+            <p>Ctrl + R = Insert Ruby (furigana)</p>
+            <p>Ctrl + M = Insert Em (underline)</p>
         </div>
         <div class="shortcut-sheet">
             <p>Ctrl + Q = New Normal Entry</p>
             <p>Ctrl + E = New Two Options Entry</p>
             <p>Ctrl + G = Go to Number</p>
+        </div>
+        <div class="shortcut-sheet">
+            <h3>Last time, i edited number :</h3>
+            <input type="text" id="persistentInput" placeholder="Enter your number here">
         </div>
         <div id="gotoDiv" class="floating-search" style="display: none;">
             <form id="gotoForm" onsubmit="return goToNumber()">

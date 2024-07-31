@@ -4,7 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JLPT GrindMaster</title>
+  <title>JLPT GrindMaster - goshintai.xyz</title>
+  <meta name="description"
+    content="Test you Japanese Skills at JLPT GrindMaster.">
+  <meta name="keywords" content="JLPT quiz, Quiz, Bunpo quiz, Kanji Quiz, JLPT.">
+  <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/x-icon" href="/assets/marchile.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,11 +41,12 @@
             <button class="bg-primary text-secondary t-button-structure" onclick="startQuiz()">Play Quiz</button>
             <button id="settings-button" class="text-primary t-button-structure bg-neutral">Settings</button>
             <button id="history-button" class="text-primary t-button-structure bg-neutral">Personal Progress</button>
-            <button class="text-primary t-button-structure bg-neutral" onclick="window.location.href='https://goshintai.xyz/blog/jlpt/bunpo/';">Browse Questions</button>
+            <button class="text-primary t-button-structure bg-neutral"
+              onclick="window.location.href='https://goshintai.xyz/blog/jlpt/bunpo/';">Browse Questions</button>
           </div>
         </div>
       </div>
-      
+
     </div>
 
     <div id="settings-container" class="pd-10" style="display: none;">
@@ -91,13 +96,16 @@
       <div class="settings-row">
         <div class="settings-column flex">
           <label for="import-file" class="bg-primary file-label text-secondary t-button-structure">Import Data</label>
-          <input type="file" id="import-file" class="t-button-structure pd-10" accept="application/json" onchange="importData(event)">
+          <input type="file" id="import-file" class="t-button-structure pd-10" accept="application/json"
+            onchange="importData(event)">
         </div>
         <div class="settings-column flex">
-          <button id="export-button" class="bg-primary text-secondary t-button-structure pd-10" onclick="exportData()">Export Data</button>
+          <button id="export-button" class="bg-primary text-secondary t-button-structure pd-10"
+            onclick="exportData()">Export Data</button>
         </div>
         <div class="settings-column flex">
-          <button id="toggle-fullscreen-button" class="bg-primary text-secondary t-button-structure pd-10">Toggle Fullscreen</button>
+          <button id="toggle-fullscreen-button" class="bg-primary text-secondary t-button-structure pd-10">Toggle
+            Fullscreen</button>
         </div>
       </div>
       <div class="settings-row">
