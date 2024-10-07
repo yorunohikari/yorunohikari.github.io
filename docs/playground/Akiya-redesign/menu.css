@@ -269,6 +269,7 @@ fieldset {
 button,
 .file-label {
   flex: 1;
+  max-height: 50px;
   border-radius: 10px;
   border: 1px solid var(--primary-color);
   padding: 10px;

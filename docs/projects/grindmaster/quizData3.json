@@ -1,130 +1,9664 @@
 {
   "questions": [
     {
-      "number": 1,
-      "type": "moji",
-      "question": "郵便局の近くに引っ越したので便利です。",
-      "options": [
-        {
-          "1": "ゆうびんきょく"
-        },
-        {
-          "2": "ゆびんきょく"
-        },
-        {
-          "3": "ようびんきょく"
-        },
-        {
-          "4": "よべんきょく"
-        }
-      ],
-      "answer": 1,
-      "answer_text": "ゆうびんきょく"
-    },
-    {
-      "number": 2,
-      "type": "goi",
-      "question": "荷物が届きましたが、それは私が注文したのと_____。",
-      "options": [
-        {
-          "1": "ちがかったです"
-        },
-        {
-          "2": "まちがったです"
-        },
-        {
-          "3": "ちがっていました"
-        },
-        {
-          "4": "まちがえていました"
-        }
-      ],
-      "answer": 3,
-      "answer_text": "ちがっていました"
-    },
-    {
-      "number": 3,
-      "type": "bunpo",
-      "question": "子供のころ、この公園で遊んだ_____。",
-      "options": [
-        {
-          "1": "ことか"
-        },
-        {
-          "2": "ことだ"
-        },
-        {
-          "3": "ものか"
-        },
-        {
-          "4": "ものだ"
-        }
-      ],
-      "answer": 4,
-      "answer_text": "ものだ"
-    },
-    {
-      "number": 4,
-      "type": "moji",
-      "question": "初めまして。リンともうします。",
-      "options": [
-        {
-          "1": "由します"
-        },
-        {
-          "2": "曲します"
-        },
-        {
-          "3": "申します"
-        },
-        {
-          "4": "直します"
-        }
-      ],
-      "answer": 3,
-      "answer_text": "申します"
-    },
-    {
-      "number": 5,
-      "type": "goi",
-      "question": "夫とは大学のとき_____、卒業後すぐに結婚した。",
-      "options": [
-        {
-          "1": "出会って"
-        },
-        {
-          "2": "出会いして"
-        },
-        {
-          "3": "出会いて"
-        },
-        {
-          "4": "出会いにして"
-        }
-      ],
-      "answer": 1,
-      "answer_text": "出会って"
-    },
-    {
-      "number": 6,
-      "type": "bunpo",
-      "question": "ゲームを_____ばかりいないで、自然に親しんだらどうですか。",
-      "options": [
-        {
-          "1": "し"
-        },
-        {
-          "2": "して"
-        },
-        {
-          "3": "した"
-        },
-        {
-          "4": "する"
-        }
-      ],
-      "answer": 2,
-      "answer_text": "して"
-    }
-  ]
+    "number": 1,
+    "type": "moji",
+    "question": "<em>郵便局</em>の近くに引っ越したので便利です。",
+    "options": [
+      {
+        "1": "ゆうびんきょく"
+      },
+      {
+        "2": "ゆびんきょく"
+      },
+      {
+        "3": "ようびんきょく"
+      },
+      {
+        "4": "よべんきょく"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ゆうびんきょく"
+  },
+  {
+    "number": 2,
+    "type": "goi",
+    "question": "<ruby>荷物<rt>にもつ</rt></ruby>が<ruby>届<rt>とど</rt></ruby>きましたが、それは私が<ruby>注文<rt>ちゅうもん</rt></ruby>したのと_____。",
+    "options": [
+      {
+        "1": "ちがかったです"
+      },
+      {
+        "2": "まちがったです"
+      },
+      {
+        "3": "ちがっていました"
+      },
+      {
+        "4": "まちがえていました"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "ちがっていました"
+  },
+  {
+    "number": 3,
+    "type": "bunpo",
+    "question": "<ruby>子供<rt>こども</rt></ruby>のころ、この<ruby>公園<rt>こうえん</rt></ruby>で<ruby>遊<rt>あそ</rt></ruby>んだ_____。",
+    "options": [
+      {
+        "1": "ことか"
+      },
+      {
+        "2": "ことだ"
+      },
+      {
+        "3": "ものか"
+      },
+      {
+        "4": "ものだ"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "ものだ"
+  },
+  {
+    "number": 4,
+    "type": "moji",
+    "question": "初めまして。リンと<em>もうします</em>。",
+    "options": [
+      {
+        "1": "由します"
+      },
+      {
+        "2": "曲します"
+      },
+      {
+        "3": "申します"
+      },
+      {
+        "4": "直します"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "申します"
+  },
+  {
+    "number": 5,
+    "type": "goi",
+    "question": "<ruby>夫<rt>おっと</rt></ruby>とは<ruby>大学<rt>だいがく</rt></ruby>のとき_____、<ruby>卒業<rt>そつぎょう</rt></ruby><ruby>後<rt>ご</rt></ruby>すぐに<ruby>結婚<rt>けっこん</rt></ruby>した。",
+    "options": [
+      {
+        "1": "<ruby>出会<rt>であ</rt></ruby>って"
+      },
+      {
+        "2": "<ruby>出会<rt>であ</rt></ruby>いして"
+      },
+      {
+        "3": "<ruby>出会<rt>であ</rt></ruby>いて"
+      },
+      {
+        "4": "<ruby>出会<rt>であ</rt></ruby>いにして"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "出会って"
+  },
+  {
+    "number": 6,
+    "type": "bunpo",
+    "question": "ゲームを_____ばかりいないで、<ruby>自然<rt>しぜん</rt></ruby>に<ruby>親<rt>した</rt></ruby>しんだらどうですか。",
+    "options": [
+      {
+        "1": "し"
+      },
+      {
+        "2": "して"
+      },
+      {
+        "3": "した"
+      },
+      {
+        "4": "する"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "して"
+  },
+  {
+    "number": 7,
+    "type": "moji",
+    "question": "財布が落ちていたので、交番に届けた。",
+    "options": [
+      {
+        "1": "つづけた"
+      },
+      {
+        "2": "あずけた"
+      },
+      {
+        "3": "とどけた"
+      },
+      {
+        "4": "ほどけた"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "とどけた"
+  },
+  {
+    "number": 8,
+    "type": "goi",
+    "question": "うそを______はいけません。",
+    "options": [
+      {
+        "1": "ひいて"
+      },
+      {
+        "2": "とって"
+      },
+      {
+        "3": "うつして"
+      },
+      {
+        "4": "ついて"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "ついて"
+  },
+  {
+    "number": 9,
+    "type": "bunpo",
+    "question": "______ありがとう。",
+    "options": [
+      {
+        "1": "<ruby>手伝<rt>てつだ</rt></ruby>って"
+      },
+      {
+        "2": "<ruby>手伝<rt>てつだ</rt></ruby>う"
+      },
+      {
+        "3": "<ruby>手伝<rt>てつだ</rt></ruby>ったのは"
+      },
+      {
+        "4": "<ruby>手伝<rt>てつだ</rt></ruby>ってくれて"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "<ruby>手伝<rt>てつだ</rt></ruby>ってくれて"
+  },
+  {
+    "number": 10,
+    "type": "moji",
+    "question": "向こうの和室でお金と<em>おかし</em>をいただきましょう。",
+    "options": [
+      {
+        "1": "お菓子"
+      },
+      {
+        "2": "お果物"
+      },
+      {
+        "3": "お果子"
+      },
+      {
+        "4": "お菓物"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "お菓子"
+  },
+  {
+    "number": 11,
+    "type": "goi",
+    "question": "これからそちらに______から、3<ruby>時<rt>じ</rt></ruby>までには<ruby>着<rt>つ</rt></ruby>くと<ruby>思<rt>おも</rt></ruby>います。",
+    "options": [
+      {
+        "1": "むかえます"
+      },
+      {
+        "2": "とどきます"
+      },
+      {
+        "3": "まにあいます"
+      },
+      {
+        "4": "むかいます"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "むかいます"
+  },
+  {
+    "number": 12,
+    "type": "bunpo",
+    "question": "Ａ「ここは<ruby>写真<rt>しゃしん</rt></ruby>を______いけないんだよ。」\nB「あ、そうなんだ。」",
+    "options": [
+      {
+        "1": "とっちゃ"
+      },
+      {
+        "2": "とるんじゃ"
+      },
+      {
+        "3": "とんじゃ"
+      },
+      {
+        "4": "とっちゃって"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "とっちゃ"
+  },
+  {
+    "number": 13,
+    "type": "moji",
+    "question": "昔は、車の代わりに馬や牛が<em>荷物</em>を運んだりした。",
+    "options": [
+      {
+        "1": "みもつ"
+      },
+      {
+        "2": "かもつ"
+      },
+      {
+        "3": "にもつ"
+      },
+      {
+        "4": "いもつ"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "にもつ"
+  },
+  {
+    "number": 14,
+    "type": "goi",
+    "question": "A「ごめんね。<ruby>本当<rt>ほんとう</rt></ruby>にごめん。」\nB「そんなに______いいよ。」",
+    "options": [
+      {
+        "1": "あいさつしなくても"
+      },
+      {
+        "2": "あやまらなくても"
+      },
+      {
+        "3": "ちゅういしなくても"
+      },
+      {
+        "4": "おこらなくても"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "あやまらなくても"
+  },
+  {
+    "number": 15,
+    "type": "bunpo",
+    "question": "A「<ruby>全部<rt>ぜんぶ</rt></ruby>______ちゃおうか。」\nB「<ruby>明日<rt>あした</rt></ruby>の<ruby>分<rt>ぶん</rt></ruby>、とっとこうよ。」",
+    "options": [
+      {
+        "1": "<ruby>食<rt>た</rt></ruby>べる"
+      },
+      {
+        "2": "<ruby>食<rt>た</rt></ruby>べて"
+      },
+      {
+        "3": "<ruby>食<rt>た</rt></ruby>べ"
+      },
+      {
+        "4": "<ruby>食<rt>た</rt></ruby>べた"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "<ruby>食<rt>た</rt></ruby>べ"
+  },
+  {
+    "number": 16,
+    "type": "moji",
+    "question": "次の信号を左に<em>曲がって</em>ください。",
+    "options": [
+      {
+        "1": "もがって"
+      },
+      {
+        "2": "みがって"
+      },
+      {
+        "3": "むがって"
+      },
+      {
+        "4": "まがって"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "まがって"
+  },
+  {
+    "number": 17,
+    "type": "goi",
+    "question": "<ruby>鉛筆<rt>えんぴつ</rt></ruby>に<ruby>消<rt>け</rt></ruby>しゴムをつけたのは、<ruby>良<rt>よ</rt></ruby>い______だと<ruby>思<rt>おも</rt></ruby>う。",
+    "options": [
+      {
+        "1": "アイデア"
+      },
+      {
+        "2": "チャンス"
+      },
+      {
+        "3": "バランス"
+      },
+      {
+        "4": "テーマ"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "アイデア"
+  },
+  {
+    "number": 18,
+    "type": "bunpo",
+    "question": "あんなやり<ruby>方<rt>かた</rt></ruby>ではうまく______だろうと<ruby>思<rt>おも</rt></ruby>う。",
+    "options": [
+      {
+        "1": "いく"
+      },
+      {
+        "2": "いかない"
+      },
+      {
+        "3": "いこう"
+      },
+      {
+        "4": "いくまい"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "いかない"
+  },
+  {
+    "number": 19,
+    "type": "moji",
+    "question": "まもなく電車が<em>まいります</em>。危ないですから、黄色い線まで下がってお待ちください。",
+    "options": [
+      {
+        "1": "入ります"
+      },
+      {
+        "2": "参ります"
+      },
+      {
+        "3": "着ります"
+      },
+      {
+        "4": "回ります"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "参ります"
+  },
+  {
+    "number": 20,
+    "type": "goi",
+    "question": "A「<ruby>試験<rt>しけん</rt></ruby>はできた？」\nB「うん、______わからなかったけど、だいたいできたよ。」",
+    "options": [
+      {
+        "1": "すべて"
+      },
+      {
+        "2": "まあまあ"
+      },
+      {
+        "3": "つぎつぎに"
+      },
+      {
+        "4": "ところどころ"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "ところどころ"
+  },
+  {
+    "number": 21,
+    "type": "bunpo",
+    "question": "<ruby>今年<rt>ことし</rt></ruby>は、<ruby>日本語能力試験<rt>にほんごのうりょくしけん</rt></ruby>のN3を______と<ruby>思<rt>おも</rt></ruby>います。",
+    "options": [
+      {
+        "1": "<ruby>受<rt>う</rt></ruby>けよう"
+      },
+      {
+        "2": "<ruby>受<rt>う</rt></ruby>けろう"
+      },
+      {
+        "3": "<ruby>受<rt>う</rt></ruby>けるよう"
+      },
+      {
+        "4": "<ruby>受<rt>う</rt></ruby>こう"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>受<rt>う</rt></ruby>けよう"
+  },
+  {
+    "number": 22,
+    "type": "moji",
+    "question": "やり方は簡単です。心配は<em>要りません</em>。",
+    "options": [
+      {
+        "1": "ありません"
+      },
+      {
+        "2": "おりません"
+      },
+      {
+        "3": "たりません"
+      },
+      {
+        "4": "いりません"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "いりません"
+  },
+  {
+    "number": 23,
+    "type": "goi",
+    "question": "ぼくは<ruby>英語<rt>えいご</rt></ruby>は<ruby>苦手<rt>にがて</rt></ruby>だが、<ruby>数学<rt>すうがく</rt></ruby>は______だ。",
+    "options": [
+      {
+        "1": "<ruby>上手<rt>じょうず</rt></ruby>"
+      },
+      {
+        "2": "<ruby>得意<rt>とくい</rt></ruby>"
+      },
+      {
+        "3": "<ruby>上等<rt>じょうとう</rt></ruby>"
+      },
+      {
+        "4": "<ruby>高級<rt>こうきゅう</rt></ruby>"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>得意<rt>とくい</rt></ruby>"
+  },
+  {
+    "number": 24,
+    "type": "bunpo",
+    "question": "A「<ruby>君<rt>きみ</rt></ruby>、<ruby>昨日来<rt>きのうこ</rt></ruby>なかったね。」\nB「______が．．．。」",
+    "options": [
+      {
+        "1": "<ruby>行<rt>い</rt></ruby>くつもりです"
+      },
+      {
+        "2": "<ruby>行<rt>い</rt></ruby>くつもりません"
+      },
+      {
+        "3": "<ruby>行<rt>い</rt></ruby>ったつもり"
+      },
+      {
+        "4": "<ruby>行<rt>い</rt></ruby>くつもりでした"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "<ruby>行<rt>い</rt></ruby>くつもりでした"
+  },
+  {
+    "number": 25,
+    "type": "moji",
+    "question": "この<em>ざっし</em>は、辞書があれば読める。",
+    "options": [
+      {
+        "1": "冊子"
+      },
+      {
+        "2": "雑誌"
+      },
+      {
+        "3": "冊誌"
+      },
+      {
+        "4": "雑子"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "雑誌"
+  },
+  {
+    "number": 26,
+    "type": "goi",
+    "question": "<ruby>隣<rt>となり</rt></ruby>の<ruby>席<rt>せき</rt></ruby>______ので、<ruby>荷物<rt>にもつ</rt></ruby>をそこに<ruby>置<rt>お</rt></ruby>いた。",
+    "options": [
+      {
+        "1": "あいていた"
+      },
+      {
+        "2": "のこっていた"
+      },
+      {
+        "3": "すいていた"
+      },
+      {
+        "4": "あまっていた"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "あいていた"
+  },
+  {
+    "number": 27,
+    "type": "bunpo",
+    "question": "<ruby>図書館<rt>としょかん</rt></ruby>の<ruby>本<rt>ほん</rt></ruby>を<ruby>返<rt>かえ</rt></ruby>す______<ruby>忘<rt>わす</rt></ruby>れていた。",
+    "options": [
+      {
+        "1": "には"
+      },
+      {
+        "2": "のに"
+      },
+      {
+        "3": "のを"
+      },
+      {
+        "4": "もの"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "のを"
+  },
+  {
+    "number": 28,
+    "type": "moji",
+    "question": "<em>宿題</em>を机の上に置いてきてしまった。",
+    "options": [
+      {
+        "1": "すくだい"
+      },
+      {
+        "2": "しょくだい"
+      },
+      {
+        "3": "しゅくだい"
+      },
+      {
+        "4": "しくだい"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "しゅくだい"
+  },
+  {
+    "number": 29,
+    "type": "goi",
+    "question": "A「すみません、コーヒーのおかわりをお<ruby>願<rt>ねが</rt></ruby>いします。」\nB「はい、______。」",
+    "options": [
+      {
+        "1": "りょうかいいたします"
+      },
+      {
+        "2": "おじゃまいたしました"
+      },
+      {
+        "3": "しょうちいたします"
+      },
+      {
+        "4": "かしこまりました"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "かしこまりました"
+  },
+  {
+    "number": 30,
+    "type": "bunpo",
+    "question": "<ruby>明日<rt>あした</rt></ruby>の<ruby>面接試験<rt>めんせつしけん</rt></ruby>______<ruby>気<rt>き</rt></ruby>になって<ruby>眠<rt>ねむ</rt></ruby>れない。",
+    "options": [
+      {
+        "1": "については"
+      },
+      {
+        "2": "のことが"
+      },
+      {
+        "3": "によって"
+      },
+      {
+        "4": "だから"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "のことが"
+  },
+  {
+    "number": 31,
+    "type": "moji",
+    "question": "これは夫がかいた<em>港</em>の絵です。",
+    "options": [
+      {
+        "1": "やまと"
+      },
+      {
+        "2": "みやこ"
+      },
+      {
+        "3": "ちまた"
+      },
+      {
+        "4": "みなと"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "みなと"
+  },
+  {
+    "number": 32,
+    "type": "goi",
+    "question": "では、また______お<ruby>電話<rt>でんわ</rt></ruby>いたします。",
+    "options": [
+      {
+        "1": "まもなく"
+      },
+      {
+        "2": "のちほど"
+      },
+      {
+        "3": "しばらく"
+      },
+      {
+        "4": "さきに"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "のちほど"
+  },
+  {
+    "number": 33,
+    "type": "bunpo",
+    "question": "______<ruby>練習<rt>れんしゅう</rt></ruby>は<ruby>休<rt>やす</rt></ruby>みません。",
+    "options": [
+      {
+        "1": "<ruby>疲<rt>つか</rt></ruby>れていても"
+      },
+      {
+        "2": "<ruby>疲<rt>つか</rt></ruby>れていては"
+      },
+      {
+        "3": "<ruby>疲<rt>つか</rt></ruby>れていると"
+      },
+      {
+        "4": "<ruby>疲<rt>つか</rt></ruby>れているから"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>疲<rt>つか</rt></ruby>れていても"
+  },
+  {
+    "number": 34,
+    "type": "moji",
+    "question": "電車が事故で<em>おくれました</em>。",
+    "options": [
+      {
+        "1": "割れました"
+      },
+      {
+        "2": "送れました"
+      },
+      {
+        "3": "遅れました"
+      },
+      {
+        "4": "別れました"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "遅れました"
+  },
+  {
+    "number": 35,
+    "type": "goi",
+    "question": "<ruby>昨日<rt>きのう</rt></ruby>、<ruby>運動<rt>うんどう</rt></ruby>しすぎて、<ruby>体<rt>からだ</rt></ruby>の______が<ruby>痛<rt>いた</rt></ruby>いです。",
+    "options": [
+      {
+        "1": "あのへん"
+      },
+      {
+        "2": "どこでも"
+      },
+      {
+        "3": "あちこち"
+      },
+      {
+        "4": "どこか"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "あちこち"
+  },
+  {
+    "number": 36,
+    "type": "bunpo",
+    "question": "<ruby>準備運動<rt>じゅんびうんどう</rt></ruby>を______<ruby>泳<rt>およ</rt></ruby>ぐと<ruby>危険<rt>きけん</rt></ruby>です。",
+    "options": [
+      {
+        "1": "さずに"
+      },
+      {
+        "2": "しずに"
+      },
+      {
+        "3": "されずに"
+      },
+      {
+        "4": "せずに"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "せずに"
+  },
+  {
+    "number": 37,
+    "type": "moji",
+    "question": "彼は<em>卒業式</em>に出ませんでした。",
+    "options": [
+      {
+        "1": "そっぎょうしき"
+      },
+      {
+        "2": "そちぎょうしき"
+      },
+      {
+        "3": "そつぎょうしき"
+      },
+      {
+        "4": "そうぎょうしき"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "そつぎょうしき"
+  },
+  {
+    "number": 38,
+    "type": "goi",
+    "question": "<ruby>緊張<rt>きんちょう</rt></ruby>しないで、______<ruby>話<rt>はな</rt></ruby>しましょう。",
+    "options": [
+      {
+        "1": "おもいついて"
+      },
+      {
+        "2": "はりきって"
+      },
+      {
+        "3": "おちついて"
+      },
+      {
+        "4": "みなおして"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "おちついて"
+  },
+  {
+    "number": 39,
+    "type": "bunpo",
+    "question": "A「なんて<ruby>書<rt>か</rt></ruby>いてあるの？」\nB「<ruby>危<rt>あ</rt></ruby>ない！______って<ruby>書<rt>か</rt></ruby>いてあるんだよ。」",
+    "options": [
+      {
+        "1": "<ruby>飛<rt>と</rt></ruby>び<ruby>出<rt>だ</rt></ruby>せ"
+      },
+      {
+        "2": "<ruby>飛<rt>と</rt></ruby>び<ruby>出<rt>だ</rt></ruby>して"
+      },
+      {
+        "3": "<ruby>飛<rt>と</rt></ruby>び<ruby>出<rt>だ</rt></ruby>そう"
+      },
+      {
+        "4": "<ruby>飛<rt>と</rt></ruby>び<ruby>出<rt>だ</rt></ruby>すな"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "<ruby>飛<rt>と</rt></ruby>び<ruby>出<rt>だ</rt></ruby>すな"
+  },
+  {
+    "number": 40,
+    "type": "moji",
+    "question": "紹介します。<em>つま</em>と息子です。",
+    "options": [
+      {
+        "1": "夫"
+      },
+      {
+        "2": "妻"
+      },
+      {
+        "3": "主人"
+      },
+      {
+        "4": "家内"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "妻"
+  },
+  {
+    "number": 41,
+    "type": "goi",
+    "question": "よくわかりません。もう<ruby>少<rt>すこ</rt></ruby>し______<ruby>説明<rt>せつめい</rt></ruby>してくださいませんか。",
+    "options": [
+      {
+        "1": "くわして"
+      },
+      {
+        "2": "きびしく"
+      },
+      {
+        "3": "けわしく"
+      },
+      {
+        "4": "よろしく"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "くわして"
+  },
+  {
+    "number": 42,
+    "type": "bunpo",
+    "question": "A「<ruby>宝<rt>たから</rt></ruby>くじ______かなあ。」\nB「お<ruby>金<rt>かね</rt></ruby>のむだだよ。」",
+    "options": [
+      {
+        "1": "<ruby>買<rt>か</rt></ruby>うもの"
+      },
+      {
+        "2": "<ruby>買<rt>か</rt></ruby>うこと"
+      },
+      {
+        "3": "<ruby>買<rt>か</rt></ruby>おう"
+      },
+      {
+        "4": "<ruby>買<rt>か</rt></ruby>うよう"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "<ruby>買<rt>か</rt></ruby>うもの"
+  },
+  {
+    "number": 43,
+    "type": "moji",
+    "question": "<em>授業</em>の予定が変わった。",
+    "options": [
+      {
+        "1": "じぎょう"
+      },
+      {
+        "2": "ずぎょう"
+      },
+      {
+        "3": "じゅうぎょう"
+      },
+      {
+        "4": "じゅぎょう"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "じゅぎょう"
+  },
+  {
+    "number": 44,
+    "type": "goi",
+    "question": "スキーで______<ruby>足<rt>あし</rt></ruby>の<ruby>骨<rt>ほね</rt></ruby>を<ruby>折<rt>お</rt></ruby>ってしまった。",
+    "options": [
+      {
+        "1": "おちて"
+      },
+      {
+        "2": "たおれて"
+      },
+      {
+        "3": "ころんで"
+      },
+      {
+        "4": "つぶれて"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "ころんで"
+  },
+  {
+    "number": 45,
+    "type": "bunpo",
+    "question": "<ruby>国<rt>くに</rt></ruby>へ<ruby>帰<rt>かえ</rt></ruby>っても、<ruby>私達<rt>わたしたち</rt></ruby>のことを______ほしい。",
+    "options": [
+      {
+        "1": "<ruby>覚<rt>おぼ</rt></ruby>えて"
+      },
+      {
+        "2": "<ruby>覚<rt>おぼ</rt></ruby>えないで"
+      },
+      {
+        "3": "<ruby>忘<rt>わす</rt></ruby>れて"
+      },
+      {
+        "4": "<ruby>忘<rt>わす</rt></ruby>れないで"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "<ruby>忘<rt>わす</rt></ruby>れないで"
+  },
+  {
+    "number": 46,
+    "type": "moji",
+    "question": "彼女と結婚の<em>約束</em>をした。",
+    "options": [
+      {
+        "1": "よくそく"
+      },
+      {
+        "2": "よっそく"
+      },
+      {
+        "3": "やくそく"
+      },
+      {
+        "4": "やっそく"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "やくそく"
+  },
+  {
+    "number": 47,
+    "type": "goi",
+    "question": "ぼくは______で、<ruby>姉<rt>あね</rt></ruby>が<ruby>一人<rt>ひとり</rt></ruby>、<ruby>兄<rt>あに</rt></ruby>が<ruby>二人<rt>ふたり</rt></ruby>います。",
+    "options": [
+      {
+        "1": "ひとりっこ"
+      },
+      {
+        "2": "すえっこ"
+      },
+      {
+        "3": "ちょうなん"
+      },
+      {
+        "4": "じなん"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "すえっこ"
+  },
+  {
+    "number": 48,
+    "type": "bunpo",
+    "question": "<ruby>風邪<rt>かぜ</rt></ruby>がうつらない______、マスクをします。",
+    "options": [
+      {
+        "1": "ために"
+      },
+      {
+        "2": "ように"
+      },
+      {
+        "3": "のそうに"
+      },
+      {
+        "4": "とおりに"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ように"
+  },
+  {
+    "number": 49,
+    "type": "moji",
+    "question": "船より<em>ひこうき</em>のほうが速い。",
+    "options": [
+      {
+        "1": "飛高機"
+      },
+      {
+        "2": "飛行機"
+      },
+      {
+        "3": "引行機"
+      },
+      {
+        "4": "引高機"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "飛行機"
+  },
+  {
+    "number": 50,
+    "type": "goi",
+    "question": "この<ruby>野菜<rt>やさい</rt></ruby>は______<ruby>食<rt>た</rt></ruby>べられません。ゆでるか<ruby>焼<rt>や</rt></ruby>くかしてください。",
+    "options": [
+      {
+        "1": "むいては"
+      },
+      {
+        "2": "ままでは"
+      },
+      {
+        "3": "なまでは"
+      },
+      {
+        "4": "にては"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "なまでは"
+  },
+  {
+    "number": 51,
+    "type": "bunpo",
+    "question": "<ruby>忙<rt>いそが</rt></ruby>しくて<ruby>寝<rt>ね</rt></ruby>る<ruby>時間<rt>じかん</rt></ruby>______ないのに、<ruby>遊<rt>あそ</rt></ruby>びに<ruby>行<rt>い</rt></ruby>けるわけがない。",
+    "options": [
+      {
+        "1": "でも"
+      },
+      {
+        "2": "ほど"
+      },
+      {
+        "3": "さえ"
+      },
+      {
+        "4": "だけ"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "さえ"
+  },
+  {
+    "number": 52,
+    "type": "moji",
+    "question": "大学で<em>美術</em>を勉強しています。",
+    "options": [
+      {
+        "1": "ぎじつ"
+      },
+      {
+        "2": "ぎじゅつ"
+      },
+      {
+        "3": "びじつ"
+      },
+      {
+        "4": "びじゅつ"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "びじゅつ"
+  },
+  {
+    "number": 53,
+    "type": "goi",
+    "question": "A「スニーカーのひもがほどけているよ。」\nB「ほんとだ。______から<ruby>待<rt>ま</rt></ruby>って。」",
+    "options": [
+      {
+        "1": "ぬく"
+      },
+      {
+        "2": "くっつける"
+      },
+      {
+        "3": "むすぶ"
+      },
+      {
+        "4": "ぬう"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "むすぶ"
+  },
+  {
+    "number": 54,
+    "type": "bunpo",
+    "question": "A「ちょっとお<ruby>茶<rt>ちゃ</rt></ruby>でも<ruby>飲<rt>の</rt></ruby>んで<ruby>休<rt>やす</rt></ruby>もうか。」\nB「お<ruby>茶<rt>ちゃ</rt></ruby>なんか<ruby>要<rt>い</rt></ruby>らない。______なんかいられないよ。」",
+    "options": [
+      {
+        "1": "<ruby>休<rt>やす</rt></ruby>んで"
+      },
+      {
+        "2": "<ruby>休<rt>やす</rt></ruby>む"
+      },
+      {
+        "3": "<ruby>休<rt>やす</rt></ruby>み"
+      },
+      {
+        "4": "<ruby>休<rt>やす</rt></ruby>んだ"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>休<rt>やす</rt></ruby>んで"
+  },
+  {
+    "number": 55,
+    "type": "moji",
+    "question": "橋を<em>わたって</em>、ニつ目の角を右へ曲がると郵便局があります。",
+    "options": [
+      {
+        "1": "渡って"
+      },
+      {
+        "2": "通って"
+      },
+      {
+        "3": "進って"
+      },
+      {
+        "4": "沿って"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "渡って"
+  },
+  {
+    "number": 56,
+    "type": "goi",
+    "question": "<ruby>車<rt>くるま</rt></ruby>の<ruby>事故<rt>じこ</rt></ruby>にあったが、______よかった。",
+    "options": [
+      {
+        "1": "<ruby>気<rt>き</rt></ruby>おつけて"
+      },
+      {
+        "2": "いいかげんで"
+      },
+      {
+        "3": "お<ruby>気<rt>き</rt></ruby>の<ruby>毒<rt>どく</rt></ruby>で"
+      },
+      {
+        "4": "<ruby>大<rt>たい</rt></ruby>したことがなくて"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "<ruby>大<rt>たい</rt></ruby>したことがなくて"
+  },
+  {
+    "number": 57,
+    "type": "bunpo",
+    "question": "<ruby>考<rt>かんが</rt></ruby>えてもどうにもならない。<ruby>忘<rt>わす</rt></ruby>れる______。",
+    "options": [
+      {
+        "1": "しかない"
+      },
+      {
+        "2": "だけない"
+      },
+      {
+        "3": "からない"
+      },
+      {
+        "4": "こそない"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "しかない"
+  },
+  {
+    "number": 58,
+    "type": "moji",
+    "question": "<em>残念</em>ですが、パーティーに出席できません。",
+    "options": [
+      {
+        "1": "さんれん"
+      },
+      {
+        "2": "ざんれん"
+      },
+      {
+        "3": "ざっねん"
+      },
+      {
+        "4": "ざんねん"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "ざんねん"
+  },
+  {
+    "number": 59,
+    "type": "goi",
+    "question": "______が、どうぞお<ruby>入<rt>はい</rt></ruby>りください。",
+    "options": [
+      {
+        "1": "<ruby>片付<rt>かたづ</rt></ruby>けられません"
+      },
+      {
+        "2": "<ruby>散<rt>ち</rt></ruby>らかっています"
+      },
+      {
+        "3": "きれいにしません"
+      },
+      {
+        "4": "<ruby>汚<rt>よご</rt></ruby>れてきます"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>散<rt>ち</rt></ruby>らかっています"
+  },
+  {
+    "number": 60,
+    "type": "bunpo",
+    "question": "A「<ruby>浅草<rt>あさくさ</rt></ruby>______、<ruby>何<rt>なに</rt></ruby>を<ruby>思<rt>おも</rt></ruby>い<ruby>浮<rt>う</rt></ruby>かべますか。」\nB「<ruby>雷門<rt>かみあんりもん</rt></ruby>、<ruby>神輿<rt>みこし</rt></ruby>、そしてスカイツリーかな。」",
+    "options": [
+      {
+        "1": "として"
+      },
+      {
+        "2": "というと"
+      },
+      {
+        "3": "といっても"
+      },
+      {
+        "4": "といっては"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "というと"
+  },
+  {
+    "number": 61,
+    "type": "moji",
+    "question": "自動販売機を使いたいので、1万円札を<em>細かく</em>してくれませんか。",
+    "options": [
+      {
+        "1": "こまかく"
+      },
+      {
+        "2": "みじかく"
+      },
+      {
+        "3": "ほそかく"
+      },
+      {
+        "4": "やわらかく"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "こまかく"
+  },
+  {
+    "number": 62,
+    "type": "goi",
+    "question": "この<ruby>店<rt>みせ</rt></ruby>の<ruby>一日<rt>いちにち</rt></ruby>の______は、<ruby>約<rt>やく</rt></ruby>10<ruby>万円<rt>まんえん</rt></ruby>です。",
+    "options": [
+      {
+        "1": "<ruby>売<rt>う</rt></ruby>り<ruby>場<rt>ば</rt></ruby>"
+      },
+      {
+        "2": "<ruby>売<rt>う</rt></ruby>り<ruby>上<rt>あ</rt></ruby>げ"
+      },
+      {
+        "3": "<ruby>売<rt>う</rt></ruby>り<ruby>切<rt>き</rt></ruby>れ"
+      },
+      {
+        "4": "<ruby>売<rt>う</rt></ruby>り<ruby>出<rt>だ</rt></ruby>し"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>売<rt>う</rt></ruby>り<ruby>上<rt>あ</rt></ruby>げ"
+  },
+  {
+    "number": 63,
+    "type": "bunpo",
+    "question": "<ruby>隅田川<rt>すみだがわ</rt></ruby>______<ruby>花火大会<rt>はなびたいかい</rt></ruby>が<ruby>行<rt>おこな</rt></ruby>われるため、<ruby>交通機関<rt>こうつうきかん</rt></ruby>は<ruby>混雑<rt>こんざつ</rt></ruby>するでしょう。",
+    "options": [
+      {
+        "1": "について"
+      },
+      {
+        "2": "によって"
+      },
+      {
+        "3": "にあたって"
+      },
+      {
+        "4": "において"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "において"
+  },
+  {
+    "number": 64,
+    "type": "moji",
+    "question": "うちは普通の家ですが、世界各国からいろんな人が<em>とまり</em>にきます。",
+    "options": [
+      {
+        "1": "足まり"
+      },
+      {
+        "2": "泊まり"
+      },
+      {
+        "3": "通まり"
+      },
+      {
+        "4": "止まり"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "泊まり"
+  },
+  {
+    "number": 65,
+    "type": "goi",
+    "question": "______、たくさん<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がってください。",
+    "options": [
+      {
+        "1": "<ruby>失礼<rt>しつれい</rt></ruby>して"
+      },
+      {
+        "2": "<ruby>遠慮<rt>えんりょ</rt></ruby>せずに"
+      },
+      {
+        "3": "<ruby>謙<rt>けん</rt></ruby>そんせずに"
+      },
+      {
+        "4": "<ruby>承知<rt>しょうち</rt></ruby>して"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>遠慮<rt>えんりょ</rt></ruby>せずに"
+  },
+  {
+    "number": 66,
+    "type": "bunpo",
+    "question": "<ruby>地震<rt>じしん</rt></ruby>______ニュースをお<ruby>伝<rt>つた</rt></ruby>えいたします。",
+    "options": [
+      {
+        "1": "に<ruby>関<rt>かん</rt></ruby>する"
+      },
+      {
+        "2": "に<ruby>対<rt>たい</rt></ruby>する"
+      },
+      {
+        "3": "に<ruby>反<rt>はん</rt></ruby>する"
+      },
+      {
+        "4": "に<ruby>先立<rt>さきだ</rt></ruby>つ"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "に<ruby>関<rt>かん</rt></ruby>する"
+  },
+  {
+    "number": 67,
+    "type": "moji",
+    "question": "店をきれいにしたら、以前に<em>比べて</em>、女性客が増えた。",
+    "options": [
+      {
+        "1": "ひらべて"
+      },
+      {
+        "2": "くらべて"
+      },
+      {
+        "3": "ならべて"
+      },
+      {
+        "4": "こらべて"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "くらべて"
+  },
+  {
+    "number": 68,
+    "type": "goi",
+    "question": "ぼくは、<ruby>毎朝<rt>まいあさ</rt></ruby>、<ruby>風呂場<rt>ふろば</rt></ruby>で______をそります。",
+    "options": [
+      {
+        "1": "ひじ"
+      },
+      {
+        "2": "はげ"
+      },
+      {
+        "3": "かび"
+      },
+      {
+        "4": "ひげ"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "ひげ"
+  },
+  {
+    "number": 69,
+    "type": "bunpo",
+    "question": "お<ruby>盆休<rt>ぼんやす</rt></ruby>みのラッシュ______<ruby>事故<rt>じこ</rt></ruby>まで<ruby>起<rt>お</rt></ruby>こり、<ruby>高速道路<rt>こうそくどうろ</rt></ruby>はひどい<ruby>渋滞<rt>じゅうたい</rt></ruby>になった。",
+    "options": [
+      {
+        "1": "にくらべて"
+      },
+      {
+        "2": "にくわえて"
+      },
+      {
+        "3": "にかけて"
+      },
+      {
+        "4": "にさいして"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "にくわえて"
+  },
+  {
+    "number": 70,
+    "type": "moji",
+    "question": "彼女はいつも助けてくれる<em>やさしい</em>人です。",
+    "options": [
+      {
+        "1": "難しい"
+      },
+      {
+        "2": "易しい"
+      },
+      {
+        "3": "優しい"
+      },
+      {
+        "4": "美しい"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "優しい"
+  },
+  {
+    "number": 71,
+    "type": "goi",
+    "question": "7<ruby>月<rt>がつ</rt></ruby>______には、<ruby>梅雨<rt>つゆ</rt></ruby>も<ruby>明<rt>あ</rt></ruby>けるでしょう。",
+    "options": [
+      {
+        "1": "<ruby>中旬<rt>ちゅうじゅん</rt></ruby>"
+      },
+      {
+        "2": "<ruby>中間<rt>ちゅうかん</rt></ruby>"
+      },
+      {
+        "3": "<ruby>中心<rt>ちゅうしん</rt></ruby>"
+      },
+      {
+        "4": "<ruby>中央<rt>ちゅうおう</rt></ruby>"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>中旬<rt>ちゅうじゅん</rt></ruby>"
+  },
+  {
+    "number": 72,
+    "type": "bunpo",
+    "question": "ご<ruby>主人様<rt>しゅじんさま</rt></ruby>に、どうぞよろしく______ください。",
+    "options": [
+      {
+        "1": "お<ruby>伝<rt>つた</rt></ruby>え"
+      },
+      {
+        "2": "お<ruby>伝<rt>つた</rt></ruby>えて"
+      },
+      {
+        "3": "お<ruby>伝<rt>つた</rt></ruby>えして"
+      },
+      {
+        "4": "お<ruby>伝<rt>つた</rt></ruby>えられ"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "お<ruby>伝<rt>つた</rt></ruby>え"
+  },
+  {
+    "number": 73,
+    "type": "moji",
+    "question": "<em>再来週</em>、面接試験を受けます。",
+    "options": [
+      {
+        "1": "さらいしゅう"
+      },
+      {
+        "2": "さいらいしゅう"
+      },
+      {
+        "3": "せらいしゅう"
+      },
+      {
+        "4": "せいらいしゅう"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "さらいしゅう"
+  },
+  {
+    "number": 74,
+    "type": "goi",
+    "question": "<ruby>一度<rt>いちど</rt></ruby>できなくても______いけません。もう<ruby>一度<rt>いちど</rt></ruby>やってみましょう。",
+    "options": [
+      {
+        "1": "あきては"
+      },
+      {
+        "2": "あきれては"
+      },
+      {
+        "3": "あきらめては"
+      },
+      {
+        "4": "あきられては"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "あきらめては"
+  },
+  {
+    "number": 75,
+    "type": "bunpo",
+    "question": "あいさつの<ruby>仕方<rt>しかた</rt></ruby>は、<ruby>時<rt>とき</rt></ruby>と<ruby>場所<rt>ばしょ</rt></ruby>、<ruby>相手<rt>あいて</rt></ruby>______<ruby>違<rt>ちが</rt></ruby>います。",
+    "options": [
+      {
+        "1": "によって"
+      },
+      {
+        "2": "にとって"
+      },
+      {
+        "3": "において"
+      },
+      {
+        "4": "について"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "によって"
+  },
+  {
+    "number": 76,
+    "type": "moji",
+    "question": "<em>君</em>は熱心な学生だから、きっと試験に合格するでしょう。",
+    "options": [
+      {
+        "1": "くん"
+      },
+      {
+        "2": "あなた"
+      },
+      {
+        "3": "かみ"
+      },
+      {
+        "4": "きみ"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "きみ"
+  },
+  {
+    "number": 77,
+    "type": "goi",
+    "question": "あの人とは<ruby>同<rt>おな</rt></ruby>じクラスなんですが、<ruby>口<rt>くち</rt></ruby>を______ことがありません。",
+    "options": [
+      {
+        "1": "かけた"
+      },
+      {
+        "2": "だした"
+      },
+      {
+        "3": "きいた"
+      },
+      {
+        "4": "さげた"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "きいた"
+  },
+  {
+    "number": 78,
+    "type": "bunpo",
+    "question": "A「おんかしいなあ、10<ruby>個<rt>こ</rt></ruby>______はずなのに。」\nB「あ、ごめん、1<ruby>個食<rt>こた</rt></ruby>べちゃった。」",
+    "options": [
+      {
+        "1": "<ruby>買<rt>か</rt></ruby>う"
+      },
+      {
+        "2": "<ruby>買<rt>か</rt></ruby>わない"
+      },
+      {
+        "3": "<ruby>買<rt>か</rt></ruby>った"
+      },
+      {
+        "4": "<ruby>買<rt>か</rt></ruby>わなかった"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "<ruby>買<rt>か</rt></ruby>った"
+  },
+  {
+    "number": 79,
+    "type": "moji",
+    "question": "石けんが12<em>こ</em>、入っています。",
+    "options": [
+      {
+        "1": "個"
+      },
+      {
+        "2": "台"
+      },
+      {
+        "3": "枚"
+      },
+      {
+        "4": "故"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "個"
+  },
+  {
+    "number": 80,
+    "type": "goi",
+    "question": "<ruby>田中<rt>たなか</rt></ruby>さんは、よく<ruby>笑<rt>わら</rt></ruby>う______<ruby>人<rt>ひと</rt></ruby>です。",
+    "options": [
+      {
+        "1": "あわただしい"
+      },
+      {
+        "2": "おとなしい"
+      },
+      {
+        "3": "まぶしい"
+      },
+      {
+        "4": "ほがらかな"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "ほがらかな"
+  },
+  {
+    "number": 81,
+    "type": "bunpo",
+    "question": "A「あのう、すみませんが、<ruby>道<rt>みち</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えて______。」\nB「いいですよ。」",
+    "options": [
+      {
+        "1": "いただけませんか"
+      },
+      {
+        "2": "いただきませんか"
+      },
+      {
+        "3": "いただきでしょうか"
+      },
+      {
+        "4": "いただいてでしょうか"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "いただけませんか"
+  },
+  {
+    "number": 82,
+    "type": "moji",
+    "question": "あのお寺の庭は、みどりが多くて<em>静か</em>です。",
+    "options": [
+      {
+        "1": "にぎやか"
+      },
+      {
+        "2": "ゆたか"
+      },
+      {
+        "3": "しずか"
+      },
+      {
+        "4": "のどか"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "しずか"
+  },
+  {
+    "number": 83,
+    "type": "goi",
+    "question": "<ruby>新幹線<rt>しんかんせん</rt></ruby>は、<ruby>乗車<rt>じょうしゃ</rt></ruby>______だけでなく、<ruby>特急<rt>とっきゅう</rt></ruby>______が<ruby>必要<rt>ひつよう</rt></ruby>だ。",
+    "options": [
+      {
+        "1": "<ruby>券<rt>けん</rt></ruby>／<ruby>券<rt>けん</rt></ruby>"
+      },
+      {
+        "2": "<ruby>札<rt>さつ</rt></ruby>／<ruby>札<rt>さつ</rt></ruby>"
+      },
+      {
+        "3": "<ruby>紙<rt>かみ</rt></ruby>／<ruby>紙<rt>かみ</rt></ruby>"
+      },
+      {
+        "4": "<ruby>賃<rt>ちん</rt></ruby>／<ruby>賃<rt>ちん</rt></ruby>"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>券<rt>けん</rt></ruby>／<ruby>券<rt>けん</rt></ruby>"
+  },
+  {
+    "number": 84,
+    "type": "bunpo",
+    "question": "こちらで______お<ruby>寺<rt>てら</rt></ruby>ちください。",
+    "options": [
+      {
+        "1": "おかけして"
+      },
+      {
+        "2": "おかけになって"
+      },
+      {
+        "3": "おかけて"
+      },
+      {
+        "4": "おかけされて"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "おかけになって"
+  },
+  {
+    "number": 85,
+    "type": "moji",
+    "question": "皆様によろしく<em>お伝え</em>ください。",
+    "options": [
+      {
+        "1": "おつだえ"
+      },
+      {
+        "2": "おつたえ"
+      },
+      {
+        "3": "おだつえ"
+      },
+      {
+        "4": "おたつえ"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "おつたえ"
+  },
+  {
+    "number": 86,
+    "type": "goi",
+    "question": "ご<ruby>注文<rt>ちゅうもん</rt></ruby>の<ruby>品物<rt>しなもの</rt></ruby>は、<ruby>明日<rt>あした</rt></ruby>______お<ruby>届<rt>とど</rt></ruby>けいたします。",
+    "options": [
+      {
+        "1": "<ruby>確<rt>たし</rt></ruby>かに"
+      },
+      {
+        "2": "<ruby>確<rt>たし</rt></ruby>か"
+      },
+      {
+        "3": "<ruby>急<rt>いそ</rt></ruby>ぎに"
+      },
+      {
+        "4": "<ruby>急<rt>きゅう</rt></ruby>に"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>確<rt>たし</rt></ruby>かに"
+  },
+  {
+    "number": 87,
+    "type": "bunpo",
+    "question": "A「お<ruby>客様<rt>きゃくさま</rt></ruby>、<ruby>何<rt>なに</rt></ruby>に______。」\nB「Aランチ、お<ruby>願<rt>ねが</rt></ruby>いします。」",
+    "options": [
+      {
+        "1": "いたしますか"
+      },
+      {
+        "2": "なさいますか"
+      },
+      {
+        "3": "お<ruby>食<rt>た</rt></ruby>べになりますか"
+      },
+      {
+        "4": "いただきますか"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "なさいますか"
+  },
+  {
+    "number": 88,
+    "type": "moji",
+    "question": "公園で<em>こども</em>と遊んだ。",
+    "options": [
+      {
+        "1": "子達"
+      },
+      {
+        "2": "子供"
+      },
+      {
+        "3": "小児"
+      },
+      {
+        "4": "小人"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "子供"
+  },
+  {
+    "number": 89,
+    "type": "goi",
+    "question": "この<ruby>先<rt>さき</rt></ruby>、<ruby>道<rt>みち</rt></ruby>が<ruby>二<rt>ふた</rt></ruby>つに<ruby>分<rt>わ</rt></ruby>かれていますが、どっちの______に<ruby>行<rt>い</rt></ruby>けばいいですか。",
+    "options": [
+      {
+        "1": "<ruby>土地<rt>とち</rt></ruby>"
+      },
+      {
+        "2": "<ruby>向<rt>む</rt></ruby>き"
+      },
+      {
+        "3": "<ruby>地方<rt>ちほう</rt></ruby>"
+      },
+      {
+        "4": "<ruby>方向<rt>ほうこう</rt></ruby>"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "<ruby>方向<rt>ほうこう</rt></ruby>"
+  },
+  {
+    "number": 90,
+    "type": "bunpo",
+    "question": "<ruby>戦争<rt>せんそう</rt></ruby>が______ように。",
+    "options": [
+      {
+        "1": "なくなる"
+      },
+      {
+        "2": "なくなって"
+      },
+      {
+        "3": "なくなった"
+      },
+      {
+        "4": "なくなります"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "なくなります"
+  },
+  {
+    "number": 91,
+    "type": "moji",
+    "question": "バスで<em>空港</em>へ行く。",
+    "options": [
+      {
+        "1": "くうこう"
+      },
+      {
+        "2": "こうくう"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "くうこう"
+  },
+  {
+    "number": 92,
+    "type": "moji",
+    "question": "午後は<em>じゅう</em>に行動して下さい。",
+    "options": [
+      {
+        "1": "自由"
+      },
+      {
+        "2": "理由"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "自由"
+  },
+  {
+    "number": 93,
+    "type": "goi",
+    "question": "<ruby>昨日<rt>さくじつ</rt></ruby>の<ruby>会議<rt>かいぎ</rt></ruby>では、よいアイデアが______<ruby>発表<rt>はっぴょう</rt></ruby>された。",
+    "options": [
+      {
+        "1": "ところどころ"
+      },
+      {
+        "2": "つぎつぎに"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "つぎつぎに"
+  },
+  {
+    "number": 94,
+    "type": "goi",
+    "question": "まだゲームをしているの？______しなさい。",
+    "options": [
+      {
+        "1": "えんりょ"
+      },
+      {
+        "2": "いいかげんに"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "いいかげんに"
+  },
+  {
+    "number": 95,
+    "type": "bunpo",
+    "question": "<ruby>昨年<rt>さくねん</rt></ruby>の試験問題は、<ruby>一昨年<rt>おととし</rt></ruby>______少し易しくなった。",
+    "options": [
+      {
+        "1": "にくらべて"
+      },
+      {
+        "2": "にくわえて"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "にくらべて"
+  },
+  {
+    "number": 96,
+    "type": "bunpo",
+    "question": "今朝は大事な<ruby>会議<rt>かいぎ</rt></ruby>がある。遅れない______、いつもより早く家を出よう。",
+    "options": [
+      {
+        "1": "ために"
+      },
+      {
+        "2": "ように"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ように"
+  },
+  {
+    "number": 97,
+    "type": "moji",
+    "question": "授業に<em>遅れない</em>ようにしてください。",
+    "options": [
+      {
+        "1": "おそれない"
+      },
+      {
+        "2": "おくれない"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "おくれない"
+  },
+  {
+    "number": 98,
+    "type": "moji",
+    "question": "こんな事があるなんて、<em>しんじられない</em>。",
+    "options": [
+      {
+        "1": "信じられない"
+      },
+      {
+        "2": "真じられない"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "信じられない"
+  },
+  {
+    "number": 99,
+    "type": "goi",
+    "question": "田中先生は、______こわいけれど、とてもいい先生です。",
+    "options": [
+      {
+        "1": "きびしくて"
+      },
+      {
+        "2": "けわしくて"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "きびしくて"
+  },
+  {
+    "number": 100,
+    "type": "goi",
+    "question": "弟は小学生のころ、______友だちも少なかったです。",
+    "options": [
+      {
+        "1": "ほがらかで"
+      },
+      {
+        "2": "おとなしくて"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "おとなしくて"
+  },
+  {
+    "number": 101,
+    "type": "bunpo",
+    "question": "A「<ruby>怒<rt>おこ</rt></ruby>らないで。」\nB「<ruby>怒<rt>おこ</rt></ruby>って______いないよ。心配しているんだ。",
+    "options": [
+      {
+        "1": "なんか"
+      },
+      {
+        "2": "ばかり"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "なんか"
+  },
+  {
+    "number": 102,
+    "type": "bunpo",
+    "question": "いつも助けて______ありがとう。",
+    "options": [
+      {
+        "1": "もらえて"
+      },
+      {
+        "2": "くれて"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "くれて"
+  },
+  {
+    "number": 103,
+    "type": "moji",
+    "question": "<em>果物</em>が好きです。",
+    "options": [
+      {
+        "1": "くだもの"
+      },
+      {
+        "2": "こどもの"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "くだもの"
+  },
+  {
+    "number": 104,
+    "type": "",
+    "question": "この<em>きょく</em>を聞くと国を思い出す。",
+    "options": [
+      {
+        "1": "局"
+      },
+      {
+        "2": "曲"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "曲"
+  },
+  {
+    "number": 105,
+    "type": "",
+    "question": "______が<ruby>良<rt>よ</rt></ruby>い食事を心がけましょう。",
+    "options": [
+      {
+        "1": "テーマ"
+      },
+      {
+        "2": "バランス"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "バランス"
+  },
+  {
+    "number": 106,
+    "type": "goi",
+    "question": "そんな易しい<ruby>計算<rt>けいさん</rt></ruby>もできないなんて、本当に______ね。",
+    "options": [
+      {
+        "1": "あきられる"
+      },
+      {
+        "2": "あきれる"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "あきれる"
+  },
+  {
+    "number": 107,
+    "type": "bunpo",
+    "question": "電話もメールも<ruby>通<rt>つう</rt></ruby>じないなら、遠くても行く______。",
+    "options": [
+      {
+        "1": "しかない"
+      },
+      {
+        "2": "だけある"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "しかない"
+  },
+  {
+    "number": 108,
+    "type": "bunpo",
+    "question": "割れない______、そっと置いてください。",
+    "options": [
+      {
+        "1": "ように"
+      },
+      {
+        "2": "ために"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ように"
+  },
+  {
+    "number": 109,
+    "type": "moji",
+    "question": "ここはお年寄りのための<em>優先席</em>です。",
+    "options": [
+      {
+        "1": "ようせんせき"
+      },
+      {
+        "2": "ゆうせんせき"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ゆうせんせき"
+  },
+  {
+    "number": 110,
+    "type": "moji",
+    "question": "お皿を<em>わって</em>しまった。",
+    "options": [
+      {
+        "1": "割って"
+      },
+      {
+        "2": "折って"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "割って"
+  },
+  {
+    "number": 111,
+    "type": "goi",
+    "question": "A「______。」\nB「気をつけて。また遊びに来てください。」",
+    "options": [
+      {
+        "1": "おじゃましました"
+      },
+      {
+        "2": "しょうちしました"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "おじゃましました"
+  },
+  {
+    "number": 112,
+    "type": "goi",
+    "question": "彼の言い方に______が、何も言いなかった。",
+    "options": [
+      {
+        "1": "腹にきた"
+      },
+      {
+        "2": "頭にきた"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "頭にきた"
+  },
+  {
+    "number": 113,
+    "type": "bunpo",
+    "question": "日本の春______、サクラですね。",
+    "options": [
+      {
+        "1": "というより"
+      },
+      {
+        "2": "といえば"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "といえば"
+  },
+  {
+    "number": 114,
+    "type": "bunpo",
+    "question": "私は夫に危険な仕事を______。",
+    "options": [
+      {
+        "1": "してほしくない"
+      },
+      {
+        "2": "しなくてほしい"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "してほしくない"
+  },
+  {
+    "number": 115,
+    "type": "moji",
+    "question": "<em>夫婦</em>で旅行に行く。",
+    "options": [
+      {
+        "1": "ふさい"
+      },
+      {
+        "2": "ふうふ"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ふうふ"
+  },
+  {
+    "number": 116,
+    "type": "moji",
+    "question": "鳥が<em>とんで</em>いる。",
+    "options": [
+      {
+        "1": "込んで"
+      },
+      {
+        "2": "飛んで"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "飛んで"
+  },
+  {
+    "number": 117,
+    "type": "goi",
+    "question": "<ruby>田舎<rt>いなか</rt></ruby>に広い______があるが、そこに家を健てるつもりはない。",
+    "options": [
+      {
+        "1": "土地"
+      },
+      {
+        "2": "地方"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "土地"
+  },
+  {
+    "number": 118,
+    "type": "goi",
+    "question": "A「今度の試験いつか知ってる？」\nB「______来月の10日だったと思うけれど．．．。」",
+    "options": [
+      {
+        "1": "確かに"
+      },
+      {
+        "2": "確か"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "確か"
+  },
+  {
+    "number": 119,
+    "type": "bunpo",
+    "question": "A「あ、リーさんだ。」\nB「え、リーさんの______よ。国にかえったんだから。」",
+    "options": [
+      {
+        "1": "はずない"
+      },
+      {
+        "2": "はずじゃない"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "はずない"
+  },
+  {
+    "number": 120,
+    "type": "bunpo",
+    "question": "お正月料理も地方や家______<ruby>違<rt>ちが</rt></ruby>う。",
+    "options": [
+      {
+        "1": "にそって"
+      },
+      {
+        "2": "によって"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "によって"
+  },
+  {
+    "number": 121,
+    "type": "moji",
+    "question": "紙を<em>三角</em>におります。",
+    "options": [
+      {
+        "1": "さんかく"
+      },
+      {
+        "2": "みつかど"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "さんかく"
+  },
+  {
+    "number": 122,
+    "type": "moji",
+    "question": "旅館に<em>とまる</em>。",
+    "options": [
+      {
+        "1": "泊まる"
+      },
+      {
+        "2": "宿まる"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "泊まる"
+  },
+  {
+    "number": 123,
+    "type": "goi",
+    "question": "おなかがすきすぎて、______。",
+    "options": [
+      {
+        "1": "ころびそうだ"
+      },
+      {
+        "2": "たおれそうだ"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "たおれそうだ"
+  },
+  {
+    "number": 124,
+    "type": "goi",
+    "question": "お金を使いすぎて、帰る電車______もなくなった。",
+    "options": [
+      {
+        "1": "貸"
+      },
+      {
+        "2": "券"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "貸"
+  },
+  {
+    "number": 125,
+    "type": "bunpo",
+    "question": "神様、お願い。今年はすてきな人と出会えます______。",
+    "options": [
+      {
+        "1": "ように"
+      },
+      {
+        "2": "かなあ"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ように"
+  },
+  {
+    "number": 126,
+    "type": "moji",
+    "question": "毎日<em>続けて</em>練習すれば覚えられます。",
+    "options": [
+      {
+        "1": "つるけて"
+      },
+      {
+        "2": "つむけて"
+      },
+      {
+        "3": "つぬけて"
+      },
+      {
+        "4": "つづけて"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "つづけて"
+  },
+  {
+    "number": 127,
+    "type": "goi",
+    "question": "<ruby>髪<rt>かみ</rt></ruby>、<ruby>切<rt>き</rt></ruby>ったんだね。ずいぶん______が<ruby>変<rt>か</rt></ruby>わったね。",
+    "options": [
+      {
+        "1": "レベル"
+      },
+      {
+        "2": "テンポ"
+      },
+      {
+        "3": "イメージ"
+      },
+      {
+        "4": "サイン"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "イメージ"
+  },
+  {
+    "number": 128,
+    "type": "bunpo",
+    "question": "しぼり______の<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>はいかがですか。",
+    "options": [
+      {
+        "1": "あげ"
+      },
+      {
+        "2": "たて"
+      },
+      {
+        "3": "すぎ"
+      },
+      {
+        "4": "きり"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "たて"
+  },
+  {
+    "number": 129,
+    "type": "moji",
+    "question": "今はかんご婦を、「かんご師」と<em>よびます</em>。",
+    "options": [
+      {
+        "1": "浴びます"
+      },
+      {
+        "2": "呼びます"
+      },
+      {
+        "3": "飛びます"
+      },
+      {
+        "4": "遊びます"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "呼びます"
+  },
+  {
+    "number": 130,
+    "type": "goi",
+    "question": "<ruby>時間<rt>じかん</rt></ruby>があるから、ちょっとその<ruby>辺<rt>へん</rt></ruby>を______しましょう。",
+    "options": [
+      {
+        "1": "そろそろ"
+      },
+      {
+        "2": "のろのろ"
+      },
+      {
+        "3": "ぶらぶら"
+      },
+      {
+        "4": "どんどん"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "ぶらぶら"
+  },
+  {
+    "number": 131,
+    "type": "bunpo",
+    "question": "<ruby>友人<rt>ゆうじん</rt></ruby>を<ruby>亡<rt>な</rt></ruby>くした______を<ruby>歌<rt>うた</rt></ruby>にしました。",
+    "options": [
+      {
+        "1": "<ruby>悲<rt>かな</rt></ruby>しい"
+      },
+      {
+        "2": "<ruby>悲<rt>かな</rt></ruby>しいさ"
+      },
+      {
+        "3": "<ruby>悲<rt>かな</rt></ruby>しみ"
+      },
+      {
+        "4": "<ruby>悲<rt>かな</rt></ruby>しむ"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "<ruby>悲<rt>かな</rt></ruby>しみ"
+  },
+  {
+    "number": 132,
+    "type": "moji",
+    "question": "<em>暖かく</em>なったら、両親を呼んでこの町を安内したい。",
+    "options": [
+      {
+        "1": "みじかく"
+      },
+      {
+        "2": "やわらかく"
+      },
+      {
+        "3": "こまかく"
+      },
+      {
+        "4": "あたたかく"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "あたたかく"
+  },
+  {
+    "number": 133,
+    "type": "goi",
+    "question": "<ruby>朝<rt>あさ</rt></ruby>から<ruby>何<rt>なに</rt></ruby>も<ruby>食<rt>た</rt></ruby>べてうないから、おなかが______だ。",
+    "options": [
+      {
+        "1": "ふらふら"
+      },
+      {
+        "2": "ぴかぴか"
+      },
+      {
+        "3": "ぺらぺら"
+      },
+      {
+        "4": "ぺこぺこ"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "ぺこぺこ"
+  },
+  {
+    "number": 134,
+    "type": "bunpo",
+    "question": "A「あれから、<ruby>彼女<rt>かのじょ</rt></ruby>に<ruby>会<rt>あ</rt></ruby>いましたか。」\nB「いえ、あれ______です。」",
+    "options": [
+      {
+        "1": "っきり"
+      },
+      {
+        "2": "っぽっち"
+      },
+      {
+        "3": "だけ"
+      },
+      {
+        "4": "ほど"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "っきり"
+  },
+  {
+    "number": 135,
+    "type": "moji",
+    "question": "今年の正月は、久しぶりに家族を<em>つれて</em>神社へ行った。",
+    "options": [
+      {
+        "1": "遅れて"
+      },
+      {
+        "2": "連れて"
+      },
+      {
+        "3": "晴れて"
+      },
+      {
+        "4": "取れて"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "連れて"
+  },
+  {
+    "number": 136,
+    "type": "goi",
+    "question": "<ruby>貧<rt>まず</rt></ruby>しかった<ruby>少年<rt>しょうねん</rt></ruby>が、<ruby>社会<rt>しゃかい</rt></ruby>で<ruby>成功<rt>せいこう</rt></ruby>するという______の<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>た。",
+    "options": [
+      {
+        "1": "<ruby>文学<rt>ぶんがく</rt></ruby>"
+      },
+      {
+        "2": "<ruby>作文<rt>さくぶん</rt></ruby>"
+      },
+      {
+        "3": "<ruby>書物<rt>しょもつ</rt></ruby>"
+      },
+      {
+        "4": "<ruby>物語<rt>ものがたり</rt></ruby>"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "<ruby>物語<rt>ものがたり</rt></ruby>"
+  },
+  {
+    "number": 137,
+    "type": "bunpo",
+    "question": "<ruby>彼女<rt>かのじょ</rt></ruby>はピンク<ruby>色<rt>いろ</rt></ruby>が<ruby>好<rt>す</rt></ruby>きで、<ruby>髪<rt>かみ</rt></ruby>______ピンクにしてまった。",
+    "options": [
+      {
+        "1": "こそ"
+      },
+      {
+        "2": "だけ"
+      },
+      {
+        "3": "まで"
+      },
+      {
+        "4": "ほど"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "まで"
+  },
+  {
+    "number": 138,
+    "type": "moji",
+    "question": "私が育って町の美しい川は、今は<em>汚れて</em>、もう泳げない。",
+    "options": [
+      {
+        "1": "よごれて"
+      },
+      {
+        "2": "よぼれて"
+      },
+      {
+        "3": "おごれて"
+      },
+      {
+        "4": "おぼれて"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "よごれて"
+  },
+  {
+    "number": 139,
+    "type": "goi",
+    "question": "この<ruby>子<rt>こ</rt></ruby>、<ruby>熱<rt>ねつ</rt></ruby>が<ruby>高<rt>たか</rt></ruby>くてすごく______だよ。すぐ<ruby>医者<rt>いしゃ</rt></ruby>に<ruby>連<rt>つ</rt></ruby>れていこう。",
+    "options": [
+      {
+        "1": "つらそう"
+      },
+      {
+        "2": "みにくそう"
+      },
+      {
+        "3": "にがそう"
+      },
+      {
+        "4": "くるしみそう"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "つらそう"
+  },
+  {
+    "number": 140,
+    "type": "bunpo",
+    "question": "この<ruby>石<rt>せっ</rt></ruby>けんはものしろい______<ruby>汚<rt>よご</rt></ruby>れがよく<ruby>落<rt>お</rt></ruby>ちる。",
+    "options": [
+      {
+        "1": "だけ"
+      },
+      {
+        "2": "ほど"
+      },
+      {
+        "3": "まで"
+      },
+      {
+        "4": "ばかり"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ほど"
+  },
+  {
+    "number": 141,
+    "type": "moji",
+    "question": "輸出の<em>反対</em>は輸入です。",
+    "options": [
+      {
+        "1": "はんだい"
+      },
+      {
+        "2": "へんだい"
+      },
+      {
+        "3": "はんたい"
+      },
+      {
+        "4": "へんたい"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "はんたい"
+  },
+  {
+    "number": 142,
+    "type": "goi",
+    "question": "<ruby>娘<rt>むすめ</rt></ruby>のけがが<ruby>軽<rt>かる</rt></ruby>くて、______しました。",
+    "options": [
+      {
+        "1": "そっと"
+      },
+      {
+        "2": "じっと"
+      },
+      {
+        "3": "さっと"
+      },
+      {
+        "4": "ほっと"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "ほっと"
+  },
+  {
+    "number": 143,
+    "type": "bunpo",
+    "question": "<ruby>息子<rt>むすこ</rt></ruby>______をして<ruby>老人<rt>ろうじん</rt></ruby>からお<ruby>金<rt>かね</rt></ruby>をとる<ruby>事件<rt>じけん</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>えている。",
+    "options": [
+      {
+        "1": "ぶり"
+      },
+      {
+        "2": "おふり"
+      },
+      {
+        "3": "にふり"
+      },
+      {
+        "4": "っぷり"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "おふり"
+  },
+  {
+    "number": 144,
+    "type": "moji",
+    "question": "A「ちょっと<em>にがい</em>ね。」\nB「お茶の葉を入れすぎたかな。」",
+    "options": [
+      {
+        "1": "若い"
+      },
+      {
+        "2": "苦い"
+      },
+      {
+        "3": "強い"
+      },
+      {
+        "4": "厚い"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "苦い"
+  },
+  {
+    "number": 145,
+    "type": "goi",
+    "question": "<ruby>毎日何回<rt>まいにちなんかい</rt></ruby>も<ruby>自分<rt>じぶん</rt></ruby>の<ruby>体重<rt>たいじゅう</rt></ruby>を______というダイエット<ruby>方法<rt>ほうほう</rt></ruby>があるそうです。",
+    "options": [
+      {
+        "1": "<ruby>量<rt>はか</rt></ruby>る"
+      },
+      {
+        "2": "<ruby>減<rt>へ</rt></ruby>らす"
+      },
+      {
+        "3": "<ruby>増<rt>ふ</rt></ruby>やす"
+      },
+      {
+        "4": "<ruby>落<rt>お</rt></ruby>とす"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>量<rt>はか</rt></ruby>る"
+  },
+  {
+    "number": 146,
+    "type": "bunpo",
+    "question": "<ruby>使<rt>つか</rt></ruby>ったら______っぱなしにしないで、<ruby>片付<rt>かたづ</rt></ruby>けなさい。",
+    "options": [
+      {
+        "1": "<ruby>出<rt>だ</rt></ruby>す"
+      },
+      {
+        "2": "<ruby>出<rt>だ</rt></ruby>し"
+      },
+      {
+        "3": "<ruby>出<rt>だ</rt></ruby>して"
+      },
+      {
+        "4": "<ruby>出<rt>だ</rt></ruby>した"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>出<rt>だ</rt></ruby>し"
+  },
+  {
+    "number": 147,
+    "type": "moji",
+    "question": "<em>最近</em>、忙しそうだけど、無理をしないで。",
+    "options": [
+      {
+        "1": "ちかごろ"
+      },
+      {
+        "2": "このごろ"
+      },
+      {
+        "3": "せいきん"
+      },
+      {
+        "4": "さいきん"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "さいきん"
+  },
+  {
+    "number": 148,
+    "type": "goi",
+    "question": "<ruby>毎日<rt>まいにち</rt></ruby>レストランで<ruby>食事<rt>しょくじ</rt></ruby>をするなんて、お<ruby>金<rt>かね</rt></ruby>が______できません。",
+    "options": [
+      {
+        "1": "かからなくて"
+      },
+      {
+        "2": "もったいなくて"
+      },
+      {
+        "3": "ぜいたくで"
+      },
+      {
+        "4": "びんぼうで"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "もったいなくて"
+  },
+  {
+    "number": 149,
+    "type": "bunpo",
+    "question": "<ruby>母<rt>はは</rt></ruby>が______、みんなで<ruby>心配<rt>しんぱい</rt></ruby>しています。",
+    "options": [
+      {
+        "1": "<ruby>入院<rt>にゅういん</rt></ruby>したことがあって"
+      },
+      {
+        "2": "<ruby>入院<rt>にゅういん</rt></ruby>したことにして"
+      },
+      {
+        "3": "<ruby>入院<rt>にゅういん</rt></ruby>することになって"
+      },
+      {
+        "4": "<ruby>入院<rt>にゅういん</rt></ruby>することにして"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "<ruby>入院<rt>にゅういん</rt></ruby>することになって"
+  },
+  {
+    "number": 150,
+    "type": "moji",
+    "question": "きれいな<em>かい</em>でしょう。先週末、南の島でひろったの。",
+    "options": [
+      {
+        "1": "買"
+      },
+      {
+        "2": "見"
+      },
+      {
+        "3": "員"
+      },
+      {
+        "4": "貝"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "貝"
+  },
+  {
+    "number": 151,
+    "type": "goi",
+    "question": "またこんなに<ruby>部屋<rt>へや</rt></ruby>を<ruby>散<rt>ち</rt></ruby>らかして．．．。______ね。",
+    "options": [
+      {
+        "1": "だらしない"
+      },
+      {
+        "2": "あやしい"
+      },
+      {
+        "3": "くだらない"
+      },
+      {
+        "4": "しつこい"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "だらしない"
+  },
+  {
+    "number": 152,
+    "type": "bunpo",
+    "question": "Ａ「<ruby>今週<rt>こんしゅう</rt></ruby>の<ruby>土曜日<rt>どようび</rt></ruby>、お<ruby>花見<rt>はなみ</rt></ruby>ですね。」\nB「ええ、<ruby>雨<rt>あめ</rt></ruby>が______ですが。」",
+    "options": [
+      {
+        "1": "<ruby>降<rt>ふ</rt></ruby>らなくてもいい"
+      },
+      {
+        "2": "<ruby>降<rt>ふ</rt></ruby>らないといい"
+      },
+      {
+        "3": "<ruby>降<rt>ふ</rt></ruby>りにくい"
+      },
+      {
+        "4": "<ruby>降<rt>ふ</rt></ruby>らないでいい"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>降<rt>ふ</rt></ruby>らないといい"
+  },
+  {
+    "number": 153,
+    "type": "moji",
+    "question": "歯医者で歯をぬいた日、血がなかなか止まらなくて<em>困った</em>。",
+    "options": [
+      {
+        "1": "こまった"
+      },
+      {
+        "2": "まいった"
+      },
+      {
+        "3": "あせった"
+      },
+      {
+        "4": "つまった"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "こまった"
+  },
+  {
+    "number": 154,
+    "type": "goi",
+    "question": "<ruby>中学<rt>ちゅうがく</rt></ruby>から<ruby>高校<rt>こうこう</rt></ruby>の６<ruby>年間<rt>ねんかん</rt></ruby>、<ruby>田中先生<rt>たなかせんせい</rt></ruby>に<ruby>英語<rt>えいご</rt></ruby>を______。",
+    "options": [
+      {
+        "1": "おそわれました"
+      },
+      {
+        "2": "まなばれました"
+      },
+      {
+        "3": "おそわりました"
+      },
+      {
+        "4": "まなばされました"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "おそわりました"
+  },
+  {
+    "number": 155,
+    "type": "bunpo",
+    "question": "<ruby>寒<rt>さむ</rt></ruby>いと<ruby>思<rt>おも</rt></ruby>ったら、<ruby>窓<rt>まど</rt></ruby>が______いた。",
+    "options": [
+      {
+        "1": "<ruby>開<rt>あ</rt></ruby>けて"
+      },
+      {
+        "2": "<ruby>閉<rt>し</rt></ruby>めて"
+      },
+      {
+        "3": "<ruby>開<rt>あ</rt></ruby>いて"
+      },
+      {
+        "4": "<ruby>閉<rt>し</rt></ruby>まった"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "<ruby>開<rt>あ</rt></ruby>いて"
+  },
+  {
+    "number": 156,
+    "type": "moji",
+    "question": "この本の第一課から、<em>復習</em>しましょう。",
+    "options": [
+      {
+        "1": "ふくしい"
+      },
+      {
+        "2": "ふうしい"
+      },
+      {
+        "3": "ふくしゅう"
+      },
+      {
+        "4": "ふうしゅう"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "ふくしゅう"
+  },
+  {
+    "number": 157,
+    "type": "goi",
+    "question": "まず、<ruby>今日<rt>きょう</rt></ruby>の______ニュースからお<ruby>伝<rt>つた</rt></ruby>えいたします。",
+    "options": [
+      {
+        "1": "おもな"
+      },
+      {
+        "2": "かなりの"
+      },
+      {
+        "3": "たいした"
+      },
+      {
+        "4": "たいへん"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "おもな"
+  },
+  {
+    "number": 158,
+    "type": "bunpo",
+    "question": "A「<ruby>一郎<rt>いちろう</rt></ruby>の<ruby>試験<rt>しけん</rt></ruby>、どうだったのかなあ。」\nB「<ruby>発表<rt>はっぴょう</rt></ruby>は<ruby>明日<rt>あした</rt></ruby>だけれど、______よ。」",
+    "options": [
+      {
+        "1": "だめだった"
+      },
+      {
+        "2": "だめらしい"
+      },
+      {
+        "3": "だめようだ"
+      },
+      {
+        "4": "だめなみたいだ"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "だめらしい"
+  },
+  {
+    "number": 159,
+    "type": "moji",
+    "question": "A社は原料を輸入して、<em>せいひん</em>を輸出している。",
+    "options": [
+      {
+        "1": "制品"
+      },
+      {
+        "2": "製品"
+      },
+      {
+        "3": "商品"
+      },
+      {
+        "4": "正品"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "製品"
+  },
+  {
+    "number": 160,
+    "type": "goi",
+    "question": "<ruby>新宿<rt>しんじゅく</rt></ruby>へ<ruby>行<rt>い</rt></ruby>くなら、<ruby>向<rt>む</rt></ruby>こうのホームから<ruby>東京<rt>とうきょう</rt></ruby>______の<ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>乗<rt>の</rt></ruby>らないとだめですよ。",
+    "options": [
+      {
+        "1": "<ruby>止<rt>ど</rt></ruby>まり"
+      },
+      {
+        "2": "<ruby>行<rt>い</rt></ruby>き"
+      },
+      {
+        "3": "<ruby>発<rt>はつ</rt></ruby>"
+      },
+      {
+        "4": "<ruby>先<rt>さき</rt></ruby>"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>行<rt>い</rt></ruby>き"
+  },
+  {
+    "number": 161,
+    "type": "bunpo",
+    "question": "<ruby>家<rt>いえ</rt></ruby>を______、<ruby>急<rt>きゅう</rt></ruby>に<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>ってきた。",
+    "options": [
+      {
+        "1": "<ruby>出<rt>で</rt></ruby>たままで"
+      },
+      {
+        "2": "<ruby>出<rt>で</rt></ruby>られたのに"
+      },
+      {
+        "3": "<ruby>出<rt>で</rt></ruby>ようと<ruby>思<rt>おも</rt></ruby>って"
+      },
+      {
+        "4": "<ruby>出<rt>で</rt></ruby>ようとしたときに"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "<ruby>出<rt>で</rt></ruby>ようとしたときに"
+  },
+  {
+    "number": 162,
+    "type": "moji",
+    "question": "アンケート<em>調査</em>にご協力をお願いします。",
+    "options": [
+      {
+        "1": "ちょうさ"
+      },
+      {
+        "2": "ちゅうさ"
+      },
+      {
+        "3": "ちょうしゃ"
+      },
+      {
+        "4": "ちゅうしゃ"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ちょうさ"
+  },
+  {
+    "number": 163,
+    "type": "goi",
+    "question": "3<ruby>時<rt>じ</rt></ruby>から<ruby>会議室<rt>かいぎしつ</rt></ruby>で、<ruby>新<rt>あたら</rt></ruby>しい<ruby>企画<rt>きかく</rt></ruby>の______をします。",
+    "options": [
+      {
+        "1": "<ruby>待<rt>ま</rt></ruby>ち<ruby>合<rt>あ</rt></ruby>わせ"
+      },
+      {
+        "2": "<ruby>組<rt>く</rt></ruby>み<ruby>合<rt>あ</rt></ruby>わせ"
+      },
+      {
+        "3": "<ruby>問<rt>と</rt></ruby>い<ruby>合<rt>あ</rt></ruby>わせ"
+      },
+      {
+        "4": "<ruby>打<rt>う</rt></ruby>ち<ruby>合<rt>あ</rt></ruby>わせ"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "<ruby>打<rt>う</rt></ruby>ち<ruby>合<rt>あ</rt></ruby>わせ"
+  },
+  {
+    "number": 164,
+    "type": "bunpo",
+    "question": "いいにおいが______が、<ruby>何<rt>なん</rt></ruby>のにおいでしょうか。",
+    "options": [
+      {
+        "1": "きます"
+      },
+      {
+        "2": "なります"
+      },
+      {
+        "3": "あります"
+      },
+      {
+        "4": "します"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "します"
+  },
+  {
+    "number": 165,
+    "type": "moji",
+    "question": "窓を開けると、<em>すずしい</em>風が入ってくる。",
+    "options": [
+      {
+        "1": "忙しい"
+      },
+      {
+        "2": "涼しい"
+      },
+      {
+        "3": "楽しい"
+      },
+      {
+        "4": "悲しい"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "涼しい"
+  },
+  {
+    "number": 166,
+    "type": "goi",
+    "question": "<ruby>今<rt>いま</rt></ruby>からだと<ruby>映画<rt>えいが</rt></ruby>に<ruby>間<rt>ま</rt></ruby>に<ruby>合<rt>あ</rt></ruby>うかどうかわからないが、______<ruby>行<rt>い</rt></ruby>ってみよう。",
+    "options": [
+      {
+        "1": "とにかく"
+      },
+      {
+        "2": "いきなり"
+      },
+      {
+        "3": "せっかく"
+      },
+      {
+        "4": "どうか"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "とにかく"
+  },
+  {
+    "number": 167,
+    "type": "bunpo",
+    "question": "この<ruby>辺<rt>へん</rt></ruby>の<ruby>小学生<rt>しょうがくせい</rt></ruby>は、______かわいいですね。",
+    "options": [
+      {
+        "1": "<ruby>子供<rt>こども</rt></ruby>らしくて"
+      },
+      {
+        "2": "<ruby>子供<rt>こども</rt></ruby>のようで"
+      },
+      {
+        "3": "<ruby>子供<rt>こども</rt></ruby>のままで"
+      },
+      {
+        "4": "<ruby>子供<rt>こども</rt></ruby>みたいで"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>子供<rt>こども</rt></ruby>らしくて"
+  },
+  {
+    "number": 168,
+    "type": "moji",
+    "question": "ランチには飲み物が付いております。温かいのも<em>冷たい</em>のもございます。",
+    "options": [
+      {
+        "1": "ひえたい"
+      },
+      {
+        "2": "ひやたい"
+      },
+      {
+        "3": "つめたい"
+      },
+      {
+        "4": "すめたい"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "つめたい"
+  },
+  {
+    "number": 169,
+    "type": "goi",
+    "question": "<ruby>夕<rt>ゆう</rt></ruby>べは、<ruby>久<rt>ひさ</rt></ruby>しぶりに<ruby>会<rt>あ</rt></ruby>った<ruby>高校時代<rt>こうこうじだい</rt></ruby>の<ruby>友人<rt>ゆうじん</rt></ruby>と、<ruby>遅<rt>おそ</rt></ruby>くまで<ruby>楽<rt>たの</rt></ruby>しく______。",
+    "options": [
+      {
+        "1": "しゃべり<ruby>出<rt>だ</rt></ruby>した"
+      },
+      {
+        "2": "<ruby>語<rt>かた</rt></ruby>り<ruby>会<rt>あ</rt></ruby>った"
+      },
+      {
+        "3": "<ruby>言<rt>い</rt></ruby>り<ruby>会<rt>あ</rt></ruby>った"
+      },
+      {
+        "4": "<ruby>話<rt>はな</rt></ruby>しかけた"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>語<rt>かた</rt></ruby>り<ruby>会<rt>あ</rt></ruby>った"
+  },
+  {
+    "number": 170,
+    "type": "bunpo",
+    "question": "しっぽを引っ張るのはやめなさい。<ruby>猫<rt>ねこ</rt></ruby>が______でしょ。",
+    "options": [
+      {
+        "1": "いやがっている"
+      },
+      {
+        "2": "いやだらしい"
+      },
+      {
+        "3": "いやなはずがない"
+      },
+      {
+        "4": "いやにしたい"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "いやがっている"
+  },
+  {
+    "number": 171,
+    "type": "moji",
+    "question": "昨日の晩は雪が降ったが、今朝は<em>晴れて</em>いる。",
+    "options": [
+      {
+        "1": "あれて"
+      },
+      {
+        "2": "なれて"
+      },
+      {
+        "3": "はれて"
+      },
+      {
+        "4": "かれて"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "はれて"
+  },
+  {
+    "number": 172,
+    "type": "goi",
+    "question": "リンさんはもう<ruby>一週間<rt>いっしゅうかん</rt></ruby>も<ruby>学校<rt>がっこう</rt></ruby>を<ruby>休<rt>やす</rt></ruby>んでいますね。だれか、<ruby>彼<rt>かれ</rt></ruby>の______を<ruby>知<rt>し</rt></ruby>りませんか。",
+    "options": [
+      {
+        "1": "<ruby>様子<rt>ようす</rt></ruby>"
+      },
+      {
+        "2": "<ruby>態度<rt>たいど</rt></ruby>"
+      },
+      {
+        "3": "<ruby>格好<rt>かっこう</rt></ruby>"
+      },
+      {
+        "4": "<ruby>症状<rt>しょうじょう</rt></ruby>"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>様子<rt>ようす</rt></ruby>"
+  },
+  {
+    "number": 173,
+    "type": "bunpo",
+    "question": "うちの<ruby>犬<rt>いぬ</rt></ruby>は、<ruby>夕方<rt>ゆうがた</rt></ruby>の５<ruby>時<rt>じ</rt></ruby>になると<ruby>散歩<rt>さんぽ</rt></ruby>に______。",
+    "options": [
+      {
+        "1": "<ruby>行<rt>い</rt></ruby>きがります"
+      },
+      {
+        "2": "<ruby>行<rt>い</rt></ruby>きたがります"
+      },
+      {
+        "3": "<ruby>行<rt>い</rt></ruby>きほしがります"
+      },
+      {
+        "4": "<ruby>行<rt>い</rt></ruby>きたいがります"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>行<rt>い</rt></ruby>きたがります"
+  },
+  {
+    "number": 174,
+    "type": "moji",
+    "question": "石油ストーブを消し忘れると、火事の<em>げんいん</em>になります。",
+    "options": [
+      {
+        "1": "原因"
+      },
+      {
+        "2": "原困"
+      },
+      {
+        "3": "原団"
+      },
+      {
+        "4": "原回"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "原因"
+  },
+  {
+    "number": 175,
+    "type": "goi",
+    "question": "<ruby>料理<rt>りょうり</rt></ruby>の<ruby>仕方<rt>しかた</rt></ruby>を______、カロリーの<ruby>低<rt>ひく</rt></ruby>い<ruby>食事<rt>しょくじ</rt></ruby>を<ruby>作<rt>つく</rt></ruby>りましょう。",
+    "options": [
+      {
+        "1": "<ruby>使用<rt>しよう</rt></ruby>して"
+      },
+      {
+        "2": "<ruby>解決<rt>かいけつ</rt></ruby>して"
+      },
+      {
+        "3": "<ruby>工夫<rt>くふう</rt></ruby>して"
+      },
+      {
+        "4": "<ruby>修理<rt>しゅうり</rt></ruby>して"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "<ruby>工夫<rt>くふう</rt></ruby>して"
+  },
+  {
+    "number": 176,
+    "type": "bunpo",
+    "question": "あ、もう８<ruby>時<rt>じ</rt></ruby>だ。<ruby>早<rt>はや</rt></ruby>く______。",
+    "options": [
+      {
+        "1": "<ruby>出<rt>で</rt></ruby>かけなかったら"
+      },
+      {
+        "2": "<ruby>出<rt>で</rt></ruby>かけないなら"
+      },
+      {
+        "3": "<ruby>出<rt>で</rt></ruby>かけなくても"
+      },
+      {
+        "4": "<ruby>出<rt>で</rt></ruby>かけないと"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "<ruby>出<rt>で</rt></ruby>かけないと"
+  },
+  {
+    "number": 177,
+    "type": "moji",
+    "question": "検査の前は、飲食もタバコも<em>禁止</em>です。",
+    "options": [
+      {
+        "1": "ちゅうし"
+      },
+      {
+        "2": "ていし"
+      },
+      {
+        "3": "きんえん"
+      },
+      {
+        "4": "きんし"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "きんし"
+  },
+  {
+    "number": 178,
+    "type": "goi",
+    "question": "そんな______ホテルには<ruby>止<rt>と</rt></ruby>まったことがない。",
+    "options": [
+      {
+        "1": "<ruby>本物<rt>ほんもの</rt></ruby>の"
+      },
+      {
+        "2": "<ruby>人気<rt>にんき</rt></ruby>な"
+      },
+      {
+        "3": "<ruby>上級<rt>じょうきゅう</rt></ruby>の"
+      },
+      {
+        "4": "<ruby>高級<rt>こうきゅう</rt></ruby>な"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "<ruby>高級<rt>こうきゅう</rt></ruby>な"
+  },
+  {
+    "number": 179,
+    "type": "bunpo",
+    "question": "<ruby>毎日練習<rt>まいにちれんしゅう</rt></ruby>しているのに、______<ruby>上手<rt>じょうず</rt></ruby>になりません。",
+    "options": [
+      {
+        "1": "ちっとも"
+      },
+      {
+        "2": "<ruby>少<rt>すこ</rt></ruby>しだけ"
+      },
+      {
+        "3": "めったに"
+      },
+      {
+        "4": "おそらく"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ちっとも"
+  },
+  {
+    "number": 180,
+    "type": "moji",
+    "question": "オリンピック選手に選ばれて、夢が<em>じつげん</em>した。",
+    "options": [
+      {
+        "1": "事実"
+      },
+      {
+        "2": "実験"
+      },
+      {
+        "3": "現実"
+      },
+      {
+        "4": "実現"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "実現"
+  },
+  {
+    "number": 181,
+    "type": "goi",
+    "question": "A「<ruby>新<rt>あたら</rt></ruby>しい<ruby>仕事<rt>しごと</rt></ruby>はどう？」\nB「まあまあ______よ。」",
+    "options": [
+      {
+        "1": "<ruby>気<rt>き</rt></ruby>にしている"
+      },
+      {
+        "2": "<ruby>気<rt>き</rt></ruby>になっている"
+      },
+      {
+        "3": "<ruby>気<rt>き</rt></ruby>に<ruby>入<rt>い</rt></ruby>っている"
+      },
+      {
+        "4": "<ruby>気<rt>き</rt></ruby>にかけている"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "<ruby>気<rt>き</rt></ruby>に<ruby>入<rt>い</rt></ruby>っている"
+  },
+  {
+    "number": 182,
+    "type": "bunpo",
+    "question": "<ruby>失敗<rt>しっぱい</rt></ruby>してもあきらめないで、もう<ruby>一度<rt>いちど</rt></ruby>______。",
+    "options": [
+      {
+        "1": "やってみれ"
+      },
+      {
+        "2": "やってごらん"
+      },
+      {
+        "3": "やってなさい"
+      },
+      {
+        "4": "やってなされ"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "やってごらん"
+  },
+  {
+    "number": 183,
+    "type": "moji",
+    "question": "日本の歴史について<em>論文</em>を書いています。",
+    "options": [
+      {
+        "1": "ろんぶん"
+      },
+      {
+        "2": "るんぶん"
+      },
+      {
+        "3": "らんぶん"
+      },
+      {
+        "4": "りんぶん"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ろんぶん"
+  },
+  {
+    "number": 184,
+    "type": "goi",
+    "question": "<ruby>両親<rt>りょうしん</rt></ruby>が<ruby>日本<rt>にほん</rt></ruby>に<ruby>来<rt>く</rt></ruby>るけれど、<ruby>仕事<rt>しごと</rt></ruby>があるので<ruby>空港<rt>くうこう</rt></ruby>まで______<ruby>行<rt>い</rt></ruby>けない。",
+    "options": [
+      {
+        "1": "みおくりに"
+      },
+      {
+        "2": "むかえに"
+      },
+      {
+        "3": "たすけに"
+      },
+      {
+        "4": "まねきに"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "むかえに"
+  },
+  {
+    "number": 185,
+    "type": "bunpo",
+    "question": "<ruby>私<rt>わたし</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>は、______<ruby>書<rt>か</rt></ruby>きます。",
+    "options": [
+      {
+        "1": "こんなに"
+      },
+      {
+        "2": "こう"
+      },
+      {
+        "3": "こういう"
+      },
+      {
+        "4": "こういうふう"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "こう"
+  },
+  {
+    "number": 186,
+    "type": "moji",
+    "question": "ファイルを作成し、<em>保存</em>しましょう。",
+    "options": [
+      {
+        "1": "ほそん"
+      },
+      {
+        "2": "ほぞん"
+      },
+      {
+        "3": "ほぜん"
+      },
+      {
+        "4": "ほじょん"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ほぞん"
+  },
+  {
+    "number": 187,
+    "type": "goi",
+    "question": "<ruby>忘<rt>わす</rt></ruby>れるといけないから、<ruby>手帳<rt>てちょう</rt></ruby>に______をしておこう。",
+    "options": [
+      {
+        "1": "プリント"
+      },
+      {
+        "2": "メモ"
+      },
+      {
+        "3": "レポート"
+      },
+      {
+        "4": "ノート"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "メモ"
+  },
+  {
+    "number": 188,
+    "type": "bunpo",
+    "question": "<ruby>日曜日<rt>にちようび</rt></ruby>は、<ruby>家<rt>いえ</rt></ruby>でDVDを______<ruby>過<rt>す</rt></ruby>ごしています。",
+    "options": [
+      {
+        "1": "<ruby>見<rt>み</rt></ruby>ようとして"
+      },
+      {
+        "2": "<ruby>見<rt>み</rt></ruby>たりして"
+      },
+      {
+        "3": "<ruby>見<rt>み</rt></ruby>るために"
+      },
+      {
+        "4": "<ruby>見<rt>み</rt></ruby>るままで"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>見<rt>み</rt></ruby>たりして"
+  },
+  {
+    "number": 189,
+    "type": "moji",
+    "question": "<em>しゅしょう</em>は消費税を上げると言った。",
+    "options": [
+      {
+        "1": "首相"
+      },
+      {
+        "2": "主相"
+      },
+      {
+        "3": "首長"
+      },
+      {
+        "4": "主長"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "首相"
+  },
+  {
+    "number": 190,
+    "type": "goi",
+    "question": "けんかでもしているのか、<ruby>外<rt>そと</rt></ruby>がとても______。",
+    "options": [
+      {
+        "1": "はげしい"
+      },
+      {
+        "2": "ずうずうしい"
+      },
+      {
+        "3": "さわがしい"
+      },
+      {
+        "4": "にぎやかしい"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "さわがしい"
+  },
+  {
+    "number": 191,
+    "type": "bunpo",
+    "question": "<ruby>中国<rt>ちゅうごく</rt></ruby>で<ruby>大<rt>おお</rt></ruby>きな<ruby>地震<rt>じしん</rt></ruby>があったというニュースが______。",
+    "options": [
+      {
+        "1": "<ruby>伝<rt>つた</rt></ruby>えられました"
+      },
+      {
+        "2": "<ruby>伝<rt>つた</rt></ruby>ってきました"
+      },
+      {
+        "3": "<ruby>伝<rt>つた</rt></ruby>えてきました"
+      },
+      {
+        "4": "<ruby>伝<rt>つた</rt></ruby>わられました"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>伝<rt>つた</rt></ruby>えられました"
+  },
+  {
+    "number": 192,
+    "type": "moji",
+    "question": "規則を<em>守りましょう</em>。",
+    "options": [
+      {
+        "1": "なのりましょう"
+      },
+      {
+        "2": "ともりましょう"
+      },
+      {
+        "3": "まもりましょう"
+      },
+      {
+        "4": "たよりましょう"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "まもりましょう"
+  },
+  {
+    "number": 193,
+    "type": "goi",
+    "question": "<ruby>仕事<rt>しごと</rt></ruby>が<ruby>忙<rt>いそが</rt></ruby>しいので、<ruby>人<rt>ひと</rt></ruby>をもう<ruby>一人<rt>ひとり</rt></ruby>______ことにした。",
+    "options": [
+      {
+        "1": "やとう"
+      },
+      {
+        "2": "つとめる"
+      },
+      {
+        "3": "まぜる"
+      },
+      {
+        "4": "あずける"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "やとう"
+  },
+  {
+    "number": 194,
+    "type": "bunpo",
+    "question": "<ruby>友達<rt>ともだち</rt></ruby>の<ruby>赤<rt>あか</rt></ruby>ちゃんを<ruby>預<rt>あず</rt></ruby>かったのですが、______<ruby>困<rt>こま</rt></ruby>りました。",
+    "options": [
+      {
+        "1": "<ruby>泣<rt>な</rt></ruby>けば"
+      },
+      {
+        "2": "<ruby>泣<rt>な</rt></ruby>かせて"
+      },
+      {
+        "3": "<ruby>泣<rt>な</rt></ruby>かれて"
+      },
+      {
+        "4": "<ruby>泣<rt>な</rt></ruby>いてられて"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "<ruby>泣<rt>な</rt></ruby>かれて"
+  },
+  {
+    "number": 195,
+    "type": "moji",
+    "question": "この書類は機械に読ませますから、<em>おり</em>曲げないでください。",
+    "options": [
+      {
+        "1": "祈り"
+      },
+      {
+        "2": "折り"
+      },
+      {
+        "3": "税り"
+      },
+      {
+        "4": "祝り"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "折り"
+  },
+  {
+    "number": 196,
+    "type": "goi",
+    "question": "A「<ruby>田中<rt>たなか</rt></ruby>さんは、フランス<ruby>語<rt>ご</rt></ruby>が______だそうだね。」\nB「ああ、<ruby>留学<rt>りゅうがく</rt></ruby>していたんだって。」",
+    "options": [
+      {
+        "1": "はきはき"
+      },
+      {
+        "2": "ぺらぺら"
+      },
+      {
+        "3": "ぶつぶつ"
+      },
+      {
+        "4": "ぶらぶら"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ぺらぺら"
+  },
+  {
+    "number": 197,
+    "type": "bunpo",
+    "question": "<ruby>田中<rt>たなか</rt></ruby>さん、<ruby>社長<rt>しゃちょう</rt></ruby>が<ruby>今<rt>いま</rt></ruby>すぐ<ruby>部屋<rt>へや</rt></ruby>に______と<ruby>言<rt>い</rt></ruby>っていますよ。",
+    "options": [
+      {
+        "1": "こい"
+      },
+      {
+        "2": "こよう"
+      },
+      {
+        "3": "きろ"
+      },
+      {
+        "4": "きよう"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "こい"
+  },
+  {
+    "number": 198,
+    "type": "moji",
+    "question": "紙の<em>表</em>とうらを間違えないように確かめてください。",
+    "options": [
+      {
+        "1": "ひょう"
+      },
+      {
+        "2": "びょう"
+      },
+      {
+        "3": "おもて"
+      },
+      {
+        "4": "あらわ"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "おもて"
+  },
+  {
+    "number": 199,
+    "type": "goi",
+    "question": "<ruby>台風<rt>たいふう</rt></ruby>の<ruby>影響<rt>えいきょう</rt></ruby>で、<ruby>今日<rt>きょう</rt></ruby>の<ruby>大学<rt>だいがく</rt></ruby>の<ruby>授業<rt>じゅぎょう</rt></ruby>はすべて______になった。",
+    "options": [
+      {
+        "1": "<ruby>休業<rt>きゅうぎょう</rt></ruby>"
+      },
+      {
+        "2": "<ruby>休<rt>きゅう</rt></ruby>"
+      },
+      {
+        "3": "<ruby>休憩<rt>きゅうけい</rt></ruby>"
+      },
+      {
+        "4": "<ruby>休講<rt>きゅうこう</rt></ruby>"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "<ruby>休講<rt>きゅうこう</rt></ruby>"
+  },
+  {
+    "number": 200,
+    "type": "bunpo",
+    "question": "ゼミの<ruby>資料<rt>しりょう</rt></ruby>を<ruby>一晩<rt>ひとばん</rt></ruby>で______<ruby>上<rt>あ</rt></ruby>げた。",
+    "options": [
+      {
+        "1": "まとめ"
+      },
+      {
+        "2": "まとめて"
+      },
+      {
+        "3": "まとめる"
+      },
+      {
+        "4": "まとめた"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "まとめ"
+  },
+  {
+    "number": 201,
+    "type": "moji",
+    "question": "『幸福な<em>王子</em>』　という物語を読んだ。",
+    "options": [
+      {
+        "1": "おうじ"
+      },
+      {
+        "2": "おおじ"
+      },
+      {
+        "3": "おうし"
+      },
+      {
+        "4": "おおし"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "おうじ"
+  },
+  {
+    "number": 202,
+    "type": "goi",
+    "question": "<ruby>部屋<rt>へや</rt></ruby>がなかなか______ね。エアコンが<ruby>壊<rt>こわ</rt></ruby>れているのかな。",
+    "options": [
+      {
+        "1": "ひえない"
+      },
+      {
+        "2": "さめない"
+      },
+      {
+        "3": "こおらない"
+      },
+      {
+        "4": "ひやさない"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ひえない"
+  },
+  {
+    "number": 203,
+    "type": "bunpo",
+    "question": "<ruby>車<rt>くるま</rt></ruby>で<ruby>空港<rt>くうこう</rt></ruby>まで______と<ruby>頼<rt>たの</rt></ruby>まれました。",
+    "options": [
+      {
+        "1": "<ruby>送<rt>おく</rt></ruby>ろう"
+      },
+      {
+        "2": "<ruby>送<rt>おく</rt></ruby>るよう"
+      },
+      {
+        "3": "<ruby>送<rt>おく</rt></ruby>ってくれ"
+      },
+      {
+        "4": "<ruby>送<rt>おく</rt></ruby>ってくれる"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "<ruby>送<rt>おく</rt></ruby>ってくれ"
+  },
+  {
+    "number": 204,
+    "type": "moji",
+    "question": "この機械を使うには、英面の<em>しじ</em>通りにしてください。",
+    "options": [
+      {
+        "1": "指示"
+      },
+      {
+        "2": "支持"
+      },
+      {
+        "3": "指事"
+      },
+      {
+        "4": "私事"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "指示"
+  },
+  {
+    "number": 205,
+    "type": "goi",
+    "question": "<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を<ruby>買<rt>か</rt></ruby>ってくれように<ruby>言<rt>い</rt></ruby>われていたが、______して<ruby>忘<rt>わす</rt></ruby>れてしまった。",
+    "options": [
+      {
+        "1": "がっかり"
+      },
+      {
+        "2": "すっかり"
+      },
+      {
+        "3": "うっかり"
+      },
+      {
+        "4": "しっかり"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "うっかり"
+  },
+  {
+    "number": 206,
+    "type": "bunpo",
+    "question": "<ruby>友達<rt>ともだち</rt></ruby>の<ruby>結婚<rt>けっこん</rt></ruby>のお<ruby>祝<rt>いわ</rt></ruby>いを<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>選<rt>えら</rt></ruby>んで______。",
+    "options": [
+      {
+        "1": "くださいませんか"
+      },
+      {
+        "2": "いただきませんか"
+      },
+      {
+        "3": "くださってもいいですか"
+      },
+      {
+        "4": "いただけてもいいですか"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "くださいませんか"
+  },
+  {
+    "number": 207,
+    "type": "moji",
+    "question": "支払い<em>期限</em>はいつですか。",
+    "options": [
+      {
+        "1": "きかん"
+      },
+      {
+        "2": "きがん"
+      },
+      {
+        "3": "きじつ"
+      },
+      {
+        "4": "きげん"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "きげん"
+  },
+  {
+    "number": 208,
+    "type": "goi",
+    "question": "きれいで<ruby>頭<rt>あたま</rt></ruby>のいい<ruby>田中<rt>たなか</rt></ruby>さんが______。",
+    "options": [
+      {
+        "1": "くやしい"
+      },
+      {
+        "2": "おしい"
+      },
+      {
+        "3": "うらやましい"
+      },
+      {
+        "4": "ずるい"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "うらやましい"
+  },
+  {
+    "number": 209,
+    "type": "bunpo",
+    "question": "A「<ruby>京都<rt>きょうと</rt></ruby>へは______ことがありますか。」\nB「ええ、<ruby>何度<rt>なんど</rt></ruby>も<ruby>行<rt>い</rt></ruby>きました。」",
+    "options": [
+      {
+        "1": "<ruby>行<rt>い</rt></ruby>けた"
+      },
+      {
+        "2": "<ruby>行<rt>い</rt></ruby>かれた"
+      },
+      {
+        "3": "<ruby>行<rt>い</rt></ruby>かせた"
+      },
+      {
+        "4": "<ruby>行<rt>い</rt></ruby>けられた"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>行<rt>い</rt></ruby>かれた"
+  },
+  {
+    "number": 210,
+    "type": "moji",
+    "question": "試験は<em>しっぱい</em>してしまった。",
+    "options": [
+      {
+        "1": "矢敗"
+      },
+      {
+        "2": "失敗"
+      },
+      {
+        "3": "欠敗"
+      },
+      {
+        "4": "夫敗"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "失敗"
+  },
+  {
+    "number": 211,
+    "type": "goi",
+    "question": "<ruby>食器<rt>しょっき</rt></ruby>は______その<ruby>棚<rt>たな</rt></ruby>にしまってください。",
+    "options": [
+      {
+        "1": "かさねて"
+      },
+      {
+        "2": "ひろげて"
+      },
+      {
+        "3": "たたんで"
+      },
+      {
+        "4": "ちぢめて"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "かさねて"
+  },
+  {
+    "number": 212,
+    "type": "bunpo",
+    "question": "A「あの<ruby>方<rt>かた</rt></ruby>をご<ruby>存<rt>ぞん</rt></ruby>じですか。」\nB「いいえ、______。」",
+    "options": [
+      {
+        "1": "<ruby>存<rt>ぞん</rt></ruby>じじゃありません"
+      },
+      {
+        "2": "<ruby>存<rt>ぞん</rt></ruby>じません"
+      },
+      {
+        "3": "<ruby>存<rt>ぞん</rt></ruby>じてません"
+      },
+      {
+        "4": "<ruby>存<rt>ぞん</rt></ruby>じないです"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>存<rt>ぞん</rt></ruby>じません"
+  },
+  {
+    "number": 213,
+    "type": "moji",
+    "question": "その友人は独身で、<ruby>趣味<rt>しゅみ</rt></ruby>は<em>登山</em>です。",
+    "options": [
+      {
+        "1": "とさん"
+      },
+      {
+        "2": "とざん"
+      },
+      {
+        "3": "とうざん"
+      },
+      {
+        "4": "とうさん"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "とざん"
+  },
+  {
+    "number": 214,
+    "type": "goi",
+    "question": "<ruby>田中<rt>たなか</rt></ruby>さんの<ruby>結婚式<rt>けっこんしき</rt></ruby>には、なんとか______<ruby>出席<rt>しゅっせき</rt></ruby>したいと<ruby>思<rt>おも</rt></ruby>っています。",
+    "options": [
+      {
+        "1": "<ruby>都合<rt>つごう</rt></ruby>をつけて"
+      },
+      {
+        "2": "<ruby>具合<rt>ぐあい</rt></ruby>がよくて"
+      },
+      {
+        "3": "<ruby>事情<rt>じじょう</rt></ruby>をとって"
+      },
+      {
+        "4": "<ruby>連絡<rt>れんらく</rt></ruby>があって"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>都合<rt>つごう</rt></ruby>をつけて"
+  },
+  {
+    "number": 215,
+    "type": "bunpo",
+    "question": "<ruby>駐車<rt>ちゅうしゃ</rt></ruby>は______ください。",
+    "options": [
+      {
+        "1": "ご<ruby>遠慮<rt>えんりょ</rt></ruby>"
+      },
+      {
+        "2": "ご<ruby>遠慮<rt>えんりょ</rt></ruby>して"
+      },
+      {
+        "3": "ご<ruby>遠慮<rt>えんりょ</rt></ruby>いただけて"
+      },
+      {
+        "4": "ご<ruby>遠慮申<rt>えんりょもう</rt></ruby>し<ruby>上<rt>あ</rt></ruby>げて"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ご<ruby>遠慮<rt>えんりょ</rt></ruby>"
+  },
+  {
+    "number": 216,
+    "type": "moji",
+    "question": "ビールが<em>冷えて</em>います。",
+    "options": [
+      {
+        "1": "ふえて"
+      },
+      {
+        "2": "ひえて"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ひえて"
+  },
+  {
+    "number": 217,
+    "type": "moji",
+    "question": "<em>ひさしぶり</em>に両親と会った。",
+    "options": [
+      {
+        "1": "欠しぶり"
+      },
+      {
+        "2": "久しぶり"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "久しぶり"
+  },
+  {
+    "number": 218,
+    "type": "goi",
+    "question": "この子が______のは、２<ruby>歳<rt>さい</rt></ruby>になってからです。",
+    "options": [
+      {
+        "1": "しゃべり出した"
+      },
+      {
+        "2": "話しかけた"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "しゃべり出した"
+  },
+  {
+    "number": 219,
+    "type": "goi",
+    "question": "彼とは会話の______が合わない。",
+    "options": [
+      {
+        "1": "チャンス"
+      },
+      {
+        "2": "テンポ"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "テンポ"
+  },
+  {
+    "number": 220,
+    "type": "bunpo",
+    "question": "妹は、私の持っているものをいつも______。",
+    "options": [
+      {
+        "1": "ほしがります"
+      },
+      {
+        "2": "ほしいはずです"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ほしがります"
+  },
+  {
+    "number": 221,
+    "type": "bunpo",
+    "question": "工事の音は耳が<ruby>痛<rt>いた</rt></ruby>くなる______大きい。",
+    "options": [
+      {
+        "1": "ばかり"
+      },
+      {
+        "2": "ほど"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ほど"
+  },
+  {
+    "number": 222,
+    "type": "moji",
+    "question": "荷物をお届けに参りましたが、お<em>留守</em>でした。",
+    "options": [
+      {
+        "1": "るしゅ"
+      },
+      {
+        "2": "るす"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "るす"
+  },
+  {
+    "number": 223,
+    "type": "moji",
+    "question": "ここは<em>むりょう</em>で車が止められます。",
+    "options": [
+      {
+        "1": "無料"
+      },
+      {
+        "2": "無両"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "無料"
+  },
+  {
+    "number": 224,
+    "type": "goi",
+    "question": "田中さんはお子さんの______が思いらしくて、もう帰りましたよ。",
+    "options": [
+      {
+        "1": "<ruby>事情<rt>じじょう</rt></ruby>"
+      },
+      {
+        "2": "<ruby>具合<rt>ぐあい</rt></ruby>"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>具合<rt>ぐあい</rt></ruby>"
+  },
+  {
+    "number": 225,
+    "type": "goi",
+    "question": "今日の面接の結果が______、<ruby>眠<rt>ねむ</rt></ruby>れない。",
+    "options": [
+      {
+        "1": "気にして"
+      },
+      {
+        "2": "気になって"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "気になって"
+  },
+  {
+    "number": 226,
+    "type": "bunpo",
+    "question": "会社が<ruby>移転<rt>いてん</rt></ruby>する______。",
+    "options": [
+      {
+        "1": "ことにした"
+      },
+      {
+        "2": "ことになった"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ことになった"
+  },
+  {
+    "number": 227,
+    "type": "bunpo",
+    "question": "<ruby>秘書<rt>ひしょ</rt></ruby>に急に______。",
+    "options": [
+      {
+        "1": "辞められた"
+      },
+      {
+        "2": "辞めさせた"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "辞められた"
+  },
+  {
+    "number": 228,
+    "type": "moji",
+    "question": "<em>汚い</em>からさわらないで。",
+    "options": [
+      {
+        "1": "きたない"
+      },
+      {
+        "2": "よごれい"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "きたない"
+  },
+  {
+    "number": 229,
+    "type": "moji",
+    "question": "おもしろい場所に<em>おつれ</em>しましょう。",
+    "options": [
+      {
+        "1": "お連れ"
+      },
+      {
+        "2": "お練れ"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "お連れ"
+  },
+  {
+    "number": 230,
+    "type": "goi",
+    "question": "A「どんな______ですか。」\nB「のどが<ruby>痛<rt>いた</rt></ruby>くてせきが出るんです。」",
+    "options": [
+      {
+        "1": "しょうじょう"
+      },
+      {
+        "2": "たいど"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "しょうじょう"
+  },
+  {
+    "number": 231,
+    "type": "goi",
+    "question": "______ことはないんですが、今、父は入院しているんです。",
+    "options": [
+      {
+        "1": "おもな"
+      },
+      {
+        "2": "たいした"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "たいした"
+  },
+  {
+    "number": 232,
+    "type": "bunpo",
+    "question": "明日早いんだから、早く______。",
+    "options": [
+      {
+        "1": "寝ると"
+      },
+      {
+        "2": "寝ないと"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "寝ないと"
+  },
+  {
+    "number": 233,
+    "type": "bunpo",
+    "question": "なんか変な_____ね。何だろう。",
+    "options": [
+      {
+        "1": "音がする"
+      },
+      {
+        "2": "音がきる"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "音がする"
+  },
+  {
+    "number": 234,
+    "type": "moji",
+    "question": "<em>忘年会</em>で飲みすぎた。",
+    "options": [
+      {
+        "1": "ぼうねんかい"
+      },
+      {
+        "2": "もうねんかい"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ぼうねんかい"
+  },
+  {
+    "number": 235,
+    "type": "moji",
+    "question": "<em>かみさま</em>、どうかお願いします。",
+    "options": [
+      {
+        "1": "上様"
+      },
+      {
+        "2": "神様"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "神様"
+  },
+  {
+    "number": 236,
+    "type": "goi",
+    "question": "<ruby>逃<rt>に</rt></ruby>げても<ruby>逃<rt>に</rt></ruby>げても犬が______<ruby>追<rt>お</rt></ruby>いかけてきて<ruby>怖<rt>こわ</rt></ruby>かった。",
+    "options": [
+      {
+        "1": "しつこく"
+      },
+      {
+        "2": "あやしく"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "しつこく"
+  },
+  {
+    "number": 237,
+    "type": "goi",
+    "question": "試験まであと１週間しかない。ああ。時間が______<ruby>過<rt>す</rt></ruby>ぎていく。",
+    "options": [
+      {
+        "1": "どんどん"
+      },
+      {
+        "2": "のろのろ"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "どんどん"
+  },
+  {
+    "number": 238,
+    "type": "bunpo",
+    "question": "ずる休みをするなんて、______。",
+    "options": [
+      {
+        "1": "あなたらしくない"
+      },
+      {
+        "2": "あなたっぱくない"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "あなたらしくない"
+  },
+  {
+    "number": 239,
+    "type": "bunpo",
+    "question": "そのベンチはペンキ______だから、座らないで。",
+    "options": [
+      {
+        "1": "ぬりたて"
+      },
+      {
+        "2": "ぬりっぱなし"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ぬりたて"
+  },
+  {
+    "number": 240,
+    "type": "moji",
+    "question": "<em>教育</em>について考える。",
+    "options": [
+      {
+        "1": "きょういく"
+      },
+      {
+        "2": "きょうよう"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "きょういく"
+  },
+  {
+    "number": 241,
+    "type": "moji",
+    "question": "<em>ねんまつ</em>は忙しい。",
+    "options": [
+      {
+        "1": "年未"
+      },
+      {
+        "2": "年末"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "年末"
+  },
+  {
+    "number": 242,
+    "type": "goi",
+    "question": "パソコンが<ruby>壊<rt>こわ</rt></ruby>れた。______のは時間もお金もかかるらしい。",
+    "options": [
+      {
+        "1": "<ruby>修理<rt>しゅうり</rt></ruby>する"
+      },
+      {
+        "2": "<ruby>解決<rt>かいけつ</rt></ruby>する"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>修理<rt>しゅうり</rt></ruby>する"
+  },
+  {
+    "number": 243,
+    "type": "goi",
+    "question": "結婚式に______けれど、何を着て行ったらよいかわからない。",
+    "options": [
+      {
+        "1": "むかえられた"
+      },
+      {
+        "2": "まねかれた"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "まねかれた"
+  },
+  {
+    "number": 244,
+    "type": "bunpo",
+    "question": "ひまなときは音楽を聞いたり______。",
+    "options": [
+      {
+        "1": "しています"
+      },
+      {
+        "2": "なっています"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "しています"
+  },
+  {
+    "number": 245,
+    "type": "bunpo",
+    "question": "A「もう会えないかも。」\nB「え、______意味ですか。」",
+    "options": [
+      {
+        "1": "どんな"
+      },
+      {
+        "2": "どういう"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "どういう"
+  },
+  {
+    "number": 246,
+    "type": "moji",
+    "question": "<em>言葉</em>の意味を調べる。",
+    "options": [
+      {
+        "1": "げんご"
+      },
+      {
+        "2": "ことば"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ことば"
+  },
+  {
+    "number": 247,
+    "type": "moji",
+    "question": "<em>なかしい</em>小説を読んだ。",
+    "options": [
+      {
+        "1": "苦しい"
+      },
+      {
+        "2": "悲しい"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "悲しい"
+  },
+  {
+    "number": 248,
+    "type": "goi",
+    "question": "セーターを家で洗ったら、______。",
+    "options": [
+      {
+        "1": "<ruby>縮<rt>ちぢ</rt></ruby>んじゃった"
+      },
+      {
+        "2": "<ruby>縮<rt>ちぢ</rt></ruby>めちゃった"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>縮<rt>ちぢ</rt></ruby>んじゃった"
+  },
+  {
+    "number": 249,
+    "type": "goi",
+    "question": "田中さんは、だまって入の物を使うような______人ではない。",
+    "options": [
+      {
+        "1": "さわがしい"
+      },
+      {
+        "2": "ずうずうしい"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ずうずうしい"
+  },
+  {
+    "number": 250,
+    "type": "bunpo",
+    "question": "先生に、毎日30分は______と言われています。",
+    "options": [
+      {
+        "1": "勉強するよう"
+      },
+      {
+        "2": "勉強しろ"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "勉強しろ"
+  },
+  {
+    "number": 251,
+    "type": "moji",
+    "question": "地下鉄の人り口はあの<em>交差点</em>にありますよ。",
+    "options": [
+      {
+        "1": "こさてん"
+      },
+      {
+        "2": "こうさてん"
+      },
+      {
+        "3": "こしゃてん"
+      },
+      {
+        "4": "こうしゃてん"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "こうさてん"
+  },
+  {
+    "number": 252,
+    "type": "goi",
+    "question": "<ruby>若<rt>わか</rt></ruby>いときは、いくらお<ruby>酒<rt>さけ</rt></ruby>を<ruby>飲<rt>の</rt></ruby>んでも______だったが、<ruby>最近<rt>さいきん</rt></ruby>はすぐに<ruby>酔<rt>よ</rt></ruby>ってしまう。",
+    "options": [
+      {
+        "1": "<ruby>平均<rt>へいき</rt></ruby>"
+      },
+      {
+        "2": "<ruby>健康<rt>けんこう</rt></ruby>"
+      },
+      {
+        "3": "まじめ"
+      },
+      {
+        "4": "<ruby>無事<rt>ぶじ</rt></ruby>"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>平均<rt>へいき</rt></ruby>"
+  },
+  {
+    "number": 253,
+    "type": "bunpo",
+    "question": "<ruby>病気<rt>びょうき</rt></ruby>に______<ruby>健康<rt>けんこう</rt></ruby>の<ruby>大切<rt>たいせつ</rt></ruby>さを<ruby>知<rt>し</rt></ruby>りました。",
+    "options": [
+      {
+        "1": "なってからでないと"
+      },
+      {
+        "2": "ならないことには"
+      },
+      {
+        "3": "なってはじめて"
+      },
+      {
+        "4": "なってからでは"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "なってはじめて"
+  },
+  {
+    "number": 254,
+    "type": "moji",
+    "question": "ご不在でしたので、資料は仲村様に<em>おあずけ</em>しました。",
+    "options": [
+      {
+        "1": "お届け"
+      },
+      {
+        "2": "お頂け"
+      },
+      {
+        "3": "お授け"
+      },
+      {
+        "4": "お預け"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "お預け"
+  },
+  {
+    "number": 255,
+    "type": "goi",
+    "question": "A「<ruby>奥<rt>おく</rt></ruby>さん、<ruby>女優<rt>じょゆう</rt></ruby>さんみたいにきれいですね。」\nB「いやあ、______です。<ruby>妻<rt>つま</rt></ruby>ももう<ruby>年<rt>とり</rt></ruby>ですよ。」",
+    "options": [
+      {
+        "1": "しょうがない"
+      },
+      {
+        "2": "おかげさま"
+      },
+      {
+        "3": "とんでもない"
+      },
+      {
+        "4": "もうしわけない"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "とんでもない"
+  },
+  {
+    "number": 256,
+    "type": "bunpo",
+    "question": "もっとうまく<ruby>英語<rt>えいご</rt></ruby>が______なあ。」",
+    "options": [
+      {
+        "1": "<ruby>話<rt>はな</rt></ruby>せない"
+      },
+      {
+        "2": "<ruby>話<rt>はな</rt></ruby>そうか"
+      },
+      {
+        "3": "<ruby>話<rt>はな</rt></ruby>せたら"
+      },
+      {
+        "4": "<ruby>話<rt>はな</rt></ruby>しても"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "<ruby>話<rt>はな</rt></ruby>せたら"
+  },
+  {
+    "number": 257,
+    "type": "moji",
+    "question": "<em>申込書</em>は例を参考に記入してください。",
+    "options": [
+      {
+        "1": "しんこくしょ"
+      },
+      {
+        "2": "しんせいしょ"
+      },
+      {
+        "3": "もしこみしょ"
+      },
+      {
+        "4": "もうしこみしょ"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "もうしこみしょ"
+  },
+  {
+    "number": 258,
+    "type": "goi",
+    "question": "<ruby>明日<rt>あした</rt></ruby>からしばらく<ruby>留守<rt>るす</rt></ruby>にします。<ruby>荷物<rt>にもつ</rt></ruby>が<ruby>来<rt>き</rt></ruby>たら______おいてください。",
+    "options": [
+      {
+        "1": "<ruby>受<rt>う</rt></ruby>け<ruby>持<rt>も</rt></ruby>って"
+      },
+      {
+        "2": "<ruby>受<rt>う</rt></ruby>け<ruby>取<rt>と</rt></ruby>って"
+      },
+      {
+        "3": "<ruby>受<rt>う</rt></ruby>け<ruby>入<rt>い</rt></ruby>れて"
+      },
+      {
+        "4": "<ruby>受<rt>う</rt></ruby>け<ruby>付<rt>つ</rt></ruby>けて"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>受<rt>う</rt></ruby>け<ruby>取<rt>と</rt></ruby>って"
+  },
+  {
+    "number": 259,
+    "type": "bunpo",
+    "question": "A「それ、<ruby>高<rt>たか</rt></ruby>かったでしょう。」\nB「______でもありませんよ。」",
+    "options": [
+      {
+        "1": "それ"
+      },
+      {
+        "2": "それほど"
+      },
+      {
+        "3": "それより"
+      },
+      {
+        "4": "それくらい"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "それほど"
+  },
+  {
+    "number": 260,
+    "type": "moji",
+    "question": "あの団体は国際的な<em>かつどう</em>をしている。",
+    "options": [
+      {
+        "1": "運動"
+      },
+      {
+        "2": "行動"
+      },
+      {
+        "3": "活動"
+      },
+      {
+        "4": "自動"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "活動"
+  },
+  {
+    "number": 261,
+    "type": "goi",
+    "question": "<ruby>私<rt>わたし</rt></ruby>は、<ruby>殺人犯<rt>さつじんはん</rt></ruby>がまだこの<ruby>近<rt>ちか</rt></ruby>くにいるような______。",
+    "options": [
+      {
+        "1": "<ruby>気<rt>き</rt></ruby>がする"
+      },
+      {
+        "2": "<ruby>考<rt>かんが</rt></ruby>えがある"
+      },
+      {
+        "3": "<ruby>感<rt>かん</rt></ruby>じになる"
+      },
+      {
+        "4": "<ruby>心<rt>こころ</rt></ruby>を<ruby>持<rt>も</rt></ruby>っている"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>気<rt>き</rt></ruby>がする"
+  },
+  {
+    "number": 262,
+    "type": "bunpo",
+    "question": "<ruby>田中<rt>たなか</rt></ruby>さんは<ruby>仕事<rt>しごと</rt></ruby>が<ruby>終<rt>お</rt></ruby>わっても、なかなか______。",
+    "options": [
+      {
+        "1": "<ruby>帰<rt>かえ</rt></ruby>るようにしていない"
+      },
+      {
+        "2": "<ruby>帰<rt>かえ</rt></ruby>れないつもりだ"
+      },
+      {
+        "3": "<ruby>帰<rt>かえ</rt></ruby>ってられない"
+      },
+      {
+        "4": "<ruby>帰<rt>かえ</rt></ruby>ろうとしない"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "<ruby>帰<rt>かえ</rt></ruby>ろうとしない"
+  },
+  {
+    "number": 263,
+    "type": "moji",
+    "question": "<em>観光</em>海外へ行くので、準備をしているところです。",
+    "options": [
+      {
+        "1": "けんこう"
+      },
+      {
+        "2": "けんこん"
+      },
+      {
+        "3": "かんこう"
+      },
+      {
+        "4": "かんこん"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "かんこう"
+  },
+  {
+    "number": 264,
+    "type": "goi",
+    "question": "その<ruby>俳優<rt>はいゆう</rt></ruby>は<ruby>雑誌<rt>ざっし</rt></ruby>の______に<ruby>応<rt>おう</rt></ruby>じた<ruby>後<rt>あと</rt></ruby>、テレビ<ruby>局<rt>きょく</rt></ruby>に<ruby>向<rt>む</rt></ruby>かった。",
+    "options": [
+      {
+        "1": "レポート"
+      },
+      {
+        "2": "インタビュー"
+      },
+      {
+        "3": "スピーチ"
+      },
+      {
+        "4": "アナウンス"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "インタビュー"
+  },
+  {
+    "number": 265,
+    "type": "bunpo",
+    "question": "<ruby>病気<rt>びょうき</rt></ruby>に______、<ruby>食事<rt>しょくじ</rt></ruby>に<ruby>気<rt>き</rt></ruby>をつけましょう。",
+    "options": [
+      {
+        "1": "ならないように"
+      },
+      {
+        "2": "なることがなくて"
+      },
+      {
+        "3": "ならないみたいに"
+      },
+      {
+        "4": "なってはいけなくて"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ならないように"
+  },
+  {
+    "number": 266,
+    "type": "moji",
+    "question": "この<em>求人広告</em>は仕事の内容がよくわからない。",
+    "options": [
+      {
+        "1": "きゅうじんこうこく"
+      },
+      {
+        "2": "きゅうにんこうこく"
+      },
+      {
+        "3": "きゅうじんこうかく"
+      },
+      {
+        "4": "きゅうにんこうかく"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "きゅうじんこうこく"
+  },
+  {
+    "number": 267,
+    "type": "goi",
+    "question": "<ruby>今日<rt>きょう</rt></ruby>の<ruby>授業<rt>じゅぎょう</rt></ruby>で<ruby>習<rt>なら</rt></ruby>ったことをノートに______みた。",
+    "options": [
+      {
+        "1": "あつめて"
+      },
+      {
+        "2": "うめて"
+      },
+      {
+        "3": "まとめて"
+      },
+      {
+        "4": "ふくめて"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "まとめて"
+  },
+  {
+    "number": 268,
+    "type": "bunpo",
+    "question": "<ruby>危<rt>あぶ</rt></ruby>なかった。もう<ruby>少<rt>すこ</rt></ruby>しで<ruby>事故<rt>じこ</rt></ruby>になる______。",
+    "options": [
+      {
+        "1": "らしかった"
+      },
+      {
+        "2": "そうだった"
+      },
+      {
+        "3": "ところだった"
+      },
+      {
+        "4": "<ruby>途中<rt>とちゅう</rt></ruby>だった"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "ところだった"
+  },
+  {
+    "number": 269,
+    "type": "moji",
+    "question": "虫歯を<em>なおす</em>方法について医師から説明してもらった。",
+    "options": [
+      {
+        "1": "消す"
+      },
+      {
+        "2": "移す"
+      },
+      {
+        "3": "正す"
+      },
+      {
+        "4": "治す"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "治す"
+  },
+  {
+    "number": 270,
+    "type": "goi",
+    "question": "A「<ruby>電車<rt>でんしゃ</rt></ruby>、<ruby>混<rt>こ</rt></ruby>んでいた？」\nB「ううん、______だったよ。」",
+    "options": [
+      {
+        "1": "のろのろ"
+      },
+      {
+        "2": "うろうろ"
+      },
+      {
+        "3": "そろそろ"
+      },
+      {
+        "4": "がらがら"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "がらがら"
+  },
+  {
+    "number": 271,
+    "type": "bunpo",
+    "question": "A「<ruby>映画<rt>えいが</rt></ruby>、おもしろかったよ。」\nB「へえー。<ruby>私<rt>わたし</rt></ruby>も<ruby>一緒<rt>いっしょ</rt></ruby>に______。」",
+    "options": [
+      {
+        "1": "<ruby>行<rt>い</rt></ruby>きたがっていた"
+      },
+      {
+        "2": "<ruby>行<rt>い</rt></ruby>けなくてよかった"
+      },
+      {
+        "3": "<ruby>行<rt>い</rt></ruby>こうとしたかった"
+      },
+      {
+        "4": "<ruby>行<rt>い</rt></ruby>けばよかった"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "<ruby>行<rt>い</rt></ruby>けばよかった"
+  },
+  {
+    "number": 272,
+    "type": "moji",
+    "question": "二十歳未満の方への販売を<em>お断り</em>しております。",
+    "options": [
+      {
+        "1": "おとこわり"
+      },
+      {
+        "2": "おことわり"
+      },
+      {
+        "3": "おこだわり"
+      },
+      {
+        "4": "おだこわり"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "おことわり"
+  },
+  {
+    "number": 273,
+    "type": "goi",
+    "question": "<ruby>映画<rt>えいが</rt></ruby>は、______<ruby>映画館<rt>えいがかん</rt></ruby>で<ruby>見<rt>み</rt></ruby>ることもありますが、たいていはDVDを<ruby>借<rt>か</rt></ruby>りて<ruby>家<rt>いえ</rt></ruby>で<ruby>見<rt>み</rt></ruby>ます。",
+    "options": [
+      {
+        "1": "たまに"
+      },
+      {
+        "2": "ついに"
+      },
+      {
+        "3": "わりに"
+      },
+      {
+        "4": "まず"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "たまに"
+  },
+  {
+    "number": 274,
+    "type": "bunpo",
+    "question": "<ruby>電話<rt>でんわ</rt></ruby>くれたらすぐ<ruby>手伝<rt>てつだ</rt></ruby>いに______、どうして<ruby>言<rt>い</rt></ruby>わなかったの？」",
+    "options": [
+      {
+        "1": "<ruby>行<rt>い</rt></ruby>ったのに"
+      },
+      {
+        "2": "<ruby>行<rt>い</rt></ruby>くつもりなので"
+      },
+      {
+        "3": "<ruby>行<rt>い</rt></ruby>きたかったけれど"
+      },
+      {
+        "4": "<ruby>行<rt>い</rt></ruby>けないだろうが"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>行<rt>い</rt></ruby>ったのに"
+  },
+  {
+    "number": 275,
+    "type": "moji",
+    "question": "体重が<em>ふえた</em>ので、食べる量を減らしています。",
+    "options": [
+      {
+        "1": "太えた"
+      },
+      {
+        "2": "多えた"
+      },
+      {
+        "3": "過えた"
+      },
+      {
+        "4": "増えた"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "増えた"
+  },
+  {
+    "number": 276,
+    "type": "goi",
+    "question": "<ruby>急<rt>きゅう</rt></ruby>に______と<ruby>車<rt>くるま</rt></ruby>にひかれるから、<ruby>気<rt>き</rt></ruby>をつけて。",
+    "options": [
+      {
+        "1": "<ruby>飛<rt>と</rt></ruby>び<ruby>込<rt>こ</rt></ruby>む"
+      },
+      {
+        "2": "<ruby>通<rt>とお</rt></ruby>り<ruby>過<rt>す</rt></ruby>ぎる"
+      },
+      {
+        "3": "<ruby>飛<rt>と</rt></ruby>び<ruby>出<rt>だ</rt></ruby>す"
+      },
+      {
+        "4": "<ruby>通<rt>とお</rt></ruby>りかかる"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "<ruby>飛<rt>と</rt></ruby>び<ruby>出<rt>だ</rt></ruby>す"
+  },
+  {
+    "number": 277,
+    "type": "bunpo",
+    "question": "<ruby>田中<rt>たなか</rt></ruby>さんの<ruby>妹<rt>いもうと</rt></ruby>さんは、<ruby>美人<rt>びじん</rt></ruby>______、かわいい<ruby>女性<rt>じょせい</rt></ruby>です。",
+    "options": [
+      {
+        "1": "というけれど"
+      },
+      {
+        "2": "といっても"
+      },
+      {
+        "3": "というより"
+      },
+      {
+        "4": "といったら"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "というより"
+  },
+  {
+    "number": 278,
+    "type": "moji",
+    "question": "何か問題が起こったら、<em>必ず</em>連絡して相談してください。",
+    "options": [
+      {
+        "1": "かならず"
+      },
+      {
+        "2": "からなず"
+      },
+      {
+        "3": "とれあいず"
+      },
+      {
+        "4": "とりあえず"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "かならず"
+  },
+  {
+    "number": 279,
+    "type": "goi",
+    "question": "<ruby>桜<rt>さくら</rt></ruby>の<ruby>花<rt>はな</rt></ruby>が______<ruby>後<rt>あと</rt></ruby>の<ruby>道<rt>みち</rt></ruby>は、まるでピンクのじゅうたんみたいだ。",
+    "options": [
+      {
+        "1": "ちった"
+      },
+      {
+        "2": "かれた"
+      },
+      {
+        "3": "さいた"
+      },
+      {
+        "4": "ひらいた"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ちった"
+  },
+  {
+    "number": 280,
+    "type": "bunpo",
+    "question": "<ruby>私<rt>わたし</rt></ruby>は<ruby>留学生<rt>りゅうがくせい</rt></ruby>______<ruby>日本<rt>にほん</rt></ruby>に<ruby>来<rt>き</rt></ruby>ましたが、<ruby>日本<rt>にほん</rt></ruby>で<ruby>就職<rt>しゅうしょく</rt></ruby>をして、<ruby>結婚<rt>けっこん</rt></ruby>もしました。",
+    "options": [
+      {
+        "1": "として"
+      },
+      {
+        "2": "としたら"
+      },
+      {
+        "3": "としては"
+      },
+      {
+        "4": "としても"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "として"
+  },
+  {
+    "number": 281,
+    "type": "moji",
+    "question": "<em>地震</em>情報です。今日午前7時13分に地震がありました。",
+    "options": [
+      {
+        "1": "じんしん"
+      },
+      {
+        "2": "じしん"
+      },
+      {
+        "3": "じっしん"
+      },
+      {
+        "4": "ちしん"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "じしん"
+  },
+  {
+    "number": 282,
+    "type": "goi",
+    "question": "<ruby>洗濯物<rt>せんたくもの</rt></ruby>は、<ruby>乾<rt>かわ</rt></ruby>いたら______たたんで、しまいましょう。",
+    "options": [
+      {
+        "1": "しいんと"
+      },
+      {
+        "2": "わざと"
+      },
+      {
+        "3": "きちんと"
+      },
+      {
+        "4": "そっと"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "きちんと"
+  },
+  {
+    "number": 283,
+    "type": "bunpo",
+    "question": "もし<ruby>休<rt>やす</rt></ruby>みが______、<ruby>旅行<rt>りょうこ</rt></ruby>には<ruby>行<rt>い</rt></ruby>かずに<ruby>家<rt>うち</rt></ruby>でのんびりしたいです。",
+    "options": [
+      {
+        "1": "<ruby>取<rt>と</rt></ruby>れたにしたら"
+      },
+      {
+        "2": "<ruby>取<rt>と</rt></ruby>れたとしても"
+      },
+      {
+        "3": "<ruby>取<rt>と</rt></ruby>れたにすれば"
+      },
+      {
+        "4": "<ruby>取<rt>と</rt></ruby>れたとしては"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>取<rt>と</rt></ruby>れたとしても"
+  },
+  {
+    "number": 284,
+    "type": "moji",
+    "question": "この植物は葉の<em>かたち</em>がかわいいので、インテリアとして人気がある。",
+    "options": [
+      {
+        "1": "形"
+      },
+      {
+        "2": "型"
+      },
+      {
+        "3": "刑"
+      },
+      {
+        "4": "列"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "形"
+  },
+  {
+    "number": 285,
+    "type": "goi",
+    "question": "おみやげを<ruby>買<rt>か</rt></ruby>いすぎて、スーツケースに<ruby>全部<rt>ぜんぶ</rt></ruby>______ことができない。",
+    "options": [
+      {
+        "1": "つめる"
+      },
+      {
+        "2": "つまる"
+      },
+      {
+        "3": "つつむ"
+      },
+      {
+        "4": "つもる"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "つめる"
+  },
+  {
+    "number": 286,
+    "type": "bunpo",
+    "question": "<ruby>学校<rt>がっこう</rt></ruby>を<ruby>辞<rt>や</rt></ruby>めました。______、<ruby>父<rt>ちち</rt></ruby>が<ruby>亡<rt>な</rt></ruby>くなって<ruby>働<rt>はたら</rt></ruby>かなければならないからです。",
+    "options": [
+      {
+        "1": "というと"
+      },
+      {
+        "2": "というのは"
+      },
+      {
+        "3": "というならば"
+      },
+      {
+        "4": "ということは"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "というのは"
+  },
+  {
+    "number": 287,
+    "type": "moji",
+    "question": "係員に整理券をもらえば、<em>並んで</em>待たなくてもいいそうです。",
+    "options": [
+      {
+        "1": "えらんで"
+      },
+      {
+        "2": "まなんで"
+      },
+      {
+        "3": "ならんで"
+      },
+      {
+        "4": "にらんで"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "ならんで"
+  },
+  {
+    "number": 288,
+    "type": "goi",
+    "question": "<ruby>今<rt>いま</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>は、<ruby>内容<rt>ないよう</rt></ruby>は<ruby>気<rt>き</rt></ruby>に<ruby>入<rt>い</rt></ruby>っているが、<ruby>給料<rt>きゅうりょう</rt></ruby>については______だ。",
+    "options": [
+      {
+        "1": "<ruby>不要<rt>ふよう</rt></ruby>"
+      },
+      {
+        "2": "<ruby>不幸<rt>ふこう</rt></ruby>"
+      },
+      {
+        "3": "<ruby>不平<rt>ふへい</rt></ruby>"
+      },
+      {
+        "4": "<ruby>不満<rt>ふまん</rt></ruby>"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "<ruby>不満<rt>ふまん</rt></ruby>"
+  },
+  {
+    "number": 289,
+    "type": "bunpo",
+    "question": "______、この<ruby>手紙<rt>てがみ</rt></ruby>を<ruby>出<rt>だ</rt></ruby>してきてくれませんか。",
+    "options": [
+      {
+        "1": "<ruby>散歩<rt>さんぽ</rt></ruby>のままで"
+      },
+      {
+        "2": "<ruby>散歩<rt>さんぽ</rt></ruby>した<ruby>最中<rt>さいちゅう</rt></ruby>に"
+      },
+      {
+        "3": "<ruby>散歩<rt>さんぽ</rt></ruby>のついでに"
+      },
+      {
+        "4": "<ruby>散歩<rt>さんぽ</rt></ruby>している<ruby>中<rt>なか</rt></ruby>"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "<ruby>散歩<rt>さんぽ</rt></ruby>のついでに"
+  },
+  {
+    "number": 290,
+    "type": "moji",
+    "question": "投手はよく投げたが、最後にホームランを打たれて<em>まけて</em>しまった。",
+    "options": [
+      {
+        "1": "負けて"
+      },
+      {
+        "2": "無けて"
+      },
+      {
+        "3": "失けて"
+      },
+      {
+        "4": "欠けて"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "負けて"
+  },
+  {
+    "number": 291,
+    "type": "goi",
+    "question": "<ruby>上司<rt>じょうし</rt></ruby>の<ruby>私<rt>わたし</rt></ruby>に<ruby>向<rt>む</rt></ruby>かって、そんな<ruby>失礼<rt>しつれい</rt></ruby>なことを<ruby>言<rt>い</rt></ruby>うのは______だ。",
+    "options": [
+      {
+        "1": "いじわる"
+      },
+      {
+        "2": "げひん"
+      },
+      {
+        "3": "なまいき"
+      },
+      {
+        "4": "のんき"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "なまいき"
+  },
+  {
+    "number": 292,
+    "type": "bunpo",
+    "question": "<ruby>今朝<rt>けさ</rt></ruby>、<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を______<ruby>気持<rt>きも</rt></ruby>ちが<ruby>悪<rt>わる</rt></ruby>くなって<ruby>吐<rt>は</rt></ruby>いた。",
+    "options": [
+      {
+        "1": "<ruby>飲<rt>の</rt></ruby>むところに"
+      },
+      {
+        "2": "<ruby>飲<rt>の</rt></ruby>むたびに"
+      },
+      {
+        "3": "<ruby>飲<rt>の</rt></ruby>んだとたんに"
+      },
+      {
+        "4": "<ruby>飲<rt>の</rt></ruby>んだながら"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "<ruby>飲<rt>の</rt></ruby>んだとたんに"
+  },
+  {
+    "number": 293,
+    "type": "moji",
+    "question": "私は<em>経済</em>に関する記事をよく読みます。",
+    "options": [
+      {
+        "1": "かいざい"
+      },
+      {
+        "2": "かいさい"
+      },
+      {
+        "3": "けいざい"
+      },
+      {
+        "4": "けいさい"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "けいざい"
+  },
+  {
+    "number": 294,
+    "type": "goi",
+    "question": "<ruby>田中<rt>たなか</rt></ruby>さんに<ruby>結婚<rt>けっこん</rt></ruby>を<ruby>申<rt>もう</rt></ruby>し<ruby>込<rt>こ</rt></ruby>まれたけれど、はっきり______つもりです。",
+    "options": [
+      {
+        "1": "ことわる"
+      },
+      {
+        "2": "きらう"
+      },
+      {
+        "3": "いやがる"
+      },
+      {
+        "4": "つきあえない"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ことわる"
+  },
+  {
+    "number": 295,
+    "type": "bunpo",
+    "question": "A「Bさんは<ruby>泳<rt>およ</rt></ruby>げますか。」\nB「______が、ぜんぜん<ruby>速<rt>はや</rt></ruby>くないです。」",
+    "options": [
+      {
+        "1": "<ruby>泳<rt>およ</rt></ruby>げるつもりです"
+      },
+      {
+        "2": "<ruby>泳<rt>およ</rt></ruby>げることは<ruby>泳<rt>およ</rt></ruby>げます"
+      },
+      {
+        "3": "<ruby>泳<rt>およ</rt></ruby>げるかもしれません"
+      },
+      {
+        "4": "<ruby>泳<rt>およ</rt></ruby>げるかどうか<ruby>知<rt>し</rt></ruby>りません"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>泳<rt>およ</rt></ruby>げることは<ruby>泳<rt>およ</rt></ruby>げます"
+  },
+  {
+    "number": 296,
+    "type": "moji",
+    "question": "A「この<em>毛糸</em>のセーター、いい香りがするね。」\nB「うん、これで洗ったの。」",
+    "options": [
+      {
+        "1": "もうふ"
+      },
+      {
+        "2": "もうし"
+      },
+      {
+        "3": "けえと"
+      },
+      {
+        "4": "けいと"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "けいと"
+  },
+  {
+    "number": 297,
+    "type": "goi",
+    "question": "<ruby>隣<rt>となり</rt></ruby>の<ruby>家<rt>いえ</rt></ruby>のテレビがうるさいので、______を<ruby>言<rt>い</rt></ruby>いに<ruby>行<rt>い</rt></ruby>った。",
+    "options": [
+      {
+        "1": "<ruby>文句<rt>もんく</rt></ruby>"
+      },
+      {
+        "2": "わがまま"
+      },
+      {
+        "3": "<ruby>不平<rt>ふへい</rt></ruby>"
+      },
+      {
+        "4": "<ruby>話<rt>はな</rt></ruby>し<ruby>合<rt>あ</rt></ruby>い"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>文句<rt>もんく</rt></ruby>"
+  },
+  {
+    "number": 298,
+    "type": "bunpo",
+    "question": "その<ruby>学生<rt>がくせい</rt></ruby>は、<ruby>漢字<rt>かんじ</rt></ruby>______、ひらがなもカタカナも<ruby>書<rt>か</rt></ruby>けません。",
+    "options": [
+      {
+        "1": "だけで"
+      },
+      {
+        "2": "もちろん"
+      },
+      {
+        "3": "ぐらいでなく"
+      },
+      {
+        "4": "ばかりか"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "ばかりか"
+  },
+  {
+    "number": 299,
+    "type": "moji",
+    "question": "畑に<em>たね</em>をまく。",
+    "options": [
+      {
+        "1": "草"
+      },
+      {
+        "2": "種"
+      },
+      {
+        "3": "根"
+      },
+      {
+        "4": "豆"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "種"
+  },
+  {
+    "number": 300,
+    "type": "goi",
+    "question": "<ruby>田舎<rt>いなか</rt></ruby>の<ruby>母<rt>はは</rt></ruby>に<ruby>電話<rt>でんわ</rt></ruby>したが、______。<ruby>心配<rt>しんぱい</rt></ruby>だ。",
+    "options": [
+      {
+        "1": "とどかない"
+      },
+      {
+        "2": "つながらない"
+      },
+      {
+        "3": "もどらない"
+      },
+      {
+        "4": "そろわない"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "つながらない"
+  },
+  {
+    "number": 301,
+    "type": "bunpo",
+    "question": "<ruby>一年生<rt>いちねんせい</rt></ruby>は<ruby>全員<rt>ぜんいん</rt></ruby>、この<ruby>授業<rt>じゅぎょう</rt></ruby>を<ruby>受<rt>う</rt></ruby>ける______。",
+    "options": [
+      {
+        "1": "ことらしい"
+      },
+      {
+        "2": "ことのようだ"
+      },
+      {
+        "3": "ことをしている"
+      },
+      {
+        "4": "ことになっている"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "ことになっている"
+  },
+  {
+    "number": 302,
+    "type": "moji",
+    "question": "<em>非常階段</em>はあそこです。",
+    "options": [
+      {
+        "1": "ひじょうかいだん"
+      },
+      {
+        "2": "いじょうかいだん"
+      },
+      {
+        "3": "ひじょうけいだん"
+      },
+      {
+        "4": "いじょうけいだん"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ひじょうかいだん"
+  },
+  {
+    "number": 303,
+    "type": "goi",
+    "question": "<ruby>停電<rt>ていでん</rt></ruby>なのか、<ruby>電気<rt>でんき</rt></ruby>が<ruby>消<rt>き</rt></ruby>えて______<ruby>何<rt>なに</rt></ruby>も<ruby>見<rt>み</rt></ruby>えない。",
+    "options": [
+      {
+        "1": "まっくろで"
+      },
+      {
+        "2": "うすくらくて"
+      },
+      {
+        "3": "まっくらで"
+      },
+      {
+        "4": "うすぐろくて"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "まっくらで"
+  },
+  {
+    "number": 304,
+    "type": "bunpo",
+    "question": "<ruby>気<rt>き</rt></ruby>に<ruby>入<rt>い</rt></ruby>った<ruby>靴<rt>くつ</rt></ruby>があったけど、<ruby>買<rt>か</rt></ruby>えなかったよ。______。",
+    "options": [
+      {
+        "1": "<ruby>高<rt>たか</rt></ruby>かっただけ"
+      },
+      {
+        "2": "<ruby>高<rt>たか</rt></ruby>かったんだって"
+      },
+      {
+        "3": "<ruby>高<rt>たか</rt></ruby>かったとか"
+      },
+      {
+        "4": "<ruby>高<rt>たか</rt></ruby>かったんだもん"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "<ruby>高<rt>たか</rt></ruby>かったんだもん"
+  },
+  {
+    "number": 305,
+    "type": "moji",
+    "question": "勝ったチームだけでなく、どのチームもよく<em>たたかった</em>。",
+    "options": [
+      {
+        "1": "戦った"
+      },
+      {
+        "2": "争った"
+      },
+      {
+        "3": "競った"
+      },
+      {
+        "4": "健った"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "戦った"
+  },
+  {
+    "number": 306,
+    "type": "goi",
+    "question": "<ruby>夜中<rt>よなか</rt></ruby>に<ruby>起<rt>お</rt></ruby>きて<ruby>水<rt>みず</rt></ruby>を<ruby>飲<rt>の</rt></ruby>むのが______しまった。",
+    "options": [
+      {
+        "1": "くりかえして"
+      },
+      {
+        "2": "ためになって"
+      },
+      {
+        "3": "くせになって"
+      },
+      {
+        "4": "あたりまえにして"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "くせになって"
+  },
+  {
+    "number": 307,
+    "type": "bunpo",
+    "question": "<ruby>今日<rt>きょう</rt></ruby>のコンサート、<ruby>何時<rt>なんじ</rt></ruby>から______？",
+    "options": [
+      {
+        "1": "だっけ"
+      },
+      {
+        "2": "とか"
+      },
+      {
+        "3": "っぽい"
+      },
+      {
+        "4": "なあ"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "だっけ"
+  },
+  {
+    "number": 308,
+    "type": "moji",
+    "question": "この会社は家具や食器を<em>製造</em>している。",
+    "options": [
+      {
+        "1": "せいぞう"
+      },
+      {
+        "2": "せいじょう"
+      },
+      {
+        "3": "そうぞう"
+      },
+      {
+        "4": "そうじょう"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "せいぞう"
+  },
+  {
+    "number": 309,
+    "type": "goi",
+    "question": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>暑<rt>あつ</rt></ruby>かった。<ruby>早<rt>はや</rt></ruby>くシャワーを<ruby>浴<rt>あ</rt></ruby>びて______したい。",
+    "options": [
+      {
+        "1": "あっさり"
+      },
+      {
+        "2": "こっそり"
+      },
+      {
+        "3": "さっぱり"
+      },
+      {
+        "4": "すっかり"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "さっぱり"
+  },
+  {
+    "number": 310,
+    "type": "bunpo",
+    "question": "<ruby>私<rt>わたし</rt></ruby>は1995<ruby>年<rt>ねん</rt></ruby>a______2000<ruby>年<rt>ねん</rt></ruby>b______、ニューヨークに<ruby>住<rt>す</rt></ruby>んでいました。",
+    "options": [
+      {
+        "1": "a．いじょう　b．にかけて"
+      },
+      {
+        "2": "a．にわたり　b．まで"
+      },
+      {
+        "3": "a．から　b．にかけて"
+      },
+      {
+        "4": "a．より　b．わたり"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "a．から　b．にかけて"
+  },
+  {
+    "number": 311,
+    "type": "moji",
+    "question": "<em>国際</em>会議で決まったことを報告する。",
+    "options": [
+      {
+        "1": "こくせい"
+      },
+      {
+        "2": "こくぜい"
+      },
+      {
+        "3": "こくさつ"
+      },
+      {
+        "4": "こくさい"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "こくさい"
+  },
+  {
+    "number": 312,
+    "type": "goi",
+    "question": "<ruby>早<rt>はや</rt></ruby>く仕事を______、<ruby>飲<rt>の</rt></ruby>みに<ruby>行<rt>い</rt></ruby>こう。",
+    "options": [
+      {
+        "1": "<ruby>終<rt>お</rt></ruby>わられて"
+      },
+      {
+        "2": "<ruby>済<rt>す</rt></ruby>ませて"
+      },
+      {
+        "3": "<ruby>仕上<rt>しあ</rt></ruby>がらせて"
+      },
+      {
+        "4": "できあげて"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>済<rt>す</rt></ruby>ませて"
+  },
+  {
+    "number": 313,
+    "type": "bunpo",
+    "question": "______、<ruby>私<rt>わたし</rt></ruby>は<ruby>彼<rt>かれ</rt></ruby>と<ruby>結婚<rt>けっこん</rt></ruby>します。",
+    "options": [
+      {
+        "1": "たとえ<ruby>親<rt>おや</rt></ruby>が<ruby>反対<rt>はんたい</rt></ruby>したら"
+      },
+      {
+        "2": "たとえば<ruby>親<rt>おや</rt></ruby>に<ruby>反対<rt>はんたい</rt></ruby>したら"
+      },
+      {
+        "3": "たとえ<ruby>親<rt>おや</rt></ruby>に<ruby>反対<rt>はんたい</rt></ruby>されても"
+      },
+      {
+        "4": "たとえば<ruby>親<rt>おや</rt></ruby>が<ruby>反対<rt>はんたい</rt></ruby>されても"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "たとえ<ruby>親<rt>おや</rt></ruby>に<ruby>反対<rt>はんたい</rt></ruby>されても"
+  },
+  {
+    "number": 314,
+    "type": "moji",
+    "question": "トイレを使ったら、ここを押して水を<em>ながして</em>ください。",
+    "options": [
+      {
+        "1": "流して"
+      },
+      {
+        "2": "移して"
+      },
+      {
+        "3": "過して"
+      },
+      {
+        "4": "汚して"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "流して"
+  },
+  {
+    "number": 315,
+    "type": "goi",
+    "question": "もう、5<ruby>時<rt>じ</rt></ruby>だ。<ruby>夕飯<rt>ゆうはん</rt></ruby>の______をしなくちゃ。",
+    "options": [
+      {
+        "1": "しあがり"
+      },
+      {
+        "2": "かたづけ"
+      },
+      {
+        "3": "ようじ"
+      },
+      {
+        "4": "したく"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "したく"
+  },
+  {
+    "number": 316,
+    "type": "bunpo",
+    "question": "その<ruby>学生<rt>がくせい</rt></ruby>は、<ruby>講義<rt>こうぎ</rt></ruby>を<ruby>最後<rt>さいご</rt></ruby>まで<ruby>聞<rt>き</rt></ruby>かない______<ruby>教室<rt>きょうしつ</rt></ruby>を<ruby>出<rt>で</rt></ruby>て<ruby>行<rt>い</rt></ruby>った。",
+    "options": [
+      {
+        "1": "あいだに"
+      },
+      {
+        "2": "うちに"
+      },
+      {
+        "3": "までに"
+      },
+      {
+        "4": "<ruby>最中<rt>さいちゅう</rt></ruby>に"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "うちに"
+  },
+  {
+    "number": 317,
+    "type": "moji",
+    "question": "科学技術の<em>発達</em>とともに、解決すべき問題も生じている。",
+    "options": [
+      {
+        "1": "はいたつ"
+      },
+      {
+        "2": "はったつ"
+      },
+      {
+        "3": "はたつ"
+      },
+      {
+        "4": "はだつ"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "はったつ"
+  },
+  {
+    "number": 318,
+    "type": "goi",
+    "question": "<ruby>勉強<rt></rt></ruby>しろ、<ruby>勉強<rt>べんきょう</rt></ruby>しろって、あんまり______<ruby>言<rt>い</rt></ruby>われると、やる<ruby>気<rt>き</rt></ruby>がなくなるよ。",
+    "options": [
+      {
+        "1": "くわして"
+      },
+      {
+        "2": "うるさく"
+      },
+      {
+        "3": "けわしく"
+      },
+      {
+        "4": "ばからしく"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "うるさく"
+  },
+  {
+    "number": 319,
+    "type": "bunpo",
+    "question": "そんなに<ruby>夜遅<rt>よるおそ</rt></ruby>く、<ruby>子<rt>こ</rt></ruby>どもを______。",
+    "options": [
+      {
+        "1": "<ruby>外出<rt>がいしゅつ</rt></ruby>させないわけだ"
+      },
+      {
+        "2": "<ruby>外出<rt>がいしゅつ</rt></ruby>させるわけではない"
+      },
+      {
+        "3": "<ruby>外出<rt>がいしゅつ</rt></ruby>させないべきだ"
+      },
+      {
+        "4": "<ruby>外出<rt>がいしゅつ</rt></ruby>させるべきではない"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "<ruby>外出<rt>がいしゅつ</rt></ruby>させるべきではない"
+  },
+  {
+    "number": 320,
+    "type": "moji",
+    "question": "すみません、<em>しお</em>を取ってください。",
+    "options": [
+      {
+        "1": "砂"
+      },
+      {
+        "2": "油"
+      },
+      {
+        "3": "塩"
+      },
+      {
+        "4": "乳"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "塩"
+  },
+  {
+    "number": 321,
+    "type": "goi",
+    "question": "A「<ruby>今<rt>いま</rt></ruby>、お<ruby>茶<rt>ちゃ</rt></ruby>をお<ruby>持<rt>も</rt></ruby>ちします。」\nB「どうぞ______。」",
+    "options": [
+      {
+        "1": "おかまいなく"
+      },
+      {
+        "2": "ごえんりょなく"
+      },
+      {
+        "3": "けっこうです"
+      },
+      {
+        "4": "ご<ruby>苦労様<rt>くろうさま</rt></ruby>です"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "おかまいなく"
+  },
+  {
+    "number": 322,
+    "type": "bunpo",
+    "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>一年生<rt>いちねん</rt></ruby>に<ruby>一回<rt>いっかい</rt></ruby>の<ruby>試験<rt>しけん</rt></ruby>だから、______。",
+    "options": [
+      {
+        "1": "<ruby>休<rt>やす</rt></ruby>むわけではない"
+      },
+      {
+        "2": "<ruby>休<rt>やす</rt></rubyまないわけはないい"
+      },
+      {
+        "3": "<ruby>休<rt>やす</rt></ruby>むわけにはいかない"
+      },
+      {
+        "4": "<ruby>休<rt>やす</rt></ruby>まないわけではない"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "<ruby>休<rt>やす</rt></ruby>むわけにはいかない"
+  },
+  {
+    "number": 323,
+    "type": "moji",
+    "question": "地球温暖化を<em>防ぐ</em>方法を話し合った。",
+    "options": [
+      {
+        "1": "いそぐ"
+      },
+      {
+        "2": "あおぐ"
+      },
+      {
+        "3": "ふせぐ"
+      },
+      {
+        "4": "かつぐ"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "ふせぐ"
+  },
+  {
+    "number": 324,
+    "type": "goi",
+    "question": "さあ、あとはねぎを<ruby>細<rt>こま</rt></ruby>かく______、のせるだけです。",
+    "options": [
+      {
+        "1": "いためて"
+      },
+      {
+        "2": "むいて"
+      },
+      {
+        "3": "むして"
+      },
+      {
+        "4": "きざんで"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "きざんで"
+  },
+  {
+    "number": 325,
+    "type": "bunpo",
+    "question": "<ruby>英語<rt>えいご</rt></ruby>は______ですが、<ruby>発音<rt>はつおん</rt></ruby>も<ruby>悪<rt>わる</rt></ruby>いし<ruby>下手<rt>へた</rt></ruby>なんです。",
+    "options": [
+      {
+        "1": "<ruby>話<rt>はな</rt></ruby>せえる"
+      },
+      {
+        "2": "<ruby>話<rt>はな</rt></ruby>せえない"
+      },
+      {
+        "3": "<ruby>話<rt>はな</rt></ruby>せることもない"
+      },
+      {
+        "4": "<ruby>話<rt>はな</rt></ruby>せないことはない"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "<ruby>話<rt>はな</rt></ruby>せないことはない"
+  },
+  {
+    "number": 326,
+    "type": "moji",
+    "question": "たいていの<em>冷蔵庫</em>には冷凍庫が付いている。",
+    "options": [
+      {
+        "1": "でいとうこ"
+      },
+      {
+        "2": "れいとうこ"
+      },
+      {
+        "3": "でいぞうこ"
+      },
+      {
+        "4": "れいぞうこ"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "れいぞうこ"
+  },
+  {
+    "number": 327,
+    "type": "goi",
+    "question": "そんなぜいたくなものは、<ruby>自分<rt>じぶん</rt></ruby>で______ようになってから<ruby>買<rt>か</rt></ruby>いなさい。",
+    "options": [
+      {
+        "1": "かせぐ"
+      },
+      {
+        "2": "もうかる"
+      },
+      {
+        "3": "とくをする"
+      },
+      {
+        "4": "おごる"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "かせぐ"
+  },
+  {
+    "number": 328,
+    "type": "bunpo",
+    "question": "<ruby>先生<rt>せんせい</rt></ruby>の______、<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>勉強<rt>べんきょう</rt></ruby>が<ruby>楽<rt>たの</rt></ruby>しくなりました。",
+    "options": [
+      {
+        "1": "おかげで"
+      },
+      {
+        "2": "せいで"
+      },
+      {
+        "3": "ためで"
+      },
+      {
+        "4": "くせに"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "おかげで"
+  },
+  {
+    "number": 329,
+    "type": "moji",
+    "question": "このラベルには値段やその他、<em>しょうひん</em>に関する情報が書いてあります。",
+    "options": [
+      {
+        "1": "賞品"
+      },
+      {
+        "2": "製品"
+      },
+      {
+        "3": "食品"
+      },
+      {
+        "4": "商品"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "商品"
+  },
+  {
+    "number": 330,
+    "type": "goi",
+    "question": "A「<ruby>田中<rt>たなか</rt></ruby>さん、<ruby>格好<rt>かっこう</rt></ruby>いいから<ruby>女<rt>おんな</rt></ruby>の<ruby>子<rt>こ</rt></ruby>がたくさん<ruby>寄<rt>よ</rt></ruby>ってくるでしょう。」\nB「とんでもない。まったく______んですよ。」",
+    "options": [
+      {
+        "1": "<ruby>気<rt>き</rt></ruby>がない"
+      },
+      {
+        "2": "ふられる"
+      },
+      {
+        "3": "もてない"
+      },
+      {
+        "4": "いやがられる"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "もてない"
+  },
+  {
+    "number": 331,
+    "type": "bunpo",
+    "question": "ぼくが<ruby>東大<rt>とうだい</rt></ruby>を<ruby>受<rt>う</rt></ruby>けても<ruby>落<rt>お</rt></ruby>ちる______。",
+    "options": [
+      {
+        "1": "にちがわない"
+      },
+      {
+        "2": "にきまっている"
+      },
+      {
+        "3": "ことがちがいない"
+      },
+      {
+        "4": "ようきまっている"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "にきまっている"
+  },
+  {
+    "number": 332,
+    "type": "moji",
+    "question": "<em>修理</em>が完了したら、営業を再開します。",
+    "options": [
+      {
+        "1": "しょり"
+      },
+      {
+        "2": "しゅり"
+      },
+      {
+        "3": "しゅうり"
+      },
+      {
+        "4": "しょうり"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "しゅうり"
+  },
+  {
+    "number": 333,
+    "type": "goi",
+    "question": "A「<ruby>大<rt>おお</rt></ruby>きい<ruby>犬<rt>いぬ</rt></ruby>なのに、<ruby>下<rt>した</rt></ruby>を<ruby>見<rt>み</rt></ruby>て______いるよ。」\nB「<ruby>人間<rt>にんげん</rt></ruby>が<ruby>怖<rt>こわ</rt></ruby>いんじゃない？",
+    "options": [
+      {
+        "1": "ゆれた"
+      },
+      {
+        "2": "なでて"
+      },
+      {
+        "3": "ふるえて"
+      },
+      {
+        "4": "なめて"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "ふるえて"
+  },
+  {
+    "number": 334,
+    "type": "bunpo",
+    "question": "<ruby>熱<rt>ねつ</rt></ruby>が<ruby>高<rt>たか</rt></ruby>いので<ruby>病院<rt>びょういん</rt></ruby>に<ruby>行<rt>い</rt></ruby>った______、インフルエンザだと<ruby>言<rt>い</rt></ruby>われた。",
+    "options": [
+      {
+        "1": "ところ"
+      },
+      {
+        "2": "ところに"
+      },
+      {
+        "3": "ところへ"
+      },
+      {
+        "4": "ところを"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ところ"
+  },
+  {
+    "number": 335,
+    "type": "moji",
+    "question": "笑っているように<em>なく</em>鳥がいる。",
+    "options": [
+      {
+        "1": "泣く"
+      },
+      {
+        "2": "拉く"
+      },
+      {
+        "3": "鳴く"
+      },
+      {
+        "4": "嶋く"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "鳴く"
+  },
+  {
+    "number": 336,
+    "type": "goi",
+    "question": "そんなに<ruby>目<rt>め</rt></ruby>を______だめよ。アレルギーの<ruby>薬<rt>くすり</rt></ruby>、ちゃんと<ruby>飲<rt>の</rt></ruby>んでる？",
+    "options": [
+      {
+        "1": "こすっちゃ"
+      },
+      {
+        "2": "ひねっちゃ"
+      },
+      {
+        "3": "ほどいちゃ"
+      },
+      {
+        "4": "つまっちゃ"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "こすっちゃ"
+  },
+  {
+    "number": 337,
+    "type": "bunpo",
+    "question": "<ruby>今日<rt>きょう</rt></ruby>の<ruby>新聞<rt>しんぶん</rt></ruby>______、<ruby>今年<rt>ことし</rt></ruby>の<ruby>夏<rt>なつ</rt></ruby>はいつもより<ruby>暑<rt>あつ</rt></ruby>いそうです。",
+    "options": [
+      {
+        "1": "によって"
+      },
+      {
+        "2": "について"
+      },
+      {
+        "3": "にとって"
+      },
+      {
+        "4": "によると"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "によると"
+  },
+  {
+    "number": 338,
+    "type": "moji",
+    "question": "その２倍くらいの<em>厚さ</em>に切って焼いてください。",
+    "options": [
+      {
+        "1": "あつさ"
+      },
+      {
+        "2": "ひろさ"
+      },
+      {
+        "3": "ふかさ"
+      },
+      {
+        "4": "おもさ"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "あつさ"
+  },
+  {
+    "number": 339,
+    "type": "goi",
+    "question": "<ruby>今日<rt>きょう</rt></ruby>は、<ruby>先輩<rt>せんぱい</rt></ruby>におごってもらったし、くじ<ruby>引<rt>び</rt></ruby>きで2<ruby>等<rt>とう</rt></ruby>が<ruby>当<rt>あ</rt></ruby>たったし、______なあ。",
+    "options": [
+      {
+        "1": "ましになった"
+      },
+      {
+        "2": "ついてた"
+      },
+      {
+        "3": "あしかった"
+      },
+      {
+        "4": "うけてた"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ついてた"
+  },
+  {
+    "number": 340,
+    "type": "bunpo",
+    "question": "このレストラン、<ruby>有名<rt>ゆうめい</rt></ruby>な<ruby>店<rt>みせ</rt></ruby>______、あんまりおいしくないですね。",
+    "options": [
+      {
+        "1": "にしても"
+      },
+      {
+        "2": "によっても"
+      },
+      {
+        "3": "にしては"
+      },
+      {
+        "4": "にとっては"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "にしては"
+  },
+  {
+    "number": 341,
+    "type": "moji",
+    "question": "<ruby>誕<rt>たん</rt></ruby>生日に<em>人形</em>をもらいました。",
+    "options": [
+      {
+        "1": "にんぎょ"
+      },
+      {
+        "2": "にんぎょう"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "にんぎょう"
+  },
+  {
+    "number": 342,
+    "type": "moji",
+    "question": "土産に<em>こうすい</em>を買ってきた。",
+    "options": [
+      {
+        "1": "香水"
+      },
+      {
+        "2": "幸水"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "香水"
+  },
+  {
+    "number": 343,
+    "type": "goi",
+    "question": "果物はビタミンｃを多く______。",
+    "options": [
+      {
+        "1": "集める"
+      },
+      {
+        "2": "<ruby>含<rt>ふく</rt></ruby>む"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>含<rt>ふく</rt></ruby>む"
+  },
+  {
+    "number": 344,
+    "type": "goi",
+    "question": "そんな仕事をだれも引き受けないのは、______と思いますよ。",
+    "options": [
+      {
+        "1": "あたりまえだ"
+      },
+      {
+        "2": "もうしわけない"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "あたりまえだ"
+  },
+  {
+    "number": 345,
+    "type": "bunpo",
+    "question": "リンさんは、クラスで一番よくできる。だから、試験に落ちる______。",
+    "options": [
+      {
+        "1": "わけがない"
+      },
+      {
+        "2": "わけにはいかない"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "わけがない"
+  },
+  {
+    "number": 346,
+    "type": "bunpo",
+    "question": "<ruby>中級<rt>ちゅうきゅう</rt></ruby>の問題______、そんなに<ruby>難<rt>むずか</rt></ruby>しくありませんよ。",
+    "options": [
+      {
+        "1": "といっても"
+      },
+      {
+        "2": "というより"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "といっても"
+  },
+  {
+    "number": 347,
+    "type": "moji",
+    "question": "店員には元気な人を<em>求めます</em>。",
+    "options": [
+      {
+        "1": "まとめます"
+      },
+      {
+        "2": "もとめます"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "もとめます"
+  },
+  {
+    "number": 348,
+    "type": "moji",
+    "question": "<em>せんそう</em>がなくなってほしい。",
+    "options": [
+      {
+        "1": "競争"
+      },
+      {
+        "2": "戦争"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "戦争"
+  },
+  {
+    "number": 349,
+    "type": "goi",
+    "question": "この<ruby>辺<rt>あた</rt></ruby>りは、雪が降っても______ことはほとんどありません。",
+    "options": [
+      {
+        "1": "つつむ"
+      },
+      {
+        "2": "つもる"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "つもる"
+  },
+  {
+    "number": 350,
+    "type": "goi",
+    "question": "もう少し、塩か何かを入れたらどう？ちょっと______しすぎているように思うよ。",
+    "options": [
+      {
+        "1": "あっさり"
+      },
+      {
+        "2": "こっそり"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "あっさり"
+  },
+  {
+    "number": 351,
+    "type": "bunpo",
+    "question": "すごく楽しかったよ。あなたも<ruby>一緒<rt>いっしょ</rt></ruby>に______。",
+    "options": [
+      {
+        "1": "来たらいいのに"
+      },
+      {
+        "2": "来ればよかったのに"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "来ればよかったのに"
+  },
+  {
+    "number": 352,
+    "type": "bunpo",
+    "question": "______、子供のことを心配するのは<ruby>当然<rt>とうぜん</rt></ruby>です。",
+    "options": [
+      {
+        "1": "親として"
+      },
+      {
+        "2": "親ばかりか"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "親として"
+  },
+  {
+    "number": 353,
+    "type": "moji",
+    "question": "<em>断水</em>のお知らせです。",
+    "options": [
+      {
+        "1": "だんすい"
+      },
+      {
+        "2": "せっすい"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "だんすい"
+  },
+  {
+    "number": 354,
+    "type": "moji",
+    "question": "<em>みらい</em>会社を予想する。",
+    "options": [
+      {
+        "1": "未来"
+      },
+      {
+        "2": "来未"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "未来"
+  },
+  {
+    "number": 355,
+    "type": "goi",
+    "question": "今日買えば3<ruby>割引<rt>わりび</rt></ruby>きだったのに、昨日買って______よ。",
+    "options": [
+      {
+        "1": "そんしちゃった"
+      },
+      {
+        "2": "そんになっちゃった"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "そんしちゃった"
+  },
+  {
+    "number": 356,
+    "type": "goi",
+    "question": "みかんもむいてほしいって、ずいぶん______なご主人ね。",
+    "options": [
+      {
+        "1": "なまいき"
+      },
+      {
+        "2": "わがまま"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "わがまま"
+  },
+  {
+    "number": 357,
+    "type": "bunpo",
+    "question": "駅に暑いた______忘れ物に気がついて、取りにもどった。",
+    "options": [
+      {
+        "1": "とちゅうに"
+      },
+      {
+        "2": "とたんに"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "とたんに"
+  },
+  {
+    "number": 358,
+    "type": "bunpo",
+    "question": "もし、私の言うことが本当だった______、あなたはどうしますか。",
+    "options": [
+      {
+        "1": "としても"
+      },
+      {
+        "2": "としたら"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "としたら"
+  },
+  {
+    "number": 359,
+    "type": "moji",
+    "question": "<em>植木</em>に水をやる。",
+    "options": [
+      {
+        "1": "うえき"
+      },
+      {
+        "2": "しょくもく"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "うえき"
+  },
+  {
+    "number": 360,
+    "type": "moji",
+    "question": "宿題が<em>すんだ</em>ら、テレビを見る。",
+    "options": [
+      {
+        "1": "住んだ"
+      },
+      {
+        "2": "済んだ"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "済んだ"
+  },
+  {
+    "number": 361,
+    "type": "goi",
+    "question": "まだ全員が______から、もう少し待ちましょう。",
+    "options": [
+      {
+        "1": "そろわない"
+      },
+      {
+        "2": "まとまらない"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "そろわない"
+  },
+  {
+    "number": 362,
+    "type": "goi",
+    "question": "A「お茶、まだ？」\nB「まだお<ruby>お湯<rt>ゆ</rt></ruby>が______いないから、ちょっと待って。",
+    "options": [
+      {
+        "1": "たいて"
+      },
+      {
+        "2": "わいて"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "わいて"
+  },
+  {
+    "number": 363,
+    "type": "bunpo",
+    "question": "A「田中さん、40<ruby>歳<rt>さい</rt></ruby>だって。」\nB「______若く見えるね。」",
+    "options": [
+      {
+        "1": "それにしては"
+      },
+      {
+        "2": "それだけに"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "それにしては"
+  },
+  {
+    "number": 364,
+    "type": "bunpo",
+    "question": "母はデパートに行く______、ケーキを買ってくる。",
+    "options": [
+      {
+        "1": "たびに"
+      },
+      {
+        "2": "<ruby>最中<rt>さいちゅう</rt></ruby>に"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "たびに"
+  },
+  {
+    "number": 365,
+    "type": "moji",
+    "question": "<em>必要</em>なものは全部そろえた。",
+    "options": [
+      {
+        "1": "ひつよう"
+      },
+      {
+        "2": "しつよう"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ひつよう"
+  },
+  {
+    "number": 366,
+    "type": "moji",
+    "question": "何<em>しゅるい</em>ありますか。",
+    "options": [
+      {
+        "1": "書類"
+      },
+      {
+        "2": "種類"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "種類"
+  },
+  {
+    "number": 367,
+    "type": "goi",
+    "question": "______ので、<ruby>寄<rt>よ</rt></ruby>ってみました。",
+    "options": [
+      {
+        "1": "通り過ぎた"
+      },
+      {
+        "2": "通りかかった"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "通りかかった"
+  },
+  {
+    "number": 368,
+    "type": "goi",
+    "question": "A「どう？まだ頭が<ruby>痛<rt>いた</rt></ruby>い？」\nB「さっきより______けど、まだ少しね。」",
+    "options": [
+      {
+        "1": "さっぱりした"
+      },
+      {
+        "2": "ましになった"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ましになった"
+  },
+  {
+    "number": 369,
+    "type": "bunpo",
+    "question": "A「来年試験をうけます。」\nB「______、今年は受けないということですね。」",
+    "options": [
+      {
+        "1": "というより"
+      },
+      {
+        "2": "ということは"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ということは"
+  },
+  {
+    "number": 370,
+    "type": "bunpo",
+    "question": "この国の人々に______一番の問題は、水が不足しているということだ。",
+    "options": [
+      {
+        "1": "とっての"
+      },
+      {
+        "2": "対しての"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "とっての"
+  },
+  {
+    "number": 371,
+    "type": "moji",
+    "question": "<em>資料</em>をコピーする。",
+    "options": [
+      {
+        "1": "しょるい"
+      },
+      {
+        "2": "しりょう"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "しりょう"
+  },
+  {
+    "number": 372,
+    "type": "moji",
+    "question": "となりの席に<em>うつる</em>。",
+    "options": [
+      {
+        "1": "移る"
+      },
+      {
+        "2": "写る"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "移る"
+  },
+  {
+    "number": 373,
+    "type": "goi",
+    "question": "そんなにしょんぼりしてどうしたの？彼女に______の？",
+    "options": [
+      {
+        "1": "ふられた"
+      },
+      {
+        "2": "なめられた"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ふられた"
+  },
+  {
+    "number": 374,
+    "type": "goi",
+    "question": "A「知っていたけれど、田中さんには教えなかった。」\nB「______ねえ。」",
+    "options": [
+      {
+        "1": "いじわるだ"
+      },
+      {
+        "2": "いやがる"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "いじわるだ"
+  },
+  {
+    "number": 375,
+    "type": "bunpo",
+    "question": "みなさんの<ruby>応援<rt>おうえん</rt></ruby>の______<ruby>優勝<rt>ゆうしょう</rt></ruby>できました。",
+    "options": [
+      {
+        "1": "おかげで"
+      },
+      {
+        "2": "せいで"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "おかげで"
+  },
+  {
+    "number": 376,
+    "type": "moji",
+    "question": "曇が広がり、風が<em>吹いて</em>、彼も高くなってきた。",
+    "options": [
+      {
+        "1": "ひいて"
+      },
+      {
+        "2": "ふいて"
+      },
+      {
+        "3": "すいて"
+      },
+      {
+        "4": "はいて"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ふいて"
+  },
+  {
+    "number": 377,
+    "type": "goi",
+    "question": "ダイエットが<ruby>成功<rt>せいこう</rt></ruby>したのか、<ruby>彼女<rt>かのじょ</rt></ruby>はとても______になったね。",
+    "options": [
+      {
+        "1": "ハンサム"
+      },
+      {
+        "2": "ユニーク"
+      },
+      {
+        "3": "ファッション"
+      },
+      {
+        "4": "スマート"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "スマート"
+  },
+  {
+    "number": 378,
+    "type": "bunpo",
+    "question": "<ruby>先生<rt>せんせい</rt></ruby>______あんな<ruby>言<rt>い</rt></ruby>い<ruby>方<rt>かた</rt></ruby>をしたら<ruby>失礼<rt>しつれい</rt></ruby>だよ。あやまったほうがいいよ。",
+    "options": [
+      {
+        "1": "にくらべて"
+      },
+      {
+        "2": "にたいして"
+      },
+      {
+        "3": "にしたら"
+      },
+      {
+        "4": "にとって"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "にたいして"
+  },
+  {
+    "number": 379,
+    "type": "moji",
+    "question": "80円の切手を10<em>まい</em>ください。",
+    "options": [
+      {
+        "1": "箱"
+      },
+      {
+        "2": "杯"
+      },
+      {
+        "3": "冊"
+      },
+      {
+        "4": "枚"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "枚"
+  },
+  {
+    "number": 380,
+    "type": "goi",
+    "question": "<ruby>最近<rt>さいきん</rt></ruby>、お<ruby>年寄<rt>としよ</rt></ruby>りに<ruby>席<rt>せき</rt></ruby>を______<ruby>若者<rt>わかもの</rt></ruby>が<ruby>多<rt>おお</rt></ruby>いと<ruby>思<rt>おも</rt></ruby>う。",
+    "options": [
+      {
+        "1": "まわさない"
+      },
+      {
+        "2": "わたさない"
+      },
+      {
+        "3": "ゆずらない"
+      },
+      {
+        "4": "つながない"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "ゆずらない"
+  },
+  {
+    "number": 381,
+    "type": "bunpo",
+    "question": "<ruby>明日<rt>あした</rt></ruby>、<ruby>休<rt>やす</rt></ruby>んでいいですよ。______、あさっては<ruby>必<rt>かなら</rt></ruby>ず<ruby>来<rt>き</rt></ruby>てください。",
+    "options": [
+      {
+        "1": "そのかわりに"
+      },
+      {
+        "2": "それにかんして"
+      },
+      {
+        "3": "それにくわえて"
+      },
+      {
+        "4": "それにたいして"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "そのかわりに"
+  },
+  {
+    "number": 382,
+    "type": "moji",
+    "question": "混んでいる通勤電車で、足を<em>組んだり</em><ruby>通路<rt>つうろ</rt></ruby>に<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>置<rt>お</rt></ruby>いたりすると、じゃまになる。",
+    "options": [
+      {
+        "1": "くんだり"
+      },
+      {
+        "2": "ふんだり"
+      },
+      {
+        "3": "うんだり"
+      },
+      {
+        "4": "もんだり"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "くんだり"
+  },
+  {
+    "number": 383,
+    "type": "goi",
+    "question": "<ruby>東京<rt>とうきょう</rt></ruby>での<ruby>生活<rt>せいかつ</rt></ruby>は、<ruby>家賃<rt>やちん</rt></ruby>も<ruby>高<rt>たか</rt></ruby>いし、______です。",
+    "options": [
+      {
+        "1": "らく"
+      },
+      {
+        "2": "きつい"
+      },
+      {
+        "3": "はげしい"
+      },
+      {
+        "4": "もったいない"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "きつい"
+  },
+  {
+    "number": 384,
+    "type": "bunpo",
+    "question": "こんなにたくさんの<ruby>料理<rt>りょうり</rt></ruby>、いくらぼくでも<ruby>食<rt>た</rt></ruby>べ______よ。",
+    "options": [
+      {
+        "1": "かけない"
+      },
+      {
+        "2": "たてない"
+      },
+      {
+        "3": "きれない"
+      },
+      {
+        "4": "おえない"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "きれない"
+  },
+  {
+    "number": 385,
+    "type": "moji",
+    "question": "あの<em>けん</em>についての感想をお聞かせください。",
+    "options": [
+      {
+        "1": "案"
+      },
+      {
+        "2": "事"
+      },
+      {
+        "3": "件"
+      },
+      {
+        "4": "題"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "件"
+  },
+  {
+    "number": 386,
+    "type": "goi",
+    "question": "A「<ruby>車<rt>くるま</rt></ruby>、<ruby>混<rt>こ</rt></ruby>んでいるね。」\nB「うん、<ruby>全然<rt>ぜんぜん</rt></ruby><ruby>進<rt>すす</rt></ruby>まないから______するよ。」",
+    "options": [
+      {
+        "1": "のろのろ"
+      },
+      {
+        "2": "どきどき"
+      },
+      {
+        "3": "ぎりぎり"
+      },
+      {
+        "4": "いらいら"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "いらいら"
+  },
+  {
+    "number": 387,
+    "type": "bunpo",
+    "question": "<ruby>日本<rt>にほん</rt></ruby>では、<ruby>北<rt>きた</rt></ruby>へ<ruby>行<rt>い</rt></ruby>けば<ruby>行<rt>い</rt></ruby>く______<ruby>寒<rt>さむ</rt></ruby>くなります。",
+    "options": [
+      {
+        "1": "ほど"
+      },
+      {
+        "2": "くらい"
+      },
+      {
+        "3": "せいか"
+      },
+      {
+        "4": "からか"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ほど"
+  },
+  {
+    "number": 388,
+    "type": "moji",
+    "question": "うちでは娘も息子も一日に2回シャワーを<em>浴びる</em>。",
+    "options": [
+      {
+        "1": "おびる"
+      },
+      {
+        "2": "わびる"
+      },
+      {
+        "3": "なびる"
+      },
+      {
+        "4": "あびる"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "あびる"
+  },
+  {
+    "number": 389,
+    "type": "goi",
+    "question": "ちょっと、この<ruby>椅子<rt>いす</rt></ruby>を______くれる？<ruby>掃除機<rt>そうじき</rt></ruby>かけるから。",
+    "options": [
+      {
+        "1": "どけて"
+      },
+      {
+        "2": "かたづいて"
+      },
+      {
+        "3": "はずして"
+      },
+      {
+        "4": "くずして"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "どけて"
+  },
+  {
+    "number": 390,
+    "type": "bunpo",
+    "question": "このパソコンは<ruby>修理<rt>しゅうり</rt></ruby>しても<ruby>直<rt>なお</rt></ruby>らないのだから、<ruby>捨<rt>す</rt></ruby>てるより______。",
+    "options": [
+      {
+        "1": "こそない"
+      },
+      {
+        "2": "だけない"
+      },
+      {
+        "3": "しかない"
+      },
+      {
+        "4": "ほかない"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "ほかない"
+  },
+  {
+    "number": 391,
+    "type": "moji",
+    "question": "資料を<em>配ります</em>から、参加者の人数を数えてください。",
+    "options": [
+      {
+        "1": "こばります"
+      },
+      {
+        "2": "くばります"
+      },
+      {
+        "3": "めくります"
+      },
+      {
+        "4": "まくります"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "くばります"
+  },
+  {
+    "number": 392,
+    "type": "goi",
+    "question": "にきびは、<ruby>無理<rt>むり</rt></ruby>やり______とあとが<ruby>残<rt>のこ</rt></ruby>るから、さわらないように。",
+    "options": [
+      {
+        "1": "とかす"
+      },
+      {
+        "2": "しぼる"
+      },
+      {
+        "3": "つぶす"
+      },
+      {
+        "4": "ひねる"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "つぶす"
+  },
+  {
+    "number": 393,
+    "type": "bunpo",
+    "question": "<ruby>料理<rt>りょうり</rt></ruby>の<ruby>本<rt>ほん</rt></ruby>に______<ruby>作<rt>つく</rt></ruby>ったのに、おいしくなかった。",
+    "options": [
+      {
+        "1": "<ruby>書<rt>か</rt></ruby>いてあるとおりに"
+      },
+      {
+        "2": "<ruby>書<rt>か</rt></ruby>いてあったどおり"
+      },
+      {
+        "3": "<ruby>書<rt>か</rt></ruby>ことをとおして"
+      },
+      {
+        "4": "<ruby>書<rt>か</rt></ruby>くころをつうじて"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>書<rt>か</rt></ruby>いてあるとおりに"
+  },
+  {
+    "number": 394,
+    "type": "moji",
+    "question": "このくらいの計算なら、慣れているので、<em>まかせて</em>ください。",
+    "options": [
+      {
+        "1": "件せて"
+      },
+      {
+        "2": "仕せて"
+      },
+      {
+        "3": "任せて"
+      },
+      {
+        "4": "在せて"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "任せて"
+  },
+  {
+    "number": 395,
+    "type": "goi",
+    "question": "このごろすごく<ruby>肩<rt>かた</rt></ruby>がこるんですが、ストレスが______せいかもしれません。",
+    "options": [
+      {
+        "1": "はやっている"
+      },
+      {
+        "2": "たまっている"
+      },
+      {
+        "3": "あつまっている"
+      },
+      {
+        "4": "つもっている"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "たまっている"
+  },
+  {
+    "number": 396,
+    "type": "bunpo",
+    "question": "ニュースによると、<ruby>中国<rt>ちゅうごく</rt></ruby>で<ruby>大地震<rt>おおじしん</rt></ruby>があった______。",
+    "options": [
+      {
+        "1": "ものだ"
+      },
+      {
+        "2": "ことだ"
+      },
+      {
+        "3": "ということだ"
+      },
+      {
+        "4": "というものだ"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "ということだ"
+  },
+  {
+    "number": 397,
+    "type": "moji",
+    "question": "高い場所の<em>掃除</em>は危険ですから、注意してください。",
+    "options": [
+      {
+        "1": "しょうじ"
+      },
+      {
+        "2": "そうじ"
+      },
+      {
+        "3": "せいそう"
+      },
+      {
+        "4": "さくじょ"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "そうじ"
+  },
+  {
+    "number": 398,
+    "type": "goi",
+    "question": "<ruby>海外旅行<rt>かいがいりょこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>くから、だれかに<ruby>猫<rt>ねこ</rt></ruby>を______もらわないといけない。",
+    "options": [
+      {
+        "1": "<ruby>世話<rt>せわ</rt></ruby>になって"
+      },
+      {
+        "2": "そだてて"
+      },
+      {
+        "3": "あたえて"
+      },
+      {
+        "4": "あずかって"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "あずかって"
+  },
+  {
+    "number": 399,
+    "type": "bunpo",
+    "question": "さっき<ruby>雨<rt>あめ</rt></ruby>が______、もうやんでいます。",
+    "options": [
+      {
+        "1": "<ruby>降<rt>ふ</rt></ruby>ったかのようで"
+      },
+      {
+        "2": "<ruby>降<rt>ふ</rt></ruby>ったかと<ruby>思<rt>おも</rt></ruby>ったら"
+      },
+      {
+        "3": "<ruby>降<rt>ふ</rt></ruby>っていると<ruby>思<rt>おも</rt></ruby>うと"
+      },
+      {
+        "4": "<ruby>降<rt>ふ</rt></ruby>ってないかのようで"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>降<rt>ふ</rt></ruby>ったかと<ruby>思<rt>おも</rt></ruby>ったら"
+  },
+  {
+    "number": 400,
+    "type": "moji",
+    "question": "散歩中に、<em>すてられた</em>子猫を見つけた。",
+    "options": [
+      {
+        "1": "拾てられた"
+      },
+      {
+        "2": "落てられた"
+      },
+      {
+        "3": "捨てられた"
+      },
+      {
+        "4": "育てられた"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "捨てられた"
+  },
+  {
+    "number": 401,
+    "type": "goi",
+    "question": "<ruby>昨日<rt>きのう</rt></ruby>、のども<ruby>痛<rt>いた</rt></ruby>くて<ruby>熱<rt>ねつ</rt></ruby>っぽかったんですが、<ruby>一日<rt>いちにち</rt></ruby>______<ruby>寝<rt>ね</rt></ruby>たら、<ruby>治<rt>なお</rt></ruby>ったようです。",
+    "options": [
+      {
+        "1": "すっかり"
+      },
+      {
+        "2": "すっきり"
+      },
+      {
+        "3": "ぐっすり"
+      },
+      {
+        "4": "びっしょり"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "ぐっすり"
+  },
+  {
+    "number": 402,
+    "type": "bunpo",
+    "question": "この<ruby>問題<rt>もんだい</rt></ruby>______<ruby>解<rt>と</rt></ruby>いてしまえば、<ruby>今日<rt>きょう</rt></ruby>の<ruby>宿題<rt>しゅくだい</rt></ruby>は<ruby>終<rt>お</rt></ruby>わる。",
+    "options": [
+      {
+        "1": "さえ"
+      },
+      {
+        "2": "なんか"
+      },
+      {
+        "3": "でさえ"
+      },
+      {
+        "4": "なんて"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "さえ"
+  },
+  {
+    "number": 403,
+    "type": "moji",
+    "question": "<em>宅配</em>の希望時間を午前中にした。",
+    "options": [
+      {
+        "1": "たっぱい"
+      },
+      {
+        "2": "たくばい"
+      },
+      {
+        "3": "たくぱい"
+      },
+      {
+        "4": "たくはい"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "たくはい"
+  },
+  {
+    "number": 404,
+    "type": "goi",
+    "question": "<ruby>怪<rt>あや</rt></ruby>しい<ruby>人<rt>ひと</rt></ruby>が<ruby>通<rt>とお</rt></ruby>りかかったときだけほえるなんて、______<ruby>犬<rt>いぬ</rt></ruby>だね。",
+    "options": [
+      {
+        "1": "りこうな"
+      },
+      {
+        "2": "おとなしい"
+      },
+      {
+        "3": "そそっかしい"
+      },
+      {
+        "4": "ひとなつっこい"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "りこうな"
+  },
+  {
+    "number": 405,
+    "type": "bunpo",
+    "question": "あのクラスは、<ruby>上級<rt>じょうきゅう</rt></ruby>______やさしい。",
+    "options": [
+      {
+        "1": "くせに"
+      },
+      {
+        "2": "のわりには"
+      },
+      {
+        "3": "に<ruby>応<rt>おう</rt></ruby>じて"
+      },
+      {
+        "4": "に<ruby>対<rt>たい</rt></ruby>して"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "のわりには"
+  },
+  {
+    "number": 406,
+    "type": "moji",
+    "question": "この薬は痛みによく<em>効いて</em>、眠くなりません。",
+    "options": [
+      {
+        "1": "きいて"
+      },
+      {
+        "2": "とどいて"
+      },
+      {
+        "3": "ひいて"
+      },
+      {
+        "4": "ひびいて"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "きいて"
+  },
+  {
+    "number": 407,
+    "type": "goi",
+    "question": "こんな<ruby>簡単<rt>かんたん</rt></ruby>なこともわからない<ruby>彼<rt>かれ</rt></ruby>に、______しまった。",
+    "options": [
+      {
+        "1": "あきて"
+      },
+      {
+        "2": "あきれて"
+      },
+      {
+        "3": "いやがって"
+      },
+      {
+        "4": "いやがられて"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "あきれて"
+  },
+  {
+    "number": 408,
+    "type": "bunpo",
+    "question": "まじめな<ruby>彼<rt>かれ</rt></ruby>が<ruby>休<rt>やす</rt></ruby>むなんて、<ruby>何<rt>なに</rt></ruby>か______<ruby>違<rt>ちが</rt></ruby>いない。",
+    "options": [
+      {
+        "1": "あったに"
+      },
+      {
+        "2": "あったようで"
+      },
+      {
+        "3": "あっただろうに"
+      },
+      {
+        "4": "あったらしく"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "あったに"
+  },
+  {
+    "number": 409,
+    "type": "moji",
+    "question": "予約を<em>とりけして</em>ください。",
+    "options": [
+      {
+        "1": "取り資して"
+      },
+      {
+        "2": "取り直して"
+      },
+      {
+        "3": "取り正して"
+      },
+      {
+        "4": "取り消して"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "取り消して"
+  },
+  {
+    "number": 410,
+    "type": "goi",
+    "question": "______<ruby>育<rt>そだ</rt></ruby>った<ruby>子供<rt>こども</rt></ruby>には<ruby>問題<rt>もんだい</rt></ruby>が<ruby>多<rt>おお</rt></ruby>いと<ruby>言<rt>い</rt></ruby>われている。",
+    "options": [
+      {
+        "1": "かわいがられて"
+      },
+      {
+        "2": "しつけられて"
+      },
+      {
+        "3": "わがままされて"
+      },
+      {
+        "4": "あまやかされて"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "あまやかされて"
+  },
+  {
+    "number": 411,
+    "type": "bunpo",
+    "question": "<ruby>息子<rt>むすこ</rt></ruby>がけがをしたと<ruby>聞<rt>き</rt></ruby>いて、どんなに______。",
+    "options": [
+      {
+        "1": "<ruby>心配<rt>しんぱい</rt></ruby>したっけ"
+      },
+      {
+        "2": "<ruby>心配<rt>しんぱい</rt></ruby>したことか"
+      },
+      {
+        "3": "<ruby>心配<rt>しんぱい</rt></ruby>したまいか"
+      },
+      {
+        "4": "<ruby>心配<rt>しんぱい</rt></ruby>したものだ"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>心配<rt>しんぱい</rt></ruby>したことか"
+  },
+  {
+    "number": 412,
+    "type": "moji",
+    "question": "夢は、留学して勉強し、国に帰ってから人々の<em>役に立つ</em>仕事をすることです。",
+    "options": [
+      {
+        "1": "らくにたつ"
+      },
+      {
+        "2": "わきにたつ"
+      },
+      {
+        "3": "やくにたつ"
+      },
+      {
+        "4": "えきにたつ"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "やくにたつ"
+  },
+  {
+    "number": 413,
+    "type": "goi",
+    "question": "<ruby>手入<rt>てい</rt></ruby>れをあうるときは、______<ruby>布<rt>ぬの</rt></ruby>で<ruby>軽<rt>かる</rt></ruby>くふいてください。",
+    "options": [
+      {
+        "1": "ぬらされた"
+      },
+      {
+        "2": "しめらせた"
+      },
+      {
+        "3": "しぼられた"
+      },
+      {
+        "4": "かわかされた"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "しめらせた"
+  },
+  {
+    "number": 414,
+    "type": "bunpo",
+    "question": "<ruby>土日<rt>どにち</rt></ruby>は<ruby>一週間<rt>いっしゅうかん</rt></ruby>の<ruby>疲<rt>つか</rt></ruby>れが<ruby>取<rt>と</rt></ruby>れる______、ゆっくり<ruby>休<rt>やす</rt></ruby>むことにしている。",
+    "options": [
+      {
+        "1": "ために"
+      },
+      {
+        "2": "ように"
+      },
+      {
+        "3": "わけで"
+      },
+      {
+        "4": "そうで"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ように"
+  },
+  {
+    "number": 415,
+    "type": "moji",
+    "question": "この文章を直すのは<em>むずかしい</em>。",
+    "options": [
+      {
+        "1": "漢しい"
+      },
+      {
+        "2": "難しい"
+      },
+      {
+        "3": "涼しい"
+      },
+      {
+        "4": "忙しい"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "難しい"
+  },
+  {
+    "number": 416,
+    "type": "goi",
+    "question": "お<ruby>近<rt>ちか</rt></ruby>くにお<ruby>越<rt>こ</rt></ruby>しのときは、______お<ruby>立<rt>た</rt></ruby>ち<ruby>寄<rt>よ</rt></ruby>りください。",
+    "options": [
+      {
+        "1": "ついに"
+      },
+      {
+        "2": "ぜひ"
+      },
+      {
+        "3": "とたんに"
+      },
+      {
+        "4": "たまに"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ぜひ"
+  },
+  {
+    "number": 417,
+    "type": "bunpo",
+    "question": "<ruby>信用<rt>しんよう</rt></ruby>されたかったら、<ruby>人<rt>ひと</rt></ruby>の<ruby>悪口<rt>わるくち</rt></ruby>を<ruby>言<rt>い</rt></ruby>わない______",
+    "options": [
+      {
+        "1": "ことだ"
+      },
+      {
+        "2": "ことではない"
+      },
+      {
+        "3": "ことはない"
+      },
+      {
+        "4": "こともある"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ことだ"
+  },
+  {
+    "number": 418,
+    "type": "moji",
+    "question": "高速道路の左側に<em>遊園地</em>が見えてきた。",
+    "options": [
+      {
+        "1": "ゆうえんち"
+      },
+      {
+        "2": "ゆえんち"
+      },
+      {
+        "3": "ようえんち"
+      },
+      {
+        "4": "よえんち"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ゆうえんち"
+  },
+  {
+    "number": 419,
+    "type": "goi",
+    "question": "______、<ruby>間<rt>ま</rt></ruby>に<ruby>合<rt>あ</rt></ruby>わなかったときは、<ruby>代<rt>か</rt></ruby>わりにスピーチをお<ruby>願<rt>ねが</rt></ruby>いします。",
+    "options": [
+      {
+        "1": "とうとう"
+      },
+      {
+        "2": "やっと"
+      },
+      {
+        "3": "いきなり"
+      },
+      {
+        "4": "まんがいち"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "まんがいち"
+  },
+  {
+    "number": 420,
+    "type": "bunpo",
+    "question": "その<ruby>本<rt>ほん</rt></ruby>なら<ruby>貸<rt>か</rt></ruby>してあげるから、______ことはないよ。",
+    "options": [
+      {
+        "1": "<ruby>買<rt>か</rt></ruby>わない"
+      },
+      {
+        "2": "<ruby>買<rt>か</rt></ruby>った"
+      },
+      {
+        "3": "<ruby>買<rt>か</rt></ruby>う"
+      },
+      {
+        "4": "<ruby>買<rt>か</rt></ruby>える"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "<ruby>買<rt>か</rt></ruby>う"
+  },
+  {
+    "number": 421,
+    "type": "moji",
+    "question": "高級な<em>布団</em>も、丸い形のこたつ用のもの色々ございます。",
+    "options": [
+      {
+        "1": "うどん"
+      },
+      {
+        "2": "ふだん"
+      },
+      {
+        "3": "ふとん"
+      },
+      {
+        "4": "ふたん"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "ふとん"
+  },
+  {
+    "number": 422,
+    "type": "goi",
+    "question": "もう10<ruby>年以上<rt>ねんいじょう</rt></ruby>も<ruby>前<rt>まえ</rt></ruby>のことなので<ruby>記憶<rt>きおく</rt></ruby>が______になっている。",
+    "options": [
+      {
+        "1": "あいまい"
+      },
+      {
+        "2": "でたらめ"
+      },
+      {
+        "3": "たしか"
+      },
+      {
+        "4": "ふあん"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "あいまい"
+  },
+  {
+    "number": 423,
+    "type": "bunpo",
+    "question": "「お<ruby>一人様一点限<rt>ひとりさまいってんかぎ</rt></ruby>り」とは、つまり、<ruby>一人一<rt>ひとりひと</rt></ruby>つしか<ruby>買<rt>か</rt></ruby>えないが、",
+    "options": [
+      {
+        "1": "ほかない"
+      },
+      {
+        "2": "わけがない"
+      },
+      {
+        "3": "にきまっている"
+      },
+      {
+        "4": "ということだ"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "ということだ"
+  },
+  {
+    "number": 424,
+    "type": "moji",
+    "question": "「本当に申しわけないが、今月は給料が<em>はらえない</em>。」と社長は行った。",
+    "options": [
+      {
+        "1": "費えない"
+      },
+      {
+        "2": "払えない"
+      },
+      {
+        "3": "賃えない"
+      },
+      {
+        "4": "与えない"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "払えない"
+  },
+  {
+    "number": 425,
+    "type": "goi",
+    "question": "<ruby>毎日体操<rt>まいにちたいそう</rt></ruby>をしないといけないのに、このごろ______<ruby>一週間<rt>いっしゅうかん</rt></ruby>もしないこともある。",
+    "options": [
+      {
+        "1": "へらして"
+      },
+      {
+        "2": "あきれて"
+      },
+      {
+        "3": "はぶいて"
+      },
+      {
+        "4": "なまけて"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "なまけて"
+  },
+  {
+    "number": 426,
+    "type": "bunpo",
+    "question": "すみません、<ruby>電車<rt>でんしゃ</rt></ruby>が<ruby>遅<rt>おく</rt></ruby>れた______、<ruby>遅<rt>おそ</rt></ruby>くなってしまいました。",
+    "options": [
+      {
+        "1": "ものですから"
+      },
+      {
+        "2": "ことですから"
+      },
+      {
+        "3": "んですから"
+      },
+      {
+        "4": "わけですから"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ものですから"
+  },
+  {
+    "number": 427,
+    "type": "moji",
+    "question": "この辺は<em>自然</em>がゆたかで、星もよく見えます。",
+    "options": [
+      {
+        "1": "しせん"
+      },
+      {
+        "2": "じぜん"
+      },
+      {
+        "3": "しぜん"
+      },
+      {
+        "4": "じせん"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "しぜん"
+  },
+  {
+    "number": 428,
+    "type": "goi",
+    "question": "セーターはハンガーに______、ネットの<ruby>上<rt>うえ</rt></ruby>で<ruby>広<rt>ひろ</rt></ruby>げて<ruby>乾<rt>かわ</rt></ruby>かしてください。",
+    "options": [
+      {
+        "1": "まとめないで"
+      },
+      {
+        "2": "つるさないで"
+      },
+      {
+        "3": "たたまないで"
+      },
+      {
+        "4": "かためないで"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "つるさないで"
+  },
+  {
+    "number": 429,
+    "type": "bunpo",
+    "question": "ここは<ruby>桜<rt>さくら</rt></ruby>の<ruby>花<rt>はな</rt></ruby>がとても______ことから、<ruby>桜<rt>さくら</rt></ruby>が<ruby>丘<rt>おか</rt></ruby>と<ruby>呼<rt>よ</rt></ruby>ばれるようになった。",
+    "options": [
+      {
+        "1": "きれい"
+      },
+      {
+        "2": "きれいな"
+      },
+      {
+        "3": "きれいだ"
+      },
+      {
+        "4": "きれいの"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "きれいな"
+  },
+  {
+    "number": 430,
+    "type": "moji",
+    "question": "農家の人から、卵や<em>はたけ</em>でとれた野菜をもらった。",
+    "options": [
+      {
+        "1": "畑"
+      },
+      {
+        "2": "田"
+      },
+      {
+        "3": "苗"
+      },
+      {
+        "4": "細"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "畑"
+  },
+  {
+    "number": 431,
+    "type": "goi",
+    "question": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>性格<rt>せいかく</rt></ruby>がいいだけでなく、<ruby>礼儀<rt>れいぎ</rt></ruby>______からみんなに<ruby>好<rt>す</rt></ruby>かれている。",
+    "options": [
+      {
+        "1": "いい"
+      },
+      {
+        "2": "ある"
+      },
+      {
+        "3": "ただしい"
+      },
+      {
+        "4": "おおい"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "ただしい"
+  },
+  {
+    "number": 432,
+    "type": "bunpo",
+    "question": "<ruby>忘<rt>わす</rt></ruby>れ<ruby>物<rt>もの</rt></ruby>をしないように、<ruby>私<rt>わたし</rt></ruby>はいつも<ruby>前<rt>まえ</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>に<ruby>準備<rt>じゅんび</rt></ruby>しておく______。",
+    "options": [
+      {
+        "1": "べきます"
+      },
+      {
+        "2": "わけにはいかない"
+      },
+      {
+        "3": "ことです"
+      },
+      {
+        "4": "ようにしている"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "ようにしている"
+  },
+  {
+    "number": 433,
+    "type": "moji",
+    "question": "この学校の生徒たちは<em>政治</em>について深い関心を持っている。",
+    "options": [
+      {
+        "1": "せいち"
+      },
+      {
+        "2": "せいじ"
+      },
+      {
+        "3": "しょうち"
+      },
+      {
+        "4": "しょうじ"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "せいじ"
+  },
+  {
+    "number": 434,
+    "type": "goi",
+    "question": "ああ、<ruby>大変<rt>たいへん</rt></ruby>！お<ruby>風呂<rt>ふろ</rt></ruby>が______いるよ。",
+    "options": [
+      {
+        "1": "こぼれて"
+      },
+      {
+        "2": "あふれて"
+      },
+      {
+        "3": "わいて"
+      },
+      {
+        "4": "たまって"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "あふれて"
+  },
+  {
+    "number": 435,
+    "type": "bunpo",
+    "question": "A「<ruby>今度<rt>こんど</rt></ruby>、プールに<ruby>行<rt>い</rt></ruby>かない？」\nB「ごめん、ぼく、______<ruby>泳<rt>およ</rt></ruby>げないんだよ。」",
+    "options": [
+      {
+        "1": "まったく"
+      },
+      {
+        "2": "けっして"
+      },
+      {
+        "3": "めったに"
+      },
+      {
+        "4": "ぜったいに"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "まったく"
+  },
+  {
+    "number": 436,
+    "type": "moji",
+    "question": "日本語能力試験のN3というのは、日常の会話や読み書きが<em>可能</em>なレベルです。",
+    "options": [
+      {
+        "1": "かのう"
+      },
+      {
+        "2": "くのう"
+      },
+      {
+        "3": "かのん"
+      },
+      {
+        "4": "くのん"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "かのう"
+  },
+  {
+    "number": 437,
+    "type": "goi",
+    "question": "<ruby>雨<rt>あめ</rt></ruby>にぬれないように、<ruby>自転車<rt>じてんしゃ</rt></ruby>にカバーを______。",
+    "options": [
+      {
+        "1": "かさねた"
+      },
+      {
+        "2": "つつんだ"
+      },
+      {
+        "3": "ほした"
+      },
+      {
+        "4": "かぶせた"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "かぶせた"
+  },
+  {
+    "number": 438,
+    "type": "bunpo",
+    "question": "A「もう<ruby>食<rt>た</rt></ruby>べないの？」\nB「______、おなかがいっぱいなんだもん。」",
+    "options": [
+      {
+        "1": "だって"
+      },
+      {
+        "2": "それで"
+      },
+      {
+        "3": "ただし"
+      },
+      {
+        "4": "つまり"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "だって"
+  },
+  {
+    "number": 439,
+    "type": "moji",
+    "question": "<em>しつれい</em>ですが、年齢や職業も書いていただきませんか。",
+    "options": [
+      {
+        "1": "欠礼"
+      },
+      {
+        "2": "無礼"
+      },
+      {
+        "3": "失礼"
+      },
+      {
+        "4": "非礼"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "失礼"
+  },
+  {
+    "number": 440,
+    "type": "goi",
+    "question": "<ruby>子供<rt>こども</rt></ruby>は<ruby>親<rt>おや</rt></ruby>の______<ruby>育<rt>そだ</rt></ruby>ちます。",
+    "options": [
+      {
+        "1": "ふりをして"
+      },
+      {
+        "2": "まねをして"
+      },
+      {
+        "3": "<ruby>世話<rt>せわ</rt></ruby>をして"
+      },
+      {
+        "4": "あとについて"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "まねをして"
+  },
+  {
+    "number": 441,
+    "type": "bunpo",
+    "question": "<ruby>今晩<rt>こんばん</rt></ruby>、<ruby>家<rt>いえ</rt></ruby>で<ruby>食<rt>た</rt></ruby>べる？______レストランへ<ruby>行<rt>い</rt></ruby>く？",
+    "options": [
+      {
+        "1": "それなら"
+      },
+      {
+        "2": "それに"
+      },
+      {
+        "3": "それとも"
+      },
+      {
+        "4": "そういえば"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "それとも"
+  },
+  {
+    "number": 442,
+    "type": "moji",
+    "question": "この電車は<em>快速</em>です。次の駅で各駅停車に乗り換えましょう。",
+    "options": [
+      {
+        "1": "けいそく"
+      },
+      {
+        "2": "こうそく"
+      },
+      {
+        "3": "けっそく"
+      },
+      {
+        "4": "かいそく"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "かいそく"
+  },
+  {
+    "number": 443,
+    "type": "goi",
+    "question": "A「パトカーが<ruby>止<rt>と</rt></ruby>まっていますが、あの<ruby>店<rt>みせ</rt></ruby>で<ruby>何<rt>なに</rt></ruby>かあったんですか。」\nB「<ruby>客<rt>きゃく</rt></ruby>が<ruby>店<rt>みせ</rt></ruby>で______らしいですよ。」",
+    "options": [
+      {
+        "1": "よっぱらった"
+      },
+      {
+        "2": "もりあがった"
+      },
+      {
+        "3": "あふれている"
+      },
+      {
+        "4": "あばれている"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "あばれている"
+  },
+  {
+    "number": 444,
+    "type": "bunpo",
+    "question": "<ruby>田中<rt>たなか</rt></ruby>さんは、______<ruby>旅館<rt>りょかん</rt></ruby>のような<ruby>大<rt>おお</rt></ruby>きい<ruby>家<rt>いえ</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます。",
+    "options": [
+      {
+        "1": "たとえ"
+      },
+      {
+        "2": "<ruby>必<rt>かなら</rt></ruby>ず"
+      },
+      {
+        "3": "まるで"
+      },
+      {
+        "4": "もしかすると"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "まるで"
+  },
+  {
+    "number": 445,
+    "type": "moji",
+    "question": "<em>かいさつぐち<em>の近くに背産機があって、ICカードにお金の追加ができます。",
+    "options": [
+      {
+        "1": "改札口"
+      },
+      {
+        "2": "改礼口"
+      },
+      {
+        "3": "政札口"
+      },
+      {
+        "4": "政礼口"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "改札口"
+  },
+  {
+    "number": 446,
+    "type": "goi",
+    "question": "______チーズに<ruby>野菜<rt>やさい</rt></ruby>をつけて食べてください。",
+    "options": [
+      {
+        "1": "といた"
+      },
+      {
+        "2": "とかした"
+      },
+      {
+        "3": "くずした"
+      },
+      {
+        "4": "くずれた"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "とかした"
+  },
+  {
+    "number": 447,
+    "type": "bunpo",
+    "question": "<ruby>雨<rt>あめ</rt></ruby>がひどくなってきた。______、<ruby>雷<rt>かみなり</rt></ruby>も<ruby>鳴<rt>な</rt></ruby>り<ruby>始<rt>はじ</rt></ruby>めている。",
+    "options": [
+      {
+        "1": "そのため"
+      },
+      {
+        "2": "そのうえ"
+      },
+      {
+        "3": "それなのに"
+      },
+      {
+        "4": "それでも"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "そのうえ"
+  },
+  {
+    "number": 448,
+    "type": "moji",
+    "question": "あれは消防署で、その向こうが<em>警察</em>署です。",
+    "options": [
+      {
+        "1": "けいさい"
+      },
+      {
+        "2": "かいさつ"
+      },
+      {
+        "3": "けいさつ"
+      },
+      {
+        "4": "かいさい"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "けいさつ"
+  },
+  {
+    "number": 449,
+    "type": "goi",
+    "question": "A「またこわしたの？」\nB「ごめんなさい。でも、______じゃないよ。」",
+    "options": [
+      {
+        "1": "わざと"
+      },
+      {
+        "2": "わざわざ"
+      },
+      {
+        "3": "わりと"
+      },
+      {
+        "4": "わりに"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "わざと"
+  },
+  {
+    "number": 450,
+    "type": "bunpo",
+    "question": "<ruby>係員<rt>かかりいん</rt></ruby>の<ruby>指示通り<rt>しじどおり</rt></ruby>に<ruby>並<rt>なら</rt></ruby>んで<ruby>待<rt>ま</rt></ruby>った。______、チケット<ruby>販売<rt>はんばい</rt></ruby>は<ruby>突然中止<rt>とつぜんちゅうし</rt></ruby>された。",
+    "options": [
+      {
+        "1": "ところが"
+      },
+      {
+        "2": "ところに"
+      },
+      {
+        "3": "ところで"
+      },
+      {
+        "4": "ところを"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ところが"
+  },
+  {
+    "number": 451,
+    "type": "moji",
+    "question": "いろいろなサインがありますね。「<em>禁煙</em>」「駐車禁止」「両替」．．．。",
+    "options": [
+      {
+        "1": "きんえん"
+      },
+      {
+        "2": "きんねん"
+      },
+      {
+        "3": "きえん"
+      },
+      {
+        "4": "きねん"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "きんえん"
+  },
+  {
+    "number": 452,
+    "type": "goi",
+    "question": "3<ruby>年<rt>ねん</rt></ruby>ほどタイで<ruby>死活<rt>せいかつ</rt></ruby>をしましたが、なかなか______<ruby>経験<rt>けいけん</rt></ruby>でした。",
+    "options": [
+      {
+        "1": "えられない"
+      },
+      {
+        "2": "<ruby>手<rt>て</rt></ruby>に<ruby>入<rt>はい</rt></ruby>らない"
+      },
+      {
+        "3": "すごせない"
+      },
+      {
+        "4": "なれない"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "えられない"
+  },
+  {
+    "number": 453,
+    "type": "bunpo",
+    "question": "りんごをください。それと、みかんも。______、バナナも。",
+    "options": [
+      {
+        "1": "もう"
+      },
+      {
+        "2": "さらに"
+      },
+      {
+        "3": "それで"
+      },
+      {
+        "4": "あと"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "あと"
+  },
+  {
+    "number": 454,
+    "type": "moji",
+    "question": "海岸のゴミ<em>拾い</em>を一緒にしませんか。",
+    "options": [
+      {
+        "1": "すくい"
+      },
+      {
+        "2": "ひろい"
+      },
+      {
+        "3": "せまい"
+      },
+      {
+        "4": "おおい"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ひろい"
+  },
+  {
+    "number": 455,
+    "type": "goi",
+    "question": "<ruby>彼<rt>かれ</rt></ruby>のアドバイスのおかげで、<ruby>悩<rt>なや</rt></ruby>みが______<ruby>解決<rt>かいけつ</rt></ruby>した。",
+    "options": [
+      {
+        "1": "そっくり"
+      },
+      {
+        "2": "ふと"
+      },
+      {
+        "3": "ものすごく"
+      },
+      {
+        "4": "いっぺんに"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "いっぺんに"
+  },
+  {
+    "number": 456,
+    "type": "bunpo",
+    "question": "<ruby>美人<rt>びじん</rt></ruby>が<ruby>必<rt>かなら</rt></ruby>ずしも<ruby>幸<rt>しあわ</rt></ruby>せになれる______。",
+    "options": [
+      {
+        "1": "に<ruby>限<rt>かぎ</rt></ruby>る"
+      },
+      {
+        "2": "<ruby>限<rt>かぎ</rt></ruby>りだ"
+      },
+      {
+        "3": "とは<ruby>限<rt>かぎ</rt></ruby>らない"
+      },
+      {
+        "4": "には<ruby>限<rt>かぎ</rt></ruby>りがある"
+      }
+    ],
+    "answer": 3,
+    "answer_text": "とは<ruby>限<rt>かぎ</rt></ruby>らない"
+  },
+  {
+    "number": 457,
+    "type": "moji",
+    "question": "カレーのルーには<ruby>甘<rt>あま</rt></ruby>いのと<ruby>辛<rt>から</rt></ruby>いのがあります。うちでは<ruby>両方<rt>りょうほう</rt></ruby>を<em>混ぜて</em>使います。",
+    "options": [
+      {
+        "1": "まぜて"
+      },
+      {
+        "2": "なぜて"
+      },
+      {
+        "3": "のぜて"
+      },
+      {
+        "4": "もぜて"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "まぜて"
+  },
+  {
+    "number": 458,
+    "type": "goi",
+    "question": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>上司<rt>じょうし</rt></ruby>にどんなにひどいことを<ruby>言<rt>い</rt></ruby>われても、______がまんをした。",
+    "options": [
+      {
+        "1": "じっと"
+      },
+      {
+        "2": "そっと"
+      },
+      {
+        "3": "ざっと"
+      },
+      {
+        "4": "きっと"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "じっと"
+  },
+  {
+    "number": 459,
+    "type": "bunpo",
+    "question": "<ruby>新聞<rt>しんぶん</rt></ruby>やテレビの<ruby>言<rt>い</rt></ruby>うことなど、______<ruby>信<rt>しん</rt></ruby>じられない。",
+    "options": [
+      {
+        "1": "<ruby>少<rt>すこ</rt></ruby>しは"
+      },
+      {
+        "2": "<ruby>少<rt>すこ</rt></ruby>しも"
+      },
+      {
+        "3": "<ruby>少<rt>すこ</rt></ruby>しでも"
+      },
+      {
+        "4": "<ruby>少<rt>すこ</rt></ruby>しぐらい"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "<ruby>少<rt>すこ</rt></ruby>しも"
+  },
+  {
+    "number": 460,
+    "type": "moji",
+    "question": "国が<em>こいしい</em>。",
+    "options": [
+      {
+        "1": "久しい"
+      },
+      {
+        "2": "愛しい"
+      },
+      {
+        "3": "等しい"
+      },
+      {
+        "4": "恋しい"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "恋しい"
+  },
+  {
+    "number": 461,
+    "type": "goi",
+    "question": "<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>学習者<rt>がくしゅうしゃ</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>えている。これから<ruby>日本語能力試験<rt>にほんごのうりょくしけん</rt></ruby>の<ruby>受験者<rt>じゅけんしゃ</rt></ruby>も______<ruby>増<rt>ふ</rt></ruby>えるだろう。",
+    "options": [
+      {
+        "1": "そろそろ"
+      },
+      {
+        "2": "ますます"
+      },
+      {
+        "3": "まあまあ"
+      },
+      {
+        "4": "のろのろ"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ますます"
+  },
+  {
+    "number": 462,
+    "type": "bunpo",
+    "question": "たとえ<ruby>家<rt>いえ</rt></ruby>を______、<ruby>健康<rt>けんこう</rt></ruby>なら<ruby>生<rt>い</rt></ruby>きていける。",
+    "options": [
+      {
+        "1": "なくしても"
+      },
+      {
+        "2": "なくしては"
+      },
+      {
+        "3": "なくしたら"
+      },
+      {
+        "4": "なくしながら"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "なくしても"
+  },
+  {
+    "number": 463,
+    "type": "moji",
+    "question": "家族を空港に<em>迎え</em>に行きますので、早退させて頂けませんか。",
+    "options": [
+      {
+        "1": "むかえ"
+      },
+      {
+        "2": "うかえ"
+      },
+      {
+        "3": "ぬかえ"
+      },
+      {
+        "4": "もかえ"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "むかえ"
+  },
+  {
+    "number": 464,
+    "type": "goi",
+    "question": "______<ruby>言<rt>い</rt></ruby>うと、<ruby>私<rt>わたし</rt></ruby>はあんまり<ruby>英語<rt>えいご</rt></ruby>ができません。",
+    "options": [
+      {
+        "1": "すなおに"
+      },
+      {
+        "2": "まじめに"
+      },
+      {
+        "3": "てきとうに"
+      },
+      {
+        "4": "しょうじきに"
+      }
+    ],
+    "answer": 4,
+    "answer_text": "しょうじきに"
+  },
+  {
+    "number": 465,
+    "type": "bunpo",
+    "question": "______ほめない<ruby>人<rt>ひと</rt></ruby>にほめられるとうれしい。",
+    "options": [
+      {
+        "1": "めったに"
+      },
+      {
+        "2": "たまに"
+      },
+      {
+        "3": "けっして"
+      },
+      {
+        "4": "かなりに"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "めったに"
+  },
+  {
+    "number": 466,
+    "type": "moji",
+    "question": "本を3<em>さつ</em>読みました。",
+    "options": [
+      {
+        "1": "冊"
+      },
+      {
+        "2": "枚"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "冊"
+  },
+  {
+    "number": 467,
+    "type": "moji",
+    "question": "今夜、おもしろいテレビ<em>ばんぐみ</em>がある。",
+    "options": [
+      {
+        "1": "晩組"
+      },
+      {
+        "2": "番組"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "番組"
+  },
+  {
+    "number": 468,
+    "type": "goi",
+    "question": "1万円札、______くれませんか。",
+    "options": [
+      {
+        "1": "くずれて"
+      },
+      {
+        "2": "くずして"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "くずして"
+  },
+  {
+    "number": 469,
+    "type": "goi",
+    "question": "A「あれ、いつものゲーム、していないの？」\nB「やりすぎて、もう______よ。」",
+    "options": [
+      {
+        "1": "あきちゃった"
+      },
+      {
+        "2": "あきれちゃった"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "あきちゃった"
+  },
+  {
+    "number": 470,
+    "type": "bunpo",
+    "question": "じゅうぶん間に合うから、あわてる______。",
+    "options": [
+      {
+        "1": "ことだ"
+      },
+      {
+        "2": "ことはない"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ことはない"
+  },
+  {
+    "number": 471,
+    "type": "bunpo",
+    "question": "漢字は勉強すればする______おもしろい。",
+    "options": [
+      {
+        "1": "ほど"
+      },
+      {
+        "2": "くらい"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ほど"
+  },
+  {
+    "number": 472,
+    "type": "moji",
+    "question": "泳ぐ前と後にシャワーを<em>あびる</em>。",
+    "options": [
+      {
+        "1": "涼びる"
+      },
+      {
+        "2": "浴びる"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "浴びる"
+  },
+  {
+    "number": 473,
+    "type": "moji",
+    "question": "<em>そうじ</em>と洗濯が終わったら買い物に行く。",
+    "options": [
+      {
+        "1": "掃除"
+      },
+      {
+        "2": "婦除"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "掃除"
+  },
+  {
+    "number": 474,
+    "type": "goi",
+    "question": "______いない犬多くて困る。",
+    "options": [
+      {
+        "1": "そだてられて"
+      },
+      {
+        "2": "しつけられて"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "しつけられて"
+  },
+  {
+    "number": 475,
+    "type": "goi",
+    "question": "おとなしくしていて、______子供だね。",
+    "options": [
+      {
+        "1": "<ruby>行儀<rt>ぎょうぎ</rt></ruby>のいい"
+      },
+      {
+        "2": "<ruby>行儀<rt>ぎょうぎ</rt></ruby>正しい"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>行儀<rt>ぎょうぎ</rt></ruby>のいい"
+  },
+  {
+    "number": 476,
+    "type": "bunpo",
+    "question": "昨日、<ruby>騒<rt>さわ</rt></ruby>いで声を出しすぎた______、のどが痛い。",
+    "options": [
+      {
+        "1": "くせに"
+      },
+      {
+        "2": "せいか"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "せいか"
+  },
+  {
+    "number": 477,
+    "type": "bunpo",
+    "question": "ここまできたら______から、とにかくやってみよう。",
+    "options": [
+      {
+        "1": "やるしかない"
+      },
+      {
+        "2": "やってもしかたない"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "やるしかない"
+  },
+  {
+    "number": 478,
+    "type": "moji",
+    "question": "<em>危険</em>ですから、入ってはいけません。",
+    "options": [
+      {
+        "1": "きけん"
+      },
+      {
+        "2": "きげん"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "きけん"
+  },
+  {
+    "number": 479,
+    "type": "moji",
+    "question": "歯医者を<em>予約</em>する。",
+    "options": [
+      {
+        "1": "よやく"
+      },
+      {
+        "2": "ようやく"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "よやく"
+  },
+  {
+    "number": 480,
+    "type": "goi",
+    "question": "長い間使っていた掃除機だったが、______<ruby>壊<rt>こわ</rt></ruby>れてしまった。",
+    "options": [
+      {
+        "1": "やっと"
+      },
+      {
+        "2": "とうとう"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "とうとう"
+  },
+  {
+    "number": 481,
+    "type": "goi",
+    "question": "A「今日、<ruby>遅刻<rt>ちこく</rt></ruby>したんじゃない？」\nB「______だったけれど、間に合ったよ。」",
+    "options": [
+      {
+        "1": "ぎりぎり"
+      },
+      {
+        "2": "どきどき"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ぎりぎり"
+  },
+  {
+    "number": 482,
+    "type": "bunpo",
+    "question": "田中さんから電話があったのは、私が夕飯を______ときだった。",
+    "options": [
+      {
+        "1": "たべようとする"
+      },
+      {
+        "2": "たべかけた"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "たべかけた"
+  },
+  {
+    "number": 483,
+    "type": "bunpo",
+    "question": "この小説は短いので、一日で______でしょう。",
+    "options": [
+      {
+        "1": "読みきれる"
+      },
+      {
+        "2": "読みっきり"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "読みきれる"
+  },
+  {
+    "number": 484,
+    "type": "moji",
+    "question": "<em>むすこ</em>を育てる。",
+    "options": [
+      {
+        "1": "息子"
+      },
+      {
+        "2": "島子"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "息子"
+  },
+  {
+    "number": 485,
+    "type": "moji",
+    "question": "最後に塩を<em>加えます</em>。",
+    "options": [
+      {
+        "1": "くわえます"
+      },
+      {
+        "2": "こわえます"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "くわえます"
+  },
+  {
+    "number": 486,
+    "type": "goi",
+    "question": "いくらかせいでも、お金は______。",
+    "options": [
+      {
+        "1": "つもらない"
+      },
+      {
+        "2": "たまらない"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "たまらない"
+  },
+  {
+    "number": 487,
+    "type": "goi",
+    "question": "テレビが見えないから、そこ、______よ。",
+    "options": [
+      {
+        "1": "ゆずって"
+      },
+      {
+        "2": "どいて"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "どいて"
+  },
+  {
+    "number": 488,
+    "type": "bunpo",
+    "question": "どこへ行っていたの？どんなにさがした______。",
+    "options": [
+      {
+        "1": "ことか"
+      },
+      {
+        "2": "ことだ"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "ことか"
+  },
+  {
+    "number": 489,
+    "type": "bunpo",
+    "question": "さっきは電話に出られなくてごめんなさい。ちょっと手が<ruby>離<rt>はな</rt></ruby>せなかった______。",
+    "options": [
+      {
+        "1": "んだもん"
+      },
+      {
+        "2": "ものだから"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ものだから"
+  },
+  {
+    "number": 490,
+    "type": "moji",
+    "question": "数を<em>数えます</em>。",
+    "options": [
+      {
+        "1": "かずえます"
+      },
+      {
+        "2": "かぞえます"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "かぞえます"
+  },
+  {
+    "number": 491,
+    "type": "moji",
+    "question": "国によって<em>しゅうかん</em>が違う。",
+    "options": [
+      {
+        "1": "習慣"
+      },
+      {
+        "2": "週刊"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "習慣"
+  },
+  {
+    "number": 492,
+    "type": "goi",
+    "question": "外にまでお客さんが______けれど、特別なセールなのかな。",
+    "options": [
+      {
+        "1": "あふれている"
+      },
+      {
+        "2": "もりあがっている"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "あふれている"
+  },
+  {
+    "number": 493,
+    "type": "goi",
+    "question": "間違いは______<ruby>認<rt>みと</rt></ruby>めたほうがいいよ。",
+    "options": [
+      {
+        "1": "<ruby>素直<rt>すなお</rt></ruby>に"
+      },
+      {
+        "2": "<ruby>真面目<rt>まじめ</rt></ruby>に"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "<ruby>素直<rt>すなお</rt></ruby>に"
+  },
+  {
+    "number": 494,
+    "type": "bunpo",
+    "question": "あの人から<ruby>返信<rt>へんしん</rt></ruby>がないなんて、______、メールを読んでいないのかもしれない。",
+    "options": [
+      {
+        "1": "もしかすると"
+      },
+      {
+        "2": "かならずしも"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "もしかすると"
+  },
+  {
+    "number": 495,
+    "type": "bunpo",
+    "question": "彼は動物にくわしくて、______学者のようだ。",
+    "options": [
+      {
+        "1": "わりに"
+      },
+      {
+        "2": "まるで"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "まるで"
+  },
+  {
+    "number": 496,
+    "type": "moji",
+    "question": "彼は<em>正直</em>な人だ。",
+    "options": [
+      {
+        "1": "しょうじき"
+      },
+      {
+        "2": "そっちょく"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "しょうじき"
+  },
+  {
+    "number": 497,
+    "type": "moji",
+    "question": "<em>毛布</em>を洗う。",
+    "options": [
+      {
+        "1": "もうふ"
+      },
+      {
+        "2": "まおふ"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "もうふ"
+  },
+  {
+    "number": 498,
+    "type": "goi",
+    "question": "______車で迎えに来てくださりありがとうございます。",
+    "options": [
+      {
+        "1": "わざと"
+      },
+      {
+        "2": "わざわざ"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "わざわざ"
+  },
+  {
+    "number": 499,
+    "type": "goi",
+    "question": "さっきから、あの人に______見られていて<ruby>嫌<rt>いや</rt></ruby>だ。",
+    "options": [
+      {
+        "1": "じっと"
+      },
+      {
+        "2": "ざっと"
+      }
+    ],
+    "answer": 1,
+    "answer_text": "じっと"
+  },
+  {
+    "number": 500,
+    "type": "bunpo",
+    "question": "しめきりに間に合う______必死でレポートを書き上げた。",
+    "options": [
+      {
+        "1": "ために"
+      },
+      {
+        "2": "ように"
+      }
+    ],
+    "answer": 2,
+    "answer_text": "ように"
+  }
+]
 }

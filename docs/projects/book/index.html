@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Novel Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main-menu">
+        <h1>Light Novel Library</h1>
+        <div id="book-list"></div>
+    </div>
+    <div id="reader" style="display: none;">
+        <div id="top-bar">
+            <button id="back-btn">←</button>
+            <button id="toc-btn">📚</button>
+            <button id="font-btn">Aa</button>
+            <button id="search-btn">🔍</button>
+            <button id="bookmark-btn">🔖</button>
+        </div>
+        <div id="content"></div>
+        <div class="navigation-overlay left"></div>
+        <div class="navigation-overlay right"></div>
+        <div id="bottom-bar">
+            <input type="range" id="page-slider" min="1" max="100" value="1">
+            <div id="page-info">
+                <span id="current-page">1</span>
+                <span id="total-pages">of 100</span>
+            </div>
+        </div>
+    </div>
+    <div id="toc-modal" class="modal">
+        <div class="modal-content">
+            <h2>Table of Contents</h2>
+            <ul id="toc-list"></ul>
+        </div>
+    </div>
+    <div id="font-modal" class="modal">
+        <div class="modal-content">
+            <h2>Font Size</h2>
+            <button class="font-size-btn" data-size="small">Small</button>
+            <button class="font-size-btn" data-size="medium">Medium</button>
+            <button class="font-size-btn" data-size="large">Large</button>
+            <button class="font-size-btn" data-size="extra-large">Extra Large</button>
+        </div>
+    </div>
+    <div id="search-modal" class="modal">
+        <div class="modal-content">
+            <h2>Search</h2>
+            <input type="text" id="search-input" placeholder="Enter search term...">
+            <ul id="search-results"></ul>
+        </div>
+    </div>
+    <div id="bookmark-modal" class="modal">
+        <div class="modal-content">
+            <h2>Bookmarks</h2>
+            <ul id="bookmark-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

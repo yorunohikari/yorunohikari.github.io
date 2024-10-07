@@ -41,7 +41,7 @@ class SearchEngine {
 
     async fetchQuizData() {
         try {
-            const files = ['quizData1.json', 'quizData2.json', 'quizData4.json']; // Add more files as needed
+            const files = ['quizData1.json', 'quizData2.json', 'quizData3.json', 'quizData4.json']; // Add more files as needed
             const allQuizData = [];
             
             for (const file of files) {
