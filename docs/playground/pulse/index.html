@@ -3,39 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSON Editor</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>John Doe - Futuristic Portfolio</title>
+    <style>
+        /* CSS styles */
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #ffffff;
+            --accent-color: #00ffff;
+            --secondary-color: #4a4a4a;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: rgba(10, 10, 10, 0.8);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        section {
+            padding: 80px 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        button {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #00cccc;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        /* Add more styles as needed */
+
+    </style>
 </head>
 <body>
-    <div id="saveIndicator" style="display:none;">Saving...</div>
-    <div id="warningDiv" style="display:none;">Warning</div>
-    <button class="btn" onclick="addNewEntry()">Add New Entry</button>
-    <button class="btn" onclick="exportJSON()">Export JSON</button>
-    <input type="file" id="importFile" style="display:none" onchange="importJSON(event)">
-    <label for="importFile" class="btn">Import JSON</label>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div id="gotoDiv">
-        <input type="number" id="gotoNumber" placeholder="Go to number" />
-        <button class="btn" onclick="goToNumber()">Go</button>
-    </div>
+    <main>
+        <section id="home" class="container">
+            <h1 class="animate-fade-in">John Doe</h1>
+            <h2 class="animate-fade-in">Futuristic Web Developer & Designer</h2>
+        </section>
 
-    <table id="jsonTable">
-        <thead>
-            <tr>
-                <th>Number</th>
-                <th>Type</th>
-                <th>Question</th>
-                <th>Options</th>
-                <th>Answer</th>
-                <th>Answer Text</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <p class="animate-fade-in">
+                I'm a passionate web developer with a keen eye for futuristic design and cutting-edge technologies.
+                My goal is to create immersive digital experiences that push the boundaries of web development.
+            </p>
+        </section>
 
-    <div id="pagination"></div>
-    
-    <script src="script.js"></script>
+        <section id="skills" class="container">
+            <h2>Skills</h2>
+            <div class="grid">
+                <div class="card animate-fade-in">HTML5 & CSS3</div>
+                <div class="card animate-fade-in">JavaScript</div>
+                <div class="card animate-fade-in">WebGL</div>
+                <div class="card animate-fade-in">3D Modeling</div>
+                <div class="card animate-fade-in">UI/UX Design</div>
+                <div class="card animate-fade-in">Animation</div>
+            </div>
+        </section>
+
+        <section id="projects" class="container">
+            <h2>Projects</h2>
+            <div class="grid">
+                <div class="card animate-fade-in">
+                    <h3>3D Portfolio</h3>
+                    <p>An interactive 3D showcase of my work</p>
+                </div>
+                <div class="card animate-fade-in">
+                    <h3>Futuristic UI Kit</h3>
+                    <p>A collection of sleek, modern UI components</p>
+                </div>
+                <div class="card animate-fade-in">
+                    <h3>WebVR Experience</h3>
+                    <p>Immersive virtual reality web application</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2>Contact Me</h2>
+            <form id="contact-form" class="animate-fade-in">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 John Doe. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for animations and interactivity
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Smooth scrolling for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Animate elements when they come into view
+            const animateOnScroll = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(animateOnScroll, {
+                root: null,
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.animate-fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Form submission (you'd need to add server-side handling)
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! (Form submission simulation)');
+                this.reset();
+            });
+        });
+    </script>
 </body>
 </html>

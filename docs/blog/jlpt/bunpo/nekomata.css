@@ -3,15 +3,17 @@ body {
     background-color: #ff6683;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* This ensures the body takes up at least the full viewport height */
 }
 
 .container {
     max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
+    width: 100%; /* This ensures the container takes up the full width up to max-width */
+    padding: 20px; 
     background-color: #d4ddfb;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: 3px solid #261f4c;
     border-radius: 5px;
     transition: all 0.5s ease;
 }
@@ -244,7 +246,7 @@ em {
 @media (max-width: 768px) {
     body {
         font-family: Arial, sans-serif;
-        background-color: #fff;
+        background-color: #ff6683;
     }
 
     .container {

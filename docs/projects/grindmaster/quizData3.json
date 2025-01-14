@@ -2565,7 +2565,7 @@
   {
     "number": 133,
     "type": "goi",
-    "question": "<ruby>朝<rt>あさ</rt></ruby>から<ruby>何<rt>なに</rt></ruby>も<ruby>食<rt>た</rt></ruby>べてうないから、おなかが______だ。",
+    "question": "<ruby>朝<rt>あさ</rt></ruby>から<ruby>何<rt>なに</rt></ruby>も<ruby>食<rt>た</rt></ruby>べていないから、おなかが______だ。",
     "options": [
       {
         "1": "ふらふら"
@@ -8025,7 +8025,7 @@
   {
     "number": 413,
     "type": "goi",
-    "question": "<ruby>手入<rt>てい</rt></ruby>れをあうるときは、______<ruby>布<rt>ぬの</rt></ruby>で<ruby>軽<rt>かる</rt></ruby>くふいてください。",
+    "question": "<ruby>手入<rt>てい</rt></ruby>れをするときは、______<ruby>布<rt>ぬの</rt></ruby>で<ruby>軽<rt>かる</rt></ruby>くふいてください。",
     "options": [
       {
         "1": "ぬらされた"
@@ -8844,7 +8844,7 @@
   {
     "number": 452,
     "type": "goi",
-    "question": "3<ruby>年<rt>ねん</rt></ruby>ほどタイで<ruby>死活<rt>せいかつ</rt></ruby>をしましたが、なかなか______<ruby>経験<rt>けいけん</rt></ruby>でした。",
+    "question": "3<ruby>年<rt>ねん</rt></ruby>ほどタイで<ruby>生活<rt>せいかつ</rt></ruby>をしましたが、なかなか______<ruby>経験<rt>けいけん</rt></ruby>でした。",
     "options": [
       {
         "1": "えられない"

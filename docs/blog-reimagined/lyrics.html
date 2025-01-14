@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Lyrics Display</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="song-title">Loading...</h1>
+        <h2 id="artist-name"></h2>
+    </header>
+
+    <main id="lyrics-container" class="lyrics"></main>
+
+    <footer>
+        <p>&copy; 2025 Artist Name | All rights reserved.</p>
+    </footer>
+
+    <script>
+        fetch('lyrics.json')
+            .then(response => response.json())
+            .then(data => {
+                // Set title and artist
+                document.getElementById("song-title").textContent = data.title;
+                document.getElementById("artist-name").textContent = data.artist;
+
+                // Populate lyrics dynamically
+                const container = document.getElementById("lyrics-container");
+                data.lyrics.forEach(section => {
+                    const sectionDiv = document.createElement("div");
+                    sectionDiv.className = section.type;
+                    section.lines.forEach(line => {
+                        const p = document.createElement("p");
+                        p.textContent = line;
+                        sectionDiv.appendChild(p);
+                    });
+                    container.appendChild(sectionDiv);
+                });
+            })
+            .catch(error => {
+                document.getElementById("song-title").textContent = "Error Loading Lyrics";
+                console.error("Failed to load JSON:", error);
+            });
+    </script>
+</body>
+</html>
