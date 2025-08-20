@@ -1,0 +1,64 @@
+{
+  "dreams": [
+    {
+      "id": "dream_001",
+      "title": "Luna 13-8",
+      "date": "2024-08-13",
+      "tags": [
+        "school",
+        "class",
+        "luna",
+        "recurring"
+      ],
+      "mood": "mysterious",
+      "lucidity": 1,
+      "brief_narrative": "It was the first week of our second year. The faint sound of birds chirping outside the school mixed with the gentle hum of the air conditioner. The occasional shuffle of a chair or the soft flip of a page added to the quiet atmosphere of the...",
+      "link": "24-08-13.html"
+    },
+    {
+      "id": "dream_002",
+      "title": "Luna 9-9",
+      "date": "2024-09-09",
+      "tags": [
+        "city",
+        "talk",
+        "luna",
+        "recurring"
+      ],
+      "mood": "mysterious",
+      "lucidity": 3,
+      "brief_narrative": "It was mid-September, just as the rainy season had begun, when I had a strange dream. In it, I reconnected with my high school friend, Luna. The last time I saw her was at a barbecue party in 2012, about three years after we graduated. In the dream...",
+      "link": "24-09-09.html"
+    },
+    {
+      "id": "dream_003",
+      "title": "Luna 7-7",
+      "date": "2025-07-07",
+      "tags": [
+        "bar",
+        "sandwich",
+        "luna",
+        "recurring"
+      ],
+      "mood": "melancholic",
+      "lucidity": 2,
+      "brief_narrative": "It was one of those strange dreams again. This time, I already had a girlfriend. We were in a long-distance relationship—four months in. I met her during a volunteer event at a southern beach. We were releasing sea turtle...",
+      "link": "25-07-07.html"
+    },
+    {
+      "id": "dream_004",
+      "title": "Luna 20-7",
+      "date": "2025-07-20",
+      "tags": [
+        "beach",
+        "cook",
+        "luna",
+        "recurring"
+      ],
+      "mood": "guilt",
+      "lucidity": 3,
+      "brief_narrative": "I was at the shore — the beach southwest of the city, the same place I first met my girlfriend. I had planned to solo camp there, just me and the sea for a night. But the weather report warned of a heavy storm approaching. Camping was....",
+      "link": "25-07-20.html"
+    }
+  ]
+}

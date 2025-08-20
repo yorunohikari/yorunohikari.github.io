@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dream_archive - goshintai</title>
+    <link rel="icon" type="image/x-icon" href="/assets/G.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="terminal-header">
+            <div class="terminal-title">DREAM_ARCHIVE_INDEX_v2.0</div>
+            <div class="terminal-path" id="terminal-path">~/goshintai.neocities.org/dreams/</div>
+        </div>
+
+        <div class="nav">
+        </div>
+
+        <h1>dream archive</h1>
+        <div class="subtitle">chronological index of my somnium</div>
+
+        <div class="search-section">
+            <input type="text" class="search-input" id="searchInput"
+                placeholder="search dreams... (title, tags, content)">
+        </div>
+
+        <div class="stats" id="stats">
+            <div class="stat-item">
+                <span class="stat-number" id="totalDreams">0</span>
+                <span>total dreams</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="lucidDreams">0</span>
+                <span>lucid dreams</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="avgLucidity">0.0</span>
+                <span>avg lucidity</span>
+            </div>
+        </div>
+
+        <div class="dreams-grid" id="dreamsGrid">
+            <div class="loading">Loading dreams...</div>
+        </div>
+
+        <div class="pagination" id="pagination">
+        </div>
+
+        <a href="../index.html" class="nav-back">← back to main</a>
+
+        <div class="footer">
+            <p>powered by risol mayo • hosted on neocities • 2025</p>
+        </div>
+    </div>
+
+    <script src="/script/navgen.js"></script>
+    <script src="dream.js"></script>
+    <script src="/script/tempath.js"></script>
+    <script src="/script/glitch.js"></script>
+</body>
+
+</html>

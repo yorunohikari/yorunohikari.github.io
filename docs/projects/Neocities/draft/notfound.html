@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction - goshintai</title>
+    <link rel="icon" type="image/x-icon" href="/assets/G.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #000000;
+            color: #ffff00;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-image: 
+                linear-gradient(90deg, rgba(255,255,0,0.03) 1px, transparent 1px),
+                linear-gradient(rgba(255,255,0,0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: backgroundShift 10s linear infinite;
+        }
+        
+        @keyframes backgroundShift {
+            0% { background-position: 0 0; }
+            100% { background-position: 20px 20px; }
+        }
+        
+        .construction-container {
+            text-align: center;
+            border: 2px solid #ffff00;
+            padding: 60px 40px;
+            background-color: #000000;
+            position: relative;
+            max-width: 600px;
+            animation: containerGlow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes containerGlow {
+            0% { 
+                box-shadow: 0 0 10px rgba(255, 255, 0, 0.3);
+                border-color: #ffff00;
+            }
+            100% { 
+                box-shadow: 0 0 30px rgba(255, 255, 0, 0.6);
+                border-color: #fff700;
+            }
+        }
+        
+        .construction-title {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            animation: titlePulse 2s ease-in-out infinite;
+        }
+    
+        
+        .construction-icon {
+            font-size: 4rem;
+            margin: 30px 0;
+            display: block;
+            animation: iconSpin 4s linear infinite;
+        }
+        
+        
+        .construction-text {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            animation: textFade 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes textFade {
+            0% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            border: 2px solid #ffff00;
+            margin: 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                #ffff00 20%, 
+                #fff700 40%, 
+                #ffff00 60%, 
+                transparent 100%);
+            width: 100%;
+            animation: progressScan 2s linear infinite;
+        }
+        
+        @keyframes progressScan {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .status-text {
+            font-size: 0.9rem;
+            margin: 20px 0;
+            animation: statusBlink 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes statusBlink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+        }
+        
+        .ascii-construction {
+            font-size: 0.8rem;
+            line-height: 1.2;
+            white-space: pre;
+            margin: 30px 0;
+            opacity: 0.8;
+            animation: asciiFlicker 4s ease-in-out infinite;
+        }
+        
+        @keyframes asciiFlicker {
+            0%, 90%, 100% { opacity: 0.8; }
+            95% { opacity: 0.3; }
+        }
+        
+        .back-link {
+            color: #ffff00;
+            text-decoration: none;
+            border: 1px solid #ffff00;
+            padding: 10px 20px;
+            display: inline-block;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            animation: linkPulse 3s ease-in-out infinite;
+        }
+        
+        .back-link:hover {
+            background-color: #ffff00;
+            color: #000000;
+            transform: scale(1.05);
+        }
+        
+        @keyframes linkPulse {
+            0%, 100% { border-color: #ffff00; }
+            50% { border-color: #fff700; box-shadow: 0 0 10px rgba(255, 255, 0, 0.3); }
+        }
+        
+        .loading-dots {
+            display: inline-block;
+            animation: loadingDots 2s linear infinite;
+        }
+        
+        @keyframes loadingDots {
+            0% { content: ''; }
+            25% { content: '.'; }
+            50% { content: '..'; }
+            75% { content: '...'; }
+            100% { content: ''; }
+        }
+        
+        .loading-dots::after {
+            content: '';
+            animation: loadingDots 2s linear infinite;
+        }
+        
+        /* Floating particles effect */
+        .particle {
+            position: absolute;
+            color: #ffff00;
+            opacity: 0.3;
+            font-size: 0.8rem;
+            animation: floatUp 6s linear infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes floatUp {
+            0% { 
+                transform: translateY(100vh) translateX(0) rotate(0deg); 
+                opacity: 0; 
+            }
+            10% { opacity: 0.3; }
+            90% { opacity: 0.3; }
+            100% { 
+                transform: translateY(-100px) translateX(20px) rotate(360deg); 
+                opacity: 0; 
+            }
+        }
+        
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 1s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 2s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 3s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 4s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 5s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 1.5s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 3.5s; }
+        .particle:nth-child(9) { left: 90%; animation-delay: 2.5s; }
+        
+        @media (max-width: 600px) {
+            .construction-container {
+                padding: 40px 20px;
+                margin: 20px;
+            }
+            
+            .construction-title {
+                font-size: 1.8rem;
+                letter-spacing: 2px;
+            }
+            
+            .construction-icon {
+                font-size: 3rem;
+            }
+            
+            .construction-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating particles -->
+    <div class="particle">⚡</div>
+    <div class="particle">🔧</div>
+    <div class="particle">⚙️</div>
+    <div class="particle">💾</div>
+    <div class="particle">🖥️</div>
+    <div class="particle">⚡</div>
+    <div class="particle">🔧</div>
+    <div class="particle">⚙️</div>
+    <div class="particle">💾</div>
+
+    <div class="construction-container">
+        <h1 class="construction-title">Under Construction</h1>
+        
+        <div class="construction-icon">🚧</div>
+        
+        <p class="construction-text">
+            This page is currently being crafted.<br>
+            Check back soon for something awesome!
+        </p>
+        
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        
+        <div class="status-text">
+            STATUS: BUILDING<span class="loading-dots"></span>
+        </div>
+        
+        <a href="/" class="back-link">← RETURN TO MAIN</a>
+    </div>
+</body>
+</html>

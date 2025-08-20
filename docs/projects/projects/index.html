@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>goshintai - projects</title>
+    <link rel="icon" type="image/x-icon" href="/assets/G.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #000000;
+            color: #ffff00;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+            background-image: 
+                linear-gradient(90deg, rgba(255,255,0,0.03) 1px, transparent 1px),
+                linear-gradient(rgba(255,255,0,0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #000000;
+            border: 2px solid #ffff00;
+            padding: 30px;
+            position: relative;
+        }
+        
+        .terminal-header {
+            border-bottom: 2px solid #ffff00;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .terminal-title {
+            font-size: 1.2rem;
+            color: #ffff00;
+            margin-bottom: 5px;
+        }
+        
+        .terminal-path {
+            font-size: 0.9rem;
+            color: #ffff00;
+            opacity: 0.7;
+        }
+        
+        .nav-back {
+            display: inline-block;
+            color: #ffff00;
+            text-decoration: none;
+            border: 2px solid #ffff00;
+            padding: 8px 15px;
+            margin-bottom: 20px;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        
+        .nav-back:hover {
+            background-color: #ffff00;
+            color: #000000;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            color: #ffff00;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #ffff00;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+        
+        .project-card {
+            margin-bottom: 40px;
+            border: 2px solid #ffff00;
+            padding: 25px;
+            background-color: rgba(255,255,0,0.02);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            background-color: rgba(255,255,0,0.05);
+            box-shadow: 0 0 20px rgba(255,255,0,0.2);
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ffff00;
+            padding-bottom: 10px;
+        }
+        
+        .project-number {
+            font-size: 2rem;
+            font-weight: bold;
+            opacity: 0.3;
+        }
+        
+        .project-title {
+            font-size: 1.5rem;
+            color: #ffff00;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+        
+        .project-status {
+            padding: 5px 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 1px solid #ffff00;
+        }
+        
+        .status-active {
+            background-color: #ffff00;
+            color: #000000;
+        }
+        
+        .status-beta {
+            background-color: transparent;
+            color: #ffff00;
+        }
+        
+        .project-description {
+            margin: 15px 0;
+            opacity: 0.9;
+        }
+        
+        .project-tech {
+            margin: 15px 0;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .tech-tag {
+            background-color: transparent;
+            border: 1px solid #ffff00;
+            color: #ffff00;
+            padding: 4px 8px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+        
+        .project-screenshot {
+            margin: 20px 0;
+            border: 2px solid #ffff00;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255,255,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .screenshot-placeholder {
+            color: #ffff00;
+            opacity: 0.5;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .project-link {
+            color: #ffff00;
+            text-decoration: none;
+            border: 2px solid #ffff00;
+            padding: 8px 15px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+        }
+        
+        .project-link:hover {
+            background-color: #ffff00;
+            color: #000000;
+        }
+        
+        .project-features {
+            margin-top: 15px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            margin-top: 10px;
+        }
+        
+        .feature-list li {
+            margin-bottom: 5px;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .feature-list li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: #ffff00;
+            font-weight: bold;
+        }
+        
+        .cursor {
+            animation: blink 1s infinite;
+            font-weight: bold;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ffff00;
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+                letter-spacing: 2px;
+            }
+            
+            .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .project-title {
+                margin-left: 0;
+            }
+            
+            .project-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .tech-stack {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="terminal-header">
+            <div class="terminal-title">PROJECT_TERMINAL_v2.1</div>
+            <div class="terminal-path">~/goshintai.neocities.org/projects/index.html</div>
+        </div>
+        
+        <a href="../index.html" class="nav-back">← back to main</a>
+        
+        <h1>PROJECTS</h1>
+        <div class="subtitle">my digital creations and ongoing experiments</div>
+        
+        <!-- GRINDMASTER Project -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-number">01</div>
+                <div class="project-title">GRINDMASTER</div>
+                <div class="project-status status-active">ACTIVE</div>
+            </div>
+            
+            <div class="project-description">
+                A comprehensive JLPT (Japanese Language Proficiency Test) quiz application designed to help learners master Japanese through structured practice. Features adaptive difficulty, progress tracking, and comprehensive vocabulary coverage from N5 to N1 levels.
+            </div>
+            
+            <div class="project-tech">
+                <strong>TECH STACK:</strong>
+                <div class="tech-stack">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">Local Storage</span>
+                </div>
+            </div>
+            
+            <div class="project-screenshot">
+                <div class="screenshot-placeholder">[ QUIZ INTERFACE PREVIEW ]</div>
+            </div>
+            
+            <div class="project-features">
+                <strong>FEATURES:</strong>
+                <ul class="feature-list">
+                    <li>Adaptive difficulty system based on performance</li>
+                    <li>Progress tracking and statistics</li>
+                    <li>Comprehensive JLPT vocabulary database</li>
+                    <li>Multiple quiz modes (kanji, vocabulary, grammar)</li>
+                    <li>Offline functionality with local data storage</li>
+                </ul>
+            </div>
+            
+            <div class="project-links">
+                <a href="#" class="project-link">LIVE DEMO</a>
+                <a href="#" class="project-link">SOURCE CODE</a>
+            </div>
+        </div>
+
+        <!-- NEKO KANJI Project -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-number">02</div>
+                <div class="project-title">NEKO KANJI</div>
+                <div class="project-status status-beta">BETA</div>
+            </div>
+            
+            <div class="project-description">
+                A playful and engaging kanji learning application featuring a cat-themed interface. Combines the joy of caring for virtual pets with serious kanji study, making character memorization fun and addictive through gamification.
+            </div>
+            
+            <div class="project-tech">
+                <strong>TECH STACK:</strong>
+                <div class="tech-stack">
+                    <span class="tech-tag">Vue.js</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Canvas API</span>
+                    <span class="tech-tag">PWA</span>
+                </div>
+            </div>
+            
+            <div class="project-screenshot">
+                <div class="screenshot-placeholder">[ NEKO INTERFACE PREVIEW ]</div>
+            </div>
+            
+            <div class="project-features">
+                <strong>FEATURES:</strong>
+                <ul class="feature-list">
+                    <li>Virtual pet cat that grows with your kanji knowledge</li>
+                    <li>Stroke order practice with touch/mouse support</li>
+                    <li>Spaced repetition system for optimal retention</li>
+                    <li>Daily challenges and achievement system</li>
+                    <li>Progressive web app for mobile learning</li>
+                </ul>
+            </div>
+            
+            <div class="project-links">
+                <a href="#" class="project-link">BETA TEST</a>
+                <a href="#" class="project-link">DEVELOPMENT LOG</a>
+            </div>
+        </div>
+
+        <!-- PREFECTURE QUIZ Project -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-number">03</div>
+                <div class="project-title">PREFECTURE QUIZ</div>
+                <div class="project-status status-active">ACTIVE</div>
+            </div>
+            
+            <div class="project-description">
+                An interactive geography quiz focused on Japan's 47 prefectures. Test your knowledge of Japanese geography, capitals, landmarks, and cultural facts through various quiz formats including map identification and trivia questions.
+            </div>
+            
+            <div class="project-tech">
+                <strong>TECH STACK:</strong>
+                <div class="tech-stack">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">SVG Maps</span>
+                    <span class="tech-tag">JSON</span>
+                </div>
+            </div>
+            
+            <div class="project-screenshot">
+                <div class="screenshot-placeholder">[ JAPAN MAP INTERFACE ]</div>
+            </div>
+            
+            <div class="project-features">
+                <strong>FEATURES:</strong>
+                <ul class="feature-list">
+                    <li>Interactive SVG map of Japan with clickable prefectures</li>
+                    <li>Multiple quiz modes: capitals, shapes, landmarks</li>
+                    <li>Timed challenges and high score tracking</li>
+                    <li>Educational facts and cultural information</li>
+                    <li>Mobile-responsive design for on-the-go learning</li>
+                </ul>
+            </div>
+            
+            <div class="project-links">
+                <a href="#" class="project-link">PLAY NOW</a>
+                <a href="#" class="project-link">VIEW CODE</a>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div style="border-left: 3px solid #ffff00; padding-left: 20px;">
+                <div style="font-size: 1.3rem; color: #ffff00; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">> project_status.log</div>
+                <p>Currently working on expanding NEKO KANJI with more interactive features and planning a new project: NIHONGO SENSEI - an AI-powered Japanese conversation practice app. Stay tuned for updates! <span class="cursor">█</span></p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>powered by human creativity • hosted on neocities • 2025</p>
+        </div>
+    </div>
+</body>
+</html>

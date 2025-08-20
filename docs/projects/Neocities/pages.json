@@ -1,0 +1,74 @@
+[
+  {
+    "path": "about/",
+    "modified": "2025-08-01T19:17:32",
+    "title": "about - goshintai",
+    "description": ""
+  },
+  {
+    "path": "blog/japanesekeyboard.html",
+    "modified": "2025-08-01T13:28:08",
+    "title": "Japanese Keyboard on Arch (Hyprland + fcitx5 + Mozc) - goshintai",
+    "description": "A step-by-step guide on how to set up Japanese input on Arch Linux using Hyprland, fcitx5, and Mozc. Clean, minimal, and beginner-friendly."
+  },
+  {
+    "path": "blog/things.html",
+    "modified": "2025-07-28T21:17:07",
+    "title": "Things - goshintai",
+    "description": ""
+  },
+  {
+    "path": "blog/linux.html",
+    "modified": "2025-07-27T18:16:32",
+    "title": "My Linux Story - goshintai",
+    "description": ""
+  },
+  {
+    "path": "/",
+    "modified": "2025-07-27T18:14:06",
+    "title": "goshintai",
+    "description": ""
+  },
+  {
+    "path": "blog/",
+    "modified": "2025-07-27T16:49:54",
+    "title": "blog - goshintai",
+    "description": ""
+  },
+  {
+    "path": "dreams/",
+    "modified": "2025-07-23T22:36:11",
+    "title": "dream_archive - goshintai",
+    "description": ""
+  },
+  {
+    "path": "dreams/25-07-20.html",
+    "modified": "2025-07-23T22:01:19",
+    "title": "Luna 20-7 - goshintai",
+    "description": ""
+  },
+  {
+    "path": "projects/",
+    "modified": "2025-07-23T11:51:22",
+    "title": "goshintai - projects",
+    "description": ""
+  },
+  {
+    "path": "dreams/24-08-13.html",
+    "modified": "2025-07-23T11:34:02",
+    "title": "Luna 13-8 - goshintai",
+    "description": ""
+  },
+  {
+    "path": "dreams/24-09-09.html",
+    "modified": "2025-07-23T11:33:57",
+    "title": "Luna 9-9 - goshintai",
+    "description": ""
+  },
+  {
+    "path": "dreams/25-07-07.html",
+    "modified": "2025-07-23T11:33:49",
+    "title": "Luna 7-7 - goshintai",
+    "description": ""
+  }
+]

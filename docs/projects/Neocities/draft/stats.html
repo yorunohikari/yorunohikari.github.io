@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Performance Analytics</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #fafbfc;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 32px 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .header h1 {
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 8px;
+            letter-spacing: -0.025em;
+        }
+
+        .header p {
+            font-size: 1rem;
+            color: #718096;
+            font-weight: 400;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+
+        .section-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid #e2e8f0;
+            background-color: #f8fafc;
+        }
+
+        .section-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 0;
+        }
+
+        .section-content {
+            padding: 24px;
+        }
+
+        .upload-area {
+            border: 2px dashed #cbd5e0;
+            border-radius: 8px;
+            padding: 48px 24px;
+            text-align: center;
+            background-color: #f7fafc;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .upload-area:hover {
+            border-color: #4299e1;
+            background-color: #ebf8ff;
+        }
+
+        .upload-area.dragover {
+            border-color: #3182ce;
+            background-color: #bee3f8;
+        }
+
+        .upload-text {
+            font-size: 1.125rem;
+            color: #4a5568;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .upload-subtext {
+            color: #718096;
+            font-size: 0.875rem;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .bulk-actions {
+            margin-bottom: 24px;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background-color: #4299e1;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            min-width: 80px;
+        }
+
+        .btn:hover {
+            background-color: #3182ce;
+        }
+
+        .btn-secondary {
+            background-color: #e2e8f0;
+            color: #4a5568;
+        }
+
+        .btn-secondary:hover {
+            background-color: #cbd5e0;
+        }
+
+        .btn-danger {
+            background-color: #e53e3e;
+        }
+
+        .btn-danger:hover {
+            background-color: #c53030;
+        }
+
+        .file-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .file-item {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .file-item:hover {
+            border-color: #cbd5e0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .file-item.selected {
+            border-color: #4299e1;
+            background-color: #ebf8ff;
+        }
+
+        .file-name {
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: #2d3748;
+            margin-bottom: 8px;
+            padding-right: 24px;
+        }
+
+        .file-info {
+            font-size: 0.75rem;
+            color: #718096;
+            line-height: 1.5;
+        }
+
+        .file-remove {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: #fed7d7;
+            border: none;
+            color: #e53e3e;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 12px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .file-remove:hover {
+            background: #feb2b2;
+        }
+
+        .file-count {
+            font-weight: 600;
+            color: #4299e1;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .summary-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .summary-value {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 4px;
+        }
+
+        .summary-label {
+            color: #718096;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .chart-container {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .chart-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid #e2e8f0;
+            background-color: #f8fafc;
+        }
+
+        .chart-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 0;
+        }
+
+        .chart-content {
+            padding: 20px;
+            height: 300px;
+            position: relative;
+        }
+
+        .chart-content canvas {
+            max-height: 260px;
+        }
+
+        .apps-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .app-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .app-item:last-child {
+            border-bottom: none;
+        }
+
+        .app-name {
+            font-weight: 500;
+            color: #2d3748;
+            font-size: 0.875rem;
+        }
+
+        .app-usage {
+            font-weight: 600;
+            color: #4299e1;
+            font-size: 0.875rem;
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #a0aec0;
+            padding: 48px 24px;
+            font-size: 0.875rem;
+        }
+
+        .loading {
+            text-align: center;
+            color: #718096;
+            font-size: 1rem;
+            padding: 48px 0;
+        }
+
+        .error {
+            background-color: #fed7d7;
+            color: #c53030;
+            padding: 16px;
+            border-radius: 6px;
+            text-align: center;
+            margin: 16px 0;
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .charts-grid {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 16px;
+            }
+            
+            .header h1 {
+                font-size: 1.875rem;
+            }
+            
+            .charts-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            
+            .chart-content {
+                height: 250px;
+                padding: 16px;
+            }
+            
+            .chart-content canvas {
+                max-height: 210px;
+            }
+            
+            .file-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .summary-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                gap: 16px;
+            }
+            
+            .bulk-actions {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .section-content {
+                padding: 16px;
+            }
+            
+            .chart-content {
+                height: 220px;
+                padding: 12px;
+            }
+            
+            .chart-content canvas {
+                max-height: 180px;
+            }
+            
+            .summary-value {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>System Performance Analytics</h1>
+            <p>Enterprise monitoring and performance insights dashboard</p>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Data Management</h2>
+            </div>
+            <div class="section-content">
+                <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+                    <div class="upload-text">Upload Performance Logs</div>
+                    <div class="upload-subtext">Drop JSON files here or click to browse • Supports multiple file selection</div>
+                </div>
+                <input type="file" id="fileInput" class="file-input" multiple accept=".json" />
+                
+                <div class="bulk-actions">
+                    <button class="btn" onclick="selectAllFiles()">Select All</button>
+                    <button class="btn btn-secondary" onclick="deselectAllFiles()">Clear Selection</button>
+                    <button class="btn btn-danger" onclick="removeAllFiles()">Remove All</button>
+                </div>
+
+                <div class="file-grid" id="fileList">
+                    <div class="empty-state">
+                        No performance logs loaded. Upload JSON files to begin analysis.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Loaded Files (<span class="file-count" id="fileCount">0</span>)</h2>
+            </div>
+        </div>
+
+        <div id="dashboard" style="display: none;">
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Performance Overview</h2>
+                </div>
+                <div class="section-content">
+                    <div class="summary-grid">
+                        <div class="summary-card">
+                            <div class="summary-value" id="sessionCount">-</div>
+                            <div class="summary-label">Total Sessions</div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-value" id="sessionDuration">-</div>
+                            <div class="summary-label">Duration (min)</div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-value" id="avgCpu">-</div>
+                            <div class="summary-label">Avg CPU (%)</div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-value" id="avgMemory">-</div>
+                            <div class="summary-label">Avg Memory (%)</div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-value" id="maxTemp">-</div>
+                            <div class="summary-label">Max Temp (°C)</div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-value" id="totalNetwork">-</div>
+                            <div class="summary-label">Network (MB)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Performance Metrics</h2>
+                </div>
+                <div class="section-content">
+                    <div class="charts-grid">
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h3 class="chart-title">CPU Performance</h3>
+                            </div>
+                            <div class="chart-content">
+                                <canvas id="cpuChart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h3 class="chart-title">Memory Usage</h3>
+                            </div>
+                            <div class="chart-content">
+                                <canvas id="memoryChart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h3 class="chart-title">Temperature Monitoring</h3>
+                            </div>
+                            <div class="chart-content">
+                                <canvas id="tempChart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h3 class="chart-title">Network Activity</h3>
+                            </div>
+                            <div class="chart-content">
+                                <canvas id="networkChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Application Usage Analysis</h2>
+                </div>
+                <div class="section-content">
+                    <div class="apps-list" id="appsList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let charts = {};
+        let selectedFiles = new Set();
+        let allData = {};
+        let uploadedFiles = {};
+
+        // File upload and drag-drop functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const uploadArea = document.querySelector('.upload-area');
+            const fileInput = document.getElementById('fileInput');
+
+            // Drag and drop handlers
+            uploadArea.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadArea.classList.add('dragover');
+            });
+
+            uploadArea.addEventListener('dragleave', () => {
+                uploadArea.classList.remove('dragover');
+            });
+
+            uploadArea.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadArea.classList.remove('dragover');
+                const files = Array.from(e.dataTransfer.files).filter(f => f.name.endsWith('.json'));
+                processFiles(files);
+            });
+
+            fileInput.addEventListener('change', (e) => {
+                const files = Array.from(e.target.files);
+                processFiles(files);
+                e.target.value = ''; // Reset input
+            });
+        });
+
+        async function processFiles(files) {
+            for (const file of files) {
+                try {
+                    const content = await readFileContent(file);
+                    const data = JSON.parse(content);
+                    
+                    // Validate JSON structure
+                    if (validatePerformanceData(data)) {
+                        const fileId = `${file.name}_${file.lastModified}`;
+                        uploadedFiles[fileId] = {
+                            name: file.name,
+                            size: file.size,
+                            data: data,
+                            uploadTime: new Date()
+                        };
+                        displayFiles();
+                    } else {
+                        showError(`Invalid JSON structure in file: ${file.name}`);
+                    }
+                } catch (error) {
+                    showError(`Error reading file ${file.name}: ${error.message}`);
+                }
+            }
+        }
+
+        function readFileContent(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = (e) => resolve(e.target.result);
+                reader.onerror = (e) => reject(new Error('Failed to read file'));
+                reader.readAsText(file);
+            });
+        }
+
+        function validatePerformanceData(data) {
+            return data.session_info && 
+                   data.performance_metrics && 
+                   Array.isArray(data.performance_metrics) &&
+                   data.application_usage &&
+                   data.network_summary;
+        }
+
+        function showError(message) {
+            const fileList = document.getElementById('fileList');
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error';
+            errorDiv.textContent = message;
+            fileList.appendChild(errorDiv);
+            setTimeout(() => errorDiv.remove(), 5000);
+        }
+
+        function displayFiles() {
+            const fileList = document.getElementById('fileList');
+            const fileCount = document.getElementById('fileCount');
+            const files = Object.entries(uploadedFiles);
+            
+            fileCount.textContent = files.length;
+            
+            if (files.length === 0) {
+                fileList.innerHTML = `
+                    <div class="empty-state">
+                        No performance logs loaded. Upload JSON files to begin analysis.
+                    </div>
+                `;
+                return;
+            }
+
+            fileList.innerHTML = files.map(([fileId, fileInfo]) => {
+                const data = fileInfo.data;
+                const duration = data.session_info?.duration_minutes || 0;
+                const startTime = data.session_info?.start_time ? 
+                    new Date(data.session_info.start_time).toLocaleString() : 'Unknown';
+                
+                return `
+                    <div class="file-item ${selectedFiles.has(fileId) ? 'selected' : ''}" data-file-id="${fileId}">
+                        <button class="file-remove" onclick="removeFile('${fileId}')" title="Remove file">×</button>
+                        <div class="file-name">${fileInfo.name}</div>
+                        <div class="file-info">
+                            ${startTime}<br>
+                            ${duration.toFixed(1)} minutes • ${data.performance_metrics?.length || 0} data points
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Add click handlers
+            document.querySelectorAll('.file-item').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (!e.target.classList.contains('file-remove')) {
+                        toggleFile(item);
+                    }
+                });
+            });
+        }
+
+        function toggleFile(element) {
+            const fileId = element.dataset.fileId;
+            
+            if (selectedFiles.has(fileId)) {
+                selectedFiles.delete(fileId);
+                element.classList.remove('selected');
+                delete allData[fileId];
+            } else {
+                selectedFiles.add(fileId);
+                element.classList.add('selected');
+                allData[fileId] = uploadedFiles[fileId].data;
+            }
+            
+            updateDashboard();
+        }
+
+        function removeFile(fileId) {
+            delete uploadedFiles[fileId];
+            selectedFiles.delete(fileId);
+            delete allData[fileId];
+            displayFiles();
+            updateDashboard();
+        }
+
+        function selectAllFiles() {
+            Object.keys(uploadedFiles).forEach(fileId => {
+                selectedFiles.add(fileId);
+                allData[fileId] = uploadedFiles[fileId].data;
+            });
+            displayFiles();
+            updateDashboard();
+        }
+
+        function deselectAllFiles() {
+            selectedFiles.clear();
+            allData = {};
+            displayFiles();
+            updateDashboard();
+        }
+
+        function removeAllFiles() {
+            uploadedFiles = {};
+            selectedFiles.clear();
+            allData = {};
+            displayFiles();
+            updateDashboard();
+        }
+
+        function updateDashboard() {
+            const dashboard = document.getElementById('dashboard');
+            
+            if (selectedFiles.size === 0) {
+                dashboard.style.display = 'none';
+                return;
+            }
+            
+            dashboard.style.display = 'block';
+            
+            // Combine all selected data
+            const combinedData = combineData();
+            updateSummary(combinedData);
+            updateCharts(combinedData);
+            updateAppsList(combinedData);
+        }
+
+        function combineData() {
+            const combined = {
+                sessions: [],
+                allMetrics: [],
+                applications: {},
+                networkSummary: { upload: 0, download: 0 }
+            };
+
+            Object.values(allData).forEach(data => {
+                combined.sessions.push(data.session_info);
+                combined.allMetrics.push(...data.performance_metrics);
+                
+                // Combine application usage
+                Object.entries(data.application_usage || {}).forEach(([app, usage]) => {
+                    combined.applications[app] = (combined.applications[app] || 0) + usage;
+                });
+
+                // Combine network summary
+                if (data.network_summary) {
+                    combined.networkSummary.upload += data.network_summary.total_upload_mb || 0;
+                    combined.networkSummary.download += data.network_summary.total_download_mb || 0;
+                }
+            });
+
+            // Sort metrics by timestamp
+            combined.allMetrics.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+
+            return combined;
+        }
+
+        function updateSummary(data) {
+            const sessionCount = data.sessions.length;
+            const totalDuration = data.sessions.reduce((sum, session) => sum + (session.duration_minutes || 0), 0);
+            const avgCpu = data.allMetrics.length > 0 ? 
+                data.allMetrics.reduce((sum, m) => sum + (m.cpu?.percent || 0), 0) / data.allMetrics.length : 0;
+            const avgMemory = data.allMetrics.length > 0 ?
+                data.allMetrics.reduce((sum, m) => sum + (m.memory?.percent || 0), 0) / data.allMetrics.length : 0;
+            const maxTemp = data.allMetrics.length > 0 ?
+                Math.max(...data.allMetrics.map(m => m.cpu?.temperature_celsius || 0)) : 0;
+            const totalNetwork = data.networkSummary.upload + data.networkSummary.download;
+
+            document.getElementById('sessionCount').textContent = sessionCount;
+            document.getElementById('sessionDuration').textContent = totalDuration.toFixed(1);
+            document.getElementById('avgCpu').textContent = avgCpu.toFixed(1);
+            document.getElementById('avgMemory').textContent = avgMemory.toFixed(1);
+            document.getElementById('maxTemp').textContent = maxTemp.toFixed(0);
+            document.getElementById('totalNetwork').textContent = totalNetwork.toFixed(1);
+        }
+
+        function updateCharts(data) {
+            if (data.allMetrics.length === 0) return;
+
+            const timestamps = data.allMetrics.map(m => new Date(m.timestamp).toLocaleTimeString());
+            const maxPoints = 100; // Limit to last 100 points for performance
+            const startIndex = Math.max(0, data.allMetrics.length - maxPoints);
+            const recentMetrics = data.allMetrics.slice(startIndex);
+            const recentTimestamps = timestamps.slice(startIndex);
+            
+            // CPU Chart
+            updateChart('cpuChart', {
+                labels: recentTimestamps,
+                datasets: [{
+                    label: 'CPU Usage (%)',
+                    data: recentMetrics.map(m => m.cpu?.percent || 0),
+                    borderColor: '#4299e1',
+                    backgroundColor: 'rgba(66, 153, 225, 0.1)',
+                    tension: 0.4,
+                    fill: true,
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    pointHoverRadius: 4
+                }]
+            });
+
+            // Memory Chart
+            updateChart('memoryChart', {
+                labels: recentTimestamps,
+                datasets: [{
+                    label: 'Memory Usage (%)',
+                    data: recentMetrics.map(m => m.memory?.percent || 0),
+                    borderColor: '#48bb78',
+                    backgroundColor: 'rgba(72, 187, 120, 0.1)',
+                    tension: 0.4,
+                    fill: true,
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    pointHoverRadius: 4
+                }]
+            });
+
+            // Temperature Chart
+            updateChart('tempChart', {
+                labels: recentTimestamps,
+                datasets: [{
+                    label: 'Temperature (°C)',
+                    data: recentMetrics.map(m => m.cpu?.temperature_celsius || 0),
+                    borderColor: '#ed8936',
+                    backgroundColor: 'rgba(237, 137, 54, 0.1)',
+                    tension: 0.4,
+                    fill: true,
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    pointHoverRadius: 4
+                }]
+            });
+
+            // Network Chart
+            updateChart('networkChart', {
+                labels: recentTimestamps,
+                datasets: [{
+                    label: 'Upload (KB/s)',
+                    data: recentMetrics.map(m => m.network?.upload_speed_kbs || 0),
+                    borderColor: '#9f7aea',
+                    backgroundColor: 'transparent',
+                    tension: 0.4,
+                    fill: false,
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    pointHoverRadius: 4
+                }, {
+                    label: 'Download (KB/s)',
+                    data: recentMetrics.map(m => m.network?.download_speed_kbs || 0),
+                    borderColor: '#38b2ac',
+                    backgroundColor: 'transparent',
+                    tension: 0.4,
+                    fill: false,
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    pointHoverRadius: 4
+                }]
+            });
+        }
+
+        function updateChart(canvasId, data) {
+            const ctx = document.getElementById(canvasId).getContext('2d');
+            
+            if (charts[canvasId]) {
+                charts[canvasId].destroy();
+            }
+            
+            charts[canvasId] = new Chart(ctx, {
+                type: 'line',
+                data: data,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                usePointStyle: true,
+                                padding: 20,
+                                font: {
+                                    size: 12,
+                                    weight: 500
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#f1f5f9',
+                                drawBorder: false
+                            },
+                            ticks: {
+                                font: {
+                                    size: 11
+                                },
+                                color: '#718096'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: '#f1f5f9',
+                                drawBorder: false
+                            },
+                            ticks: {
+                                maxTicksLimit: 8,
+                                font: {
+                                    size: 11
+                                },
+                                color: '#718096'
+                            }
+                        }
+                    },
+                    interaction: {
+                        intersect: false,
+                        mode: 'index'
+                    }
+                }
+            });
+        }
+
+        function updateAppsList(data) {
+            const appsList = document.getElementById('appsList');
+            const apps = Object.entries(data.applications)
+                .sort(([,a], [,b]) => b - a)
+                .slice(0, 15);
+
+            if (apps.length === 0) {
+                appsList.innerHTML = '<div class="empty-state">No application usage data available</div>';
+                return;
+            }
+
+            appsList.innerHTML = apps.map(([app, usage]) => `
+                <div class="app-item">
+                    <span class="app-name">${app}</span>
+                    <span class="app-usage">${usage.toFixed(1)} min</span>
+                </div>
+            `).join('');
+        }
+    </script>
+</body>
+</html>

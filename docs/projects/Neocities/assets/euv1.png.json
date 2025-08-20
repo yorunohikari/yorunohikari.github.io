@@ -1,0 +1,6 @@
+{
+    "path": "assets/euv1.png",
+    "modified": "2025-06-20T15:56:09.750375",
+    "title": "euv1.png",
+    "description": "This image is a screenshot of a computer terminal, displaying a command-line interface with a dark background and light green text. The terminal seems to be showing the process of a software package installation or update, likely on a Linux-based system.\n\nIn the top section of the screen, there's a list of package names like \"extra/haskell,\" \"extra/python-certifi,\" and \"extra/vulkan-radeon,\" along with version numbers and file sizes. The columns are titled \"Package,\" \"Version,\" \"Installed Size,\" and \"Net Upgrade Size.\"\n\nBelow this list, a message reads \"Proceed with installation? [Y/n] y,\" indicating the user has been prompted to confirm the installation and has entered 'y'.\n\nThe bottom part of the screen shows the progress of \"Retrieving packages...\" There's a list of file names, download speeds, and progress bars. The numbers \"2/45\" suggest that two out of 45 packages have been processed.\n\nThe overall aesthetic is that of a minimalist, text-based operating system or a development environment. The screen also has a status bar at the very top, showing information like battery level, network connection, time, and system resources."
+}

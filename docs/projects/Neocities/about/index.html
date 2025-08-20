@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about - goshintai</title>
+    <link rel="icon" type="image/x-icon" href="/assets/G.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="terminal-header">
+            <div class="terminal-title">ABOUT_TERMINAL_v2.1</div>
+            <div class="terminal-path" id="terminal-path">~/goshintai.neocities.org/about/</div>
+        </div>
+
+        <div class="nav">
+        </div>
+
+
+        <h1>ABOUT ME</h1>
+        <div class="subtitle">who is GOSHINTAI????</div>
+
+        <div class="main-content">
+            <div class="intro-section">
+                <div class="section-title">> introduction.txt</div>
+                <p class="intro-text">
+                    Welcome to my digital home! I'm goshintai, an artist I guess. I love
+                    technology, art, and culture. I was born when internet is still pretty much alive.
+                    Now, I believe in the power of genuine human connection can revive the Internet.
+                </p>
+                <p class="intro-text">
+                    I love blender 3D. Sometime I make something in blender.
+                    I also write my dream to some kind of dream novella pieces <a href="/dreams/"
+                        class="inline-gif-link"><img src="/assets/clickhere.gif" alt="Check them out here"
+                            class="inline-gif"></a>
+                    I watch anime a lot. I listen to Bring Me The Horizon a lot (unhealthy amount of time a lot)<span
+                        class="cursor">█</span>
+                </p>
+            </div>
+
+            <div class="info-box">
+                <div class="info-box-title">USER_INFO</div>
+                <img src="/assets/avaiyah.jpg" alt="goshintai profile picture" class="profile-image">
+                <div class="info-row">
+                    <span class="info-label">USERNAME:</span>
+                    <span class="info-value">goshintai</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">STATUS:</span>
+                    <span class="info-value">ACTIVE</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">LOCATION:</span>
+                    <span class="info-value">Indonesia</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">PROJECTS:</span>
+                    <span class="info-value">3+</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">LANGUAGES:</span>
+                    <span class="info-value">ID, EN, JP</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">SKILLS:</span>
+                    <span class="info-value">Blender 3D, Photoshop, JS, CSS, HTML</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">JOINED:</span>
+                    <span class="info-value">2025</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                <span class="collapsible-arrow expanded">▶</span>
+                <div class="section-title"> currently_watching.log</div>
+            </div>
+            <div class="collapsible-content expanded">
+                <p class="section-description">Anime series I'm actively following:</p>
+                <div id="currently-watching" class="anime-grid">
+                    <div class="loading">Loading anime data...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                <span class="collapsible-arrow">▶</span>
+                <div class="section-title">anime_database.completed</div>
+            </div>
+            <div class="collapsible-content">
+                <p class="section-description">Series I've completed :</p>
+                <div id="completed-anime" class="anime-list">
+                    <div class="loading">Loading completed anime...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                <span class="collapsible-arrow">▶</span>
+                <div class="section-title">anime_database.on_hold</div>
+            </div>
+            <div class="collapsible-content">
+                <p class="section-description">Series I've put on hold :</p>
+                <div id="on-hold-anime" class="anime-list">
+                    <div class="loading">Loading on-hold anime...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                <span class="collapsible-arrow">▶</span>
+                <div class="section-title">anime_database.dropped</div>
+            </div>
+            <div class="collapsible-content">
+                <p class="section-description">Series I've dropped :</p>
+                <div id="dropped-anime" class="anime-list">
+                    <div class="loading">Loading dropped anime...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">> music_library.favorites</div>
+            <p>Albums, singles, and EPs that i like:</p>
+
+            <div class="music-list">
+                <div class="music-item">
+                    <div class="music-info">
+                        <div class="music-title">POST HUMAN: NeX GEn</div>
+                        <div class="music-artist">Bring Me The Horizon</div>
+                    </div>
+                    <div class="music-type">ALBUM</div>
+                </div>
+                <div class="music-item">
+                    <div class="music-info">
+                        <div class="music-title">F*CK U SKRILLEX YOU THINK UR ANDY WARHOL BUT UR NOT!! <3 </div>
+                                <div class="music-artist">Skrillex</div>
+                        </div>
+                        <div class="music-type">ALBUM</div>
+                    </div>
+                    <div class="music-item">
+                        <div class="music-info">
+                            <div class="music-title">HIT ME HARD AND SOFT </div>
+                            <div class="music-artist">Billie Eilish</div>
+                        </div>
+                        <div class="music-type">ALBUM</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">> social_network.links</div>
+                <p>Connect with me across the digital landscape:</p>
+
+                <div class="social-links">
+                    <a href="https://bsky.app/profile/goshintai.neocities.org" class="social-link">
+                        <div class="social-platform">Bluesky</div>
+                        <div class="social-handle">@goshintai.neocities.org</div>
+                    </a>
+
+                    <a href="https://github.com/yorunohikari" class="social-link">
+                        <div class="social-platform">GITHUB</div>
+                        <div class="social-handle">yorunohikari</div>
+                    </a>
+
+                    <a href="https://myanimelist.net/profile/goshintai_" class="social-link">
+                        <div class="social-platform">MYANIMELIST</div>
+                        <div class="social-handle">goshintai_</div>
+                    </a>
+
+                    <a href="https://www.reddit.com/user/Rashicakra/" class="social-link">
+                        <div class="social-platform">Reddit</div>
+                        <div class="social-handle">Rashicakra</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">> end_transmission.log</div>
+                <p>Thanks for taking the time to read more about me. Feel free to reach out if you share similar
+                    interests
+                    or just want to chat about the anime, music, or something! <span class="cursor">█</span></p>
+            </div>
+
+            <a href="../index.html" class="nav-back">← back to main</a>
+
+            <div class="footer">
+                <p>powered by risol mayo • hosted on neocities • 2025</p>
+            </div>
+        </div>
+        <script src="/script/navgen.js"></script>
+        <script src="/script/tempath.js"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog - goshintai</title>
+    <link rel="icon" type="image/x-icon" href="/assets/G.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="terminal-header">
+            <div class="terminal-title">PERSONAL_TERMINAL_v2.1</div>
+            <div class="terminal-path" id="terminal-path">~/goshintai.neocities.org/</div>
+        </div>
+
+        <div class="nav">
+        </div>
+
+        <h1>BLOG.TXT</h1>
+        <div class="subtitle">thoughts from the digital void</div>
+
+        <div class="section">
+            <div class="section-title">> recent_posts.log</div>
+            
+            <div id="blog-posts" class="loading">
+                Loading posts<span class="cursor">█</span>
+            </div>
+
+            <div id="pagination" class="pagination" style="display: none;">
+                <button id="prev-btn" class="pagination-btn">← prev</button>
+                <div class="pagination-info">
+                    page <span id="page-num">1</span> of <span id="total-pages">1</span>
+                </div>
+                <button id="next-btn" class="pagination-btn">next →</button>
+            </div>
+        </div>
+
+        <a href="../index.html" class="nav-back">← back to main</a>
+        
+        <div class="footer">
+            <p>powered by risol mayo • hosted on neocities • 2025</p>
+        </div>
+    </div>
+
+    <script>
+        // Configuration - change this to your JSON file path
+        const BLOG_JSON_URL = '/blog/posts.json';
+
+        // Pagination settings
+        const POSTS_PER_PAGE = 5;
+        let currentPage = 1;
+        let blogData = [];
+
+        // Initialize the blog
+        async function initBlog() {
+            try {
+                const response = await fetch(BLOG_JSON_URL);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                blogData = await response.json();
+                
+                // Sort by date (newest first)
+                blogData = blogData.sort((a, b) => new Date(b.date) - new Date(a.date));
+                
+                renderPage();
+            } catch (error) {
+                console.error('Error loading blog posts:', error);
+                document.getElementById('blog-posts').innerHTML = 
+                    `<p>Error loading blog posts: ${error.message}<span class="cursor">█</span></p>`;
+            }
+        }
+
+        function renderPage() {
+            const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+            const endIndex = startIndex + POSTS_PER_PAGE;
+            const postsToShow = blogData.slice(startIndex, endIndex);
+            
+            const postsContainer = document.getElementById('blog-posts');
+            
+            if (postsToShow.length === 0) {
+                postsContainer.innerHTML = '<p>No posts found<span class="cursor">█</span></p>';
+                return;
+            }
+
+            postsContainer.innerHTML = postsToShow.map(post => `
+                <div class="blog-post">
+                    <div class="blog-post-date">[${post.date}]</div>
+                    <a href="${post.url}" class="blog-post-title">${post.title}</a>
+                    <div class="blog-post-description">${post.description}</div>
+                </div>
+            `).join('');
+
+            updatePagination();
+        }
+
+        function updatePagination() {
+            const totalPages = Math.ceil(blogData.length / POSTS_PER_PAGE);
+            const paginationContainer = document.getElementById('pagination');
+            
+            if (totalPages <= 1) {
+                paginationContainer.style.display = 'none';
+                return;
+            }
+
+            paginationContainer.style.display = 'flex';
+            
+            document.getElementById('page-num').textContent = currentPage;
+            document.getElementById('total-pages').textContent = totalPages;
+            
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            
+            prevBtn.disabled = currentPage === 1;
+            nextBtn.disabled = currentPage === totalPages;
+        }
+
+        // Event listeners for pagination
+        document.getElementById('prev-btn').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderPage();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+
+        document.getElementById('next-btn').addEventListener('click', () => {
+            const totalPages = Math.ceil(blogData.length / POSTS_PER_PAGE);
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderPage();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', initBlog);
+    </script>
+    <script src="/script/navgen.js"></script>
+    <script src="/script/tempath.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,586 @@
+ @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: "JetBrains Mono", monospace;
+     background-color: #000000;
+     color: #ffff00;
+     line-height: 1.6;
+     min-height: 100vh;
+     padding: 20px;
+     background-image:
+         linear-gradient(90deg, rgba(255, 255, 0, 0.03) 1px, transparent 1px),
+         linear-gradient(rgba(255, 255, 0, 0.03) 1px, transparent 1px);
+     background-size: 20px 20px;
+ }
+
+ .container {
+     max-width: 1200px;
+     margin: 0 auto;
+     background-color: #000000;
+     border: 2px solid #ffff00;
+     padding: 30px;
+     position: relative;
+ }
+
+ .terminal-header {
+     border-bottom: 2px solid #ffff00;
+     padding-bottom: 15px;
+     margin-bottom: 25px;
+ }
+
+ .terminal-title {
+     font-size: 1.2rem;
+     color: #ffff00;
+     margin-bottom: 5px;
+ }
+
+ .terminal-path {
+     font-size: 0.9rem;
+     color: #ffff00;
+     opacity: 0.7;
+ }
+
+ .nav {
+     margin-bottom: 30px;
+     text-align: center;
+ }
+
+ .nav-link {
+     color: #ffff00;
+     text-decoration: none;
+     margin: 0 15px;
+     padding: 8px 15px;
+     border: 1px solid #ffff00;
+     transition: all 0.2s ease;
+     font-size: 0.9rem;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+ }
+
+ .nav-link:hover {
+     background-color: #ffff00;
+     color: #000000;
+ }
+
+ .nav-back {
+     display: inline-block;
+     color: #ffff00;
+     text-decoration: none;
+     border: 2px solid #ffff00;
+     padding: 8px 15px;
+     margin-bottom: 20px;
+     transition: all 0.2s ease;
+     text-transform: uppercase;
+     font-size: 0.9rem;
+     letter-spacing: 1px;
+ }
+
+ .nav-back:hover {
+     background-color: #ffff00;
+     color: #000000;
+ }
+
+ h1 {
+     font-size: 2.5rem;
+     color: #ffff00;
+     margin-bottom: 10px;
+     text-transform: uppercase;
+     letter-spacing: 3px;
+     text-align: center;
+ }
+
+ .subtitle {
+     text-align: center;
+     font-size: 1rem;
+     color: #ffff00;
+     margin-bottom: 40px;
+     opacity: 0.8;
+ }
+
+ .main-content {
+     display: grid;
+     grid-template-columns: 1fr 300px;
+     gap: 30px;
+     margin-bottom: 30px;
+ }
+
+ .intro-section {
+     border-left: 3px solid #ffff00;
+     padding-left: 20px;
+ }
+
+ .section-title {
+     font-size: 1.3rem;
+     color: #ffff00;
+     margin-bottom: 15px;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+ }
+
+ .profile-image {
+     width: 200px;
+     height: 200px;
+     object-fit: cover;
+     border: 2px solid #ffff00;
+     margin: 0 auto 15px auto;
+     display: block;
+     background-color: rgba(255, 255, 0, 0.1);
+ }
+
+ .inline-gif-link {
+    display: inline;
+    text-decoration: none;
+    vertical-align: middle;
+    transition: opacity 0.2s ease;
+}
+
+.inline-gif-link:hover {
+    opacity: 0.8;
+}
+
+.inline-gif {
+    width: 100px;
+    height: 42px;
+    display: inline;
+    vertical-align: middle;
+    margin: 0 4px;
+    transition: all 0.2s ease;
+}
+
+.inline-gif:hover {
+    transform: scale(1.05);
+}
+
+ .intro-text {
+     font-size: 1rem;
+     margin-bottom: 15px;
+     opacity: 0.9;
+ }
+
+ .info-box {
+     border: 2px solid #ffff00;
+     padding: 20px;
+     background-color: rgba(255, 255, 0, 0.03);
+     height: fit-content;
+ }
+
+ .info-box-title {
+     font-size: 1.1rem;
+     color: #ffff00;
+     text-transform: uppercase;
+     text-align: center;
+     margin-bottom: 15px;
+     border-bottom: 1px solid #ffff00;
+     padding-bottom: 10px;
+ }
+
+ .info-row {
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 8px;
+     font-size: 0.9rem;
+ }
+
+ .info-label {
+     font-weight: bold;
+     opacity: 0.8;
+ }
+
+ .info-value {
+     text-align: right;
+     opacity: 0.9;
+ }
+
+ .section {
+     margin-bottom: 30px;
+     border-left: 3px solid #ffff00;
+     padding-left: 20px;
+ }
+
+ .collapsible-header {
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+     margin-bottom: 15px;
+     transition: opacity 0.2s ease;
+ }
+
+ .collapsible-header:hover {
+     opacity: 0.8;
+ }
+
+ .collapsible-arrow {
+     margin-right: 10px;
+     transition: transform 0.3s ease;
+     font-size: 1.2rem;
+ }
+
+ .collapsible-arrow.expanded {
+     transform: rotate(90deg);
+ }
+
+ .collapsible-content {
+     max-height: 0;
+     overflow: hidden;
+     transition: max-height 0.3s ease-in-out;
+ }
+
+ .collapsible-content.expanded {
+     max-height: 3000px;
+ }
+
+ .section-description {
+     margin-bottom: 15px;
+     opacity: 0.8;
+ }
+
+ .currently-watching {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 15px;
+     margin-top: 15px;
+ }
+
+ .anime-card {
+     border: 1px solid #ffff00;
+     padding: 15px;
+     background-color: rgba(255, 255, 0, 0.02);
+ }
+
+ .anime-title {
+     font-weight: bold;
+     margin-bottom: 5px;
+ }
+
+ .anime-progress {
+     font-size: 0.9rem;
+     opacity: 0.7;
+ }
+
+ .anime-status {
+     display: inline-block;
+     padding: 3px 8px;
+     font-size: 0.8rem;
+     margin-top: 5px;
+     border: 1px solid #ffff00;
+     text-transform: uppercase;
+ }
+
+ .status-watching {
+     background-color: #ffff00;
+     color: #000000;
+ }
+
+ .currently-watching {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+     gap: 15px;
+     margin-top: 15px;
+ }
+
+
+ .status-completed {
+     background-color: transparent;
+     color: #ffff00;
+ }
+
+ .status-dropped {
+     background-color: transparent;
+     color: #ffff00;
+     opacity: 0.6;
+ }
+
+ .anime-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+     gap: 15px;
+     margin-top: 15px;
+ }
+
+ .anime-item {
+     border: 1px solid #ffff00;
+     background-color: rgba(255, 255, 0, 0.02);
+     transition: transform 0.2s ease, box-shadow 0.2s ease;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .anime-item:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 5px 15px rgba(255, 255, 0, 0.2);
+ }
+
+ .anime-cover {
+     width: 100%;
+     height: 240px;
+     object-fit: cover;
+     border-bottom: 1px solid #ffff00;
+ }
+
+ .anime-info {
+     padding: 12px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     height: 100px;
+     /* Add this line for layout control */
+ }
+
+ .anime-item-title {
+     font-size: 0.85rem;
+     font-weight: bold;
+     margin-bottom: 4px;
+     /* Was 8px, you can reduce to save space */
+     line-height: 1.2;
+     max-height: 2.4rem;
+     /* Make height dynamic if possible */
+     overflow: hidden;
+     display: -webkit-box;
+     -webkit-box-orient: vertical;
+ }
+
+
+ .anime-mal-id {
+     font-size: 0.75rem;
+     opacity: 0.6;
+     text-transform: uppercase;
+ }
+
+ .loading-cover {
+     width: 100%;
+     height: 240px;
+     background: linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000),
+         linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
+     background-size: 10px 10px;
+     background-position: 0 0, 5px 5px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-bottom: 1px solid #ffff00;
+     color: #ffff00;
+     font-size: 0.8rem;
+ }
+
+ .error-cover {
+     width: 100%;
+     height: 240px;
+     background-color: rgba(255, 255, 0, 0.1);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-bottom: 1px solid #ffff00;
+     color: #ffff00;
+     font-size: 0.8rem;
+     opacity: 0.6;
+ }
+
+ .pagination {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+     margin-top: 20px;
+     padding-top: 15px;
+     border-top: 1px solid #ffff00;
+ }
+
+ .pagination-btn {
+     background: transparent;
+     border: 1px solid #ffff00;
+     color: #ffff00;
+     padding: 8px 12px;
+     cursor: pointer;
+     transition: all 0.2s ease;
+     font-family: 'JetBrains Mono', monospace;
+     font-size: 0.8rem;
+     text-transform: uppercase;
+ }
+
+ .pagination-btn:hover:not(:disabled) {
+     background-color: #ffff00;
+     color: #000000;
+ }
+
+ .pagination-btn:disabled {
+     opacity: 0.4;
+     cursor: not-allowed;
+ }
+
+ .pagination-info {
+     font-size: 0.8rem;
+     opacity: 0.8;
+     margin: 0 15px;
+ }
+
+ .anime-link {
+     color: inherit;
+     text-decoration: none;
+ }
+
+ .anime-link:hover {
+     opacity: 0.7;
+ }
+
+ .cursor {
+     animation: blink 1s infinite;
+     font-weight: bold;
+ }
+
+ @keyframes blink {
+
+     0%,
+     50% {
+         opacity: 1;
+     }
+
+     51%,
+     100% {
+         opacity: 0;
+     }
+ }
+
+ .music-list {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 15px;
+     margin-top: 15px;
+ }
+
+ .music-item {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 12px 15px;
+     border: 1px solid #ffff00;
+     background-color: rgba(255, 255, 0, 0.02);
+ }
+
+ .music-info {
+     flex-grow: 1;
+ }
+
+ .music-title {
+     font-weight: bold;
+     margin-bottom: 3px;
+ }
+
+ .music-artist {
+     font-size: 0.9rem;
+     opacity: 0.7;
+ }
+
+ .music-type {
+     font-size: 0.8rem;
+     padding: 2px 6px;
+     border: 1px solid #ffff00;
+     text-transform: uppercase;
+ }
+
+ .link {
+     color: #ffff00;
+     text-decoration: none;
+     border-bottom: 2px solid #ffff00;
+     padding-bottom: 2px;
+     transition: all 0.2s ease;
+ }
+
+ .link:hover {
+     background-color: #ffff00;
+     color: #000000;
+ }
+
+ .social-links {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 15px;
+     margin-top: 15px;
+ }
+
+ .social-link {
+     display: block;
+     color: #ffff00;
+     text-decoration: none;
+     border: 2px solid #ffff00;
+     padding: 15px 20px;
+     text-transform: uppercase;
+     font-size: 0.9rem;
+     letter-spacing: 1px;
+     transition: all 0.2s ease;
+     text-align: center;
+ }
+
+ .social-link:hover {
+     background-color: #ffff00;
+     color: #000000;
+ }
+
+ .social-platform {
+     font-weight: bold;
+     margin-bottom: 5px;
+ }
+
+ .social-handle {
+     font-size: 0.8rem;
+     opacity: 0.8;
+ }
+
+ .loading {
+     text-align: center;
+     opacity: 0.7;
+     font-style: italic;
+     padding: 20px;
+ }
+
+ .error {
+     text-align: center;
+     opacity: 0.7;
+     color: #ffff00;
+     padding: 20px;
+ }
+
+ .footer {
+     text-align: center;
+     margin-top: 40px;
+     padding-top: 20px;
+     border-top: 2px solid #ffff00;
+     opacity: 0.7;
+ }
+
+ @media (max-width: 600px) {
+     .container {
+         padding: 20px;
+     }
+
+     h1 {
+         font-size: 2rem;
+         letter-spacing: 2px;
+     }
+
+     .main-content {
+         grid-template-columns: 1fr;
+         gap: 20px;
+     }
+
+     .currently-watching,
+     .anime-grid,
+     .music-list,
+     .social-links {
+         grid-template-columns: 1fr;
+     }
+
+     .anime-grid {
+         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+     }
+
+     .nav-link {
+         display: block;
+         margin: 5px 0;
+     }
+
+ }

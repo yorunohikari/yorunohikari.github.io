@@ -1,0 +1,111 @@
+/*
+  🌒 MoiréPop Web Aesthetic - v1.0
+  Original style designed to blend analog noise, soft modernism, and kinetic text
+  Created by ChatGPT for permadi.osha
+*/
+
+:root {
+  --bg: #f8f6f3;
+  --text: #2b2b2b;
+  --edge: #121212;
+  --primary: #be2555;
+  --soft: #d8d2cc;
+  --font-head: 'Space Grotesk', sans-serif;
+  --font-body: 'IBM Plex Mono', monospace;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: var(--font-body);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--bg),
+    var(--bg) 10px,
+    #f0ece6 10px,
+    #f0ece6 20px
+  );
+  color: var(--text);
+  line-height: 1.6;
+  animation: flicker 14s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(0.97); }
+  100% { filter: brightness(1.02); }
+}
+
+h1, h2, h3 {
+  font-family: var(--font-head);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-shadow: 1px 1px 0 var(--soft);
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--primary);
+  border-left: 8px double var(--edge);
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+  background: #ffffffc4;
+  padding: 0.8rem 1.2rem;
+  border-left: 3px solid var(--primary);
+  margin-bottom: 1.5rem;
+  box-shadow: 2px 2px 0 var(--soft);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--primary);
+  transition: 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--edge);
+  background: var(--primary);
+  color: white;
+}
+
+code, pre {
+  font-family: var(--font-body);
+  background: #f3efea;
+  padding: 0.3em 0.6em;
+  font-size: 0.95rem;
+  border: 1px solid var(--soft);
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 1rem;
+  box-shadow: inset 1px 1px 0 var(--soft);
+}
+
+blockquote {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #fffdf9;
+  border: 2px dashed var(--primary);
+  font-style: italic;
+  color: #444;
+  box-shadow: 4px 4px 0 var(--soft);
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--soft), transparent);
+  margin: 2rem 0;
+}
+
+/* Decorative Element */
+.wave-border {
+  height: 40px;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23be2555" fill-opacity="0.4" d="M0,160L48,165.3C96,171,192,181,288,197.3C384,213,480,235,576,224C672,213,768,171,864,154.7C960,139,1056,149,1152,138.7C1248,128,1344,96,1392,80L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>');
+  background-size: cover;
+  margin: 3rem 0;
+}

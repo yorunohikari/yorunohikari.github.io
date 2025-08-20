@@ -1,0 +1,6 @@
+{
+    "path": "assets/euv5.png",
+    "modified": "2025-06-20T02:17:53.426167",
+    "title": "euv5.png",
+    "description": "This is a screenshot of a 3D modeling software, most likely Blender, showing a complex user interface. The screen has a dark theme and is filled with multiple panels and toolbars.\n\nThe main viewport in the center displays a 3D scene of a bicycle on a small, rocky, grass-covered island surrounded by water. A white camera frame outlines the view that will be rendered. The scene is lit to show shadows and textures on the objects.\n\nTo the right of the main viewport is a panel showing a \"Scene Collection\" with a hierarchical list of objects in the scene, such as \"Camera,\" \"Light,\" and various models like \"Bicycle\" and \"Grass.\" Below that panel are various properties and settings for the selected object, including camera settings.\n\nAt the bottom of the screen is a timeline panel, used for animation, with a series of keyframes and a playhead visible. Along the top of the window, a menu bar with options like \"File,\" \"Edit,\" \"Layout,\" and \"Modeling\" is present. The very top of the screen has a status bar showing system information like battery level, time, and memory usage. The overall image depicts a detailed workspace for 3D creation."
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>goshintai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="topbar">
+  </div>
+
+  <div class="content-container">
+    <div class="cover">
+      <div class="profile-header" style="position: relative; z-index: 2;">
+        <div class="profile-pic-cover">
+          <div class="profile-pic"></div>
+        </div>
+        <div class="profile-name">
+          <h1>goshintai</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="left-col">
+        <div class="card">
+          <h2>About</h2>
+          <div class="info-row">
+            <span class="info-label">LOCATION:</span>
+            <span class="info-value">Indonesia</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">PROJECTS:</span>
+            <span class="info-value">3+</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">LANGUAGES:</span>
+            <span class="info-value">ID, EN, JP</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">SKILLS:</span>
+            <span class="info-value">Blender 3D, Photoshop, JS, CSS, HTML</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">JOINED:</span>
+            <span class="info-value">2025</span>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Photos</h2>
+          <div id="photo-grid" class="photo-grid"></div>
+        </div>
+        <div class="card" id="anime-list-card">
+          <h2>Anime List</h2>
+          <div id="anime-list-container"></div>
+        </div>
+
+      </div>
+
+
+      <div class="main-col">
+
+      </div>
+
+      <div class="right-col">
+        <div class="card">
+          <h2>Fav Music</h2>
+          <a href="http://goblem.com" class="music-info">
+            <div>
+              <div class="music-title">POST HUMAN: NeX GEn</div>
+              <div class="music-artist">Bring Me The Horizon</div>
+            </div>
+          </a>
+
+          <a href="http://goblem.com" class="music-info">
+            <div>
+              <div class="music-title">POST HUMAN: NeX GEn</div>
+              <div class="music-artist">Bring Me The Horizon</div>
+            </div>
+          </a>
+
+          <div class="music-item">
+            <div class="music-info">
+              <div class="music-title">F*CK U SKRILLEX YOU THINK UR ANDY WARHOL BUT UR NOT!! </div>
+              <div class="music-artist">Skrillex</div>
+            </div>
+          </div>
+          <div class="music-item">
+            <div class="music-info">
+              <div class="music-title">HIT ME HARD AND SOFT </div>
+              <div class="music-artist">Billie Eilish</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h2>People You May Know</h2>
+          <p>[Friends Suggestion Placeholder]</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="footer">
+    goshintai | Not affiliated with Meta<br>
+    Links: Home · Projects · Blog · About · More
+  </div>
+
+  <script src="mainposts.js"></script>
+  <script src="animelist.js"></script>
+  <script src="topbar.js"></script>
+
+  <script>
+    fetch('photos.json')
+      .then(res => res.json())
+      .then(data => {
+        const grid = document.getElementById('photo-grid');
+
+        // Sort by 'modified' descending
+        const sorted = data.sort((a, b) => new Date(b.modified) - new Date(a.modified));
+
+        // Take first 9 items
+        const topNine = sorted.slice(0, 9);
+
+        topNine.forEach(photo => {
+          const img = document.createElement('img');
+          img.src = photo.path;
+          img.alt = '';
+          img.addEventListener('click', () => {
+            window.location.href = `/photo.html?src=${encodeURIComponent(photo.path)}`;
+          });
+          grid.appendChild(img);
+        });
+      })
+      .catch(err => {
+        console.error('Failed to load photos.json', err);
+        document.getElementById('photo-grid').innerHTML = '<p style="color:#999">Failed to load photos.</p>';
+      });
+  </script>
+
+
+</body>
+
+</html>

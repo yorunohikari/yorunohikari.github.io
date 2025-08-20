@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Things",
+    "url": "/blog/things.html",
+    "description": "yapping about things",
+    "date": "2025-07-29"
+  },
+  {
+    "title": "My Linux Story",
+    "url": "/blog/linux.html",
+    "description": "yapping about linux and stuff",
+    "date": "2025-07-26"
+  }
+]

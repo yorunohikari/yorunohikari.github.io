@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Japanese Input on Arch Linux (Hyprland + fcitx5 + Mozc)">
+    <meta name="description" content="A step-by-step guide on how to set up Japanese input on Arch Linux using Hyprland, fcitx5, and Mozc. Clean, minimal, and beginner-friendly.">
+    <link rel="icon" type="image/x-icon" href="/assets/G.ico">
+    <title>Japanese Keyboard on Arch (Hyprland + fcitx5 + Mozc) - goshintai</title>
+    <style>
+        :root {
+            --bg: #e0e5ec;
+            --shadow-light: #ffffff;
+            --shadow-dark: #a3b1c6;
+            --text: #333;
+            --accent: #007aff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--text);
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p,
+        li {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        pre {
+            background: var(--bg);
+            border-radius: 12px;
+            box-shadow: 7px 7px 15px var(--shadow-dark), -7px -7px 15px var(--shadow-light);
+            padding: 1rem;
+            overflow-x: auto;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        code {
+            background: none;
+            padding: 0 4px;
+            border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+            font-size: 0.95rem;
+        }
+
+        blockquote {
+            background: var(--bg);
+            border-left: 5px solid var(--accent);
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
+            margin-bottom: 2rem;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: #ccc;
+            margin: 3rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>How to Install Japanese Keyboard on Arch (Hyprland + fcitx5 + Mozc)</h1>
+
+    <p>So I recently needed to type in Japanese on my Arch Linux setup using Hyprland, and lemme tell you, it wasn’t
+        exactly plug and play. But once I figured it out, it was actually kinda straightforward. Here's a full
+        step-by-step of what I did to get <strong>fcitx5 + Mozc</strong> working for Japanese input.</p>
+
+    <blockquote>
+        TL;DR: Install <code>fcitx5-mozc</code>, set environment variables, add Mozc in the fcitx5 GUI, and
+        <strong>don't forget to save <code>hyprland.conf</code></strong> (yes, I forgot lol).
+    </blockquote>
+
+    <h2>Step 1: Install the necessary packages</h2>
+    <pre><code>sudo pacman -S fcitx5-mozc fcitx5-configtool fcitx5-gtk</code></pre>
+
+    <ul>
+        <li><code>fcitx5</code> – the input method framework</li>
+        <li><code>mozc</code> – Japanese input engine by Google</li>
+        <li>the GTK frontend + GUI config tool</li>
+    </ul>
+
+    <h2>Step 2: Tell Hyprland to start fcitx5</h2>
+    <pre><code>nano ~/.config/hypr/hyprland.conf</code></pre>
+
+    <p>Add this line (under existing <code>exec-once</code> entries or at the end):</p>
+    <pre><code>exec-once = fcitx5 &</code></pre>
+
+    <p><strong>Don't be like me:</strong> I forgot to save the file before rebooting, so the fcitx5 doesn't load on startup. Be sure to
+        press <code>Ctrl+O</code>, then <code>Enter</code> to save, and <code>Ctrl+X</code> to exit.</p>
+
+    <h2>Step 3: Add environment variables</h2>
+    <pre><code>nano ~/.bashrc</code></pre>
+
+    <p>Add these at the bottom:</p>
+    <pre><code>export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx</code></pre>
+
+    <p>Then reload it:</p>
+    <pre><code>source ~/.bashrc</code></pre>
+
+    <p>If you use zsh, put them in <code>~/.zshrc</code> instead.</p>
+
+    <h2>Step 4: Reboot (or log out and back in)</h2>
+    <p>After saving everything, reboot or just log out and back into Hyprland. This should start <code>fcitx5</code>
+        automatically.</p>
+
+    <h2>Step 5: Add Japanese (Mozc) in fcitx5</h2>
+    <pre><code>fcitx5-configtool</code></pre>
+
+    <ul>
+        <li>On the left panel, click the “+” to add input method</li>
+        <li>Search for <code>Mozc</code> and add it</li>
+        <li>Make sure it's below your default input method (like English)</li>
+        <li>Default key to toggle input methods is <strong>Ctrl + Space</strong></li>
+    </ul>
+
+    <hr>
+
+    <h2>Final Thoughts</h2>
+    <ul>
+        <li>Set up the environment variables</li>
+        <li>Add <code>fcitx5</code> to <code>exec-once</code></li>
+        <li><strong>Save your config file</strong> 😭</li>
+    </ul>
+
+    <p>If you're using Arch with Hyprland and want to type Japanese, <strong>fcitx5 + mozc is solid</strong>. Let me
+        know if you run into any issues!</p>
+</body>
+
+</html>
