@@ -1,0 +1,265 @@
+{
+    "Osha": {
+        "week1": {
+            "monday": {
+                "moji": 5,
+                "goi": 3,
+                "bunpou": 3
+            },
+            "tuesday": {
+                "moji": 3,
+                "goi": 4,
+                "bunpou": 1
+            },
+            "wednesday": {
+                "moji": 4,
+                "goi": 3,
+                "bunpou": 3
+            },
+            "thursday": {
+                "moji": 5,
+                "goi": 4,
+                "bunpou": 2
+            },
+            "friday": {
+                "moji": 3,
+                "goi": 0,
+                "bunpou": 2
+            },
+            "saturday": {
+                "moji": 4,
+                "goi": 1,
+                "bunpou": 1
+            },
+            "sunday": {
+                "moji": 9,
+                "goi": 5,
+                "bunpou": 6
+            }
+        },
+        "week2": {
+            "monday": {
+                "moji": 3,
+                "goi": 2,
+                "bunpou": 2
+            },
+            "tuesday": {
+                "moji": 3,
+                "goi": 2,
+                "bunpou": 3
+            },
+            "wednesday": {
+                "moji": 3,
+                "goi": 1,
+                "bunpou": 0
+            },
+            "thursday": {
+                "moji": 3,
+                "goi": 2,
+                "bunpou": 1
+            },
+            "friday": {
+                "moji": 4,
+                "goi": 1,
+                "bunpou": 1
+            },
+            "saturday": {
+                "moji": 4,
+                "goi": 3,
+                "bunpou": 3
+            },
+            "sunday": {
+                "moji": 9,
+                "goi": 8,
+                "bunpou": 4
+            }
+        },
+        "week3": {
+            "monday": {
+                "moji": 2,
+                "goi": 2,
+                "bunpou": 0
+            },
+            "tuesday": {
+                "moji": 3,
+                "goi": 2,
+                "bunpou": 1
+            },
+            "wednesday": {
+                "moji": 3,
+                "goi": 3,
+                "bunpou": 2
+            },
+            "thursday": {
+                "moji": 3,
+                "goi": 3,
+                "bunpou": 1
+            },
+            "friday": {
+                "moji": 3,
+                "goi": 3,
+                "bunpou": 2
+            },
+            "saturday": {
+                "moji": 3,
+                "goi": 0,
+                "bunpou": 0
+            },
+            "sunday": {
+                "moji": 9,
+                "goi": 7,
+                "bunpou": 6
+            }
+        }
+    },
+    "Sato Yuki": {
+        "week1": {
+            "monday": {
+                "moji": 3,
+                "goi": 4,
+                "bunpou": 3
+            },
+            "tuesday": {
+                "moji": 4,
+                "goi": 3,
+                "bunpou": 4
+            },
+            "wednesday": {
+                "moji": 2,
+                "goi": 4,
+                "bunpou": 3
+            },
+            "thursday": {
+                "moji": 3,
+                "goi": 3,
+                "bunpou": 4
+            },
+            "friday": {
+                "moji": 4,
+                "goi": 4,
+                "bunpou": 3
+            },
+            "saturday": {
+                "moji": 3,
+                "goi": 4,
+                "bunpou": 4
+            },
+            "sunday": {
+                "moji": 8,
+                "goi": 9,
+                "bunpou": 7
+            }
+        },
+        "week2": {
+            "monday": {
+                "moji": 4,
+                "goi": 4,
+                "bunpou": 4
+            },
+            "tuesday": {
+                "moji": 3,
+                "goi": 5,
+                "bunpou": 4
+            },
+            "wednesday": {
+                "moji": 4,
+                "goi": 3,
+                "bunpou": 5
+            },
+            "thursday": {
+                "moji": 4,
+                "goi": 4,
+                "bunpou": 3
+            },
+            "friday": {
+                "moji": 3,
+                "goi": 4,
+                "bunpou": 4
+            },
+            "saturday": {
+                "moji": 4,
+                "goi": 4,
+                "bunpou": 4
+            },
+            "sunday": {
+                "moji": 9,
+                "goi": 8,
+                "bunpou": 8
+            }
+        },
+        "week3": {
+            "monday": {
+                "moji": 3,
+                "goi": 4,
+                "bunpou": 4
+            },
+            "tuesday": {
+                "moji": 4,
+                "goi": 4,
+                "bunpou": 3
+            },
+            "wednesday": {
+                "moji": 4,
+                "goi": 3,
+                "bunpou": 4
+            },
+            "thursday": {
+                "moji": 3,
+                "goi": 4,
+                "bunpou": 4
+            },
+            "friday": {
+                "moji": 4,
+                "goi": 4,
+                "bunpou": 3
+            },
+            "saturday": {
+                "moji": 3,
+                "goi": 4,
+                "bunpou": 4
+            },
+            "sunday": {
+                "moji": 8,
+                "goi": 10,
+                "bunpou": 9
+            }
+        },
+        "week4": {
+            "monday": {
+                "moji": 4,
+                "goi": 4,
+                "bunpou": 4
+            },
+            "tuesday": {
+                "moji": 4,
+                "goi": 5,
+                "bunpou": 4
+            },
+            "wednesday": {
+                "moji": 3,
+                "goi": 4,
+                "bunpou": 5
+            },
+            "thursday": {
+                "moji": 4,
+                "goi": 4,
+                "bunpou": 4
+            },
+            "friday": {
+                "moji": 4,
+                "goi": 4,
+                "bunpou": 4
+            },
+            "saturday": {
+                "moji": 4,
+                "goi": 5,
+                "bunpou": 4
+            },
+            "sunday": {
+                "moji": 10,
+                "goi": 11,
+                "bunpou": 9
+            }
+        }
+    }
+}
